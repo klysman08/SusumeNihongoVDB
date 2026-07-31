@@ -1,0 +1,231 @@
+---
+title: "Chapter 40 — N4 Capstone"
+level: "N4"
+chapter: 40
+description: "Review your journey through Japanese N4 grammar, vocabulary, and kanji, and prepare for the next step in your Japanese studies (N3)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="N4 Capstone: Bringing It All Together"
+  level="N4"
+  chapter={40}
+  objectives={[
+    "Review the most critical grammar points from the N4 level.",
+    "Practice using multiple advanced grammatical structures in a single context.",
+    "Reflect on the shift from 'survival' Japanese to 'conversational' Japanese.",
+    "Assess your readiness for the transition to intermediate Japanese (N3)."
+  ]}
+/>
+
+<SectionIntro level="N4">
+Congratulations! You have reached the end of the N4 curriculum. While N5 gave you the basic survival tools, N4 has given you the ability to express complex thoughts, relationships, and intentions. You can now talk about what you *can* do, what you are *forced* to do, and how to navigate social hierarchies. Let's celebrate your progress by reviewing how these pieces fit together.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/40-n4-capstone.webp"
+  alt="Anime pixel-art illustration of a learner at a mountain shrine viewpoint celebrating a glowing grammar constellation and stepping-stone path to a torii gate."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Grammatical Evolution
+
+In N4, your ability to manipulate verbs expanded significantly. Let's see how a simple action like "reading a book" (本を読む) transforms through N4 grammar.
+
+<GrammarBox client:load 
+  pattern="Verb Conjugation Review"
+  meaning="Expressing Ability, Intent, and Perspective."
+  formation="Various N4 Verb Forms"
+  examples={[
+    { japanese: "この本は難しくて、読めません。", romaji: "kono hon wa muzukashikute, yomemasen.", translation: "This book is difficult, so I cannot read it. (Potential)" },
+    { japanese: "明日、この本を読もうと思っています。", romaji: "ashita, kono hon o yomou to omotte imasu.", translation: "I am intending to read this book tomorrow. (Volitional)" },
+    { japanese: "母に漫画を読まれました。", romaji: "haha ni manga o yomaremashita.", translation: "My mother read my manga (and I am annoyed). (Passive)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="漢字を読めるようになるために、毎日練習しています。"
+  romaji="kanji o yomeru you ni naru tame ni, mainichi renshuu shite imasu."
+  translation="In order to become able to read kanji, I practice every day."
+/>
+
+<ExampleSentence client:load 
+  japanese="昨日読んだ本はとても面白かったです。"
+  romaji="kinou yonda hon wa totemo omoshirokatta desu."
+  translation="The book [that I read yesterday] was very interesting."
+/>
+
+<ExampleSentence client:load 
+  japanese="社長が資料をお読みになっています。"
+  romaji="shachou ga shiryou o oyomi ni natte imasu."
+  translation="The company president is reading the documents (Respectful)."
+/>
+
+---
+
+## 2. Navigating Complex Intentions
+
+N4 taught you to combine grammar points to express very specific social nuances. Requesting permission, for example, is a hallmark of N4 proficiency.
+
+<GrammarBox client:load 
+  pattern="[Causative て-form] + いただけませんか"
+  meaning="Could you please let me [do X]?"
+  formation="Verb-saseru-te + itadakemasen ka"
+  examples={[
+    { japanese: "気分が悪いので、早く帰らせていただけませんか。", romaji: "kibun ga warui node, hayaku kaerasete itadakemasen ka.", translation: "Since I feel unwell, could you please let me go home early?" },
+    { japanese: "写真を撮らせていただけませんか。", romaji: "shashin o torasete itadakemasen ka.", translation: "Could you please let me take a photo?" },
+    { japanese: "ここで待たせていただけませんか。", romaji: "koko de matasete itadakemasen ka.", translation: "Could you please let me wait here?" }
+  ]}
+/>
+
+---
+
+## Cultural Insight: From Survival to Social Integration
+
+Reaching the end of N4 is a major milestone. In the Japanese language community, N5 is often called "Survival Japanese"—it's enough to buy a train ticket or order food. N4, however, is where **Social Integration** begins. 
+
+With N4 grammar, you can explain *why* you are late (without sounding defensive), you can express *gratitude* for favors received, and you can show *respect* to elders. You are moving from being a "visitor" to being a "participant" in Japanese society. The ability to use the passive voice to show empathy and Keigo to show respect allows you to build deeper, more meaningful relationships with Japanese speakers.
+
+## Contextual Dialogues
+
+### Dialogue 1: The Farewell Party Planning
+<ConversationDialog client:load 
+  title="The Send-off Party"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, regarding the manager's farewell party, I'm thinking of checking the restaurant today.", japanese: "田中さん、課長の送別会のことですが、今日レストランを調べようと思っています。", romaji: "Tanaka-san, kachou no soubetsukai no koto desu ga, kyou resutoran o shirabeyou to omotte imasu." },
+    { speaker: "Tanaka", translation: "Thank you. Did you hear what the manager wants to eat?", japanese: "ありがとうございます。課長が何を食べたいか、聞きましたか。", romaji: "Arigatou gozaimasu. Kachou ga nani o tabetai ka, kikimashita ka." },
+    { speaker: "Suzuki", translation: "Yes. Yesterday he said that if it's sushi, it's good.", japanese: "はい。昨日おっしゃっていましたが、お寿司ならいいそうですよ。", romaji: "Hai. Kinou osshatte imashita ga, osushi nara ii sou desu yo." },
+    { speaker: "Tanaka", translation: "If that's the case, the place near the station is delicious, so I'll make a reservation.", japanese: "それなら、駅の近くの店が美味しいので、予約しておきますね。", romaji: "Sore nara, eki no chikaku no mise ga oishii node, yoyaku shite okimasu ne." }
+  ]}
+/>
+
+### Dialogue 2: A Job Interview (Small Scale)
+<ConversationDialog client:load 
+  title="Part-time Job Interview"
+  lines={[
+    { speaker: "Interviewer", translation: "Can you speak Japanese?", japanese: "日本語が話せますか。", romaji: "Nihongo ga hanasemasu ka." },
+    { speaker: "Applicant", translation: "Yes. I can speak a little, but I'm still studying.", japanese: "はい。少し話せますが、まだ勉強しているところです。", romaji: "Hai. Sukoshi hanasemasu ga, mada benkyou shite iru tokoro desu." },
+    { speaker: "Interviewer", translation: "Why do you want to work here?", japanese: "どうしてここで働きたいんですか。", romaji: "Doushite koko de hatarakitai n desu ka." },
+    { speaker: "Applicant", translation: "In order to improve my Japanese, I want to talk to many people.", japanese: "日本語が上手になるために、たくさんの人と話したいからです。", romaji: "Nihongo ga jouzu ni naru tame ni, takusan no hito to hanashitai kara desu." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "N4 is the bridge from basic survival to meaningful social interaction.",
+    "Mastery of complex verb forms (Potential, Passive, Causative) is essential.",
+    "Conditionals (tara, nara) allow for sophisticated logical connections.",
+    "Keigo and giving/receiving grammar define your social relationship with the listener.",
+    "You are now ready to begin the N3 journey into intermediate Japanese!"
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which form is used to express 'I was forced to do' something?",
+      options: ["Passive", "Causative", "Causative-Passive", "Potential"],
+      correct: 2,
+      explanation: "Causative-Passive (〜させられる) indicates being forced to perform an action."
+    },
+    {
+      question: "Translate: 'The book I read yesterday.'",
+      options: ["昨日読む本", "昨日読んだの本", "昨日読んだ本", "本は昨日読みました"],
+      correct: 2,
+      explanation: "Relative clauses use the plain past form to modify a noun."
+    },
+    {
+      question: "What is the respectful (Sonkeigo) form of 'taberu'?",
+      options: ["いただく", "召し上がる", "おっしゃる", "いらっしゃる"],
+      correct: 1,
+      explanation: "召し上がる is the respectful verb for eating/drinking."
+    },
+    {
+      question: "Which particle is used inside a relative clause to mark the subject?",
+      options: ["は", "が", "を", "に"],
+      correct: 1,
+      explanation: "Inside relative clauses, 'wa' must change to 'ga' (or 'no')."
+    },
+    {
+      question: "What does '〜ようと思っています' express?",
+      options: ["Ability", "A long-term intention or plan", "A command", "A past habit"],
+      correct: 1,
+      explanation: "Volitional form + to omotte iru = intention."
+    },
+    {
+      question: "Which conditional is used for giving advice based on the listener's topic?",
+      options: ["〜たら", "〜ば", "〜と", "〜なら"],
+      correct: 3,
+      explanation: "〜なら responds to the context provided by the other speaker."
+    },
+    {
+      question: "Translate: 'Even if it's difficult, I won't give up.'",
+      options: ["難しくても、諦めません。", "難しいから、諦めません。", "難しいのに、諦めません。", "難しいなら、諦めません。"],
+      correct: 0,
+      explanation: "Te-form + も = 'Even if'."
+    },
+    {
+      question: "What does '〜てある' indicate?",
+      options: ["An ongoing action.", "A state resulting from a purposeful human action.", "A natural state.", "A future plan."],
+      correct: 1,
+      explanation: "Transitive + te-aru shows preparation or intentional state."
+    },
+    {
+      question: "Which is the most polite way to ask for permission to take a photo?",
+      options: ["写真を撮ってもいいですか。", "写真を撮らせてください。", "写真を撮らせていただけませんか。", "写真を撮りなさい。"],
+      correct: 2,
+      explanation: "Causative-te + itadakemasen ka is extremely polite."
+    },
+    {
+      question: "What is the difference between 'kara' and 'node'?",
+      options: ["No difference.", "'kara' is subjective; 'node' is objective and polite.", "'node' is only for writing.", "'kara' is only for nouns."],
+      correct: 1,
+      explanation: "〜ので is preferred in formal/polite contexts as it sounds more objective."
+    },
+    {
+      question: "Translate: 'The mountain [that I can see from here].'",
+      options: ["ここから見られる山", "ここから見える山", "ここから見た山", "山がここから見えます"],
+      correct: 1,
+      explanation: "Potential/Visible state modifying a noun."
+    },
+    {
+      question: "How do you humbly say 'I am called...'?",
+      options: ["〜とおっしゃいます", "〜と言います", "〜と申します", "〜といらっしゃいます"],
+      correct: 2,
+      explanation: "申す is the humble form of 'to say'."
+    },
+    {
+      question: "What does '〜なければならない' express?",
+      options: ["Permission", "Possibility", "Obligation (Must)", "Desire"],
+      correct: 2,
+      explanation: "Double negative logic for 'must do'."
+    },
+    {
+      question: "Which form expresses a 'suffering' or 'adversity' caused by someone else?",
+      options: ["Potential", "Causative", "Passive", "Volitional"],
+      correct: 2,
+      explanation: "Japanese passive often carries a nuance of being negatively affected."
+    },
+    {
+      question: "What is the primary goal of the N4 level?",
+      options: ["Basic survival.", "Fluency in literature.", "Navigating social relationships and complex intentions.", "Becoming a Japanese teacher."],
+      correct: 2,
+      explanation: "N4 focuses on conversational logic and social context."
+    }
+  ]}
+/>

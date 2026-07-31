@@ -1,0 +1,287 @@
+---
+title: "Chapter 28 — Conditional (〜たら)"
+level: "N4"
+chapter: 28
+description: "Learn how to use the 'tara' conditional form to express 'if', 'when', and unexpected discoveries in natural Japanese conversations."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Conditional (〜たら)"
+  level="N4"
+  chapter={28}
+  objectives={[
+    "Conjugate verbs, adjectives, and nouns into the 〜たら conditional form.",
+    "Express hypothetical 'if' statements.",
+    "Express sequential 'when/after' statements.",
+    "Understand the nuance of 〜たら compared to English 'if/when'."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, we have "if" for hypothetical situations and "when" for guaranteed future events. Japanese handles conditionals quite differently. There are four main conditional forms (`と`, `ば`, `たら`, `なら`), but `〜たら` is the most versatile and common in daily conversation. It can mean both "if" *and* "when/after" depending on the context!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/28-conditional-tara.webp"
+  alt="Anime pixel-art illustration of a learner at a signpost where possible paths branch toward rain, travel, work, meals, and snowy discoveries."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Forming 〜たら
+
+The rule for making the `〜たら` form is extremely simple: **Take the plain past tense (TA-form) of any word, and add ら.**
+
+### Verbs
+Take the plain past tense (the `た/だ` form) and add `ら`.
+* 飲む (nomu) ➔ 飲んだ (nonda) ➔ 飲んだら (nondara)
+* 食べる (taberu) ➔ 食べた (tabeta) ➔ 食べたら (tabetara)
+* する (suru) ➔ した (shita) ➔ したら (shitara)
+* 来る (kuru) ➔ 来た (kita) ➔ 来たら (kitara)
+
+### I-Adjectives
+Take the past tense (drop `い`, add `かった`) and add `ら`.
+* 安い (yasui) ➔ 安かった (yasukatta) ➔ 安かったら (yasukattara)
+* いい (ii) ➔ よかった (yokatta) ➔ よかったら (yokattara)
+
+### Na-Adjectives and Nouns
+Take the past tense (add `だった`) and add `ら`.
+* 暇 (hima) ➔ 暇だった (himadatta) ➔ 暇だったら (himadattara)
+* 雨 (ame) ➔ 雨だった (amedatta) ➔ 雨だったら (amedattara)
+
+### Negative Forms
+Take the negative past tense (`〜なかった`) and add `ら`.
+* 飲まない ➔ 飲まなかった ➔ 飲まなかったら
+* 安くない ➔ 安くなかった ➔ 安くなかったら
+* 雨じゃない ➔ 雨じゃなかった ➔ 雨じゃなかったら
+
+---
+
+## 2. Hypothetical Condition ("If")
+
+The most straightforward use of `〜たら` is for hypothetical conditions. If Condition A happens, then Action B will happen. It is often paired with the adverb `もし` (moshi) at the beginning of the sentence to emphasize that it is a hypothetical "if".
+
+<GrammarBox client:load 
+  pattern="(もし) A〜たら、B。"
+  meaning="If A happens / If A is true, then B."
+  formation="Ta-form + ら"
+  examples={[
+    { japanese: "もし雨が降ったら、行きません。", romaji: "moshi ame ga futtara, ikimasen.", translation: "If it rains, I will not go." },
+    { japanese: "安かったら、買います。", romaji: "yasukattara, kaimasu.", translation: "If it's cheap, I will buy it." },
+    { japanese: "時間がなかったら、手伝ってください。", romaji: "jikan ga nakattara, tetsudatte kudasai.", translation: "If you don't have time, please help me." }
+  ]}
+/>
+
+> [!TIP]
+> `もし` (moshi) is completely optional! The `〜たら` at the end of the clause already carries the "If" meaning. `もし` just gives the listener an early warning that an "If" statement is coming.
+
+## 3. Sequential Condition ("When / After")
+
+This is where `〜たら` often confuses English speakers. If the condition (A) is **guaranteed** to happen in the future, `〜たら` no longer means "If". It means "When" or "After". 
+
+It implies a strong sequence: **First A must completely finish, and THEN B will happen.**
+
+<GrammarBox client:load 
+  pattern="A〜たら、B。"
+  meaning="When A happens / After A finishes, then B."
+  formation="Ta-form + ら"
+  examples={[
+    { japanese: "日本に着いたら、電話します。", romaji: "Nihon ni tsuitara, denwa shimasu.", translation: "When/After I arrive in Japan, I will call you." },
+    { japanese: "仕事が終わったら、飲みに行きましょう。", romaji: "shigoto ga owattara, nomi ni ikimashou.", translation: "When work finishes, let's go drinking." },
+    { japanese: "夏休みになったら、海へ行きたいです。", romaji: "natsu-yasumi ni nattara, umi e ikitai desu.", translation: "When summer vacation comes, I want to go to the sea." }
+  ]}
+/>
+
+> [!IMPORTANT]
+> You cannot use `〜たら` for habitual actions (e.g., "When I am a child, I played..."). It is used for specific cause-and-effect scenarios or sequential events.
+
+## 4. Past Discovery ("When I did A, I discovered B")
+
+There is a less common but important third usage. If the sentence is entirely in the past tense (`A〜たら、B(past)`), it means "When I did A, an unexpected result (B) happened."
+
+<ExampleSentence client:load 
+  japanese="家へ帰ったら、手紙がありました。"
+  romaji="ie e kaettara, tegami ga arimashita."
+  translation="When I returned home, there was a letter (I discovered it)."
+/>
+
+<ExampleSentence client:load 
+  japanese="窓を開けたら、雪が降っていました。"
+  romaji="mado o aketara, yuki ga futte imashita."
+  translation="When I opened the window, it was snowing (to my surprise)."
+/>
+
+<ExampleSentence client:load 
+  japanese="デパートへ行ったら、休みでした。"
+  romaji="depaato e ittara, yasumi deshita."
+  translation="When I went to the department store, it was closed (unexpectedly)."
+/>
+
+
+## 5. Cultural Insight: Polite Offers with "Yokattara"
+
+One of the most common and useful phrases involving the `〜たら` form is **よかったら** (yokattara), which literally means "If it's good." In practice, it translates to "If you like" or "If it's okay with you."
+
+Japanese people use this phrase to make offers or suggestions less pushy and more polite. It acknowledges that the other person might be busy or have other preferences.
+
+Common uses:
+* `「よかったら、食べてください。」` (If you like, please eat some.)
+* `「よかったら、明日一緒に映画を見に行きませんか。」` (If you'd like, would you like to go see a movie together tomorrow?)
+
+Using `よかったら` shows that you are being considerate of the other person's feelings and situation.
+
+---
+
+---
+
+## Contextual Dialogues
+
+### 1. Planning a Trip (旅行の計画)
+
+Listen to how Tanaka and Suzuki plan an outing using both the "If" and "When" meanings of `〜たら`.
+
+<ConversationDialog client:load 
+  title="Planning a Trip (旅行の計画)"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, when work finishes tomorrow, let's go see a movie.", japanese: "鈴木さん、明日仕事が終わったら、映画を見に行きましょう。", romaji: "Suzuki-san, ashita shigoto ga owattara, eiga o mi ni ikimashou." },
+    { speaker: "Suzuki", translation: "That sounds good. If it rains, what will we do?", japanese: "いいですね。もし雨が降ったら、どうしますか。", romaji: "Ii desu ne. Moshi ame ga futtara, dou shimasu ka." },
+    { speaker: "Tanaka", translation: "If it rains, let's play games at home instead of the movie.", japanese: "雨だったら、映画の代わりに家でゲームをしましょう。", romaji: "Ame dattara, eiga no kawari ni ie de geemu o shimashou." },
+    { speaker: "Suzuki", translation: "Got it. If it is sunny, let's go to the movie theater.", japanese: "わかりました。晴れたら、映画館へ行きましょう。", romaji: "Wakarimashita. Haretara, eigakan e ikimashou." }
+  ]}
+/>
+
+### 2. An Unexpected Discovery (驚いたこと)
+
+Using `〜たら` to describe something unexpected.
+
+<ConversationDialog client:load 
+  title="An Unexpected Discovery (驚いたこと)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka, when I went to the station this morning, I met our teacher!", japanese: "田中さん、今朝駅に行ったら、先生に会いましたよ！", romaji: "Tanaka-san, kesa eki ni ittara, sensei ni aimashita yo!" },
+    { speaker: "Tanaka", translation: "Really? Was it Mori-sensei?", japanese: "本当ですか？森先生でしたか。", romaji: "Hontou desu ka? Mori-sensei deshita ka." },
+    { speaker: "Suzuki", translation: "Yes. When I talked to him, he said he's going to Kyoto today.", japanese: "はい。話したら、今日は京都へ行くと言っていました。", romaji: "Hai. Hanashitara, kyou wa Kyouto e iku to itte imashita." },
+    { speaker: "Tanaka", translation: "I see. If I have time, I'd like to go to Kyoto too.", japanese: "そうですか。僕も時間があったら、京都へ行きたいです。", romaji: "Sou desu ka. Boku mo jikan ga attara, Kyouto e ikitai desu." }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "To form 〜たら, take the plain past tense (た/だ) of any word and add ら.",
+    "It can mean 'If [A] happens' for hypothetical situations. (Often paired with もし).",
+    "It can mean 'When/After [A] happens' for guaranteed future events that must finish before [B] starts.",
+    "If used in the past tense, it means 'When I did [A], I made an unexpected discovery [B].'"
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the 〜たら conditional!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the 〜たら form of the verb '飲む' (to drink)?",
+      options: ["飲みたら", "飲んだら", "飲んたら", "飲めたら"],
+      correct: 1,
+      explanation: "Take the past tense (飲んだ) and add ら -> 飲んだら (nondara)."
+    },
+    {
+      question: "Which of these means 'If it's cheap'?",
+      options: ["安いなら", "安かったら", "安いたら", "安くなる"],
+      correct: 1,
+      explanation: "安い is an i-adjective. Past tense is 安かった -> 安かったら (yasukattara)."
+    },
+    {
+      question: "Translate: 'When I arrive in Japan, I will call you.'",
+      options: ["日本に着くと、電話します。", "日本に着いたら、電話します。", "日本に着けば、電話します。", "日本に着くなら、電話します。"],
+      correct: 1,
+      explanation: "〜たら is perfect for 'When/After [A] completes, I will do [B]'. 着いたら (tsuitara)."
+    },
+    {
+      question: "In the sentence '雨だったら、行きません', what form is '雨だったら' based on?",
+      options: ["A verb", "An i-adjective", "A na-adjective/noun", "A particle"],
+      correct: 2,
+      explanation: "雨 (ame) is a noun. Noun past tense is 'だった' -> 雨だったら."
+    },
+    {
+      question: "What does the word 'もし' (moshi) do in a sentence with 〜たら?",
+      options: ["It changes 'if' to 'when'.", "It makes the sentence negative.", "It emphasizes that the condition is hypothetical ('if').", "It changes the verb tense to past."],
+      correct: 2,
+      explanation: "もし warns the listener that a hypothetical condition is coming."
+    },
+    {
+      question: "How do you form the negative 〜たら condition for '行かない' (not go)?",
+      options: ["行かなくたら", "行かなかったら", "行かないたら", "行きなかったら"],
+      correct: 1,
+      explanation: "行かない -> 行かなかった -> 行かなかったら (If I don't go)."
+    },
+    {
+      question: "What does '家へ帰ったら、手紙がありました' imply?",
+      options: ["If I return home, there will be a letter.", "I will return home and write a letter.", "When I returned home, I discovered there was a letter.", "Because I returned home, there was a letter."],
+      correct: 2,
+      explanation: "When 〜たら is followed by a past-tense sentence, it means 'When I did A, I discovered/found B'."
+    },
+    {
+      question: "Translate: 'If you have time, let's talk.'",
+      options: ["時間があったら、話しましょう。", "時間だったら、話しましょう。", "時間になったら、話しましょう。", "時間をしたら、話しましょう。"],
+      correct: 0,
+      explanation: "ある (to have/exist) -> あった -> あったら (If there is...)."
+    },
+    {
+      question: "Which 〜たら form is correct for the noun '日曜日' (Sunday)?",
+      options: ["日曜日ら", "日曜日だったら", "日曜日かったら", "日曜日たら"],
+      correct: 1,
+      explanation: "Noun + だった + ら -> 日曜日だったら (If/When it's Sunday)."
+    },
+    {
+      question: "In the dialogue, why does Tanaka say '駅に着いたら'?",
+      options: ["If I arrive at the station", "When/After I arrive at the station", "Because I arrived at the station", "Before I arrive at the station"],
+      correct: 1,
+      explanation: "He is talking about a guaranteed future action. The arrival must happen FIRST, and *then* he sends the message."
+    },
+    {
+      question: "Can 〜たら be used to describe habitual actions? (e.g., 'When I was a child, I played tennis every day.')",
+      options: ["Yes, always.", "No, 〜たら is for specific conditions, not general habits.", "Only for negative habits.", "Only if you use もし."],
+      correct: 1,
+      explanation: "〜たら is not used for habitual or general factual statements (その時 / 子どもの時 is better for describing past periods)."
+    },
+    {
+      question: "What is the 〜たら form of 'いい' (good)?",
+      options: ["いいたら", "いいったら", "よかったら", "よくたら"],
+      correct: 2,
+      explanation: "The past tense of いい is よかった -> よかったら (If it's good / If you like)."
+    },
+    {
+      question: "Translate: 'If it is not delicious, I won't eat it.'",
+      options: ["美味しくなかったら、食べません。", "美味しかったら、食べません。", "美味しいなら、食べません。", "美味しくないたら、食べません。"],
+      correct: 0,
+      explanation: "美味しくない -> 美味しくなかった -> 美味しくなかったら."
+    },
+    {
+      question: "Which of the following is an incorrect usage?",
+      options: ["雨が降ったら、行きません。", "安かったら、買います。", "明日になったら、行きます。", "毎日疲れたら、寝ます。"],
+      correct: 3,
+      explanation: "You don't use 〜たら for regular daily habits like 'Every day when I get tired, I sleep.' You would use 疲れた時 (tsukareta toki) or と."
+    },
+    {
+      question: "What does 'もし暇だったら、電話してください' mean?",
+      options: ["When you are busy, please call me.", "If you are free, please call me.", "Because you are free, please call me.", "Even if you are free, do not call me."],
+      correct: 1,
+      explanation: "暇 (free/not busy). 暇だった + ら -> If you are free."
+    }
+  ]}
+/>

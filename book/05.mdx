@@ -1,0 +1,250 @@
+---
+title: "Chapter 05 — Question Words & Particle か"
+level: "N5"
+chapter: "05"
+description: "Master the art of asking questions in Japanese. Learn the essential question words (Who, What, Where, When) and the particle 'ka' that marks a question."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Question Words & Particle か"
+  level="N5"
+  chapter="05"
+  objectives={[
+    "Use the particle か (ka) to turn any statement into a question.",
+    "Learn the 'Big Five' question words: Who, What, Where, When, and Why.",
+    "Understand the difference between なに (nani) and なん (nan).",
+    "Explore the cultural concept of 'Enryo' and how it affects social interaction."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In many languages, asking a question requires changing the entire word order. In Japanese, it is much simpler! To ask a question, you simply keep the sentence exactly as it is and add the particle **か** to the end. In this chapter, we will learn how to use this particle and master the essential words for seeking information.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/05-question-words-ka.webp"
+  alt="Anime pixel-art illustration of a learner politely asking for directions with か and question-word cards in a Japanese street scene."
+  width={1672}
+  height={941}
+/>
+
+## 1. The Question Particle: か (ka)
+
+The particle か (ka) acts like a spoken question mark. When you add it to the end of a sentence, it signals that you are asking for information.
+
+<GrammarBox client:load 
+  pattern="[Sentence] ＋ か"
+  meaning="Turns a statement into a question."
+  formation="Statement + か"
+  examples={[
+    { japanese: "これ は ぺん です か。", romaji: "Kore wa pen desu ka.", translation: "Is this a pen?" },
+    { japanese: "あなた は 学生 です か。", romaji: "Anata wa gakusei desu ka.", translation: "Are you a student?" },
+    { japanese: "コーヒー を のみます か。", romaji: "Koohii o nomimasu ka.", translation: "Will you drink coffee?" }
+  ]}
+/>
+
+## 2. The Big Five Question Words
+
+To ask for specific information, you drop a question word into the slot where the answer would normally go.
+
+<VocabTable data={[
+  { word: 'なに / なん', romaji: 'nani / nan', meaning: 'What', type: 'Question Word' },
+  { word: 'どこ', romaji: 'doko', meaning: 'Where', type: 'Question Word' },
+  { word: 'だれ', romaji: 'dare', meaning: 'Who', type: 'Question Word' },
+  { word: 'いつ', romaji: 'itsu', meaning: 'When', type: 'Question Word' },
+  { word: 'どうして', romaji: 'doushite', meaning: 'Why', type: 'Question Word' }
+]} />
+
+> [!TIP]
+> **なに vs. なん:** Use **なん (nan)** if the next word starts with a D, T, or N sound (like *desu*). Use **なに (nani)** in most other cases.
+
+<ExampleSentence client:load 
+  japanese="それ は なん です か。"
+  romaji="Sore wa nan desu ka."
+  translation="What is that?"
+/>
+
+<ExampleSentence client:load 
+  japanese="トイレ は どこ です か。"
+  romaji="Toire wa doko desu ka."
+  translation="Where is the toilet?"
+/>
+
+<ExampleSentence client:load 
+  japanese="いつ 日本 へ いきます か。"
+  romaji="Itsu Nihon e ikimasu ka."
+  translation="When will you go to Japan?"
+/>
+
+## 3. Asking About People and Reasons
+
+<GrammarBox client:load 
+  pattern="だれ が / どうして ～ か"
+  meaning="Asking 'Who' and 'Why'."
+  formation="Question Word + Particle + Verb + か"
+  examples={[
+    { japanese: "だれ が きました か。", romaji: "Dare ga kimashita ka.", translation: "Who came?" },
+    { japanese: "どうして 日本語 を べんきょうします か。", romaji: "Doushite Nihongo o benkyoushimasu ka.", translation: "Why do you study Japanese?" },
+    { japanese: "だれ の くるま です か。", romaji: "Dare no kuruma desu ka.", translation: "Whose car is it?" }
+  ]}
+/>
+
+## 4. Cultural Note: The Concept of 'Enryo' (遠慮)
+
+**Enryo** is a vital Japanese cultural concept meaning "reserve," "restraint," or "modesty." It involves holding back one's own desires or questions for the sake of others or to maintain social harmony (**Wa**).
+- When asked "Would you like some tea?", a person might initially refuse due to *enryo*, even if they are thirsty.
+- When asking questions, Japanese people often use "softening" phrases like *Sumimasen* (Excuse me) to show they are aware they might be bothering the other person.
+- Understanding *enryo* helps you realize that "No" might sometimes mean "I'm being polite," and "Yes" might sometimes be a bit hesitant!
+
+## Practical Conversations
+
+<BookImage
+  src="/book-images/05-question-words-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of a tourist asking directions with Japanese question-word cards for どこ, なん, いつ, だれ, and か."
+  width={1672}
+  height={941}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Lost in the City"
+  lines={[
+    { speaker: "Tourist", japanese: "すみません、 ホテル は どこ です か。", romaji: "Sumimasen, hoteru wa doko desu ka.", translation: "Excuse me, where is the hotel?" },
+    { speaker: "Local", japanese: "あ！ あそこ です。", romaji: "A! Asoko desu.", translation: "Ah! It's over there." },
+    { speaker: "Tourist", japanese: "ありがとうございます。 これ は なん です か。", romaji: "Arigatou gozaimasu. Kore wa nan desu ka.", translation: "Thank you very much. What is this (building)?" },
+    { speaker: "Local", japanese: "これ は だいがく です。", romaji: "Kore wa daigaku desu.", translation: "This is a university." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Asking About a Trip"
+  lines={[
+    { speaker: "A", japanese: "アンナさん、 いつ 日本 へ いきます か。", romaji: "Anna-san, itsu Nihon e ikimasu ka.", translation: "Anna, when will you go to Japan?" },
+    { speaker: "B", japanese: "らいげつ いきます。", romaji: "Raigetsu ikimasu.", translation: "I will go next month." },
+    { speaker: "A", japanese: "だれ と いきます か。", romaji: "Dare to ikimasu ka.", translation: "Who are you going with?" },
+    { speaker: "B", japanese: "かぞく と いきます。", romaji: "Kazoku to ikimasu.", translation: "I am going with my family." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "The particle か (ka) at the end of a sentence creates a question.",
+    "Japanese word order stays the same in questions; just replace the missing info with a question word.",
+    "Question words include なに (What), どこ (Where), だれ (Who), and いつ (When).",
+    "Use なん (nan) before D, T, or N sounds, and なに (nani) otherwise.",
+    "Enryo (遠慮) is the social practice of being reserved and mindful of others when interacting."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your ability to ask and understand questions!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which particle turns a statement into a question?",
+      options: ["は", "の", "か", "を"],
+      correct: 2,
+      explanation: "か (ka) is the question marker placed at the end of a sentence."
+    },
+    {
+      question: "How do you say 'Where'?",
+      options: ["なに", "どこ", "だれ", "いつ"],
+      correct: 1,
+      explanation: "どこ (Doko) means where."
+    },
+    {
+      question: "Which pronunciation of 'What' is used in '_____ です か'?",
+      options: ["なに", "なん", "ぬに", "のん"],
+      correct: 1,
+      explanation: "Use 'nan' before 'desu' because it starts with a 'D' sound."
+    },
+    {
+      question: "What does 'だれ' mean?",
+      options: ["What", "Where", "Who", "When"],
+      correct: 2,
+      explanation: "だれ (Dare) means who."
+    },
+    {
+      question: "Translate: 'いつ いきます か。'",
+      options: ["Where are you going?", "When will you go?", "Who is going?", "Why are you going?"],
+      correct: 1,
+      explanation: "いつ (Itsu) means when."
+    },
+    {
+      question: "What is 'Enryo'?",
+      options: ["A type of Japanese food", "The concept of social reserve or restraint", "A formal way to say goodbye", "A particle for emphasis"],
+      correct: 1,
+      explanation: "Enryo is the practice of being modest or reserved in social situations."
+    },
+    {
+      question: "How do you ask 'Whose book is this?'",
+      options: ["これ は だれ の 本 です か", "これ は だれ 本 です か", "これ は なに の 本 です か", "だれ は これ 本 です か"],
+      correct: 0,
+      explanation: "だれ (Who) + の (Possession) = Whose."
+    },
+    {
+      question: "Which question word is used for 'Why'?",
+      options: ["いつ", "どうして", "どこ", "だれ"],
+      correct: 1,
+      explanation: "どうして (Doushite) means why."
+    },
+    {
+      question: "When should you use 'なに' (nani) instead of 'なん' (nan)?",
+      options: ["Before 'desu'", "Before the particle 'o' (を)", "Before the particle 'no' (の)", "Never"],
+      correct: 1,
+      explanation: "Use 'nani' when the following word doesn't start with D, T, or N (like the particle を)."
+    },
+    {
+      question: "Translate: 'トイレ は どこ です か。'",
+      options: ["What is a toilet?", "Is there a toilet?", "Where is the toilet?", "Who is in the toilet?"],
+      correct: 2,
+      explanation: "Doko means where."
+    },
+    {
+      question: "True or False: Japanese word order changes completely for questions.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. You just add 'ka' and replace the noun with a question word."
+    },
+    {
+      question: "If someone asks you 'Doushite Nihon e ikimasu ka', they want to know:",
+      options: ["When you are going", "Who you are going with", "Why you are going", "Where you are going"],
+      correct: 2,
+      explanation: "Doushite means why."
+    },
+    {
+      question: "How do you ask 'Which one?' when choosing from several items?",
+      options: ["なに", "どれ", "だれ", "いつ"],
+      correct: 1,
+      explanation: "どれ (Dore) is 'which one'."
+    },
+    {
+      question: "Translate: 'だれ が きました か。'",
+      options: ["Who came?", "Where did you go?", "What did you do?", "When will you come?"],
+      correct: 0,
+      explanation: "Dare (Who) + ga (Subject) + kimashita (came)."
+    },
+    {
+      question: "In the conversation 'Ocha o nomimasu ka', what does 'Ocha' mean?",
+      options: ["Water", "Coffee", "Tea", "Juice"],
+      correct: 2,
+      explanation: "Ocha is (green) tea."
+    }
+  ]}
+/>

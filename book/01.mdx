@@ -1,0 +1,396 @@
+---
+title: "Chapter 01 — Introduction & ひらがな (Hiragana)"
+level: "N5"
+chapter: "01"
+description: "Welcome to your Japanese journey! Start by understanding the three writing systems and mastering Hiragana, the foundational script for every sound in the language."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import KanaGrid from '../../components/book/KanaGrid.tsx'
+import CultureNote from '../../components/book/CultureNote.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Introduction & ひらがな (Hiragana)"
+  level="N5"
+  chapter="01"
+  locale="en"
+  objectives={[
+    "Understand the three Japanese writing systems: Hiragana, Katakana, and Kanji.",
+    "Read and write the 46 base Hiragana characters.",
+    "Master voiced marks (Dakuten and Handakuten) and combined sounds (Youon).",
+    "Read long vowels (おう・えい) and double consonants (small っ), and follow basic stroke-order rules.",
+    "Learn foundational vocabulary and start recognizing Japanese sounds."
+  ]}
+/>
+
+<SectionIntro level="N5" locale="en">
+Japanese may seem daunting at first with its three distinct writing systems, but it is one of the most logically structured languages in the world. **Hiragana** is your starting line. It represents every sound in the language and forms the grammatical skeleton of every sentence. Once you master these 46 characters, you can read and write anything in Japanese!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/01-hiragana-introduction.webp"
+  alt="Anime pixel-art illustration of a beginner Japanese learner discovering hiragana sound cards and the three Japanese writing systems."
+  width={1672}
+  height={941}
+/>
+
+## 1. The Three Writing Systems
+
+Before diving into Hiragana, it is important to understand how Japanese is written. A single sentence often uses all three systems together:
+
+1.  **Hiragana (ひらがな):** Used for native Japanese words and grammar particles. It is curvy and soft.
+2.  **Katakana (カタカナ):** Used for foreign loanwords and names. It is angular and sharp.
+3.  **Kanji (漢字):** Symbols borrowed from Chinese that represent concepts/meanings.
+
+<ExampleSentence client:load 
+  japanese="あき は きれいです。"
+  romaji="Aki wa kirei desu."
+  translation="Autumn is beautiful."
+  note="Written entirely in Hiragana."
+/>
+
+<ExampleSentence client:load 
+  japanese="コーヒー を のみます。"
+  romaji="Koohii o nomimasu."
+  translation="I drink coffee."
+  note="Combines Katakana (コーヒー) and Hiragana (を、のみます)."
+/>
+
+<ExampleSentence client:load 
+  japanese="日本 に いきます。"
+  romaji="Nihon ni ikimasu."
+  translation="I am going to Japan."
+  note="Combines Kanji (日本) and Hiragana (に、いきます)."
+/>
+
+## 2. The 46 Base Characters
+
+Japanese is composed of 5 pure vowels and 41 consonant-vowel combinations. The chart below is the standard "A-I-U-E-O" order used in dictionaries.
+
+<KanaGrid client:load script="hiragana" sections={['base', 'dakuten', 'yoon']} highlight={['shi', 'tsu']} />
+
+<ExampleSentence client:load 
+  japanese="あおい うみ"
+  romaji="Aoi umi"
+  translation="Blue sea"
+  note="Uses characters from the Vowel and M rows."
+/>
+
+<ExampleSentence client:load 
+  japanese="すし を たべます。"
+  romaji="Sushi o tabemasu."
+  translation="I eat sushi."
+  note="Note: を is pronounced 'o' when used as a particle."
+/>
+
+<ExampleSentence client:load 
+  japanese="さくら は きれいです。"
+  romaji="Sakura wa kirei desu."
+  translation="Cherry blossoms are beautiful."
+  note="Note: は is pronounced 'wa' when used as a particle."
+/>
+
+<CommonMistake client:load title="Three kana with special particle readings">
+
+A few kana are read differently when they act as grammar **particles** (you'll meet these in later chapters):
+
+- **は** → read **"wa"** as the topic particle (otherwise "ha").
+- **へ** → read **"e"** as the direction particle (otherwise "he").
+- **を** → read **"o"**; in modern Japanese it appears *only* as the object particle.
+
+Everywhere else, read them normally.
+
+</CommonMistake>
+
+## 3. Voiced Marks (Dakuten & Handakuten)
+
+By adding two small dots called `Dakuten` (゛) or a small circle `Handakuten` (゜) to specific rows, you create new sounds.
+
+<GrammarBox client:load 
+  pattern="k → g, s → z, t → d, h → b / h → p"
+  meaning="Voicing shifts the sound of the consonant."
+  formation="Character + ゛(Dakuten) OR ゜(Handakuten)"
+  examples={[
+    { japanese: "か (ka) ＋ ゛ ＝ が (ga)", romaji: "ka -> ga", translation: "Unvoiced 'k' becomes voiced 'g'" },
+    { japanese: "さ (sa) ＋ ゛ ＝ ざ (za)", romaji: "sa -> za", translation: "Unvoiced 's' becomes voiced 'z'" },
+    { japanese: "は (ha) ＋ ゜ ＝ ぱ (pa)", romaji: "ha -> pa", translation: "Unvoiced 'h' becomes a popped 'p'" }
+  ]}
+/>
+
+## 4. Combinations (Youon)
+
+When a character from the **"i" column** (ki, shi, chi, ni, hi, mi, ri) is followed by a **small ya (ゃ), yu (ゅ), or yo (ょ)**, the sounds blend together into a single syllable.
+
+<ExampleSentence client:load 
+  japanese="おちゃ を のみます。"
+  romaji="Ocha o nomimasu."
+  translation="I drink green tea."
+  note="ち (chi) + ゃ (small ya) = ちゃ (cha)."
+/>
+
+<ExampleSentence client:load 
+  japanese="きゅうしゅう は にほん の しま です。"
+  romaji="Kyuushuu wa Nihon no shima desu."
+  translation="Kyushu is a Japanese island."
+  note="き (ki) + ゅ (small yu) = きゅ (kyu)."
+/>
+
+<ExampleSentence client:load 
+  japanese="きょう は あついです。"
+  romaji="Kyou wa atsui desu."
+  translation="Today is hot."
+  note="き (ki) + ょ (small yo) = きょ (kyo)."
+/>
+
+## 5. Long Vowels (長音, Chouon)
+
+A **long vowel** is held for two beats (mora) instead of one — and the length can change the meaning of a word. In hiragana you extend a vowel by adding a second vowel kana. Four rows simply repeat the vowel; the **お** and **え** rows follow a special rule.
+
+<GrammarBox client:load 
+  pattern="あ→ああ・い→いい・う→うう・え→えい・お→おう"
+  meaning="Hold the vowel for two beats. The え-row usually adds い, and the お-row usually adds う."
+  formation="[kana] + matching vowel (お-row + う, え-row + い)"
+  examples={[
+    { japanese: "おかあさん", romaji: "okaasan", translation: "mother (a + あ)" },
+    { japanese: "おにいさん", romaji: "oniisan", translation: "older brother (i + い)" },
+    { japanese: "くうき", romaji: "kuuki", translation: "air (u + う)" },
+    { japanese: "せんせい", romaji: "sensei", translation: "teacher (え-row + い → long 'e')" },
+    { japanese: "がっこう", romaji: "gakkou", translation: "school (お-row + う → long 'o')" }
+  ]}
+/>
+
+<CommonMistake client:load title="Spelling vs. sound: おう and えい">
+
+Even though **おう** is written with う, it is pronounced as a long **"o"** (like *oo*), and **えい** is pronounced as a long **"e"** (like *ee*). That is why this book romanizes them as `ou` and `ei` — matching the kana you actually write.
+
+A handful of words break the pattern and double the vowel directly (おお / ええ) — just memorize these:
+
+- **おおきい** (ookii) — big
+- **とおい** (tooi) — far
+- **こおり** (koori) — ice
+- **おねえさん** (oneesan) — older sister
+
+</CommonMistake>
+
+## 6. Double Consonants (The Small っ, Sokuon)
+
+A **small っ** — written smaller and lower than a full つ — is called the *sokuon*. It is never read on its own; instead it creates a short, sharp pause that **doubles the consonant** of the kana that follows.
+
+<ExampleSentence client:load 
+  japanese="きって"
+  romaji="kitte"
+  translation="postage stamp"
+  note="The small っ doubles the 't': ki–(pause)–te."
+/>
+
+<ExampleSentence client:load 
+  japanese="ざっし"
+  romaji="zasshi"
+  translation="magazine"
+  note="っ + し doubles the 's' sound."
+/>
+
+<ExampleSentence client:load 
+  japanese="がっこう"
+  romaji="gakkou"
+  translation="school"
+  note="Combines a double consonant (っこ) and a long vowel (おう)."
+/>
+
+<CommonMistake client:load title="Small っ vs. full つ">
+
+Size matters! The small **っ** marks a pause, while the full-size **つ** is the syllable *tsu*. Mixing them up changes the word:
+
+- **きって** (kitte) = stamp — but **きて** (kite) = "come."
+- Hold the pause for a full beat; rushing it makes you say a different word.
+
+</CommonMistake>
+
+## 7. Writing Kana: Stroke Order
+
+You can *read* kana in any order, but *writing* them in the correct **stroke order** keeps your characters balanced and legible — and it builds the muscle memory you'll rely on later for kanji. Three universal rules cover almost every kana:
+
+1. **Top → bottom** — write upper strokes before lower ones.
+2. **Left → right** — write left strokes before right ones.
+3. **Horizontal before vertical** — when strokes cross, the horizontal one usually comes first.
+
+Enclosing or outer strokes generally come before what they contain, and most kana are written in just **1–4 strokes**.
+
+<CommonMistake client:load title="Direction is part of the character">
+
+Drawing a stroke in the wrong direction (e.g. bottom-to-top) changes its shape and makes look-alike kana harder to tell apart. The classic pair **シ (shi)** and **ツ (tsu)** in katakana differ mainly in stroke *direction* — so building the right habit now pays off in Chapter 2.
+
+</CommonMistake>
+
+<CultureNote client:load title="The Origins of Hiragana" ja="ひらがなの由来">
+
+Hiragana was developed in the 9th century by simplifying the cursive forms of Chinese characters. For a long time, it was known as **onnade** (女手), or "woman's hand," because it was primarily used by women in the imperial court to write poetry and literature, while men used Kanji for official documents. *The Tale of Genji* — often called the world's first novel — was written largely in Hiragana. Today it is used by everyone and is valued for its fluid, aesthetic beauty.
+
+</CultureNote>
+
+## Practical Conversations
+
+<BookImage
+  src="/book-images/01-hiragana-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of a teacher and student practicing hiragana dialogue with sushi, school, small っ, and おう study cards."
+  width={1693}
+  height={929}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load 
+  title="Reading Hiragana in Real Words"
+  lines={[
+    { speaker: "Student", japanese: "これ は なん です か。", romaji: "Kore wa nan desu ka.", translation: "What is this?" },
+    { speaker: "Teacher", japanese: "これ は 「すし」 です。", romaji: "Kore wa 'sushi' desu.", translation: "This is 'sushi'." },
+    { speaker: "Student", japanese: "「す」 と 「し」 です ね。", romaji: "'Su' to 'shi' desu ne.", translation: "It's 'su' and 'shi', right?" },
+    { speaker: "Teacher", japanese: "はい、そうです。", romaji: "Hai, sou desu.", translation: "Yes, that's right." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Finding Small っ and Long Vowels"
+  lines={[
+    { speaker: "Student", japanese: "これ は 「がっこう」 です か。", romaji: "Kore wa 'gakkou' desu ka.", translation: "Is this 'gakkou' (school)?" },
+    { speaker: "Teacher", japanese: "はい。「がっこう」 です。", romaji: "Hai. 'Gakkou' desu.", translation: "Yes. It is 'gakkou'." },
+    { speaker: "Student", japanese: "ちいさい っ と おう が あります ね。", romaji: "Chiisai tsu to ou ga arimasu ne.", translation: "It has a small っ and おう, right?" },
+    { speaker: "Teacher", japanese: "はい。おう は ながい お です。", romaji: "Hai. Ou wa nagai o desu.", translation: "Yes. おう is a long o." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  locale="en"
+  takeaways={[
+    "Hiragana is the foundational writing system representing all 46 basic sounds.",
+    "Japanese uses three systems: Hiragana (native), Katakana (foreign), and Kanji (meaning).",
+    "Dakuten (゛) and Handakuten (゜) modify consonants to create sounds like G, Z, D, B, and P.",
+    "Combined sounds (Youon) are formed by adding a small ya, yu, or yo to 'i' column characters.",
+    "Long vowels (おう→long 'o', えい→long 'e') are held for two beats and can change a word's meaning.",
+    "The small っ (sokuon) marks a pause that doubles the next consonant, as in きって (kitte).",
+    "Proper stroke order — top→bottom, left→right, horizontal→vertical — keeps writing legible."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your mastery of Hiragana!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which writing system is used for native Japanese words and grammar?",
+      options: ["Kanji", "Katakana", "Hiragana", "Romaji"],
+      correct: 2,
+      explanation: "Hiragana is the primary script for native words and grammatical particles."
+    },
+    {
+      question: "Which of these is the correct Hiragana for 'A'?",
+      options: ["い", "う", "あ", "お"],
+      correct: 2,
+      explanation: "あ is 'A'. い is 'I', う is 'U', and お is 'O'."
+    },
+    {
+      question: "How do you produce the 'GA' sound in Hiragana?",
+      options: ["か + ゜", "か + ゛", "さ + ゛", "た + ゛"],
+      correct: 1,
+      explanation: "Adding a dakuten (゛) to 'KA' (か) makes 'GA' (が)."
+    },
+    {
+      question: "Which character is 'SHI'?",
+      options: ["ち", "し", "つ", "さ"],
+      correct: 1,
+      explanation: "し is 'SHI'. ち is 'CHI', つ is 'TSU', and さ is 'SA'."
+    },
+    {
+      question: "How is 'PA' written?",
+      options: ["ば", "ぱ", "は", "ま"],
+      correct: 1,
+      explanation: "Adding a handakuten (゜) to 'HA' (は) makes 'PA' (ぱ)."
+    },
+    {
+      question: "What sound does 'き' + 'ょ' (small) produce?",
+      options: ["kiyo", "kyo", "kiya", "kya"],
+      correct: 1,
+      explanation: "The small 'yo' blends with 'ki' to form the single syllable 'kyo'."
+    },
+    {
+      question: "Which consonant can be written without a vowel?",
+      options: ["s (す)", "k (く)", "n (ん)", "m (む)"],
+      correct: 2,
+      explanation: "ん (n) is the only independent consonant in Japanese."
+    },
+    {
+      question: "Correctly spell 'NEKO' (cat).",
+      options: ["ぬこ", "ねこ", "わこ", "めこ"],
+      correct: 1,
+      explanation: "ね is 'NE' and こ is 'KO'."
+    },
+    {
+      question: "What is the correct reading for 'おはよう'?",
+      options: ["o-ha-yo-u", "o-ha-yu-u", "a-ha-yo-u", "o-ho-yo-u"],
+      correct: 0,
+      explanation: "It is read as 'o-ha-yo-u'."
+    },
+    {
+      question: "Identify 'ME'.",
+      options: ["ぬ", "ね", "め", "あ"],
+      correct: 2,
+      explanation: "め is 'ME'. It looks like ぬ (nu) but without the loop."
+    },
+    {
+      question: "Read the word: 'おちゃ'",
+      options: ["o-ki-ya", "o-chi-ya", "o-cha", "o-sa"],
+      correct: 2,
+      explanation: "お (o) + ちゃ (cha) = ocha (tea)."
+    },
+    {
+      question: "Which row comes after the S-row (sa, shi, su, se, so)?",
+      options: ["K-row", "T-row", "N-row", "H-row"],
+      correct: 1,
+      explanation: "The order is A, K, S, T, N, H, M, Y, R, W."
+    },
+    {
+      question: "What is 'tsu' in Hiragana?",
+      options: ["す", "つ", "ち", "ぬ"],
+      correct: 1,
+      explanation: "つ is 'tsu'. す is 'su'."
+    },
+    {
+      question: "Read the word: 'かぜ'",
+      options: ["kaze", "kase", "base", "gabe"],
+      correct: 0,
+      explanation: "か (ka) + ぜ (ze - which is se + dakuten)."
+    },
+    {
+      question: "How is the long vowel in 'がっこう' (school) written?",
+      options: ["お-row + お", "お-row + う", "お-row + ー", "お-row + あ"],
+      correct: 1,
+      explanation: "The お-row usually forms a long 'o' by adding う (こ + う), so it is written こう and pronounced like a long 'o'."
+    },
+    {
+      question: "What does the small っ in 'きって' (stamp) do?",
+      options: ["Adds a 'tsu' sound", "Doubles the next consonant", "Makes a long vowel", "Marks a question"],
+      correct: 1,
+      explanation: "The small っ (sokuon) is a pause that doubles the following consonant: ki-(pause)-te → kitte. Compare きて (kite, 'come')."
+    },
+    {
+      question: "What does 'onnade' mean in the context of Hiragana's history?",
+      options: ["Beautiful handwriting", "Woman's hand", "Court poetry", "Simplified script"],
+      correct: 1,
+      explanation: "Hiragana was once called 'onnade' (woman's hand) due to its historical use by women."
+    }
+  ]}
+/>

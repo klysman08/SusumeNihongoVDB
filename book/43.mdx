@@ -1,0 +1,208 @@
+---
+title: "Chapter 43 — Giving and Receiving"
+level: "N3"
+chapter: 43
+unit: 1
+unitTitle: "Intermediate Foundations"
+topics: "Benefactive perspective, social distance, and considerate wording"
+description: "Choose あげる, くれる, もらう, and favor expressions by tracking perspective, relationship, and politeness."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import CultureNote from '../../components/book/CultureNote.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader
+  title="Giving and Receiving (授受表現)"
+  level="N3"
+  chapter={43}
+  objectives={[
+    "Choose あげる, くれる, or もらう by identifying whose perspective the speaker uses.",
+    "Use 〜てあげる, 〜てくれる, and 〜てもらう to describe favors.",
+    "Recognize when a favor expression carries gratitude, request, or social-distance nuance.",
+    "Use いただく appropriately as a humble form of receiving."
+  ]}
+/>
+
+<SectionIntro level="N3">
+Giving and receiving expressions are not only about the direction of an object. They tell the listener whose viewpoint matters and how the people involved are connected. At N3, choosing the right expression makes your Japanese warmer, clearer, and more socially natural.
+</SectionIntro>
+
+## 1. Start with the direction of the benefit
+
+The key is to decide who stands at the center of the sentence.
+
+* **あげる**: someone gives to another person, moving away from the speaker or the speaker's group.
+* **くれる**: someone gives to the speaker or someone in the speaker's group.
+* **もらう**: the speaker or another receiver gets something from a giver.
+
+<VocabTable
+  data={[
+    { word: "授受", reading: "じゅじゅ", romaji: "juju", meaning: "giving and receiving", type: "noun" },
+    { word: "視点", reading: "してん", romaji: "shiten", meaning: "viewpoint; perspective", type: "noun" },
+    { word: "世話", reading: "せわ", romaji: "sewa", meaning: "care; help; looking after", type: "noun" },
+    { word: "手伝う", reading: "てつだう", romaji: "tetsudau", meaning: "to help", type: "verb" },
+    { word: "迷惑", reading: "めいわく", romaji: "meiwaku", meaning: "trouble; inconvenience", type: "noun" },
+    { word: "いただく", reading: "いただく", romaji: "itadaku", meaning: "to receive (humble); to eat/drink (humble)", type: "verb" }
+  ]}
+/>
+
+<ParticleCompare
+  client:load
+  title="One gift, three perspectives"
+  items={[
+    { label: "あげる", role: "Giver's action toward someone else", example: "私は妹に本をあげた。", note: "I gave my younger sister a book." },
+    { label: "くれる", role: "A gift comes toward me / my group", example: "友達が私に本をくれた。", note: "A friend gave me a book." },
+    { label: "もらう", role: "Receiver's action", example: "私は友達から本をもらった。", note: "I received a book from a friend." },
+    { label: "いただく", role: "Humble receiving from someone higher or outside", example: "先生から本をいただいた。", note: "I received a book from my teacher (humbly)." }
+  ]}
+/>
+
+## 2. あげる, くれる, and もらう with things
+
+<GrammarBox client:load
+  pattern="Giver は Recipient に Thing を あげる / くれる"
+  meaning="Give a thing; くれる means the recipient is me or my in-group."
+  formation="Use に for the recipient and を for the thing."
+  examples={[
+    { japanese: "私は友達に誕生日カードをあげました。", romaji: "watashi wa tomodachi ni tanjoubi kaado o agemashita.", translation: "I gave my friend a birthday card." },
+    { japanese: "姉が私に新しいペンをくれました。", romaji: "ane ga watashi ni atarashii pen o kuremashita.", translation: "My older sister gave me a new pen." },
+    { japanese: "友達が母に花をくれました。", romaji: "tomodachi ga haha ni hana o kuremashita.", translation: "My friend gave my mother flowers." }
+  ]}
+/>
+
+<GrammarBox client:load
+  pattern="Receiver は Giver に / から Thing を もらう"
+  meaning="Receive a thing from someone."
+  formation="Use に or から for the giver. With an organization, から is especially common."
+  examples={[
+    { japanese: "私は先輩からアドバイスをもらいました。", romaji: "watashi wa senpai kara adobaisu o moraimashita.", translation: "I received advice from a senior." },
+    { japanese: "弟は先生に賞をもらった。", romaji: "otouto wa sensei ni shou o moratta.", translation: "My younger brother received an award from the teacher." },
+    { japanese: "会社からメールをもらいました。", romaji: "kaisha kara meeru o moraimashita.", translation: "I received an email from the company." }
+  ]}
+/>
+
+<CommonMistake title="くれる always comes toward the speaker's side">
+  <p>Do not choose `くれる` merely because the giver is kind. In `友達が妹に本をあげた`, the friend gives a book to your sister. Because your sister is in the speaker's in-group, `友達が妹に本をくれた` is also natural when you are speaking from your family's perspective.</p>
+</CommonMistake>
+
+## 3. Favors: 〜てあげる, 〜てくれる, and 〜てもらう
+
+Adding the て-form turns giving and receiving into a helpful action. These forms often communicate that someone benefited from the action.
+
+<GrammarBox client:load
+  pattern="V てあげる / V てくれる / V てもらう"
+  meaning="Do a favor for someone / someone does me a favor / receive someone's help."
+  formation="Verb て-form + あげる, くれる, or もらう."
+  examples={[
+    { japanese: "私は友達に日本語を教えてあげた。", romaji: "watashi wa tomodachi ni nihongo o oshiete ageta.", translation: "I taught Japanese to my friend." },
+    { japanese: "友達が宿題を手伝ってくれた。", romaji: "tomodachi ga shukudai o tetsudatte kureta.", translation: "My friend helped me with my homework." },
+    { japanese: "私は友達に宿題を手伝ってもらった。", romaji: "watashi wa tomodachi ni shukudai o tetsudatte moratta.", translation: "I had my friend help me with my homework." }
+  ]}
+/>
+
+`〜てくれる` naturally includes appreciation from the speaker. `〜てもらう` puts the receiver at the center and is useful when explaining how you got help or arranging it: `先生に見てもらう` (have the teacher look at it).
+
+<ExampleSentence client:load
+  japanese="先生に作文を見ていただけますか。"
+  romaji="sensei ni sakubun o mite itadakemasu ka."
+  translation="Could I have you look at my composition, teacher?"
+  note="〜ていただく is a humble way to receive a favor from someone you treat with respect."
+/>
+
+## 4. Social relationships and considerate wording
+
+`〜てあげる` can sound as if the speaker is emphasizing their own kindness. It is normally fine for a clear benefit to a child, family member, close friend, or someone who asked for help. For a person of higher status, avoid presenting your action as a favor to them; use respectful or neutral wording instead.
+
+<GrammarBox client:load
+  pattern="差し上げる / くださる / いただく"
+  meaning="Humble giving / respectful giving toward me / humble receiving."
+  formation="Use these honorific alternatives when the relationship calls for them."
+  examples={[
+    { japanese: "先生に資料を差し上げました。", romaji: "sensei ni shiryou o sashiagemashita.", translation: "I gave the teacher the materials (humbly)." },
+    { japanese: "先生が推薦状を書いてくださいました。", romaji: "sensei ga suisenjou o kaite kudasaimashita.", translation: "The teacher kindly wrote me a recommendation letter." },
+    { japanese: "部長から貴重なご意見をいただきました。", romaji: "buchou kara kichou na goiken o itadakimashita.", translation: "I received valuable feedback from the department manager (humbly)." }
+  ]}
+/>
+
+<CultureNote title="Favors are relational, not transactions" ja="気配り">
+  <p>Japanese favor expressions frequently make gratitude and social distance visible. Saying <strong>手伝ってくれてありがとう</strong> (“Thank you for helping me”) names both the helpful action and its direction toward you. In formal settings, expressions such as <strong>〜ていただく</strong> and <strong>〜てくださる</strong> help acknowledge the other person's consideration.</p>
+</CultureNote>
+
+## 5. Context dialogue: revising an application
+
+<ConversationDialog client:load
+  title="Asking for feedback"
+  lines={[
+    { speaker: "Hana", japanese: "応募書類を書いたんだけど、先生に見てもらったほうがいいかな。", romaji: "ouboshorui o kaita n da kedo, sensei ni mite moratta hou ga ii kana.", translation: "I wrote my application documents; do you think I should have the teacher look at them?" },
+    { speaker: "Yui", japanese: "うん。先生は前にも私の作文を直してくださったよ。", romaji: "un. sensei wa mae ni mo watashi no sakubun o naoshite kudasatta yo.", translation: "Yes. The teacher kindly corrected my composition before too." },
+    { speaker: "Hana", japanese: "じゃあ、明日お願いしてみる。忙しそうだったら、無理に見てもらわない。", romaji: "jaa, ashita onegai shite miru. isogashisou dattara, muri ni mite morawanai.", translation: "Then I will try asking tomorrow. If the teacher seems busy, I will not push them to look at it." },
+    { speaker: "Yui", japanese: "それがいいと思う。終わったら、私にも見せてくれる？", romaji: "sore ga ii to omou. owattara, watashi ni mo misete kureru?", translation: "I think that is a good idea. When you are done, will you show it to me too?" }
+  ]}
+/>
+
+## 6. Guided practice
+
+Choose the expression that best matches the perspective.
+
+1. “My friend gave me a map.”
+2. “I received a map from my friend.”
+3. “My younger brother helped his friend.”
+4. “The teacher kindly explained the grammar to me.”
+
+<details>
+  <summary>Check your answers</summary>
+  <ol>
+    <li>`友達が私に地図をくれた。`</li>
+    <li>`私は友達から地図をもらった。`</li>
+    <li>`弟は友達を手伝ってあげた。` (or simply `弟は友達を手伝った。`)</li>
+    <li>`先生が私に文法を説明してくださいました。`</li>
+  </ol>
+</details>
+
+## 7. Reading practice: a thank-you message
+
+> 昨日は引っ越しを手伝ってくれて、本当にありがとう。重い荷物を運んでもらったおかげで、予定より早く終わりました。新しい部屋にはまだ何もないけれど、来週、みんなを招待して食事を作ってあげたいです。そのときは、ぜひ来てください。
+
+**Reading check:** Who performed each favor? Find `〜てくれて`, `〜てもらった`, and `〜てあげたい`, then explain whose viewpoint each expression uses.
+
+Translation: “Thank you very much for helping me move yesterday. Thanks to having you carry the heavy luggage, we finished earlier than planned. There is still nothing in my new room, but next week I would like to invite everyone and cook a meal for them. Please come then.”
+
+## 8. Communication and flashcard review
+
+**Speak or write:** thank someone for a real or imagined favor using `〜てくれてありがとう`. Then describe the same event from your own perspective with `〜てもらった`.
+
+**Review flashcards:** `あげる` direction; `くれる` direction; `もらう` perspective; `〜てくれる` gratitude; `〜ていただく` humble receiving.
+
+<ChapterSummary
+  takeaways={[
+    "あげる moves a gift or benefit away from the speaker's side; くれる moves it toward the speaker or in-group.",
+    "もらう centers the receiver and can use に or から for the giver.",
+    "Favor expressions use the same perspective system: てあげる, てくれる, and てもらう.",
+    "〜てくれる often conveys gratitude; 〜てもらう focuses on receiving help or arranging it.",
+    "Use honorific alternatives such as くださる and いただく to reflect social distance and respect."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock
+  client:load
+  questions={[
+    { question: "Which sentence means 'My friend gave me a book'?", options: ["私は友達に本をあげた。", "友達が私に本をくれた。", "私は友達に本をもらった。", "友達が本をもらった。"], correct: 1, explanation: "くれる is used when someone gives something to the speaker or the speaker's in-group." },
+    { question: "Which sentence centers the receiver?", options: ["友達が花をくれた。", "私は友達から花をもらった。", "私は友達に花をあげた。", "友達に花をあげるな。"], correct: 1, explanation: "もらう describes receiving from the receiver's perspective." },
+    { question: "What does 友達が手伝ってくれた imply?", options: ["I helped my friend", "My friend helped me or my in-group", "My friend was helped", "My friend will not help"], correct: 1, explanation: "〜てくれる means someone performed a helpful action toward the speaker's side." },
+    { question: "Which is a humble way to say 'I received advice from the teacher'?", options: ["先生に助言をあげました", "先生が助言をくれました", "先生から助言をいただきました", "先生に助言をくださいました"], correct: 2, explanation: "いただく is the humble form of receiving." },
+    { question: "Why can 〜てあげる need care?", options: ["It is grammatically incorrect", "It can overemphasize the speaker's kindness", "It is only used in the past", "It cannot follow a verb"], correct: 1, explanation: "It is grammatical, but can sound patronizing when the relationship does not make the benefit clear." },
+    { question: "Which expression is most natural for 'Could I have the teacher check my essay?'", options: ["先生に作文を見てあげますか", "先生に作文を見ていただけますか", "先生が作文を見てもらいますか", "先生に作文を見るな"], correct: 1, explanation: "〜ていただけますか humbly asks to receive a favor from the teacher." }
+  ]}
+/>

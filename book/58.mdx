@@ -1,0 +1,47 @@
+---
+title: "Chapter 58 — Sequence and Event Triggers"
+level: "N3"
+chapter: 58
+unit: 5
+unitTitle: "Written and Lexical Japanese"
+topics: "Formal occasions, sudden triggers, first-time realisation, prerequisites, and time windows"
+description: "Order events precisely with 際, とたん, てはじめて, てからでないと, and うちに."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Sequence and Event Triggers" level="N3" chapter={58} objectives={["Distinguish a formal occasion from an unexpected instant.", "Mark a prerequisite that must occur first.", "Use a changing time window before an opportunity disappears."]} />
+<SectionIntro level="N3">Sequence is not only “before” and “after.” These forms show whether an event is formal, sudden, newly revelatory, a strict prerequisite, or possible only within a limited window.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "手続き", reading: "てつづき", meaning: "procedure", type: "noun" }, { word: "直後", reading: "ちょくご", meaning: "immediately after", type: "noun" }, { word: "許可", reading: "きょか", meaning: "permission", type: "noun" }, { word: "機会", reading: "きかい", meaning: "opportunity", type: "noun" }, { word: "実感する", reading: "じっかんする", meaning: "to realise through experience", type: "verb" }, { word: "突然", reading: "とつぜん", meaning: "suddenly", type: "adv" }]} />
+<PatternCompare client:load title="How are the two events related?" items={[
+  { pattern: "V-る／V-た／Nの際（に）", meaning: "when; on the occasion of", use: "A formal time or occasion, common in guidance and notices.", example: "入館の際、身分証を提示してください。", translation: "Please show identification when entering.", register: "formal occasion" },
+  { pattern: "V-たとたん（に）", meaning: "the moment; just as", use: "A sudden, often unexpected event follows immediately. The second event is not normally a deliberate command or plan.", example: "外に出たとたん、雨が降り出した。", translation: "The moment I went outside, it started raining.", register: "sudden trigger" },
+  { pattern: "V-てはじめて", meaning: "only after; not until", use: "The first event enables a new realisation, state, or experience.", example: "一人で暮らしてはじめて、家事の大変さが分かった。", translation: "Only after living alone did I understand how demanding housework is.", register: "realisation" },
+  { pattern: "V-てからでないと", meaning: "not until after; unless first", use: "The first action is a necessary prerequisite for the second.", example: "上司の許可を得てからでないと、公開できない。", translation: "It cannot be published until permission is obtained from a manager.", register: "prerequisite" },
+  { pattern: "plain + うちに", meaning: "while; before a state changes", use: "Act within a time or state that may end. With negative verbs: before it happens.", example: "忘れないうちに、メモしておこう。", translation: "I’ll note it down before I forget.", register: "time window" }
+]} />
+<CommonMistake title="とたん is not a planned sequence"><p><strong>家に着いたとたん、電話が鳴った</strong> is natural because the call is sudden. For a deliberate next action, use <strong>家に着いてから、電話した</strong>.</p></CommonMistake>
+<PracticeBlock client:load instructions="Make the event relationship explicit." items={[{ prompt: "Formal notice: return this card when leaving.", answer: "退館の際、このカードを返してください。", explanation: "際 suits formal procedural guidance." }, { prompt: "The computer stopped the instant you opened the file.", answer: "ファイルを開いたとたん、パソコンが動かなくなった。", explanation: "とたん highlights the sudden immediate event." }, { prompt: "You cannot register until you verify your email address.", answer: "メールアドレスを確認してからでないと、登録できません。", explanation: "てからでないと makes verification a prerequisite." }]} />
+<ReadingPractice client:load title="Using the shared studio" genre="procedural notice" targetTime="3 minutes" passage={<>スタジオを利用する際は、受付で予約番号を伝えてください。説明を受けてからでないと、機材を使うことはできません。初めての方は、担当者がいるうちに操作方法を確認してください。以前、利用者が電源を入れたとたんに警告音が鳴ったことがありましたが、正しい順序で操作すれば問題ありません。</>} glossary={[{ word: "機材", reading: "きざい", meaning: "equipment" }, { word: "警告音", reading: "けいこくおん", meaning: "warning sound" }]} questions={[{ question: "What must happen before equipment can be used?", answer: "The user must receive an explanation.", explanation: "てからでないと establishes the prerequisite." }, { question: "Why should first-time users ask while staff are present?", answer: "The opportunity may disappear once the staff member leaves.", explanation: "いるうちに marks a limited time window." }]} />
+<ListeningPractice client:load title="A sudden interruption" situation="Listen for the immediate trigger." script="発表を始めたとたん、会場の電気が消えました。復旧してはじめて、機械の故障ではなかったと分かりました。" questions={[{ question: "What happened immediately, and what was understood later?", answer: "The lights went out immediately; after power returned, they realised the equipment was not broken.", explanation: "とたん marks the sudden event and てはじめて the later realisation." }]} />
+<ChapterSummary takeaways={["際 marks a formal occasion; とたん marks a sudden immediate event.", "てはじめて introduces a newly possible realisation.", "てからでないと sets a prerequisite; うちに uses a limited time window."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "申し込みの＿＿、この番号が必要です。", options: ["際", "とたん", "結果", "こそ"], correct: 0, explanation: "際 marks a formal occasion." },
+  { question: "ドアを開けた＿＿、猫が飛び出した。", options: ["際に", "とたん", "うちに", "てからでないと"], correct: 1, explanation: "The cat's action is sudden and immediate." },
+  { question: "親になって＿＿、親の気持ちが分かった。", options: ["はじめて", "際", "うちに", "とたんを"], correct: 0, explanation: "てはじめて introduces the new realisation." },
+  { question: "料金を払って＿＿、予約は確定しない。", options: ["うちに", "からでないと", "とたん", "際で"], correct: 1, explanation: "Payment is the prerequisite." },
+  { question: "温かい＿＿食べてください。", options: ["とたん", "うちに", "際", "結果"], correct: 1, explanation: "Eat it before the warm state ends." },
+  { question: "Which is unnatural?", options: ["着いたとたん雨が降った。", "着いたとたん電話してください。", "着いた際に連絡した。", "着いてからでないと入れない。"], correct: 1, explanation: "A deliberate request does not naturally follow とたん." },
+  { question: "忘れないうちに means…", options: ["after forgetting", "before forgetting", "because of forgetting", "even if forgotten"], correct: 1, explanation: "Negative + うちに means before the state occurs." },
+  { question: "Which is most appropriate in a public instruction?", options: ["入るとたん", "入館の際", "入ってはじめて", "入るこそ"], correct: 1, explanation: "Nの際 is formal and procedural." }
+]} />

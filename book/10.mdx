@@ -1,0 +1,294 @@
+---
+title: "Chapter 10 — Verb Conjugation: ます-form"
+level: "N5"
+chapter: "10"
+description: "Take your first step into verb conjugation. Learn how to turn plain dictionary form verbs into the polite 'masu' form to speak respectfully to others."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import ConjugationTable from '../../components/book/ConjugationTable.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Verb Conjugation: ます-form"
+  level="N5"
+  chapter="10"
+  objectives={[
+    "Understand the importance of the polite (ます) form in daily life.",
+    "Conjugate Group 2 (ru-verbs) by dropping る.",
+    "Conjugate Group 1 (u-verbs) by shifting the vowel to the 'i' row.",
+    "Master the polite forms of irregular verbs (する and くる)."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Every Japanese verb belongs to one of **three groups**, and the group decides exactly how a verb conjugates — for politeness, tense, and every form you'll ever learn. Using the plain "dictionary form" (like *taberu*) with strangers, teachers, or superiors can sound too casual or even rude. To speak politely, we use the **ます (masu) form**: the standard polite way to talk about the present and future.
+
+This chapter teaches you to recognize each group and conjugate its ます-form. Chapter 12 then goes deeper into classifying verbs and using the plain dictionary form.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/10-masu-form.webp"
+  alt="Anime pixel-art illustration of Japanese verb groups transforming dictionary-form verbs into polite ます-form cards."
+  width={1536}
+  height={1024}
+/>
+
+> [!NOTE]
+> **Spotting the groups (quick version):**
+> - **Group 2 (ru-verbs):** end in る with an **i** or **e** sound before it — たべ**る** (tabe-ru), み**る** (mi-ru).
+> - **Group 1 (u-verbs):** every other verb — のむ, かく, はなす, and some る-verbs like かえ**る** (to return).
+> - **Group 3 (irregular):** only する and くる.
+
+## 1. Group 2 (ru-verbs): The Easy Drop
+
+Group 2 verbs (like *taberu*, *miru*) are the simplest to conjugate. You just remove the final **る** and replace it with **ます**.
+
+<GrammarBox client:load 
+  pattern="[Root] ＋ ます"
+  meaning="Polite Present Affirmative for Group 2."
+  formation="Drop る + Add ます (Affirmative) / ません (Negative)"
+  examples={[
+    { japanese: "リンゴ を たべます。", romaji: "Ringo o tabemasu.", translation: "I eat an apple." },
+    { japanese: "テレビ を みます。", romaji: "Terebi o mimasu.", translation: "I watch TV." },
+    { japanese: "しちじ に おきます。", romaji: "Shichi-ji ni okimasu.", translation: "I wake up at 7:00." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="じゅうじ に ねます。"
+  romaji="Juu-ji ni nemasu."
+  translation="I go to sleep at 10:00."
+/>
+
+## 2. Group 1 (u-verbs): The Vowel Shift
+
+Group 1 verbs (like *nomu*, *kaku*) require a small change. You take the final character (which ends in an "u" sound) and change it to the corresponding character in the **"i" row** of the Hiragana chart. Then add **ます**.
+
+*Example: の**む** (no-mu) ➔ の**み** (no-mi) + ます ➔ のみます (nomimasu).*
+
+<GrammarBox client:load 
+  pattern="[i-row shift] ＋ ます"
+  meaning="Polite Present Affirmative for Group 1."
+  formation="Change final 'u' sound to 'i' sound + Add ます"
+  examples={[
+    { japanese: "みず を のみます。", romaji: "Mizu o nomimasu.", translation: "I drink water." },
+    { japanese: "てがみ を かきます。", romaji: "Tegami o kakimasu.", translation: "I write a letter." },
+    { japanese: "にほんご を はなします。", romaji: "Nihongo o hanashimasu.", translation: "I speak Japanese." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="ほん を よみます。"
+  romaji="Hon o yomimasu."
+  translation="I read a book."
+/>
+
+<ExampleSentence client:load 
+  japanese="うちに かえります。"
+  romaji="Uchi ni kaerimasu."
+  translation="I return home."
+/>
+
+## 3. Group 3 (Irregular): Memorize!
+
+There are only two irregular verbs, so just memorize their polite forms:
+- **する (suru)** ➔ **します (shimasu)** [to do]
+- **くる (kuru)** ➔ **きます (kimasu)** [to come]
+
+<GrammarBox client:load 
+  pattern="します ／ きます"
+  meaning="Polite forms of 'do' and 'come'."
+  formation="Memorize: suru -> shimasu, kuru -> kimasu"
+  examples={[
+    { japanese: "べんきょう を します。", romaji: "Benkyou o shimasu.", translation: "I study." },
+    { japanese: "がっこう に きます。", romaji: "Gakkou ni kimasu.", translation: "I come to school." },
+    { japanese: "テニス を します。", romaji: "Tenisu o shimasu.", translation: "I play tennis." }
+  ]}
+/>
+
+## 4. The Negative: 〜ません (masen)
+
+To say you *don't* do something, the rules for the root word stay exactly the same, but you use **ません** instead of **ます**.
+
+<VocabTable data={[
+  { word: 'たべません', romaji: 'tabemasen', meaning: 'Do not eat', type: 'Negative' },
+  { word: 'のみません', romaji: 'nomimasen', meaning: 'Do not drink', type: 'Negative' },
+  { word: 'しません', romaji: 'shimasen', meaning: 'Do not do', type: 'Negative' },
+  { word: 'きません', romaji: 'kimasen', meaning: 'Do not come', type: 'Negative' }
+]} />
+
+<ConjugationTable
+  client:load
+  title="ます-form at a glance (one verb per group)"
+  rows={[
+    { form: "Group 2 — dictionary", japanese: "たべる", romaji: "taberu", meaning: "to eat (plain)", highlight: true },
+    { form: "Group 2 — polite", japanese: "たべます", romaji: "tabemasu", meaning: "eat (drop る + ます)" },
+    { form: "Group 2 — polite negative", japanese: "たべません", romaji: "tabemasen", meaning: "do not eat" },
+    { form: "Group 1 — dictionary", japanese: "のむ", romaji: "nomu", meaning: "to drink (plain)", highlight: true },
+    { form: "Group 1 — polite", japanese: "のみます", romaji: "nomimasu", meaning: "drink (u-sound → i-sound + ます)" },
+    { form: "Group 1 — polite negative", japanese: "のみません", romaji: "nomimasen", meaning: "do not drink" },
+    { form: "Irregular — する", japanese: "します", romaji: "shimasu", meaning: "do", highlight: true },
+    { form: "Irregular — 来る", japanese: "きます", romaji: "kimasu", meaning: "come", highlight: true },
+  ]}
+  note="The negative simply swaps ます → ません for every group."
+/>
+
+## 5. Cultural Note: Desu/Masu vs. Plain Form
+
+In Japan, the level of politeness you use depends on your relationship with the listener.
+- **Polite (Desu/Masu):** Used with people you don't know well, teachers, bosses, and older people. It is the "safety" level—using it ensures you are never seen as rude.
+- **Plain (Dictionary):** Used with close friends, family, and younger people.
+- **The Transition:** Even if you become friends with someone, many Japanese people continue to use polite forms until an explicit or implicit agreement to use casual speech (*tame-guchi*) is reached. When in doubt, stick to **ます**!
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/10-masu-form-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of daily routine and weekend plan dialogue practice with polite ます and ません verb cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Daily Routine"
+  lines={[
+    { speaker: "Alice", japanese: "たなかさん、 毎日 何時 に おきます か。", romaji: "Tanaka-san, mainichi nan-ji ni okimasu ka.", translation: "Mr. Tanaka, what time do you wake up every day?" },
+    { speaker: "Tanaka", japanese: "わたし は 毎日 しちじ に おきます。", romaji: "Watashi wa mainichi shichi-ji ni okimasu.", translation: "I wake up at 7:00 every day." },
+    { speaker: "Alice", japanese: "朝ごはん を たべます か。", romaji: "Asagohan o tabemasu ka.", translation: "Do you eat breakfast?" },
+    { speaker: "Tanaka", japanese: "はい、 たべます。 パン を たべます。 アリスさん は？", romaji: "Hai, tabemasu. Pan o tabemasu. Arisu-san wa?", translation: "Yes, I do. I eat bread. How about you, Alice?" },
+    { speaker: "Alice", japanese: "わたし は たべません。 コーヒー を のみます。", romaji: "Watashi wa tabemasen. Koohii o nomimasu.", translation: "I don't eat. I drink coffee." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Weekend Plans"
+  lines={[
+    { speaker: "Ken", japanese: "明日、 どこ へ いきます か。", romaji: "Ashita, doko e ikimasu ka.", translation: "Where will you go tomorrow?" },
+    { speaker: "Yumi", japanese: "としょかん へ いきます。 ほん を よみます。", romaji: "Toshokan e ikimasu. Hon o yomimasu.", translation: "I'll go to the library. I'll read books." },
+    { speaker: "Ken", japanese: "テニス を します か。", romaji: "Tenisu o shimasu ka.", translation: "Will you play tennis?" },
+    { speaker: "Yumi", japanese: "いいえ、 しません。", romaji: "Iie, shimasen.", translation: "No, I won't." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "ます (masu) is the polite present/future form of a verb.",
+    "Group 2: Drop る and add ます (e.g., taberu -> tabemasu).",
+    "Group 1: Shift the final 'u' sound to 'i' and add ます (e.g., nomu -> nomimasu).",
+    "Irregular: する -> します, くる -> きます.",
+    "The negative form for all groups is 〜ません (masen).",
+    "Use polite speech (Desu/Masu) with strangers and superiors."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your conjugation skills!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of the following is the polite form of 'たべる' (taberu)?",
+      options: ["たべます", "たべります", "たべします", "たべります"],
+      correct: 0,
+      explanation: "たべる is a Group 2 verb. Drop る and add ます."
+    },
+    {
+      question: "Conjugate 'のむ' (nomu) into the polite form.",
+      options: ["のむます", "のみます", "のみますます", "のめます"],
+      correct: 1,
+      explanation: "のむ is a Group 1 verb. Shift 'mu' to 'mi' and add 'masu'."
+    },
+    {
+      question: "What is the polite negative of 'する' (suru)?",
+      options: ["しません", "すりません", "しませて", "しります"],
+      correct: 0,
+      explanation: "する is irregular. Its polite form is します, so the negative is しません."
+    },
+    {
+      question: "Which group does 'みる' (miru) belong to and what is its polite form?",
+      options: ["Group 1, みります", "Group 2, みます", "Group 3, みします", "Group 2, みります"],
+      correct: 1,
+      explanation: "みる is a Group 2 verb. Drop る and add ます to get みます."
+    },
+    {
+      question: "Translate: 'I do not drink coffee.'",
+      options: ["コーヒー を のみます。", "コーヒー を のみません。", "コーヒー を たべません。", "コーヒー を しません。"],
+      correct: 1,
+      explanation: "Koohii o (coffee [object]) + nomimasen (do not drink)."
+    },
+    {
+      question: "How do you conjugate 'かえる' (kaeru - to return home)?",
+      options: ["かえます", "かえります", "かえします", "かえりますます"],
+      correct: 1,
+      explanation: "かえる is an EXCEPTION. It looks like Group 2 but is Group 1. Shift 'ru' to 'ri' to get かえります."
+    },
+    {
+      question: "What is the polite form of 'くる' (kuru)?",
+      options: ["くます", "きます", "こます", "くりまります"],
+      correct: 1,
+      explanation: "くる is irregular. Its polite form is きます."
+    },
+    {
+      question: "Translate: 'I study every day.'",
+      options: ["毎日 べんきょう を します。", "毎日 べんきょう を しません。", "毎日 べんきょう です。", "毎日 べんきょう を きます。"],
+      correct: 0,
+      explanation: "Mainichi (every day) + benkyou o shimasu (do study)."
+    },
+    {
+      question: "What vowel row do Group 1 verbs shift to before adding 'masu'?",
+      options: ["a row", "i row", "u row", "e row"],
+      correct: 1,
+      explanation: "Group 1 verbs shift from the 'u' sound to the 'i' sound (e.g., mu -> mi, ku -> ki)."
+    },
+    {
+      question: "Which is the correct negative for 'おきます' (wake up)?",
+      options: ["おきない", "おきません", "おきじゃありません", "おきませんでした"],
+      correct: 1,
+      explanation: "The polite negative for all verbs is 〜ません."
+    },
+    {
+      question: "Translate: 'What time do you sleep?'",
+      options: ["何時 に ねます か。", "何時 に おきます か。", "何時 に きます か。", "何時 です か。"],
+      correct: 0,
+      explanation: "Nan-ji ni (at what time) + nemasu ka (do you sleep?)."
+    },
+    {
+      question: "True or False: Using 'masu' form with your boss is considered polite and appropriate.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. 'Desu/Masu' form is the standard for polite social interactions."
+    },
+    {
+      question: "Fill in the blank: 'Hon o _____' (I read a book).",
+      options: ["よみます", "よむます", "よみします", "よめます"],
+      correct: 0,
+      explanation: "よむ is a Group 1 verb. Shift 'mu' to 'mi' to get よみます."
+    },
+    {
+      question: "What does 'tabemasen' mean?",
+      options: ["I eat", "I am eating", "I do not eat", "I did not eat"],
+      correct: 2,
+      explanation: "Tabemasen is the polite present negative form of 'to eat'."
+    },
+    {
+      question: "Which verb means 'to return home'?",
+      options: ["いきます", "きます", "かえります", "ねます"],
+      correct: 2,
+      explanation: "かえります (kaerimasu) is the polite form of kaeru (to return home)."
+    }
+  ]}
+/>

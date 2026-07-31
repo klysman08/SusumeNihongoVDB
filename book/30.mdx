@@ -1,0 +1,260 @@
+---
+title: "Chapter 30 — Passive Voice (られる)"
+level: "N4"
+chapter: 30
+description: "Learn how to use the passive voice (rareru) to describe actions done to you, including the uniquely Japanese 'suffering passive'."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Passive Voice (られる)"
+  level="N4"
+  chapter={30}
+  objectives={[
+    "Conjugate verbs into the passive form.",
+    "Use the Direct Passive for actions done to a person or object.",
+    "Understand the Indirect/Suffering Passive, a uniquely Japanese concept.",
+    "Properly use the particle に to mark the ‘doer’ of the passive action."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, the passive voice shifts focus from *who did the action* to *who received the action* ("The dog bit me" ➔ "I was bitten by the dog"). Japanese has a similar function, but it also has a unique psychological layer: the **Indirect Passive**, often called the "Suffering Passive". It expresses how someone else's action negatively affected you!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/30-passive-voice.webp"
+  alt="Anime pixel-art illustration of a commuter stepping from a crowded rainy train while arrows show unwanted effects like a cracked window and dropped passport."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Conjugating the Passive Form (受身形 - Ukemikei)
+
+First, let's look at how to conjugate verbs into the passive voice. The rules are very similar to creating the negative (Nai-form) and adding a suffix.
+
+### Group 1 (U-Verbs)
+Change the final `〜u` sound to the `〜a` sound, and add `れる` (reru).
+* 叱る (shikaru - to scold) ➔ 叱られる (shikarareru - to be scolded)
+* 踏む (fumu - to step on) ➔ 踏まれる (fumareru - to be stepped on)
+* 呼ぶ (yobu - to call) ➔ 呼ばれる (yobareru - to be called)
+* 使う (tsukau - to use) ➔ 使われる (tsukawareru - to be used) *(Note: u becomes wa)*
+
+### Group 2 (Ru-Verbs)
+Drop the `る` (ru) and add `られる` (rareru). 
+*(Note: This is identical to the Potential Form for Group 2! You must judge by context).*
+* 見る (miru - to see) ➔ 見られる (mirareru - to be seen)
+* 食べる (taberu - to eat) ➔ 食べられる (taberareru - to be eaten)
+
+### Group 3 (Irregular Verbs)
+* 来る (kuru - to come) ➔ 来られる (korareru - to be come [upon])
+* する (suru - to do) ➔ される (sareru - to be done)
+
+---
+
+## 2. Direct Passive (直接受身)
+
+The Direct Passive works just like English. The person or thing that *receives* the action becomes the subject/topic (`は` or `が`), and the person who *did* the action is marked with `に` (by).
+
+<GrammarBox client:load 
+  pattern="[Receiver] は [Doer] に [Verb-Passive]"
+  meaning="Receiver is [verb]ed by the Doer."
+  formation="Passive Verb Conjugation"
+  examples={[
+    { japanese: "私は先生に褒められました。", romaji: "watashi wa sensei ni homeraremashita.", translation: "I was praised by the teacher." },
+    { japanese: "泥棒にパスポートを盗まれました。", romaji: "dorobou ni pasupooto o nusumaremashita.", translation: "My passport was stolen by a thief." }
+  ]}
+/>
+
+If the passive sentence is about a historical fact, a building, an invention, or an event, the "doer" is usually marked with `によって` instead of just `に`.
+
+<ExampleSentence client:load 
+  japanese="このビルは有名な建築家によって建てられました。"
+  romaji="kono biru wa yuumei na kenchikuka ni yotte tateraremashita."
+  translation="This building was built by a famous architect."
+/>
+
+## 3. Indirect "Suffering" Passive (間接受身)
+
+This is a concept deeply embedded in Japanese psychology. You can use the passive voice even when an action *was not done directly to you*, but the action broadly **inconvenienced** or **annoyed you**. 
+
+In this structure, you (the speaker) are the subject (`私は`), the person who caused the problem is marked with `に`, and the action they took is in the passive voice.
+
+<GrammarBox client:load 
+  pattern="私は [Doer] に [Intransitive Verb-Passive]"
+  meaning="I was negatively affected/annoyed by the Doer doing [verb]."
+  formation="Subject + に + Passive Verb"
+  examples={[
+    { japanese: "私は隣の人にタバコを吸われました。", romaji: "watashi wa tonari no hito ni tabako o suwaremashita.", translation: "I suffered from the person next to me smoking (My neighbor smoked, and it bothered me)." },
+    { japanese: "夜中、赤ちゃんに泣かれました。", romaji: "yonaka, akachan ni nakaremashita.", translation: "I was inconvenienced by the baby crying in the middle of the night." },
+    { japanese: "雨に降られて、服が濡れました。", romaji: "ame ni furarete, fuku ga nuremashita.", translation: "I was caught in the rain, and my clothes got wet (The rain fell, inconveniencing me)." }
+  ]}
+/>
+
+> [!WARNING]
+> You cannot use the indirect passive for positive actions. For example, if your baby crying made you *happy*, you would not say "赤ちゃんに泣かれました". The suffering passive is strictly for reporting complaints or hardships.
+
+## 4. Cultural Insight: The Social Context of Passive Voice
+
+In Japanese society, maintaining harmony (**wa**) is extremely important. The passive voice is often used as a linguistic tool to avoid placing direct blame or being too confrontational.
+
+By using the passive voice, the speaker can describe an event without directly pointing a finger at someone as the "actor." For example, instead of saying "You broke this window," a Japanese speaker might say `「窓が壊されました」` (The window was broken), which subtly shifts the focus away from the person who did it.
+
+Furthermore, the **Suffering Passive** allows people to express their feelings of being inconvenienced without directly complaining about the person's character. It's a way to say, "I am in a difficult situation because of this action," which is more socially acceptable than saying, "You are annoying me."
+
+---
+
+---
+
+## Contextual Dialogues
+
+### 1. A Bad Day (最悪な一日)
+
+Listen to how Tanaka and Suzuki use the passive voice to complain about their day.
+
+<ConversationDialog client:load 
+  title="A Bad Day (最悪な一日)"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, you look terrible. What happened?", japanese: "鈴木さん、ひどい顔ですね。どうしたんですか。", romaji: "Suzuki-san, hidoi kao desu ne. Dou shita n desu ka." },
+    { speaker: "Suzuki", translation: "To be honest, today was awful. First, someone stepped on my foot on the train.", japanese: "実は、今日は最悪でした。まず、電車の中で足を踏まれました。", romaji: "Jitsu wa, kyou wa saiaku deshita. Mazu, densha no naka de ashi o fumaremashita." },
+    { speaker: "Tanaka", translation: "That is painful...", japanese: "それは痛いですね…。", romaji: "Sore wa itai desu ne..." },
+    { speaker: "Suzuki", translation: "Then, I was caught in the rain, and my bag got wet. Furthermore, I was scolded by the section manager at the company.", japanese: "そして、雨に降られて、カバンが濡れました。さらに、会社で課長に叱られました。", romaji: "Soshite, ame ni furarete, kaban ga nuremashita. Sarani, kaisha de kachou ni shikararemashita." }
+  ]}
+/>
+
+### 2. Praised by the Teacher (先生に褒められた)
+
+Positive use of direct passive (though less common than suffering passive, it's still used!).
+
+<ConversationDialog client:load 
+  title="Praised by the Teacher (先生に褒められた)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka, I'm very happy today!", japanese: "田中さん、今日はとても嬉しいです！", romaji: "Tanaka-san, kyou wa totemo ureshii desu!" },
+    { speaker: "Tanaka", translation: "What happened?", japanese: "どうしたんですか。", romaji: "Dou shita n desu ka." },
+    { speaker: "Suzuki", translation: "I was praised by the teacher during the Japanese class.", japanese: "日本語の授業で、先生に褒められたんです。", romaji: "Nihongo no jugyou de, sensei ni homerareta n desu." },
+    { speaker: "Tanaka", translation: "That's great! It's because you've been studying hard.", japanese: "すごいですね！毎日一生懸命勉強していましたからね。", romaji: "Sugoi desu ne! Mainichi isshoukenmei benkyou shite imashita kara ne." }
+  ]}
+/>
+
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Group 1 passive drops 'u' and adds 'areru'. Group 2 drops 'ru' and adds 'rareru'. Irregulars become される and 来られる.",
+    "The person/thing affected by the action is the subject (は/が).",
+    "The person who DID the action is marked with に.",
+    "The action can be an intransitive verb (like 'cry' or 'rain') resulting in the 'Suffering Passive', which shows the speaker was inconvenienced."
+  ]}
+/>
+
+
+## Knowledge Check
+
+Test your understanding of the passive voice!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the passive form of 'ほめる' (homeru - to praise)?",
+      options: ["ほまれる", "ほめられる", "ほめらせる", "ほめるれる"],
+      correct: 1,
+      explanation: "Group 2 verb: Drop 'ru' and add 'rareru' ➔ ほめられる (to be praised)."
+    },
+    {
+      question: "What is the passive form of '盗む' (nusumu - to steal)?",
+      options: ["盗まれる", "盗みられる", "盗められる", "盗むられる"],
+      correct: 0,
+      explanation: "Group 1 verb: Change 'mu' to 'ma' and add 'reru' -> 盗まれる (to be stolen)."
+    },
+    {
+      question: "Which particle marks the DOER in a passive sentence?",
+      options: ["は", "を", "に", "が"],
+      correct: 2,
+      explanation: "The Doer (the agent of the action) is marked with 'に' (or 'によって' for historical/creative works)."
+    },
+    {
+      question: "Translate: 'I was praised by my mother.'",
+      options: ["私は母をほめられました。", "母は私にほめられました。", "私は母にほめられました。", "母は私がほめられました。"],
+      correct: 2,
+      explanation: "Receiver (I) は Doer (Mother) に Verb-Passive (praised) ➔ 私は母にほめられました。"
+    },
+    {
+      question: "What does '雨に降られた' mean in Japanese psychology?",
+      options: ["It rained, and I was happy.", "It rained, and I was inconvenienced/caught in it.", "I made it rain.", "The rain saw me."],
+      correct: 1,
+      explanation: "This is the Suffering Passive. It explicitly means the rain fell and it negatively affected you."
+    },
+    {
+      question: "What is the passive form of the irregular verb 'する' (to do)?",
+      options: ["される", "すれる", "しられる", "するれる"],
+      correct: 0,
+      explanation: "The passive form of する is される."
+    },
+    {
+      question: "What is the passive form of '使う' (tsukau - to use)?",
+      options: ["使あれる", "使われる", "使えれる", "使いるれる"],
+      correct: 1,
+      explanation: "Group 1 verbs ending in 'う' change to 'わ' (wa) before adding reru ➔ 使われる."
+    },
+    {
+      question: "In the sentence '泥棒にパスポートを___', which verb fits 'was stolen'?",
+      options: ["盗みました", "盗まれました", "盗ませました", "盗んでくれました"],
+      correct: 1,
+      explanation: "Thief に Passport を 盗まれる (was stolen). ➔ 盗まれました."
+    },
+    {
+      question: "What is the primary difference between Group 2 Potential form and Group 2 Passive form?",
+      options: ["Passive uses 'reru', Potential uses 'rareru'.", "They are conjugated identically ('rareru'); context separates them.", "Passive drops 'ru', Potential keeps it.", "They cannot be used interchangeably in writing."],
+      correct: 1,
+      explanation: "Group 2 Passive and Potential forms are exactly the same (e.g., 食べられる can mean 'can eat' or 'is eaten'). Context is key."
+    },
+    {
+      question: "In the dialogue, why did Suzuki say '足を踏まれました'?",
+      options: ["He stepped on someone's foot.", "Someone stepped on his foot (inconveniencing him).", "He broke his foot.", "He walked to the train."],
+      correct: 1,
+      explanation: "足 (foot) を 踏む (step on) ➔ 踏まれました (was stepped on). Direct passive describing an annoying action happening to his body part."
+    },
+    {
+      question: "If '泣く' (naku) means 'to cry', how do you say 'The baby cried (and it annoyed me)'?",
+      options: ["赤ちゃんが泣かれました", "赤ちゃんが泣きました", "赤ちゃんを泣かせました", "赤ちゃんに泣かれました"],
+      correct: 3,
+      explanation: "This is the suffering passive. You are the invisible subject. 'Bothered by baby' = 赤ちゃんに + 泣かれる."
+    },
+    {
+      question: "How do you translate 'Toyota cars are made in Japan.'?",
+      options: ["トヨタの車は日本で作ります。", "トヨタの車は日本で作られます。", "トヨタの車は日本が作れます。", "日本にトヨタの車が作ります。"],
+      correct: 1,
+      explanation: "作る (tsukuru - to make) ➔ 作られる (is made/produced). ➔ 日本で作られます。"
+    },
+    {
+      question: "When should you use 'によって' instead of 'に'?",
+      options: ["For people you hate.", "When describing who built a building, wrote a famous book, or discovered something.", "When talking about the future.", "When using the suffering passive."],
+      correct: 1,
+      explanation: "によって is used for 'by' when discussing historical artifacts, buildings, or famous inventions."
+    },
+    {
+      question: "Translate: 'I had my bike stolen by someone.'",
+      options: ["私は誰かに自転車を盗まれました。", "自転車は誰かを盗まれました。", "誰かは私に自転車を盗みました。", "誰もが自転車を盗まれました。"],
+      correct: 0,
+      explanation: "私 (receiver) は 誰か (doer) に 自転車 (object) を 盗まれた (passive verb)."
+    },
+    {
+      question: "Can you use the suffering passive for a situation where your teacher corrects your test and you are happy about it?",
+      options: ["Yes, anytime an action is done to you.", "No, it is strictly for when you are inconvenienced or suffer.", "Only if you say it to their face.", "Only if it is a Group 1 verb."],
+      correct: 1,
+      explanation: "The suffering passive inherently implies inconvenience/hardship. If you were happy, you would use 〜てもらう (I had them correct it for me)."
+    }
+  ]}
+/>

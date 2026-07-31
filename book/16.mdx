@@ -1,0 +1,310 @@
+---
+title: "Chapter 16 — Basic Particles Recap"
+level: "N5"
+chapter: "16"
+description: "Consolidate your knowledge of the 'glue' of the Japanese language: the particles that define topics, subjects, objects, and relationships."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Basic Particles Recap"
+  level="N5"
+  chapter="16"
+  objectives={[
+    "Consolidate the usage of core particles: は, が, を, に, で, へ, と, も.",
+    "Master the directional and range particles から and まで.",
+    "Review how particles interact with expressing desires (ほしい and 〜たい).",
+    "Explore the Japanese culture of seasonal gift-giving (Ochuugen and Oseibo)."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Particles are the unsung heroes of Japanese grammar. Without them, a sentence is just a pile of nouns and verbs with no relationship. You've encountered many particles in the first 15 chapters, but as you move toward N4, it is vital to have a rock-solid foundation. In this chapter, we will recap the core "glue" of the language and see how these particles work together in complex scenarios.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/16-particles-recap.webp"
+  alt="Anime pixel-art illustration of Japanese particle tiles connecting nouns, verbs, places, and time into sentences."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Core Three: は, が, and を
+
+The most fundamental particles define the **Topic** (は), the **Subject** (が), and the **Object** (を).
+
+- **は (wa):** Sets the stage. "As for X..."
+- **が (ga):** Identifies the specific do-er or the subject of an adjective/existence.
+- **を (o):** Identifies the target of a transitive action.
+
+<GrammarBox client:load 
+  pattern="Noun ＋ [は / が / を]"
+  meaning="Defining roles in a sentence."
+  formation="Noun + Particle"
+  examples={[
+    { japanese: "わたし は ラーメン を たべます。", romaji: "Watashi wa raamen o tabemasu.", translation: "As for me, I eat ramen." },
+    { japanese: "だれ が きました か。", romaji: "Dare ga kimashita ka?", translation: "Who (specifically) came?" },
+    { japanese: "この ほん が ほしい です。", romaji: "Kono hon ga hoshii desu.", translation: "I want this book. (Desire uses が)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="たなかさん は コーヒー を のみます。"
+  romaji="Tanaka-san wa koohii o nomimasu."
+  translation="Mr. Tanaka drinks coffee."
+/>
+<ExampleSentence client:load 
+  japanese="あそこ に いぬ が います。"
+  romaji="Asoko ni inu ga imasu."
+  translation="There is a dog over there."
+/>
+<ExampleSentence client:load 
+  japanese="なに が おいしい です か。"
+  romaji="Nani ga oishii desu ka?"
+  translation="What (specifically) is delicious?"
+/>
+
+<ParticleCompare
+  client:load
+  title="は vs が vs を — who does what to what"
+  items={[
+    { label: "は", role: "Topic", example: "わたし は がくせい です。", note: "watashi wa gakusei desu — 'As for me, (I) am a student.'" },
+    { label: "が", role: "Subject", example: "だれ が きました か。", note: "dare ga kimashita ka — identifies the specific doer." },
+    { label: "を", role: "Object", example: "ごはん を たべます。", note: "gohan o tabemasu — marks the thing acted upon." },
+  ]}
+/>
+
+## 2. Location & Direction: に, で, and へ
+
+These particles tell us *where* things are or *where* they are going.
+
+- **に (ni):** A specific point in time, a location of existence, or a target.
+- **で (de):** The location where an action takes place, or the tool/means used.
+- **へ (e):** The direction of movement (towards).
+
+<GrammarBox client:load 
+  pattern="Location ＋ [に / で / へ]"
+  meaning="Mapping space and time."
+  formation="Location/Time + Particle"
+  examples={[
+    { japanese: "がっこう に いきます。", romaji: "Gakkou ni ikimasu.", translation: "I go to school." },
+    { japanese: "としょかん で べんきょうします。", romaji: "Toshokan de benkyoushimasu.", translation: "I study at the library." },
+    { japanese: "バス で かえります。", romaji: "Basu de kaerimasu.", translation: "I return home by bus." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="しちじ に おきます。"
+  romaji="Shichi-ji ni okimasu."
+  translation="I wake up at 7:00."
+/>
+<ExampleSentence client:load 
+  japanese="にほん へ いきたい です。"
+  romaji="Nihon e ikitai desu."
+  translation="I want to go to Japan."
+/>
+<ExampleSentence client:load 
+  japanese="レストラン で さかな を たべました。"
+  romaji="Resutoran de sakana o tabemashita."
+  translation="I ate fish at a restaurant."
+/>
+
+## 3. Range & Connection: から, まで, と, and も
+
+These particles handle boundaries and additions.
+
+- **から (kara):** Starting point (from).
+- **まで (made):** Ending point (until/to).
+- **と (to):** "And" (between nouns) or "With" (a person).
+- **も (mo):** "Also/Too" (replaces は, が, or を).
+
+<GrammarBox client:load 
+  pattern="Noun ＋ [から / まで / と / も]"
+  meaning="Defining limits and relationships."
+  formation="Noun + Particle"
+  examples={[
+    { japanese: "とうきょう から きょうと まで いきます。", romaji: "Toukyou kara Kyouto made ikimasu.", translation: "I go from Tokyo to Kyoto." },
+    { japanese: "ともだち と えいが を みました。", romaji: "Tomodachi to eiga o mimashita.", translation: "I watched a movie with a friend." },
+    { japanese: "わたし も すし が すき です。", romaji: "Watashi mo sushi ga suki desu.", translation: "I also like sushi." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="くじ から ごじ まで はたらきます。"
+  romaji="Ku-ji kara go-ji made hatarakimasu."
+  translation="I work from 9:00 until 5:00."
+/>
+
+<ExampleSentence client:load 
+  japanese="あした も テスト が あります。"
+  romaji="Ashita mo tesuto ga arimasu."
+  translation="There is a test tomorrow too."
+/>
+
+## 4. Cultural Note: Seasonal Gifts (Ochuugen & Oseibo)
+
+In Japan, the relationship between people is often maintained through **Giri** (social obligation) and the practice of gift-giving. Two major seasons define this:
+
+- **Ochuugen (お中元):** Mid-summer gifts (July) sent to express gratitude to superiors, teachers, or clients. People often send "cool" items like beer, jelly, or fruit to combat the summer heat.
+- **Oseibo (お歳暮):** Year-end gifts (December) sent to thank people for their support throughout the year. 
+
+**Particle Connection:** When discussing these gifts, the particles **に (to)** and **から (from)** are essential.
+- *Sensei **ni** oseibo o agemasu.* (I give a year-end gift **to** the teacher.)
+- *Tanaka-san **kara** ochuugen o moraimashita.* (I received a mid-summer gift **from** Mr. Tanaka.)
+
+The choice of gift is carefully considered to reflect the status of the recipient, demonstrating the high-context nature of Japanese culture.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/16-particles-recap-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of department store gift and office schedule dialogue practice with core particle cards from は to まで."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Planning the Day"
+  lines={[
+    { speaker: "Tanaka", japanese: "スミスさん、あした は なに を します か。", romaji: "Sumisu-san, ashita wa nani o shimasu ka?", translation: "Mr. Smith, what will you do tomorrow?" },
+    { speaker: "Smith", japanese: "あした は じゅうじ に ともだち と デパート へ いきます。", romaji: "Ashita wa juu-ji ni tomodachi to depaato e ikimasu.", translation: "Tomorrow at 10:00, I'm going to a department store with a friend." },
+    { speaker: "Tanaka", japanese: "デパート で なに を かいます か。", romaji: "Depaato de nani o kaimasu ka?", translation: "What will you buy at the department store?" },
+    { speaker: "Smith", japanese: "おちゅうげん を かいます。 せんせい に あげたい です から。", romaji: "Ochuugen o kaimasu. Sensei ni agetai desu kara.", translation: "I'll buy a mid-summer gift. Because I want to give it to my teacher." },
+    { speaker: "Tanaka", japanese: "いい です ね。 わたし も デパート へ いきたい です。", romaji: "Ii desu ne. Watashi mo depaato e ikitai desu.", translation: "That's nice. I also want to go to the department store." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="At the Office"
+  lines={[
+    { speaker: "Sato", japanese: "しごと は なんじ から です か。", romaji: "Shigoto wa nan-ji kara desu ka?", translation: "From what time is work?" },
+    { speaker: "Lee", japanese: "くじ から ごじ まで です。 さとうさん も です か。", romaji: "Ku-ji kara go-ji made desu. Satou-san mo desu ka?", translation: "It's from 9:00 until 5:00. Is it the same for you, Mr. Sato?" },
+    { speaker: "Sato", japanese: "はい。 でも、きょう は ろくじ まで はたらきます。", romaji: "Hai. Demo, kyou wa roku-ji made hatarakimasu.", translation: "Yes. But today I will work until 6:00." },
+    { speaker: "Lee", japanese: "そうですか。 たいへん です ね。 がんばって ください！", romaji: "Sou desu ka. Taihen desu ne. Ganbatte kudasai!", translation: "I see. That's tough. Good luck!" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "は (wa) introduces the topic, while が (ga) identifies the specific subject.",
+    "を (o) marks the direct object of a transitive verb.",
+    "に (ni) is for specific time/location; で (de) is for location of action or means.",
+    "へ (e) indicates direction; と (to) means 'and/with'; も (mo) means 'also'.",
+    "から (from) and まで (until) define the temporal or spatial range.",
+    "Seasonal gift-giving (Ochuugen/Oseibo) is a key cultural practice for maintaining social harmony."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your mastery of Japanese particles!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which particle marks the destination of a motion verb like 'iku'?",
+      options: ["を", "へ", "で", "は"],
+      correct: 1,
+      explanation: "へ (e) or に (ni) is used to mark the destination or direction of movement."
+    },
+    {
+      question: "Translate: 'I study at the library.'",
+      options: ["としょかん に べんきょうします。", "としょかん で べんきょうします。", "としょかん を べんきょうします。", "としょかん へ べんきょうします。"],
+      correct: 1,
+      explanation: "で (de) marks the location where an action (studying) takes place."
+    },
+    {
+      question: "Which particle is used to mean 'also' or 'too'?",
+      options: ["と", "も", "に", "は"],
+      correct: 1,
+      explanation: "も (mo) replaces は, が, or を to mean 'also'."
+    },
+    {
+      question: "What is the correct particle for 'from' in 'From 9:00'?",
+      options: ["まで", "から", "に", "と"],
+      correct: 1,
+      explanation: "から (kara) means 'from'."
+    },
+    {
+      question: "Translate: 'I want a new car.'",
+      options: ["あたらしい くるま を ほしい です。", "あたらしい くるま が ほしい です。", "あたらしい くるま に ほしい です。", "あたらしい くるま は ほしい です。"],
+      correct: 1,
+      explanation: "Desire (hoshii) usually marks the object of desire with が."
+    },
+    {
+      question: "You are going with a friend. Which particle means 'with'?",
+      options: ["と", "に", "で", "を"],
+      correct: 0,
+      explanation: "と (to) means 'with' when used with a person."
+    },
+    {
+      question: "How do you say 'Until 5:00'?",
+      options: ["ごじ から", "ごじ まで", "ごじ に", "ごじ と"],
+      correct: 1,
+      explanation: "まで (made) means 'until' or 'to'."
+    },
+    {
+      question: "Which particle marks a specific time point (e.g., at 3:00)?",
+      options: ["に", "で", "を", "は"],
+      correct: 0,
+      explanation: "に (ni) is the particle for specific time points."
+    },
+    {
+      question: "Translate: 'I go to school by bus.'",
+      options: ["バス に がっこう へ いきます。", "バス で がっこう へ いきます。", "バス を がっこう へ いきます。", "バス は がっこう へ いきます。"],
+      correct: 1,
+      explanation: "で (de) marks the means or tool (the bus) used to perform the action."
+    },
+    {
+      question: "Which particle connects two nouns as 'and'?",
+      options: ["も", "と", "に", "を"],
+      correct: 1,
+      explanation: "と (to) is the 'and' for listing nouns."
+    },
+    {
+      question: "In 'Tanaka-san wa sushi o tabemasu', what is 'sushi'?",
+      options: ["The Topic", "The Subject", "The Direct Object", "The Location"],
+      correct: 2,
+      explanation: "Marked by を, sushi is the direct object receiving the action of eating."
+    },
+    {
+      question: "When are 'Oseibo' gifts typically given?",
+      options: ["July", "April", "December", "January"],
+      correct: 2,
+      explanation: "Oseibo are year-end gifts given in December."
+    },
+    {
+      question: "Translate: 'とうきょう から きょうと まで'",
+      options: ["From Tokyo to Kyoto", "To Tokyo from Kyoto", "Tokyo and Kyoto", "Tokyo also Kyoto"],
+      correct: 0,
+      explanation: "Kara (from) + Made (to)."
+    },
+    {
+      question: "Which particle would you use to emphasize 'WHO' did something (e.g., 'Who ate it?')",
+      options: ["は", "が", "を", "に"],
+      correct: 1,
+      explanation: "が (ga) is used to identify the specific subject, especially in answer to 'who/what' questions."
+    },
+    {
+      question: "True or False: The particle 'へ' is pronounced 'he' when used as a particle.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. As a particle, へ is pronounced 'e'."
+    }
+  ]}
+/>

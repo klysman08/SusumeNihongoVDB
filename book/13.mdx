@@ -1,0 +1,296 @@
+---
+title: "Chapter 13 — Existence Verbs: あります & います"
+level: "N5"
+chapter: "13"
+description: "Learn how to express that something exists and describe where it is using the verbs iru (animate) and aru (inanimate) with position words."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Existence Verbs: あります & います"
+  level="N5"
+  chapter="13"
+  objectives={[
+    "Understand the difference between animate existence (いる) and inanimate existence (ある).",
+    "State that something exists or that you have something using the particle が.",
+    "Describe the location of an object or person using the particle に.",
+    "Explore the aesthetic of 'Wabi-sabi' in Japanese spaces."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In English, we say "There is a dog" and "There is a book." The verb "is" remains exactly the same whether the subject is alive or an inanimate object. Japanese, however, draws a very strict line between the living and the non-living. There are two completely different verbs used to express existence ("There is..." / "I have..."). The verb you choose depends entirely on whether the subject can move on its own! 
+</SectionIntro>
+
+<BookImage
+  src="/book-images/13-existence-verbs.webp"
+  alt="Anime pixel-art illustration of living things with います and objects with あります in a calm Japanese room."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Inanimate Existence: ある (Aru)
+
+The verb **ある (aru)** is used for anything that is inanimate (not alive) or things that are alive but cannot move on their own (like plants and trees). It is a Group 1 verb. Its polite form is **あります (arimasu)**.
+
+<GrammarBox client:load 
+  pattern="[Noun] が あります"
+  meaning="There is a [Noun]. / I have a [Noun]."
+  formation="Inanimate Noun + が + あります"
+  examples={[
+    { japanese: "ほん が あります。", romaji: "Hon ga arimasu.", translation: "There is a book. (Or: I have a book.)" },
+    { japanese: "じかん が あります。", romaji: "Jikan ga arimasu.", translation: "There is time. / I have time." },
+    { japanese: "ホテル に プール が あります。", romaji: "Hoteru ni puuru ga arimasu.", translation: "There is a pool at the hotel." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="くるま が あります。"
+  romaji="Kuruma ga arimasu."
+  translation="There is a car."
+/>
+<ExampleSentence client:load 
+  japanese="きょう、 テスト が あります。"
+  romaji="Kyou, tesuto ga arimasu."
+  translation="There is a test today."
+/>
+<ExampleSentence client:load 
+  japanese="こうえん に き が あります。"
+  romaji="Kouen ni ki ga arimasu."
+  translation="There is a tree in the park."
+/>
+
+## 2. Animate Existence: いる (Iru)
+
+The verb **いる (iru)** is used for people, animals, and insects—anything that is alive and can move of its own volition. It is a Group 2 verb. Its polite form is **います (imasu)**.
+
+<GrammarBox client:load 
+  pattern="[Noun] が います"
+  meaning="There is a [Person/Animal]. / I have a [Person/Animal]."
+  formation="Animate Noun + が + います"
+  examples={[
+    { japanese: "ねこ が います。", romaji: "Neko ga imasu.", translation: "There is a cat. (Or: I have a cat.)" },
+    { japanese: "あそこ に たなかさん が います。", romaji: "Asoko ni Tanaka-san ga imasu.", translation: "Mr. Tanaka is over there." },
+    { japanese: "へや に いぬ が います。", romaji: "Heya ni inu ga imasu.", translation: "There is a dog in the room." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="きょうだい が います。"
+  romaji="Kyoudai ga imasu."
+  translation="I have siblings."
+/>
+<ExampleSentence client:load 
+  japanese="あそこに だれ が います か。"
+  romaji="Asoko ni dare ga imasu ka."
+  translation="Who is over there?"
+/>
+<ExampleSentence client:load 
+  japanese="ともだち が たくさん います。"
+  romaji="Tomodachi ga takusan imasu."
+  translation="I have many friends."
+/>
+
+<CommonMistake client:load title="ある or いる? Pick by 'can it move on its own?'">
+
+The choice is **not** "alive vs. not alive" — it's **self-movement**:
+
+- **いる** → people, animals, insects (things that move on their own). **犬がいます**.
+- **ある** → objects, *and* plants/trees (alive, but they don't move). **木があります**, not ~~木がいます~~.
+- Both take **が** for the thing that exists, and the negatives are **ありません / いません** (never ~~あらない~~).
+
+A common trap: a parked car uses **ある** (車があります) — but talk about the *driver* inside and you switch to **いる**.
+
+</CommonMistake>
+
+## 3. Describing Location with "に"
+
+To say *where* something exists, you place the location word before the particle **に (ni)**. 
+
+<GrammarBox client:load 
+  pattern="[Location] に [Noun] が あります/います"
+  meaning="[Noun] is in/at [Location]."
+  formation="Location + に + Noun + が + Verb"
+  examples={[
+    { japanese: "としょかん に ほん が あります。", romaji: "Toshokan ni hon ga arimasu.", translation: "There are books in the library." },
+    { japanese: "こうえん に ねこ が います。", romaji: "Kouen ni neko ga imasu.", translation: "There is a cat in the park." },
+    { japanese: "つくえ の うえ に ペン が あります。", romaji: "Tsukue no ue ni pen ga arimasu.", translation: "There is a pen on top of the desk." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="はこ の なか に なに が あります か。"
+  romaji="Hako no naka ni nani ga arimasu ka."
+  translation="What is inside the box?"
+/>
+<ExampleSentence client:load 
+  japanese="ぎんこう の まえ に くるま が あります。"
+  romaji="Ginkou no mae ni kuruma ga arimasu."
+  translation="There is a car in front of the bank."
+/>
+<ExampleSentence client:load 
+  japanese="ベッド の した に いぬ が います。"
+  romaji="Beddo no shita ni inu ga imasu."
+  translation="The dog is under the bed."
+/>
+
+## 4. Cultural Note: The Aesthetic of 'Wabi-sabi' (わびさび)
+
+**Wabi-sabi** is a world view centered on the acceptance of transience and imperfection. It is often described as beauty that is "imperfect, impermanent, and incomplete."
+- **In Space:** A room designed with Wabi-sabi principles might feel empty or "lonely" to a Western eye, but this emptiness (related to 'Ma') is intended to foster focus and peace.
+- **In Existence:** The verbs *aru* and *iru* help define the existence of things within these spaces. Whether it's a cracked tea bowl (*aru*) or the moss growing on a stone (*aru*), Wabi-sabi finds dignity in the natural cycle of life and decay.
+- **Characteristics:** Asymmetry, roughness, simplicity, and appreciation of the ingenuous integrity of natural objects and processes.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/13-existence-verbs-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of existence verb practice with a person, dog, car, bag objects, and います and あります cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Looking for a Friend"
+  lines={[
+    { speaker: "Alice", japanese: "すみません、 たなかさん は どこ に います か。", romaji: "Sumimasen, Tanaka-san wa doko ni imasu ka?", translation: "Excuse me, where is Mr. Tanaka?" },
+    { speaker: "Staff", japanese: "たなかさん は あそこ に います よ。 あおい くるま の まえ です。", romaji: "Tanaka-san wa asoko ni imasu yo. Aoi kuruma no mae desu.", translation: "Mr. Tanaka is over there. In front of the blue car." },
+    { speaker: "Alice", japanese: "あ、 わかりました。 ありがとうございます。", romaji: "A, wakarimashita. Arigatou gozaimasu.", translation: "Ah, I see. Thank you very much." },
+    { speaker: "Staff", japanese: "いいえ。 あ、 たなかさん の となり に いぬ も います よ。", romaji: "Iie. A, Tanaka-san no tonari ni inu mo imasu yo.", translation: "No problem. Oh, there's also a dog next to Mr. Tanaka." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="What's in the Bag?"
+  lines={[
+    { speaker: "Ken", japanese: "その かばん の なか に なに が あります か。", romaji: "Sono kaban no naka ni nani ga arimasu ka?", translation: "What is inside that bag (near you)?" },
+    { speaker: "Yumi", japanese: "ほん と さいふ が あります。 それから、 スマホ も あります。", romaji: "Hon to saifu ga arimasu. Sorekara, sumaho mo arimasu.", translation: "There's a book and a wallet. And also a smartphone." },
+    { speaker: "Ken", japanese: "おべんとう は ありません か。", romaji: "Obentou wa arimasen ka?", translation: "Is there no lunch box?" },
+    { speaker: "Yumi", japanese: "はい、 ありません。 レストラン で たべます。", romaji: "Hai, arimasen. Resutoran de tabemasu.", translation: "Yes, there isn't. I'll eat at a restaurant." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "ある (arimasu) is used for inanimate objects, plants, and abstract concepts.",
+    "いる (imasu) is used for living, moving things like people and animals.",
+    "Use the particle が (ga) to mark the subject that exists.",
+    "Use the particle に (ni) to mark the location of existence.",
+    "Position words like うえ, した, and なか specify where an object is located.",
+    "Wabi-sabi is the Japanese art of finding beauty in imperfection and existence."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of existence and location!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which verb do you use for 'There is a person'?",
+      options: ["あります", "います", "します", "きます"],
+      correct: 1,
+      explanation: "A person is animate, so you must use います."
+    },
+    {
+      question: "Which verb do you use for 'There is a book'?",
+      options: ["あります", "います", "ありますした", "いません"],
+      correct: 0,
+      explanation: "A book is inanimate, so you use あります."
+    },
+    {
+      question: "Translate: 'I have a cat.'",
+      options: ["ねこ を あります。", "ねこ が います。", "ねこ に あります。", "ねこ は います。"],
+      correct: 1,
+      explanation: "A cat is alive (います) and is the subject of existence (が)."
+    },
+    {
+      question: "Which particle marks the location where something exists?",
+      options: ["を", "は", "に", "へ"],
+      correct: 2,
+      explanation: "に (ni) is the location marker for existence verbs."
+    },
+    {
+      question: "What does 'つくえ の うえ' mean?",
+      options: ["Under the desk", "Inside the desk", "On top of the desk", "Next to the desk"],
+      correct: 2,
+      explanation: "うえ (ue) means top or above."
+    },
+    {
+      question: "Translate: 'じかん が ありません。'",
+      options: ["I have time.", "I don't have time.", "There is no person.", "Where is the time?"],
+      correct: 1,
+      explanation: "Jikan (time) is inanimate (arimasu). Arimasen is the negative."
+    },
+    {
+      question: "Which verb group does 'ある' belong to?",
+      options: ["Group 1", "Group 2", "Group 3", "Exception"],
+      correct: 0,
+      explanation: "It ends in 'ru' but has an 'a' sound before it (a-ru). It's Group 1."
+    },
+    {
+      question: "Which verb group does 'いる' belong to?",
+      options: ["Group 1", "Group 2", "Group 3", "Exception"],
+      correct: 1,
+      explanation: "It ends in 'ru' and has an 'i' sound before it (i-ru). It's Group 2."
+    },
+    {
+      question: "What is 'Wabi-sabi'?",
+      options: ["A type of spicy condiment", "The art of finding beauty in imperfection", "A Japanese holiday", "A martial art"],
+      correct: 1,
+      explanation: "Wabi-sabi is a foundational Japanese aesthetic centered on transience and imperfection."
+    },
+    {
+      question: "Translate: 'Hako no naka ni nani ga arimasu ka.'",
+      options: ["Where is the box?", "What is inside the box?", "Who is in the box?", "Is there a box?"],
+      correct: 1,
+      explanation: "Naka means inside; nani means what; arimasu ka asks if it exists."
+    },
+    {
+      question: "How do you say 'There is a tree'?",
+      options: ["き が あります。", "き が います。", "き を あります。", "き に います。"],
+      correct: 0,
+      explanation: "Trees/plants are considered inanimate in this grammar context because they don't move."
+    },
+    {
+      question: "Which word means 'Behind'?",
+      options: ["まえ", "うしろ", "となり", "なか"],
+      correct: 1,
+      explanation: "うしろ (ushiro) means behind."
+    },
+    {
+      question: "Translate: 'Tanaka-san wa ginkou ni imasu.'",
+      options: ["Mr. Tanaka is at the bank.", "Mr. Tanaka is going to the bank.", "Mr. Tanaka is the bank.", "Is Mr. Tanaka at the bank?"],
+      correct: 0,
+      explanation: "Ginkou (bank) + ni (at) + imasu (exists)."
+    },
+    {
+      question: "Fill in the blank: 'Asoko _____ inu が います。' (There is a dog over there).",
+      options: ["を", "に", "は", "が"],
+      correct: 1,
+      explanation: "Asoko (over there) is the location, marked by に."
+    },
+    {
+      question: "True or False: Robots that move on their own usually take 'imasu'.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. In Japanese, if it appears to move with its own volition, it often takes 'imasu'."
+    }
+  ]}
+/>

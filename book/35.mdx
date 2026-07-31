@@ -1,0 +1,258 @@
+---
+title: "Chapter 35 — Transitive & Intransitive Verbs"
+level: "N4"
+chapter: 35
+description: "Master the twin verbs of Japanese (transitive and intransitive) and learn how to express intentional actions vs. natural states."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Transitive & Intransitive Verbs (他動詞・自動詞)"
+  level="N4"
+  chapter={35}
+  objectives={[
+    "Understand the difference between Transitive (action) and Intransitive (state) verbs.",
+    "Recognize common verb pairs and their particle usage (を vs. が).",
+    "Use Transitive verbs with 〜てある to describe a state left by human intention.",
+    "Use Intransitive verbs with 〜ている to describe a natural or resultant ongoing state."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, we often use the same word for different situations: "I open the door" (Action) and "The door opens" (State). Japanese, however, usually employs **two separate but related verbs** for these concepts: a Transitive verb (他動詞 - Tadoushi) involving a direct action by an agent, and an Intransitive verb (自動詞 - Jidoushi) focusing on the change of state of the subject itself.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/35-transitive-intransitive-verbs.webp"
+  alt="Anime pixel-art illustration of a learner opening a sliding door and placing a cup while wind opens a curtain and a cup lies spilled nearby."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Transitive vs. Intransitive Divide
+
+The most important distinction is the focus of the sentence and the particle used.
+
+* **Transitive (他動詞):** Focuses on an agent performing an action *on* an object. It uses the direct object particle `を`.
+* **Intransitive (自動詞):** Focuses on the subject undergoing a change or being in a state. It uses the subject particle `が`.
+
+### Common Verb Pairs
+
+| English | Transitive (Subject を Verb) | Intransitive (Subject が Verb) |
+| :--- | :--- | :--- |
+| **Open** | 開ける (akeru - I open it) | 開く (aku - It opens) |
+| **Close** | 閉める (shimeru - I close it) | 閉まる (shimaru - It closes) |
+| **Turn on** | つける (tsukeru - I turn it on) | つく (tsuku - It turns on) |
+| **Turn off** | 消す (kesu - I turn it off) | 消える (kieru - It turns off/goes out) |
+| **Break** | 壊す (kowasu - I break it) | 壊れる (kowareru - It breaks) |
+| **Drop/Fall** | 落とす (otosu - I drop it) | 落ちる (ochiru - It falls) |
+| **Put in/Enter**| 入れる (ireru - I put it in) | 入る (hairu - It enters) |
+
+<ExampleSentence client:load 
+  japanese="私は窓を開けました。"
+  romaji="watashi wa mado o akemashita."
+  translation="I opened the window. (Action on an object)."
+/>
+
+<ExampleSentence client:load 
+  japanese="風で窓が開きました。"
+  romaji="kaze de mado ga akimashita."
+  translation="The window opened because of the wind. (The window itself changed state)."
+/>
+
+<ExampleSentence client:load 
+  japanese="弟がコップを壊しました。"
+  romaji="otouto ga koppu o kowashimashita."
+  translation="My little brother broke the glass. (Intentional or accidental action by an agent)."
+/>
+
+---
+
+## 2. Intransitive Verb + 〜ている (Ongoing State)
+
+While `〜ている` with action verbs means "currently doing," when attached to an **Intransitive verb of change**, it describes a **resultant state**—the action happened, and the result is still visible.
+
+<GrammarBox client:load 
+  pattern="[Noun] が [Intransitive て-form] + いる"
+  meaning="The [Noun] is currently in the state of [verb]."
+  formation="Intransitive Verb-te + いる"
+  examples={[
+    { japanese: "電気がついています。", romaji: "denki ga tsuite imasu.", translation: "The lights are (currently) on." },
+    { japanese: "このパソコンは壊れています。", romaji: "kono pasokon wa kowarete imasu.", translation: "This computer is broken." },
+    { japanese: "窓が閉まっています。", romaji: "mado ga shimatte imasu.", translation: "The window is closed." }
+  ]}
+/>
+
+> [!TIP]
+> Use this when you are simply observing the world as it is, without worrying about who made it that way.
+
+## 3. Transitive Verb + 〜てある (Intentional Preparation)
+
+If you want to say "The window is open," but you want to emphasize that **someone opened it for a specific reason** and left it that way, use the **Transitive verb** with `〜てある`.
+
+When using `〜てある`, the focus moves to the object, so `を` typically changes to `が`.
+
+<GrammarBox client:load 
+  pattern="[Noun] が [Transitive て-form] + ある"
+  meaning="The [Noun] has been [verb]ed (purposefully left in that state)."
+  formation="Transitive Verb-te + ある"
+  examples={[
+    { japanese: "机の上に花が飾ってあります。", romaji: "tsukue no ue ni hana ga kazatte arimasu.", translation: "Flowers are displayed on the desk (someone decorated them there)." },
+    { japanese: "名前が書いてあります。", romaji: "namae ga kaite arimasu.", translation: "A name is written (someone wrote it for identification)." },
+    { japanese: "カレンダーが壁に掛けてあります。", romaji: "karendaa ga kabe ni kakete arimasu.", translation: "A calendar is hung on the wall (someone put it there to be used)." }
+  ]}
+/>
+
+### Summary Comparison:
+1. **窓を閉めています** (Transitive + iru): "I am (actively) closing the window."
+2. **窓が閉まっています** (Intransitive + iru): "The window is (simply) closed."
+3. **窓が閉めてあります** (Transitive + aru): "The window is (purposely) closed (to keep the heat in)."
+
+## Cultural Insight: The "Invisible Hand" and Animism
+
+The heavy use of intransitive verbs in Japanese reflects a cultural tendency to view events as happening "of their own accord" rather than always being driven by a human agent. This is linked to **Animism** (Shinto beliefs), where objects and natural forces are seen as having their own 'spirit' or agency. 
+
+In English, we might say "I broke the glass" (taking blame). In Japanese, saying `コップが壊れました` (The glass broke) is a common way to report an accident. It focuses on the event rather than the person who caused it, which can sound more polite and less confrontational in a social context.
+
+## Contextual Dialogues
+
+### Dialogue 1: At the Office
+<ConversationDialog client:load 
+  title="The Meeting Preparation"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki-san, is the meeting room ready?", japanese: "鈴木さん、会議室の準備はできましたか。", romaji: "Suzuki-san, kaigishitsu no junbi wa dekimashita ka." },
+    { speaker: "Suzuki", translation: "Yes. The documents have been placed on the table.", japanese: "はい。テーブルの上に資料が置いてあります。", romaji: "Hai. Teeburu no ue ni shiryou ga oite arimasu." },
+    { speaker: "Tanaka", translation: "The air conditioner is on, so it's cool, isn't it?", japanese: "エアコンがついていますから、涼しいですね。", romaji: "Eakon ga tsuite imasu kara, suzushii desu ne." },
+    { speaker: "Suzuki", translation: "Actually, I purposefully left it on for everyone.", japanese: "実は、みんなのために、つけておいてあるんです。", romaji: "Jitsu wa, minna no tame ni, tsukete oite aru n desu." }
+  ]}
+/>
+
+### Dialogue 2: An Unfortunate Accident
+<ConversationDialog client:load 
+  title="The Broken Vase"
+  lines={[
+    { speaker: "Child", translation: "Mom, the vase broke!", japanese: "お母さん、花瓶が壊れちゃった！", romaji: "Okaa-san, kabin ga kowarechatta!" },
+    { speaker: "Mother", translation: "Did you break it?", japanese: "あなたが壊したの？", romaji: "Anata ga kowashita no?" },
+    { speaker: "Child", translation: "No, it just fell from the shelf...", japanese: "ううん、棚から落ちたんだ……。", romaji: "Uun, tana kara ochita n da..." },
+    { speaker: "Mother", translation: "I see. It's okay, because the shards are already put in the trash.", japanese: "そう。大丈夫よ。ゴミ箱に破片が入れてあるから、触らないでね。", romaji: "Sou. Daijoubu yo. Gomibako ni hahen ga irete aru kara, sawaranaide ne." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Transitive verbs (他動詞) require an agent and an object (marked with を).",
+    "Intransitive verbs (自動詞) focus on the subject's change of state (marked with が).",
+    "Intransitive + 〜ている describes a visible resultant state ('The door is open').",
+    "Transitive + 〜てある describes a purposeful resultant state ('The door has been left open').",
+    "Japanese culture often prefers intransitive verbs to avoid direct confrontation or blame."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of the following is an Intransitive verb?",
+      options: ["消す (to turn off)", "開ける (to open)", "壊れる (to break)", "入れる (to put in)"],
+      correct: 2,
+      explanation: "壊れる describes a state change of the subject itself. The others are transitive."
+    },
+    {
+      question: "Which particle is used with Transitive verbs to mark the object?",
+      options: ["が", "に", "を", "で"],
+      correct: 2,
+      explanation: "Transitive verbs (他動詞) act upon an object marked with 'を'."
+    },
+    {
+      question: "Translate: 'The window is (currently) open.' (Just observing).",
+      options: ["窓を開けています", "窓が開いています", "窓を開けてあります", "窓が開けてあります"],
+      correct: 1,
+      explanation: "Intransitive (開く -> 開く) + ている = [開いています]."
+    },
+    {
+      question: "What does '〜てある' imply when used with a transitive verb?",
+      options: ["An action is in progress.", "Something happened by accident.", "A state was created purposefully by someone.", "The action will happen in the future."],
+      correct: 2,
+      explanation: "〜てある emphasizes the human intent or preparation behind a state."
+    },
+    {
+      question: "Translate: 'I dropped my phone.'",
+      options: ["スマホが落ちました", "スマホを落としました", "スマホが落としました", "スマホを落ちました"],
+      correct: 1,
+      explanation: "落とす (to drop) is transitive. Use 'wo' + Transitive."
+    },
+    {
+      question: "In the sentence '壁に絵が掛けてあります', why is 'が' used instead of 'を'?",
+      options: ["Because 'ga' is always used with 'aru'.", "Because the object of the transitive verb has become the subject of the state.", "Because 'kake' is intransitive.", "Because it is a question."],
+      correct: 1,
+      explanation: "In the '〜てある' pattern, the former object is promoted to the subject of the resulting state."
+    },
+    {
+      question: "Which verb pair describes turning on/off a light?",
+      options: ["開ける / 開く", "つける / つく", "壊す / 壊れる", "消す / 消える"],
+      correct: 1,
+      explanation: "つける (transitive) and つく (intransitive)."
+    },
+    {
+      question: "If you want to say 'The computer has been purposefully left on for you', what do you say?",
+      options: ["パソコンがついています", "パソコンをつけています", "パソコンがつけてあります", "パソコンをつけてあります"],
+      correct: 2,
+      explanation: "Transitive (つける) + てある = [つけてあります]."
+    },
+    {
+      question: "Translate: 'The glass broke' (Avoiding blame).",
+      options: ["コップが壊れました", "コップを壊しました", "コップが壊しました", "コップを壊れました"],
+      correct: 0,
+      explanation: "Using the intransitive 'kowareta' focuses on the event, not the person."
+    },
+    {
+      question: "What is the transitive counterpart to '入る' (to enter)?",
+      options: ["入れます", "入れる", "入する", "入ける"],
+      correct: 1,
+      explanation: "入れる (ireru) means to put something in."
+    },
+    {
+      question: "What does '消えています' mean?",
+      options: ["Someone turned it off.", "It is currently in the state of being off/disappeared.", "I am turning it off now.", "It will turn off soon."],
+      correct: 1,
+      explanation: "Intransitive (消える) + ている = resultant state."
+    },
+    {
+      question: "Why would a Japanese speaker say '落ちていましたよ' when finding a lost wallet?",
+      options: ["To blame the wallet.", "To focus on the state of the wallet being found.", "To say they dropped it.", "To be rude."],
+      correct: 1,
+      explanation: "Focusing on the resultant state (jidoushi + teiru) is neutral and descriptive."
+    },
+    {
+      question: "True or False: '〜てある' can be used with intransitive verbs.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. '〜てある' requires a transitive verb to imply human intent."
+    },
+    {
+      question: "Translate: 'The documents are (purposefully) placed on the desk.'",
+      options: ["資料が机に置いてあります", "資料が机に置いています", "資料を机に置きました", "資料が机にあります"],
+      correct: 0,
+      explanation: "Transitive (置く) + てある = [置いてあります]."
+    },
+    {
+      question: "Which of these expresses 'Someone is actively breaking the door'?",
+      options: ["ドアが壊れています", "ドアが壊してあります", "ドアを壊しています", "ドアが壊れます"],
+      correct: 2,
+      explanation: "Transitive (壊す) + ている = active progress."
+    }
+  ]}
+/>

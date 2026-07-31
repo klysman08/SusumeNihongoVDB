@@ -1,0 +1,615 @@
+---
+title: "Chapter 21 — 日常生活の漢字 (N4 Kanji Part 1: Everyday Life)"
+level: "N4"
+chapter: 21
+description: "Expand your N4 kanji foundation with characters essential for everyday life, the human body, food vocabulary, and daily communication."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import KanjiCard from '../../components/book/KanjiCard.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="日常生活の漢字 (N4 Kanji Part 1: Everyday Life)"
+  level="N4"
+  chapter={21}
+  objectives={[
+    "Master N4 kanji related to the physical body and mental states (心, 目, 耳, 手, 足).",
+    "Identify essential kanji for meals and ingredients (飯, 牛, 魚).",
+    "Understand verbs of motion and daily habits in kanji form.",
+    "Learn about Japanese eating etiquette and cultural expressions."
+  ]}
+/>
+
+<SectionIntro level="N4">
+Welcome to the N4 level! Now that you have mastered the foundational N5 kanji, it is time to expand your vocabulary with characters you will encounter every single day in Japan. This chapter focuses on the human body, the food we eat, and the actions that define our daily routines.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/21-n4-kanji-everyday-life.webp"
+  alt="Anime pixel-art illustration of everyday N4 kanji study with body, food, tea, and walking routine objects on study cards."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Human Body & Mind (体と心)
+
+Understanding the body is essential for health, fashion, and expressing feelings. We start with the core physical parts and the "heart" or "mind" (心).
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "体",
+      meaning: "Body",
+      onyomi: "タイ、テイ",
+      kunyomi: "からだ",
+      strokes: 7,
+      examples: [
+        { word: "体", reading: "からだ", meaning: "body" },
+        { word: "体育", reading: "たいいく", meaning: "physical education" },
+        { word: "体力", reading: "たいりょく", meaning: "physical strength" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "頭",
+      meaning: "Head",
+      onyomi: "トウ、ズ、ト",
+      kunyomi: "あたま",
+      strokes: 16,
+      examples: [
+        { word: "頭", reading: "あたま", meaning: "head" },
+        { word: "頭痛", reading: "ずつう", meaning: "headache" },
+        { word: "先頭", reading: "せんとう", meaning: "the head/front" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "顔",
+      meaning: "Face",
+      onyomi: "ガン",
+      kunyomi: "かお",
+      strokes: 18,
+      examples: [
+        { word: "顔", reading: "かお", meaning: "face" },
+        { word: "洗顔", reading: "せんがん", meaning: "face washing" },
+        { word: "笑顔", reading: "えがお", meaning: "smiling face" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "声",
+      meaning: "Voice",
+      onyomi: "セイ、ショウ",
+      kunyomi: "こえ",
+      strokes: 7,
+      examples: [
+        { word: "声", reading: "こえ", meaning: "voice" },
+        { word: "大声", reading: "おおごえ", meaning: "loud voice" },
+        { word: "音声", reading: "おんせい", meaning: "sound/audio" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "心",
+      meaning: "Heart, Mind",
+      onyomi: "シン",
+      kunyomi: "こころ",
+      strokes: 4,
+      examples: [
+        { word: "心", reading: "こころ", meaning: "heart" },
+        { word: "安心", reading: "あんしん", meaning: "relief/peace of mind" },
+        { word: "中心", reading: "ちゅうしん", meaning: "center" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "目",
+      meaning: "Eye",
+      onyomi: "モク、ボク",
+      kunyomi: "め",
+      strokes: 5,
+      examples: [
+        { word: "目", reading: "め", meaning: "eye" },
+        { word: "目的", reading: "もくてき", meaning: "purpose" },
+        { word: "一日目", reading: "いちにちめ", meaning: "the first day" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "耳",
+      meaning: "Ear",
+      onyomi: "ジ",
+      kunyomi: "みみ",
+      strokes: 6,
+      examples: [
+        { word: "耳", reading: "みみ", meaning: "ear" },
+        { word: "耳鼻科", reading: "じびか", meaning: "ENT clinic" },
+        { word: "初耳", reading: "はつみみ", meaning: "hearing for the first time" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "手",
+      meaning: "Hand",
+      onyomi: "シュ",
+      kunyomi: "て",
+      strokes: 4,
+      examples: [
+        { word: "手", reading: "て", meaning: "hand" },
+        { word: "上手", reading: "じょうず", meaning: "skillful" },
+        { word: "下手", reading: "へた", meaning: "unskillful" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "足",
+      meaning: "Foot, Leg, Sufficiency",
+      onyomi: "ソク",
+      kunyomi: "あし、た・りる",
+      strokes: 7,
+      examples: [
+        { word: "足", reading: "あし", meaning: "foot/leg" },
+        { word: "足りる", reading: "たりる", meaning: "to be sufficient" },
+        { word: "遠足", reading: "えんそく", meaning: "excursion" }
+      ]
+    }}
+  />
+</div>
+
+<ExampleSentence client:load 
+  japanese="最近、体が少し重いです。"
+  romaji="Saikin, karada ga sukoshi omoi desu."
+  translation="Recently, my body feels a bit heavy."
+/>
+<ExampleSentence client:load 
+  japanese="彼は頭がいいし、心も広いです。"
+  romaji="Kare wa atama ga ii shi, kokoro mo hiroi desu."
+  translation="He is smart and also broad-minded (generous)."
+/>
+<ExampleSentence client:load 
+  japanese="手を洗ってから、目と耳をチェックしてください。"
+  romaji="Te o aratte kara, me to mimi o chekku shite kudasai."
+  translation="Please wash your hands, then check your eyes and ears."
+/>
+<ExampleSentence client:load 
+  japanese="大きな声で話すと、足が痛くなるのを忘れます。"
+  romaji="Ookina koe de hanasu to, ashi ga itaku naru no o wasuremasu."
+  translation="When I talk in a loud voice, I forget that my feet are starting to hurt."
+/>
+<ExampleSentence client:load 
+  japanese="寒いので、顔と耳が赤くなりました。"
+  romaji="Samui node, kao to mimi ga akaku narimashita."
+  translation="Because it's cold, my face and ears turned red."
+/>
+<ExampleSentence client:load 
+  japanese="体育の授業で、手足の運動をしました。"
+  romaji="Taiiku no jugyou de, teashi no undou o shimashita."
+  translation="In the physical education class, we did hand and foot exercises."
+/>
+<ExampleSentence client:load 
+  japanese="日本へ行く目的は、有名な建築を見ることです。"
+  romaji="Nihon e iku mokuteki wa, yuumeina kenchiku o miru koto desu."
+  translation="The purpose of going to Japan is to see famous architecture."
+/>
+<ExampleSentence client:load 
+  japanese="テストの結果を見て、安心しました。"
+  romaji="Tesuto no kekka o mite, anshin shimashita."
+  translation="I felt relieved after seeing the test results."
+/>
+
+## 2. Food & Drink (飲食)
+
+Food is the soul of culture. These kanji will help you navigate menus and talk about your favorite meals.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "肉",
+      meaning: "Meat",
+      onyomi: "ニク",
+      kunyomi: "-",
+      strokes: 6,
+      examples: [
+        { word: "肉", reading: "にく", meaning: "meat" },
+        { word: "牛肉", reading: "ぎゅうにく", meaning: "beef" },
+        { word: "豚肉", reading: "ぶたにく", meaning: "pork" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "飯",
+      meaning: "Meal, Cooked Rice",
+      onyomi: "ハン",
+      kunyomi: "めし",
+      strokes: 12,
+      examples: [
+        { word: "ご飯", reading: "ごはん", meaning: "meal/rice" },
+        { word: "夕飯", reading: "ゆうはん", meaning: "dinner" },
+        { word: "朝飯", reading: "あさめし", meaning: "breakfast (informal)" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "牛",
+      meaning: "Cow",
+      onyomi: "ギュウ",
+      kunyomi: "うし",
+      strokes: 4,
+      examples: [
+        { word: "牛", reading: "うし", meaning: "cow" },
+        { word: "牛肉", reading: "ぎゅうにく", meaning: "beef" },
+        { word: "牛乳", reading: "ぎゅうにゅう", meaning: "milk" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "魚",
+      meaning: "Fish",
+      onyomi: "ギョ",
+      kunyomi: "さかな、うお",
+      strokes: 11,
+      examples: [
+        { word: "魚", reading: "さかな", meaning: "fish" },
+        { word: "金魚", reading: "きんぎょ", meaning: "goldfish" },
+        { word: "焼き魚", reading: "やきざかな", meaning: "grilled fish" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "茶",
+      meaning: "Tea",
+      onyomi: "チャ、サ",
+      kunyomi: "-",
+      strokes: 9,
+      examples: [
+        { word: "お茶", reading: "おちゃ", meaning: "tea (green tea)" },
+        { word: "紅茶", reading: "こうちゃ", meaning: "black tea" },
+        { word: "茶色", reading: "ちゃいろ", meaning: "brown" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "野",
+      meaning: "Field",
+      onyomi: "ヤ",
+      kunyomi: "の",
+      strokes: 11,
+      examples: [
+        { word: "野菜", reading: "やさい", meaning: "vegetable" },
+        { word: "分野", reading: "ぶんや", meaning: "field (of study)" },
+        { word: "長野", reading: "ながの", meaning: "Nagano (prefecture)" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "菜",
+      meaning: "Vegetable, Side dish",
+      onyomi: "サイ",
+      kunyomi: "な",
+      strokes: 11,
+      examples: [
+        { word: "野菜", reading: "やさい", meaning: "vegetable" },
+        { word: "白菜", reading: "はくさい", meaning: "Chinese cabbage" },
+        { word: "総菜", reading: "そうざい", meaning: "side dish" }
+      ]
+    }}
+  />
+</div>
+
+<VocabTable data={[
+  { word: 'ご飯', reading: 'ごはん', romaji: 'gohan', meaning: 'Meal / Cooked rice', type: 'Noun' },
+  { word: '牛肉', reading: 'ぎゅうにく', romaji: 'gyuuniku', meaning: 'Beef', type: 'Noun' },
+  { word: '魚料理', reading: 'さかなりょうり', romaji: 'sakanaryouri', meaning: 'Fish dish', type: 'Noun' },
+  { word: '野菜', reading: 'やさい', romaji: 'yasai', meaning: 'Vegetable', type: 'Noun' },
+  { word: 'お茶', reading: 'おちゃ', romaji: 'ocha', meaning: 'Green tea', type: 'Noun' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="日本人は毎日ご飯と魚を食べます。"
+  romaji="Nihonjin wa mainichi gohan to sakana o tabemasu."
+  translation="Japanese people eat rice and fish every day."
+/>
+<ExampleSentence client:load 
+  japanese="牛肉は高いですが、とても美味しいです。"
+  romaji="Gyuuniku wa takai desu ga, totemo oishii desu."
+  translation="Beef is expensive, but it is very delicious."
+/>
+<ExampleSentence client:load 
+  japanese="野菜をたくさん食べて、温かいお茶を飲みましょう。"
+  romaji="Yasai o takusan tabete, atatakai ocha o nomimashou."
+  translation="Let's eat lots of vegetables and drink warm tea."
+/>
+<ExampleSentence client:load 
+  japanese="夕飯には焼き魚と白菜のスープを食べました。"
+  romaji="Yuuhan ni wa yakizakana to hakusai no suupu o tabemashita."
+  translation="For dinner, I ate grilled fish and napa cabbage soup."
+/>
+<ExampleSentence client:load 
+  japanese="朝ご飯に冷たい牛乳を一杯飲みました。"
+  romaji="Asagohan ni tsumetai gyuunyuu o ippai nomimashita."
+  translation="I drank a glass of cold milk for breakfast."
+/>
+<ExampleSentence client:load 
+  japanese="紅茶よりお茶のほうが好きです。"
+  romaji="Koucha yori ocha no hou ga suki desu."
+  translation="I like green tea more than black tea."
+/>
+<ExampleSentence client:load 
+  japanese="分野を問わず、色々な野菜を食べることが大切です。"
+  romaji="Bunya o towazu, iroirona yasai o taberu koto ga taisetsu desu."
+  translation="Regardless of the type, it is important to eat various vegetables."
+/>
+
+## 3. Movement and Actions (行動)
+
+These verbs describe the physical movements we make throughout the day.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "走",
+      meaning: "Run",
+      onyomi: "ソウ",
+      kunyomi: "はし・る",
+      strokes: 7,
+      examples: [
+        { word: "走る", reading: "はしる", meaning: "to run" },
+        { word: "競走", reading: "きょうそう", meaning: "race" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "歩",
+      meaning: "Walk",
+      onyomi: "ホ、ブ、フ",
+      kunyomi: "ある・く、あゆ・む",
+      strokes: 8,
+      examples: [
+        { word: "歩く", reading: "あるく", meaning: "to walk" },
+        { word: "散歩", reading: "さんぽ", meaning: "a stroll/walk" },
+        { word: "歩道", reading: "ほどう", meaning: "sidewalk" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "起",
+      meaning: "Wake up, occur",
+      onyomi: "キ",
+      kunyomi: "お・きる、お・こす",
+      strokes: 10,
+      examples: [
+        { word: "起きる", reading: "おきる", meaning: "to wake up" },
+        { word: "早起き", reading: "はやおき", meaning: "early rising" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "寝",
+      meaning: "Sleep",
+      onyomi: "シン",
+      kunyomi: "ね・る、ね・かす",
+      strokes: 13,
+      examples: [
+        { word: "寝る", reading: "ねる", meaning: "to sleep" },
+        { word: "昼寝", reading: "ひるね", meaning: "nap" },
+        { word: "寝室", reading: "しんしつ", meaning: "bedroom" }
+      ]
+    }}
+  />
+</div>
+
+<ExampleSentence client:load 
+  japanese="毎朝、六時に起きて公園を走ります。"
+  romaji="Maiasa, rokuji ni okite kouen o hashirimasu."
+  translation="Every morning, I wake up at six and run in the park."
+/>
+<ExampleSentence client:load 
+  japanese="夜、寝る前に少し歩きます。"
+  romaji="Yoru, neru mae ni sukoshi arukimasu."
+  translation="At night, I walk a little before going to sleep."
+/>
+<ExampleSentence client:load 
+  japanese="昼寝をすると、体が元気になります。"
+  romaji="Hirune o suru to, karada ga genki ni narimasu."
+  translation="When I take a nap, my body becomes energetic."
+/>
+<ExampleSentence client:load 
+  japanese="車が多いので、歩道を歩いてください。"
+  romaji="Kuruma ga ooi node, hodou o aruite kudasai."
+  translation="Because there are many cars, please walk on the sidewalk."
+/>
+<ExampleSentence client:load 
+  japanese="友達と公園で競走をしました。"
+  romaji="Tomodachi to kouen de kyousou o shimashita."
+  translation="I had a race with my friend in the park."
+/>
+<ExampleSentence client:load 
+  japanese="寝室で静かに寝たいです。"
+  romaji="Shinshitsu de shizuka ni netai desu."
+  translation="I want to sleep quietly in the bedroom."
+/>
+<ExampleSentence client:load 
+  japanese="早起きをして、美味しい朝ご飯を食べましょう。"
+  romaji="Hayaoki o shite, oishii asagohan o tabemashou."
+  translation="Let's wake up early and eat a delicious breakfast."
+/>
+
+## 4. Cultural Note: Japanese Eating Etiquette
+
+In Japan, showing gratitude for food is deeply ingrained in the culture. It is not just about manners; it's about acknowledging the life that was given and the effort of those who prepared the meal.
+
+### Itadakimasu (いただきます)
+Before starting a meal, Japanese people put their hands together and say *Itadakimasu*. This literally translates to "I humbly receive." It expresses gratitude to the plants, animals, farmers, and cooks.
+
+### Gochisousama deshita (ごちそうさまでした)
+After finishing, the phrase *Gochisousama deshita* is used. The kanji for *Gochisou* (御馳走) includes the characters for "run" (走), implying that the host "ran around" to gather and prepare the best ingredients for the guest. It is a sign of respect and appreciation for the "feast."
+
+**Key Etiquette Tips:**
+- **Chopstick Rest:** Always place your chopsticks on a *hashioki* (rest) or across the side of your plate when not in use.
+- **Lifting Bowls:** It is polite to lift small rice or miso soup bowls to your chest while eating to avoid spilling.
+
+## Contextual Dialogues
+
+### Dialogue 1: Lunch Break (昼休み)
+
+<ConversationDialog client:load 
+  title="Lunch Break"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, let's go eat lunch.", japanese: "鈴木さん、お昼ご飯を食べに行きましょう。", romaji: "Suzuki-san, ohirugohan o tabe ni ikimashou." },
+    { speaker: "Suzuki", translation: "Sounds good. What do you want to eat? Meat? Fish?", japanese: "いいですね。何を食べたいですか。肉ですか、魚ですか。", romaji: "Ii desu ne. Nani o tabetai desu ka. Niku desu ka, sakana desu ka." },
+    { speaker: "Tanaka", translation: "Recently, my body feels a bit heavy, so I want to eat lots of vegetables.", japanese: "最近、少し体が重いので、野菜をたくさん食べたいです。", romaji: "Saikin, sukoshi karada ga omoi node, yasai o takusan tabetai desu." },
+    { speaker: "Suzuki", translation: "I understand. Then, how about walking to that new salad place?", japanese: "わかります。じゃあ、あの新しいサラダのお店まで歩いていきませんか。", romaji: "Wakarimasu. Jaa, ano atarashii sarada no omise made aruite ikimasen ka." },
+    { speaker: "Tanaka", translation: "Yes, let's do that! I'm thirsty, so I also want to drink cold tea.", japanese: "はい、そうしましょう！喉が渇いたので、冷たいお茶も飲みたいです。", romaji: "Hai, sou shimashou! Nodo ga kawaita node, tsumetai ocha mo nomitai desu." }
+  ]}
+/>
+
+### Dialogue 2: Health & Physical Exercise (健康と運動)
+
+<ConversationDialog client:load 
+  title="Health Habits"
+  lines={[
+    { speaker: "Abe", translation: "Kim, your body looks very strong recently.", japanese: "キムさん、最近、体がとても丈夫そうですね。", romaji: "Kimu-san, saikin, karada ga totemo joubu sou desu ne." },
+    { speaker: "Kim", translation: "Thank you. Every morning I wake up early and run for 30 minutes.", japanese: "ありがとうございます。毎朝、早起きして三十分走っています。", romaji: "Arigatou gozaimasu. Maiasa, hayaoki shite sanjuppun hashitte imasu." },
+    { speaker: "Abe", translation: "That's great. My feet hurt easily, so I just walk slowly.", japanese: "すごいですね。私は足がすぐ痛くなるので、ゆっくり歩くだけです。", romaji: "Sugoi desu ne. Watashi wa ashi ga sugu itaku naru node, yukkuri aruku dake desu." },
+    { speaker: "Kim", translation: "Walking is also good. Don't push your mind too hard; just enjoy it.", japanese: "歩くのもいいですよ。心に無理をしないで、楽しんでください。", romaji: "Aruku no mo ii desu yo. Kokoro ni muri o shinaide, tanoshinde kudasai." },
+    { speaker: "Abe", translation: "You're right. After exercise, I always drink water and sleep well.", japanese: "そうですね。運動の後は、いつも水を飲んでよく寝ます。", romaji: "Sou desu ne. Undou no ato wa, itsumo mizu o nonde yoku nemasu." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Body kanji include physical parts like 頭 (head) and 顔 (face), but also mental states via 心 (heart/mind).",
+    "Meals center around 飯 (rice/meal), 肉 (meat), and 魚 (fish).",
+    "Daily actions are represented by verbs like 走る (run), 歩く (walk), 起きる (wake up), and 寝る (sleep).",
+    "Expressions like 'Itadakimasu' and 'Gochisousama' are vital for showing gratitude in Japanese culture.",
+    "Kanji combinations often describe functions, such as 牛肉 (beef) or 笑顔 (smiling face)."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the N4 kanji and cultural notes from this chapter!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which kanji means both 'heart' and 'mind'?",
+      options: ["体", "心", "頭", "声"],
+      correct: 1,
+      explanation: "心 (kokoro/shin) refers to the heart, mind, and spirit."
+    },
+    {
+      question: "Select the correct reading for '魚'.",
+      options: ["さかな", "にく", "やさい", "あし"],
+      correct: 0,
+      explanation: "魚 is read as 'sakana', meaning fish."
+    },
+    {
+      question: "What does the phrase 'Itadakimasu' literally mean?",
+      options: ["Thank you for the food", "I humbly receive", "Let's eat", "It was a feast"],
+      correct: 1,
+      explanation: "Itadakimasu literally means 'I humbly receive'."
+    },
+    {
+      question: "Which kanji represents 'hand'?",
+      options: ["足", "目", "耳", "手"],
+      correct: 3,
+      explanation: "手 (te) is the kanji for hand."
+    },
+    {
+      question: "What is the reading for 'ご飯'?",
+      options: ["あさめし", "ゆうはん", "ごはん", "めし"],
+      correct: 2,
+      explanation: "ご飯 is read as 'gohan', meaning meal or cooked rice."
+    },
+    {
+      question: "Choose the kanji for 'to walk'.",
+      options: ["走る", "歩く", "起きる", "寝る"],
+      correct: 1,
+      explanation: "歩く (aruku) means to walk."
+    },
+    {
+      question: "What is the meaning of '牛肉' (gyuuniku)?",
+      options: ["Pork", "Chicken", "Fish", "Beef"],
+      correct: 3,
+      explanation: "牛 (cow) + 肉 (meat) = Beef."
+    },
+    {
+      question: "Which kanji is used in '散歩' (stroll)?",
+      options: ["走", "歩", "起", "寝"],
+      correct: 1,
+      explanation: "散歩 (sanpo) uses the kanji 歩 (walk)."
+    },
+    {
+      question: "What is '目'?",
+      options: ["Ear", "Eye", "Face", "Head"],
+      correct: 1,
+      explanation: "目 (me) means eye."
+    },
+    {
+      question: "What does 'Gochisousama' acknowledge?",
+      options: ["The weather", "The price of food", "The effort of preparation", "The size of the portion"],
+      correct: 2,
+      explanation: "Gochisousama acknowledges the effort (the 'running around') required to prepare the meal."
+    },
+    {
+      question: "Which word means 'headache'?",
+      options: ["足痛", "心痛", "耳痛", "頭痛"],
+      correct: 3,
+      explanation: "頭痛 (zutsuu) means headache (Head + Pain)."
+    },
+    {
+      question: "Identify the reading for '足'.",
+      options: ["て", "め", "あし", "みみ"],
+      correct: 2,
+      explanation: "足 is read as 'ashi', meaning foot or leg."
+    },
+    {
+      question: "What is '早起き'?",
+      options: ["Sleeping late", "Early rising", "Running fast", "Eating quickly"],
+      correct: 1,
+      explanation: "早起き (hayaoki) means early rising or waking up early."
+    },
+    {
+      question: "Which kanji means 'ear'?",
+      options: ["目", "手", "耳", "足"],
+      correct: 2,
+      explanation: "耳 (mimi) is the kanji for ear."
+    },
+    {
+      question: "In the second dialogue, what does Kim do every morning?",
+      options: ["Sleeps late", "Eats beef", "Wakes up early and runs", "Walks slowly"],
+      correct: 2,
+      explanation: "Kim says '毎朝、早起きして三十分走っています' (Every morning I wake up early and run for 30 minutes)."
+    }
+  ]}
+/>

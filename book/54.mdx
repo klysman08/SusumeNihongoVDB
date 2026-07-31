@@ -1,0 +1,47 @@
+---
+title: "Chapter 54 — Contrast and Concession"
+level: "N3"
+chapter: 54
+unit: 4
+unitTitle: "Conditions and Nuance"
+topics: "Unexpected outcomes, formal concession, criticism, and expectation-based contrast"
+description: "Express neutral, emotional, formal, and critical contrast with のに, ても, ながらも, くせに, and にしては."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Contrast and Concession" level="N3" chapter={54} objectives={["Choose contrast forms by emotion and register.", "Avoid the accusatory force of くせに in neutral contexts.", "Compare a result with an expected standard using にしては."]} />
+<SectionIntro level="N3">All these forms can translate as “although” or “even though,” but they do different social work: reporting an unexpected result, granting a hypothetical condition, acknowledging two sides, criticising someone, or comparing reality with an expectation.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "予想", reading: "よそう", meaning: "expectation; prediction", type: "noun" }, { word: "不満", reading: "ふまん", meaning: "dissatisfaction", type: "noun" }, { word: "評価", reading: "ひょうか", meaning: "evaluation", type: "noun" }, { word: "経験", reading: "けいけん", meaning: "experience", type: "noun" }, { word: "意外", reading: "いがい", meaning: "unexpected", type: "adj" }, { word: "認める", reading: "みとめる", meaning: "to acknowledge", type: "verb" }]} />
+<PatternCompare client:load title="Contrast has a tone" items={[
+  { pattern: "plain + のに", meaning: "although; despite", use: "Marks an unexpected result, often with disappointment, surprise, or complaint.", example: "予約したのに、三十分も待たされた。", translation: "Although I had booked, I was made to wait thirty minutes.", register: "emotional" },
+  { pattern: "V-ても／Nでも", meaning: "even if; even though", use: "Concedes a real or hypothetical condition without necessarily expressing blame.", example: "雨が降っても、試合は行われます。", translation: "Even if it rains, the match will be held.", register: "neutral" },
+  { pattern: "stem／N／adj + ながらも", meaning: "although; while acknowledging", use: "A compact, often written way to recognise one fact before presenting a contrasting fact.", example: "小さいながらも、設備が整っている。", translation: "Although it is small, it is well equipped.", register: "written" },
+  { pattern: "plain + くせに", meaning: "even though; despite", use: "Expresses criticism, contempt, or blame. Avoid it toward superiors and in neutral explanation.", example: "知っているくせに、何も教えてくれなかった。", translation: "Even though they knew, they told me nothing.", register: "critical" },
+  { pattern: "N／plain + にしては", meaning: "for; considering", use: "The result differs from the standard normally expected for that category or situation.", example: "初めてにしては、よくできました。", translation: "For a first attempt, you did well.", register: "evaluation" }
+]} />
+<CommonMistake title="Do not soften a complaint with くせに"><p><strong>新人なのに詳しい</strong> expresses surprise. <strong>新人のくせに偉そうだ</strong> attacks the person for acting contrary to the speaker's expectation. The second form is deliberately harsh.</p></CommonMistake>
+<PracticeBlock client:load instructions="Match the contrast to the intended attitude." items={[{ prompt: "Neutral rule: the event proceeds even if it snows.", answer: "雪が降っても、イベントは行われます。", explanation: "ても gives neutral concession." }, { prompt: "Written acknowledgement: the device is old but still useful.", answer: "古いながらも、まだ十分に役立つ機械です。", explanation: "ながらも suits balanced written contrast." }, { prompt: "Positive evaluation: the report is good for a beginner.", answer: "初心者にしては、よく書けたレポートです。", explanation: "にしては compares with an expected standard." }]} />
+<ReadingPractice client:load title="A small hotel with a strong reputation" genre="travel review" targetTime="3 minutes" passage={<>駅から遠いにもかかわらず、この旅館はいつも予約でいっぱいです。建物は古いながらも、部屋はきれいに手入れされています。値段が安いのに食事も評判がよく、初めて訪れた人にしては「前にも来たような気がする」と感じるほど温かい雰囲気があります。</>} glossary={[{ word: "旅館", reading: "りょかん", meaning: "Japanese inn" }, { word: "手入れ", reading: "ていれ", meaning: "care; maintenance" }]} questions={[{ question: "What two positive contrasts are described?", answer: "The old building is well maintained, and the inexpensive inn serves well-regarded food.", explanation: "ながらも and のに each link a fact with an unexpected positive result." }, { question: "What expectation does にしては establish?", answer: "A first-time visitor would normally feel unfamiliar with the place.", explanation: "The actual feeling is unexpectedly familiar." }]} />
+<ListeningPractice client:load title="A disappointing purchase" situation="Listen for the speaker's emotional contrast." script="評判がよかったのに、私が買った製品は一週間で動かなくなりました。安くても、すぐ壊れるなら困ります。" questions={[{ question: "Which form carries disappointment?", answer: "評判がよかったのに", explanation: "のに highlights the gap between good reviews and the bad result." }]} />
+<ChapterSummary takeaways={["のに often carries emotion; ても gives neutral concession.", "ながらも acknowledges two sides in compact written style.", "くせに is critical; にしては compares reality with an expected standard."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "約束した＿＿、来なかった。", options: ["のに", "にしては", "さえ", "結果"], correct: 0, explanation: "The broken expectation naturally takes のに." },
+  { question: "忙しく＿＿、毎日運動します。", options: ["ても", "くせに", "にしては", "ことから"], correct: 0, explanation: "ても neutrally concedes the condition." },
+  { question: "Which sounds openly critical?", options: ["知らないのに", "知らなくても", "知らないくせに", "知らないにしては"], correct: 2, explanation: "くせに conveys blame or contempt." },
+  { question: "新人＿＿、対応が落ち着いている。", options: ["の結果", "にしては", "さえ", "そうだ"], correct: 1, explanation: "The calm response exceeds the expected beginner standard." },
+  { question: "Which is suited to balanced written contrast?", options: ["狭いながらも快適だ。", "狭いくせに快適だ。", "狭さえ快適だ。", "狭い結果快適だ。"], correct: 0, explanation: "ながらも formally acknowledges both facts." },
+  { question: "Why is くせに risky with a superior?", options: ["It is too formal", "It conveys criticism or contempt", "It means praise", "It can only describe weather"], correct: 1, explanation: "Its accusatory stance is socially marked." },
+  { question: "Even if it is expensive, I need it: 高く＿＿、必要だ。", options: ["のに", "ても", "くせに", "にしては"], correct: 1, explanation: "ても expresses a conceded condition." },
+  { question: "Which sentence evaluates against a category expectation?", options: ["冬なのに暖かい。", "冬でも行く。", "冬にしては暖かい。", "冬のくせに暖かい。"], correct: 2, explanation: "にしては means warmer than expected for winter." }
+]} />

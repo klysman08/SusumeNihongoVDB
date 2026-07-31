@@ -1,0 +1,133 @@
+name: susume-nihongo
+
+x-common-backend-environment: &common-backend-environment
+  ADMIN_API_KEY: ${ADMIN_API_KEY:?Set ADMIN_API_KEY in .env}
+  QDRANT_URL: http://qdrant:6333
+  QDRANT_API_KEY: ${QDRANT_API_KEY}
+  DATABASE_PATH: /data/documents.sqlite3
+  BOOK_PATH: /book
+  INGEST_COMPLETE_FILE: /data/.book_ingest_complete
+  MODEL_CACHE_PATH: /models
+  DENSE_RELEVANCE_FLOOR: ${DENSE_RELEVANCE_FLOOR:-0.25}
+
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.18.3-unprivileged
+    ports:
+      - "127.0.0.1:${QDRANT_DASHBOARD_PORT:-6333}:6333"
+    environment:
+      QDRANT__SERVICE__API_KEY: ${QDRANT_API_KEY:?Set QDRANT_API_KEY in .env}
+      QDRANT__TELEMETRY_DISABLED: "true"
+    volumes:
+      - qdrant-data:/qdrant/storage
+    networks:
+      - private
+      - dashboard
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "kill -0 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 10s
+    restart: unless-stopped
+
+  ingest:
+    build:
+      context: ./backend
+    command: ["susume", "ingest"]
+    environment: *common-backend-environment
+    volumes:
+      - catalog-data:/data
+      - ./book:/book:ro
+    networks:
+      - private
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      <<: *common-backend-environment
+      LLM_PROVIDER: ${LLM_PROVIDER:-openrouter}
+      OPENROUTER_BASE_URL: ${OPENROUTER_BASE_URL:-https://openrouter.ai/api/v1}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-~openai/gpt-latest}
+      OPENROUTER_HTTP_REFERER: ${OPENROUTER_HTTP_REFERER:-}
+      OPENROUTER_APP_TITLE: ${OPENROUTER_APP_TITLE:-Susume Nihongo}
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+    volumes:
+      - catalog-data:/data
+      - ./book:/book:ro
+    networks:
+      - private
+      - edge
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      qdrant:
+        condition: service_healthy
+      ingest:
+        condition: service_completed_successfully
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - ${APP_PORT:-8080}:8080
+    networks:
+      - edge
+    depends_on:
+      backend:
+        condition: service_healthy
+    read_only: true
+    tmpfs:
+      - /tmp:size=32m,mode=1777
+      - /var/cache/nginx:size=32m,mode=0755
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/ >/dev/null"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+networks:
+  private:
+    internal: true
+  dashboard:
+  edge:
+
+volumes:
+  qdrant-data:
+  catalog-data:

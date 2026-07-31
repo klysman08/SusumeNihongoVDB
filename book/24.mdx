@@ -1,0 +1,281 @@
+---
+title: "Chapter 24 — て-Form Extensions (The Power of TE)"
+level: "N4"
+chapter: 24
+description: "Unlock advanced nuances in Japanese by attaching auxiliary verbs like miru (try), shimau (regret/complete), oku (prepare), kuru, and iku to the te-form."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="て-Form Extensions (The Power of TE)"
+  level="N4"
+  chapter={24}
+  objectives={[
+    "Express trying something to see what it's like using 〜てみる.",
+    "Describe completion or regret using 〜てしまう.",
+    "Indicate advanced preparation using 〜ておく.",
+    "Describe actions moving toward or away from the speaker with 〜てくる and 〜ていく."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In N5, you learned that the て-form (TE-form) connects sentences and makes requests (`〜てください`). In N4, the て-form acts as a powerful docking station. By attaching specific "auxiliary verbs" to it, you can express complex nuances like preparation, regret, direction, and trial. Let's explore these five essential extensions!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/24-te-form-extensions.webp"
+  alt="Anime pixel-art illustration of the て-form as a grammar docking station branching into trying, regret, preparation, and movement paths."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Trying Something: 〜てみる
+
+When you do something as an experiment to see what it is like, use `〜てみる`. This comes from the verb `見る` (to see), but when used as an auxiliary, it is usually written in hiragana (`みる`).
+
+<GrammarBox client:load 
+  pattern="Verb (て-form) + みる"
+  meaning="To try doing [verb] to see what happens / what it's like."
+  formation="食べる → 食べてみる (Try eating)"
+  examples={[
+    { japanese: "このケーキを食べてみてください。", romaji: "kono keeki o tabete mite kudasai.", translation: "Please try eating this cake." },
+    { japanese: "あの新しいレストランへ行ってみます。", romaji: "ano atarashii resutoran e itte mimasu.", translation: "I am going to try going to that new restaurant." },
+    { japanese: "サイズが合うか、着てみました。", romaji: "saizu ga au ka, kite mimashita.", translation: "I tried wearing it to see if the size fits." }
+  ]}
+/>
+
+> [!NOTE]
+> `〜てみる` conjugates just like a normal Group 2 (ru-verb). You can say `てみます`, `てみない`, `てみたい` (want to try doing), etc.
+
+## 2. Regret or Completion: 〜てしまう
+
+The extension `〜てしまう` has two distinct meanings depending on the context:
+1. **Regret/Oops:** Doing something accidentally or unfortunately.
+2. **Completion:** Finishing an action completely and thoroughly.
+
+In casual speech, `〜てしまう` contracts to `〜ちゃう`, and `〜でしまう` contracts to `〜じゃう`.
+
+<GrammarBox client:load 
+  pattern="Verb (て-form) + しまう"
+  meaning="To do [verb] completely, OR to do [verb] accidentally / with regret."
+  formation="忘れる → 忘れてしまう (Forget completely / Unfortunately forget)"
+  examples={[
+    { japanese: "ごめんなさい、パスポートを忘れてしまいました。", romaji: "gomennasai, pasupooto o wasurete shimaimashita.", translation: "I'm sorry, I accidentally forgot my passport." },
+    { japanese: "ビールを全部飲んでしまいました。", romaji: "biiru o zenbu nonde shimaimashita.", translation: "I completely drank all the beer." },
+    { japanese: "あ！ケーキ食べちゃった！", romaji: "a! keeki tabechatta!", translation: "Ah! I accidentally ate the cake! (Casual)" }
+  ]}
+/>
+
+## 3. Preparation: 〜ておく
+
+When you do an action *in preparation* for the future, use `〜ておく`. It implies leaving something in a certain state so that it is ready later. In casual speech, it contracts to `〜とく`.
+
+<GrammarBox client:load 
+  pattern="Verb (て-form) + おく"
+  meaning="To do [verb] in advance / as preparation."
+  formation="買う → 買っておく (Buy in advance)"
+  examples={[
+    { japanese: "パーティーの前に、飲み物を買っておきます。", romaji: "paatii no mae ni, nomimono o katte okimasu.", translation: "Before the party, I will buy drinks in advance." },
+    { japanese: "ホテルを予約しておきました。", romaji: "hoteru o yoyaku shite okimashita.", translation: "I booked the hotel in advance." },
+    { japanese: "ドアを開けておいてください。", romaji: "doa o akete oite kudasai.", translation: "Please leave the door open (for future convenience)." }
+  ]}
+/>
+
+### Cultural Insight: The Concept of Dandori (段取り)
+
+Japanese culture places a high value on **Dandori (段取り)**, which refers to "preparation and planning." Using `〜ておく` reflects this cultural mindset. Whether it's setting up a meeting room 15 minutes early or buying a gift weeks before a birthday, performing actions *in advance* is seen as a sign of consideration for others and professional competence.
+
+## 4. Movement in Time/Space: 〜てくる and 〜ていく
+
+These two extensions describe the *direction* of an action from the speaker's perspective, either physically or temporally.
+
+### A. 〜てくる (Toward the speaker / Up to now)
+1. **Physical:** Do an action and then come back (`行ってきます`).
+2. **Temporal:** A change that has been happening up until now, or something starting to happen (`雨が降ってきた`).
+
+<ExampleSentence client:load 
+  japanese="ちょっとコンビニへ行ってきます。"
+  romaji="chotto konbini e itte kimasu."
+  translation="I'm going to the convenience store and coming right back."
+/>
+<ExampleSentence client:load 
+  japanese="急に雨が降ってきました。"
+  romaji="kyuu ni ame ga futte kimashita."
+  translation="It suddenly started raining (the rain came toward us in time)."
+/>
+<ExampleSentence client:load 
+  japanese="日本語が少しずつわかってきました。"
+  romaji="nihongo ga sukoshizutsu wakatte kimashita."
+  translation="I've gradually started to understand Japanese (up until now)."
+/>
+
+### B. 〜ていく (Away from the speaker / From now on)
+1. **Physical:** Do an action and move away from the current location.
+2. **Temporal:** A change that will continue to happen from now into the future.
+
+<ExampleSentence client:load 
+  japanese="日本の人口は減っていくでしょう。"
+  romaji="nihon no jinkou wa hette iku deshou."
+  translation="The Japanese population will continue to decrease (into the future)."
+/>
+<ExampleSentence client:load 
+  japanese="会社にお弁当を持っていきます。"
+  romaji="kaisha ni obentou o motte ikimasu."
+  translation="I will take a bento to the company (taking it away from current location)."
+/>
+<ExampleSentence client:load 
+  japanese="これからも日本語を勉強し続けていきます。"
+  romaji="korekara mo nihongo o benkyou shitsudukete ikimasu."
+  translation="I will continue to keep studying Japanese from now on."
+/>
+
+---
+
+## Contextual Dialogues
+
+### Dialogue 1: Preparing for a Trip (旅行の準備)
+
+<ConversationDialog client:load 
+  title="Preparing for a Trip"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, are our concert tickets okay?", japanese: "鈴木さん、コンサートのチケットは大丈夫ですか。", romaji: "Suzuki-san, konsaato no chiketto wa daijoubu desu ka." },
+    { speaker: "Suzuki", translation: "Yes, I bought them in advance yesterday.", japanese: "はい、昨日買っておきましたよ。", romaji: "Hai, kinou katte okimashita yo." },
+    { speaker: "Tanaka", translation: "That's a relief! Oh no, I accidentally forgot my wallet!", japanese: "よかった！あ、しまった！財布を忘れてしまいました！", romaji: "Yokatta! A, shimatta! Saifu o wasurete shimaimashita!" },
+    { speaker: "Suzuki", translation: "Really? Then, please try looking in your bag one more time.", japanese: "本当ですか？じゃあ、もう一度カバンの中を見てみてください。", romaji: "Hontou desu ka? Jaa, mou ichido kaban no naka o mite mite kudasai." },
+    { speaker: "Tanaka", translation: "Ah, here it is. Sorry about that. Well then, I will go buy some coffee and come back.", japanese: "あ、ありました。すみません。じゃあ、ちょっとコーヒーを買ってきますね。", romaji: "A, arimashita. Sumimasen. Jaa, chotto koohii o katte kimasu ne." }
+  ]}
+/>
+
+### Dialogue 2: Change Over Time (最近の変化)
+
+<ConversationDialog client:load 
+  title="Recent Changes"
+  lines={[
+    { speaker: "Yamada", translation: "It's become quite cold recently, hasn't it?", japanese: "最近、ずいぶん寒くなってきましたね。", romaji: "Saikin, zuibun samuku natte kimashita ne." },
+    { speaker: "Sato", translation: "Yes. From now on, it will continue to get even colder.", japanese: "ええ。これから、もっと寒くなっていきますよ。", romaji: "Ee. Korekara, motto samuku natte ikimasu yo." },
+    { speaker: "Yamada", translation: "I should try buying a new coat soon.", japanese: "そろそろ、新しいコートを買ってみようと思っています。", romaji: "Sorosoro, atarashii kooto o kattemiyou to omotte imasu." },
+    { speaker: "Sato", translation: "I've already bought mine in advance. I'm ready for winter.", japanese: "私はもう買っておきましたよ。冬の準備は大丈夫です。", romaji: "Watashi wa mou katte okimashita yo. Fuyu no junbi wa daijoubu desu." },
+    { speaker: "Yamada", translation: "You are well-prepared! I've completely lost track of the season.", japanese: "準備がいいですね！私は季節を忘れてしまっていました。", romaji: "Junbi ga ii desu ne! Watashi wa kisetsu o wasurete shimatte imashita." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "〜てみる means to try doing something to see what happens.",
+    "〜てしまう indicates either completing an action entirely or doing it accidentally/with regret.",
+    "〜ておく indicates doing something in advance as preparation (Dandori).",
+    "〜てくる shows action moving toward the speaker or a change continuing up to the present.",
+    "〜ていく shows action moving away from the speaker or a change continuing into the future."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the て-Form extensions!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which form implies you are doing something in advance for preparation?",
+      options: ["〜てみる", "〜ておく", "〜てしまう", "〜てくる"],
+      correct: 1,
+      explanation: "〜ておく indicates advanced preparation or leaving something in a ready state."
+    },
+    {
+      question: "Translate: 'I accidentally dropped my phone.'",
+      options: ["スマホを落としておきました。", "スマホを落としてみました。", "スマホを落としてしまいました。", "スマホを落としてきました。"],
+      correct: 2,
+      explanation: "〜てしまう expresses an accidental or regrettable action. 落とす -> 落としてしまう."
+    },
+    {
+      question: "What is the casual contraction of '食べてしまう'?",
+      options: ["食べとく", "食べちゃう", "食べじゃう", "食べみく"],
+      correct: 1,
+      explanation: "て + しまう contracts to ちゃう. (食べてしまう -> 食べちゃう)."
+    },
+    {
+      question: "If you want to say 'Please try eating this.', you say:",
+      options: ["食べてきてください", "食べておいてください", "食べてみてください", "食べていってください"],
+      correct: 2,
+      explanation: "〜てみる means 'to try'. 食べる -> 食べてみる -> 食べてみてください."
+    },
+    {
+      question: "Which phrase means 'I am going to buy it and come back'?",
+      options: ["買っていきます", "買ってみます", "買っておきます", "買ってきます"],
+      correct: 3,
+      explanation: "〜てくる indicates doing an action and returning to the current location. 買ってくる -> 買ってきます."
+    },
+    {
+      question: "What nuance does '窓（まど）を開けておく' imply?",
+      options: ["I accidentally left the window open.", "I will try opening the window.", "I will leave the window open (for future convenience/ventilation).", "I am opening the window right now."],
+      correct: 2,
+      explanation: "〜ておく implies an intended action for preparation or leaving something in a certain state."
+    },
+    {
+      question: "If an ongoing trend will continue from now into the future, which extension is used?",
+      options: ["〜てみる", "〜ておく", "〜てくる", "〜ていく"],
+      correct: 3,
+      explanation: "〜ていく marks an action or change heading away from the present moment into the future."
+    },
+    {
+      question: "Translate: 'ケーキを全部食べてしまった。'",
+      options: ["I tried to eat the whole cake.", "I left the cake for later.", "I completely ate the whole cake.", "The cake is coming toward me."],
+      correct: 2,
+      explanation: "〜てしまう here implies total completion (and perhaps a bit of regret!)."
+    },
+    {
+      question: "What is the casual spoken form of '買っておく' (to buy in advance)?",
+      options: ["買っちゃう", "買っとく", "買ってみる", "買ってく"],
+      correct: 1,
+      explanation: "〜ておく contracts to 〜とく. 買っておく -> 買っとく."
+    },
+    {
+      question: "Which extension comes from the verb 'to see'?",
+      options: ["〜てしまう", "〜てみる", "〜ておく", "〜てくる"],
+      correct: 1,
+      explanation: "〜てみる comes from 見る (to see) -> 'to do something and see'."
+    },
+    {
+      question: "In the dialogue, why did Suzuki say '買っておきました'?",
+      options: ["Because he bought the tickets accidentally.", "Because he bought the tickets in preparation for the concert.", "Because he tried buying tickets.", "Because he dropped the tickets."],
+      correct: 1,
+      explanation: "He used 〜ておく because buying the tickets was a preparation step for the future."
+    },
+    {
+      question: "What is the correct contraction for '飲んでしまう'?",
+      options: ["飲んじゃう", "飲みちゃう", "飲んどく", "飲んでみる"],
+      correct: 0,
+      explanation: "で + しまう becomes じゃう. (飲んでしまう -> 飲んじゃう)."
+    },
+    {
+      question: "If the clouds gather and it starts raining right now, which is correct?",
+      options: ["雨が降っていきました。", "雨が降ってきました。", "雨が降ってみました。", "雨が降っておきました。"],
+      correct: 1,
+      explanation: "〜てくる is used for changes that emerge up to the present moment (e.g. rain starting to fall)."
+    },
+    {
+      question: "Which of these expresses 'I want to try going to Japan'?",
+      options: ["日本へ行ってしまいます。", "日本へ行っておきたいです。", "日本へ行ってみます。", "日本へ行ってみたいです。"],
+      correct: 3,
+      explanation: "Going (行く) + try (てみる) + want (たい) -> 行ってみたい."
+    },
+    {
+      question: "If you take an umbrella with you when you leave your house, you literally 'hold and go'. How is this written?",
+      options: ["持っていきます", "持ってきます", "持っておきます", "持ってみます"],
+      correct: 0,
+      explanation: "持つ (to hold) + ていく (movement away) -> 持っていきます (to take [something] and go)."
+    }
+  ]}
+/>

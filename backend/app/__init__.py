@@ -1,0 +1,2 @@
+"""Susume Nihongo knowledge API."""
+

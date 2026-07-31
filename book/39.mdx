@@ -1,0 +1,272 @@
+---
+title: "Chapter 39 — Introduction to Keigo (Honorifics)"
+level: "N4"
+chapter: 39
+description: "Enter the world of Japanese business and extreme politeness by learning the three pillars of Keigo (Teineigo, Sonkeigo, and Kenjougo)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Introduction to Keigo (敬語)"
+  level="N4"
+  chapter={39}
+  objectives={[
+    "Understand the three pillars of Keigo: Teineigo, Sonkeigo, and Kenjougo.",
+    "Learn the common 'special' respectful verbs for superiors.",
+    "Learn the common 'special' humble verbs for yourself.",
+    "Form the standard respectful and humble structures using お/ご."
+  ]}
+/>
+
+<SectionIntro level="N4">
+Welcome to one of the most sophisticated aspects of the Japanese language: **Keigo (Honorific Language)**. Keigo is not a different language; it is a system of respect heavily used in business, customer service, and formal society. It adjusts your language based on the social hierarchy between the speaker, the listener, and the people being discussed.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/39-keigo-honorifics.webp"
+  alt="Anime pixel-art illustration of bookstore staff and a customer bowing politely while a learner observes from respectful social-distance circles."
+  width={1672}
+  height={941}
+/>
+
+## 1. The Three Pillars of Keigo
+
+To use Keigo correctly, you must visualize an invisible line between "Your Group" (Uchi - you, your family, your company) and "The Outside Group" (Soto - the customer, the boss, strangers). 
+
+1. **Teineigo (丁寧語 - Polite Language):** The standard `〜ます / 〜です` form. Everyone uses this for general politeness.
+2. **Sonkeigo (尊敬語 - Respectful Language):** Used to elevate the actions of someone in the *Outside Group* (e.g., a customer, a teacher, a boss). **Never use Sonkeigo for your own actions!**
+3. **Kenjougo (謙譲語 - Humble Language):** Used to lower the actions of someone in *Your Group* (e.g., yourself) to show modesty toward the listener. 
+
+## 2. Special Respectful Verbs (Sonkeigo)
+
+Many common verbs have completely different vocabulary words in Sonkeigo. You use these to describe the actions of your boss, teacher, or customer.
+
+| Standard Verb | Respectful Verb (Sonkeigo) | Meaning |
+| :--- | :--- | :--- |
+| 行く / 来る / いる | **いらっしゃる** | To go / come / be |
+| 食べる / 飲む | **召し上がる** | To eat / drink |
+| 言う | **おっしゃる** | To say |
+| する | **なさる** | To do |
+| 見る | **ご覧になる** | To see |
+
+<GrammarBox client:load 
+  pattern="[Superior] + [Sonkeigo Verb]"
+  meaning="The [Superior] [Verbs] (Respectful)."
+  formation="Special Sonkeigo Verb + ます/です"
+  examples={[
+    { japanese: "社長は明日、東京へいらっしゃいます。", romaji: "shachou wa ashita, toukyou e irasshaimasu.", translation: "The company president will go to Tokyo tomorrow." },
+    { japanese: "先生、もうお弁当を召し上がりましたか。", romaji: "sensei, mou obentou o meshiagarimashita ka.", translation: "Teacher, have you already eaten the bento?" },
+    { japanese: "課長がおっしゃったことは正しいです。", romaji: "kachou ga osshatta koto wa tadashii desu.", translation: "What the section manager said is correct." }
+  ]}
+/>
+
+> [!WARNING]
+> Verbs ending in 'aru' in Keigo (いらっしゃる, おっしゃる, なさる, くださる) conjugate irregularly in the ます-form. The 'ru' becomes an 'i'. Therefore: いらっしゃ**います**, おっしゃ**います**.
+
+## 3. Special Humble Verbs (Kenjougo)
+
+If YOU are doing the action for or toward someone higher up, you use "Humble" verbs to lower yourself and show respect to the listener.
+
+| Standard Verb | Humble Verb (Kenjougo) | Meaning |
+| :--- | :--- | :--- |
+| 行く / 来る | **参る** (mairu) | To go / come |
+| いる | **おる** | To be (animate) |
+| もらう / 食べる | **いただく** | To receive / eat / drink |
+| 言う | **申す / 申し上げる** | To say |
+| する | **いたす** | To do |
+
+<GrammarBox client:load 
+  pattern="[I] + [Kenjougo Verb]"
+  meaning="I [Verb] (Humbly)."
+  formation="Special Kenjougo Verb + ます/です"
+  examples={[
+    { japanese: "私は田中と申します。どうぞよろしく。", romaji: "watashi wa Tanaka to moushimasu. douzo yoroshiku.", translation: "I am called Tanaka (humble). Nice to meet you." },
+    { japanese: "明日、十時にそちらへ参ります。", romaji: "ashita, juu-ji ni sochira e mairimasu.", translation: "I will go there tomorrow at 10 o'clock (humble)." },
+    { japanese: "私がその仕事をいたします。", romaji: "watashi ga sono shigoto o itashimasu.", translation: "I will do that job (humble)." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="先生のメールを拝見しました。"
+  romaji="sensei no meeru o haiken shimashita."
+  translation="I saw (humbly) the teacher's email."
+/>
+
+## 4. Standard Keigo Formulas (お / ご)
+
+For verbs without a "special" word, we use the following standard formulas.
+
+### Standard Respectful (Elevating the other person)
+**お + [Verb stem] + になる**
+
+<GrammarBox client:load 
+  pattern="お + [Verb stem] + になる"
+  meaning="A superior [Verbs] (Standard Respectful)."
+  formation="お + Verb Stem + になる"
+  examples={[
+    { japanese: "先生はもうお帰りになりました。", romaji: "sensei wa mou okaeri ni narimashita.", translation: "The teacher has already returned (respectful)." },
+    { japanese: "何をお読みになりますか。", romaji: "nani o oyomi ni narimasu ka.", translation: "What will you read? (respectful to listener)." },
+    { japanese: "部長がこの資料をお作りになりました。", romaji: "buchou ga kono shiryou o otsukuri ni narimashita.", translation: "The department manager made these documents (respectful)." }
+  ]}
+/>
+
+### Standard Humble (Lowering yourself)
+**お + [Verb stem] + する / いたす**
+
+<GrammarBox client:load 
+  pattern="お + [Verb stem] + する / いたす"
+  meaning="I humbly [Verb] (Standard Humble)."
+  formation="お + Verb Stem + する / いたす"
+  examples={[
+    { japanese: "荷物をお持ちします。", romaji: "nimotsu o omochi shimasu.", translation: "I will (humbly) carry your luggage." },
+    { japanese: "駅までお送りいたします。", romaji: "eki made ookuri itashimasu.", translation: "I will (humbly) walk/drive you to the station." },
+    { japanese: "ここでお待ちしております。", romaji: "koko de omachi shite orimasu.", translation: "I am (humbly) waiting for you here." }
+  ]}
+/>
+
+## Cultural Insight: Vertical Society (Tate-Shakai)
+
+Japanese honorifics reflect a concept called **Tate-Shakai** (Vertical Society), where relationships are defined by relative status (seniority, position, age). Unlike Western cultures that emphasize equality, Japanese culture values the clarity of social hierarchy. 
+
+Using Keigo is not about being "subservient"; it is about acknowledging the other person's position and maintaining the **Wa** (harmony). In a business setting, failing to use Keigo is seen as a lack of professional etiquette, as it disrupts the established social order.
+
+## Contextual Dialogues
+
+### Dialogue 1: At a Department Store
+<ConversationDialog client:load 
+  title="Customer Service"
+  lines={[
+    { speaker: "Clerk", translation: "Welcome! What are you looking for today? (Respectful)", japanese: "いらっしゃいませ！本日は何をお探しですか。", romaji: "Irasshaimase! Honjitsu wa nani o osagashi desu ka." },
+    { speaker: "Customer", translation: "I'm looking for a coat. Could you show me that one?", japanese: "コートを探しています。あれを見せてください。", romaji: "Kooto o sagashite imasu. Are o misete kudasai." },
+    { speaker: "Clerk", translation: "Certainly. I will bring it right away (Humble). Have you worn this brand before? (Respectful)", japanese: "かしこまりました。すぐにお持ちいたします。こちらのブランドはお召しになったことがありますか。", romaji: "Kashikomarimashita. Sugu ni omochi itashimasu. Kochira no burando wa omeshi ni natta koto ga arimasu ka." }
+  ]}
+/>
+
+### Dialogue 2: A Business Phone Call
+<ConversationDialog client:load 
+  title="Scheduling a Meeting"
+  lines={[
+    { speaker: "Tanaka", translation: "This is Tanaka from ABC Company. I would like to meet with Manager Suzuki.", japanese: "ABC会社の田中と申します。鈴木部長にお目にかかりたいのですが。", romaji: "ABC-gaisha no Tanaka to moushimasu. Suzuki-buchou ni ome ni kakaritai no desu ga." },
+    { speaker: "Secretary", translation: "Tanaka-san, thank you for always being helpful. The manager is currently in Tokyo.", japanese: "田中様、いつもお世話になっております。部長は今、東京にいらっしゃいます。", romaji: "Tanaka-sama, itsumo osewa ni natte orimasu. Buchou wa ima, Toukyou ni irasshaimasu." },
+    { speaker: "Tanaka", translation: "I see. Then I will call again next week (Humble).", japanese: "さようでございますか。では、来週またお電話いたします。", romaji: "Sayou de gozaimasu ka. Dewa, raishuu mata odenwa itashimasu." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Teineigo: Polite form (〜ます/です).",
+    "Sonkeigo: Elevates superiors (Never for yourself!). Key verbs: いらっしゃる, 召し上がる, おっしゃる.",
+    "Kenjougo: Lowers yourself to show respect. Key verbs: 参る, いただく, 申す, いたす.",
+    "Form Sonkeigo with お〜になる; Kenjougo with お〜する / いたす.",
+    "Keigo is essential for professional and social harmony in Japanese culture."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of the following describes the purpose of Sonkeigo?",
+      options: ["To lower your own actions.", "To elevate the actions of a superior or customer.", "To speak casually with friends.", "To describe inanimate objects."],
+      correct: 1,
+      explanation: "Sonkeigo (Respectful) is used to elevate someone else's actions."
+    },
+    {
+      question: "Which respectful verb means 'to eat' or 'to drink'?",
+      options: ["いただく", "召し上がる", "申す", "なさる"],
+      correct: 1,
+      explanation: "召し上がる (meshiagaru) is the respectful form for eating/drinking."
+    },
+    {
+      question: "How do you say 'I am called Tanaka' humbly?",
+      options: ["田中とおっしゃいます", "田中と言います", "田中と申します", "田中がいらっしゃいます"],
+      correct: 2,
+      explanation: "申す (mousu) is the humble form of 'to say/be called' for yourself."
+    },
+    {
+      question: "Which respectful verb means 'to go', 'to come', or 'to be'?",
+      options: ["参る", "いらっしゃる", "おる", "いたす"],
+      correct: 1,
+      explanation: "いらっしゃる (irassharu) is the all-purpose respectful verb for presence/movement."
+    },
+    {
+      question: "What is the humble equivalent of 'to go' and 'to come'?",
+      options: ["参る", "いらっしゃる", "なさる", "拝見する"],
+      correct: 0,
+      explanation: "参る (mairu) is used humbly for your own movement."
+    },
+    {
+      question: "Which formula is used to make a regular verb Respectful (Sonkeigo)?",
+      options: ["お + stem + する", "お + stem + になる", "ご + noun + いたす", "verb + させる"],
+      correct: 1,
+      explanation: "お + verb stem + になる (e.g., お読みになる)."
+    },
+    {
+      question: "Which humble verb means 'to look at' or 'to see'?",
+      options: ["ご覧になる", "拝見する", "おっしゃる", "参る"],
+      correct: 1,
+      explanation: "拝見する (haiken suru) is the humble form for looking at something belonging to a superior."
+    },
+    {
+      question: "What is the irregular ます-form of 'なさる'?",
+      options: ["なさります", "なさいます", "なされるます", "なさいします"],
+      correct: 1,
+      explanation: "Keigo verbs ending in 'aru' change to 'ai' before 'masu'."
+    },
+    {
+      question: "If a clerk says 'お待ちください', what does it mean?",
+      options: ["I am waiting.", "Please wait.", "I will wait.", "Don't wait."],
+      correct: 1,
+      explanation: "お + stem + kudasai is a respectful request for the listener."
+    },
+    {
+      question: "Which verb is used humbly for 'to do'?",
+      options: ["なさる", "いたす", "おっしゃる", "参る"],
+      correct: 1,
+      explanation: "いたす (itasu) is the humble form of 'suru'."
+    },
+    {
+      question: "If your teacher asks 'Do you know?', how do you reply 'I know' humbly?",
+      options: ["はい、ご存知です。", "はい、存じております。", "はい、知っています。", "はい、おっしゃいます。"],
+      correct: 1,
+      explanation: "存じている (humble know) -> 存じております."
+    },
+    {
+      question: "Can you use Sonkeigo for your own actions?",
+      options: ["Yes, to show confidence.", "No, it is a grave social error.", "Only in writing.", "Only with family."],
+      correct: 1,
+      explanation: "Sonkeigo is exclusively for others; using it for yourself sounds arrogant."
+    },
+    {
+      question: "What does '召し上がる' apply to?",
+      options: ["Movement", "Speaking", "Eating and Drinking", "Seeing"],
+      correct: 2,
+      explanation: "Respectful form of both 'taberu' and 'nomu'."
+    },
+    {
+      question: "Translate: 'The teacher will come tomorrow.' (Respectful)",
+      options: ["先生は明日いらっしゃいます。", "先生は明日参ります。", "先生は明日申します。", "先生は明日お目にかかります。"],
+      correct: 0,
+      explanation: "いらっしゃる is the respectful form for movement."
+    },
+    {
+      question: "In a business setting, how do you refer to your own boss to an outside client?",
+      options: ["Using Sonkeigo (Respectful).", "Using Kenjougo (Humble).", "Using Plain Form.", "Using their nickname."],
+      correct: 1,
+      explanation: "To outsiders, your boss is part of your 'group' (Uchi), so you must be humble about them."
+    }
+  ]}
+/>

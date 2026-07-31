@@ -1,0 +1,283 @@
+---
+title: "Chapter 15 — Adjectives Part 2: な-Adjectives"
+level: "N5"
+chapter: "15"
+description: "Discover the second group of Japanese adjectives: adjectival nouns (na-adjectives) that rely on the copula and the particle な to modify other words."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Adjectives Part 2: な-Adjectives"
+  level="N5"
+  chapter="15"
+  objectives={[
+    "Identify な-Adjectives and distinguish them from い-Adjectives.",
+    "Conjugate な-Adjectives using the Copula (です / でした).",
+    "Use the particle な to connect these adjectives directly to nouns.",
+    "Understand the spirit of Omotenashi (Japanese hospitality)."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In the previous chapter, we learned that *い-Adjectives* can conjugate themselves. But Japanese has a second group of describing words: **な-Adjectives (na-adjectives)**. Grammatically, these words are actually **Nouns**! Because they act like nouns, they cannot change their own endings. Instead, they rely entirely on the Copula verb (**です**, **じゃありません**, **でした**) to do all the work.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/15-na-adjectives.webp"
+  alt="Anime pixel-art illustration of な-adjective cards linking to nouns with な and copula endings."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Defining a な-Adjective
+
+How do you know if a word is an い-Adjective or a な-Adjective?
+- い-Adjectives *always* end in the Hiragana character **い**.
+- な-Adjectives usually end in something else! (e.g., *Shizuka*, *Genki*, *Benri*). 
+- **The Trick:** Some な-Adjectives end in the *sound* "i" but are spelled with Kanji that hide it. The two most famous traps are **きれい (Beautiful/Clean)** and **ゆうめい (Famous)**. Despite the "i" sound, these are strictly な-Adjectives!
+
+<VocabTable data={[
+  { word: 'しずか', romaji: 'shizuka', meaning: 'Quiet', type: 'な-Adj' },
+  { word: 'にぎやか', romaji: 'nigiyaka', meaning: 'Lively / Bustling', type: 'な-Adj' },
+  { word: 'きれい', romaji: 'kirei', meaning: 'Beautiful / Clean', type: 'な-Adj' },
+  { word: 'ゆうめい', romaji: 'yuumei', meaning: 'Famous', type: 'な-Adj' },
+  { word: 'ひま', romaji: 'hima', meaning: 'Free / Not busy', type: 'な-Adj' },
+  { word: 'げんき', romaji: 'genki', meaning: 'Healthy / Energetic', type: 'な-Adj' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="この まち は しずか です。"
+  romaji="Kono machi wa shizuka desu."
+  translation="This town is quiet."
+/>
+<ExampleSentence client:load 
+  japanese="たなかさん は とても げんき です。"
+  romaji="Tanaka-san wa totemo genki desu."
+  translation="Mr. Tanaka is very energetic."
+/>
+<ExampleSentence client:load 
+  japanese="きのう は ひま でした。"
+  romaji="Kinou wa hima deshita."
+  translation="Yesterday I was free (not busy)."
+/>
+
+## 2. Conjugating with the Copula
+
+Because な-Adjectives act like nouns, you just put them in the "A is B" sentence structure. The adjective root **never changes**. You only alter the **です** at the end.
+
+<GrammarBox client:load 
+  pattern="[Noun] は [な-Adjective] です／でした"
+  meaning="States a property using the copula."
+  formation="Noun + は + Adjective Root + Conjugated Copula"
+  examples={[
+    { japanese: "この へや は きれい です。", romaji: "Kono heya wa kirei desu.", translation: "This room is clean." },
+    { japanese: "あした は ひま じゃありません。", romaji: "Ashita wa hima ja arimasen.", translation: "Tomorrow I am not free." },
+    { japanese: "パーティー は にぎやか でした。", romaji: "Paatii wa nigiyaka deshita.", translation: "The party was lively." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="にほんご は かんたん じゃありません。"
+  romaji="Nihongo wa kantan ja arimasen."
+  translation="Japanese is not easy."
+/>
+<ExampleSentence client:load 
+  japanese="あの ひと は ゆうめい です か。"
+  romaji="Ano hito wa yuumei desu ka."
+  translation="Is that person famous?"
+/>
+<ExampleSentence client:load 
+  japanese="きょねん は びょうき でした。"
+  romaji="Kyonen wa byouki deshita."
+  translation="Last year I was sick."
+/>
+
+## 3. Direct Noun Modification: The "な" Particle
+
+When you place a な-adjective directly before a noun, you must use the particle **な (na)** to glue them together.
+
+<GrammarBox client:load 
+  pattern="[な-Adjective] ＋ な ＋ [Noun]"
+  meaning="Modifies a noun directly."
+  formation="Adjective Root + な + Noun"
+  examples={[
+    { japanese: "しずかな へや です。", romaji: "Shizukana heya desu.", translation: "It is a quiet room." },
+    { japanese: "きれいな はな を かいました。", romaji: "Kireina hana o kaimashita.", translation: "I bought beautiful flowers." },
+    { japanese: "ゆうめいな まち に いきます。", romaji: "Yuumeina machi ni ikimasu.", translation: "I am going to a famous town." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="べんりな じしょ です ね。"
+  romaji="Benrina jisho desu ne."
+  translation="It's a convenient dictionary, isn't it?"
+/>
+<ExampleSentence client:load 
+  japanese="にぎやかな レストラン で たべました。"
+  romaji="Nigiyakana resutoran de tabemashita."
+  translation="I ate at a lively restaurant."
+/>
+<ExampleSentence client:load 
+  japanese="げんきな こども です。"
+  romaji="Genkina kodomo desu."
+  translation="He is an energetic child."
+/>
+
+## 4. Cultural Note: Omotenashi (おもてなし)
+
+**Omotenashi** is often translated as "hospitality," but its meaning goes much deeper. It represents a wholehearted concern for the guest's needs, often anticipating them before the guest even realizes them.
+- **Root:** The word comes from *omote* (public face) and *nashi* (nothing), implying that service comes from the heart without any hidden agenda or expectation of a tip.
+- **In Language:** When you visit someone's home, they might describe their preparation as *benri* (convenient) for you or ensure the room is *shizuka* (quiet) and *kirei* (clean).
+- **Practice:** It is seen in the way a taxi driver opens the door for you or how a shop clerk bows as you exit. It's about providing a *kirei* (beautiful) and *shizuka* (peaceful) experience for every guest.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/15-na-adjectives-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of Kyoto and invitation dialogue practice with な-adjective cards for きれいな, ゆうめい, しずか, and ひま."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Talking About Cities"
+  lines={[
+    { speaker: "Alice", japanese: "きょうと は どんな まち ですか。", romaji: "Kyouto wa donna machi desuka?", translation: "What kind of city is Kyoto?" },
+    { speaker: "Tanaka", japanese: "きょうと は とても きれいな まち です。 そして、 ゆうめい です。", romaji: "Kyouto wa totemo kireina machi desu. Soshite, yuumei desu.", translation: "Kyoto is a very beautiful city. And it's famous." },
+    { speaker: "Alice", japanese: "しずか ですか。", romaji: "Shizuka desuka?", translation: "Is it quiet?" },
+    { speaker: "Tanaka", japanese: "はい、 しずかな ところ が たくさん あります。", romaji: "Hai, shizukana tokoro ga takusan arimasu.", translation: "Yes, there are many quiet places." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Inviting a Friend"
+  lines={[
+    { speaker: "Ken", japanese: "あした、 ひま です か。", romaji: "Ashita, hima desu ka?", translation: "Are you free tomorrow?" },
+    { speaker: "Yumi", japanese: "いいえ、 ひま じゃありません。 いそがしい です。", romaji: "Iie, hima ja arimasen. Isogashii desu.", translation: "No, I'm not free. I'm busy." },
+    { speaker: "Ken", japanese: "そうですか。 ざんねん です ね。", romaji: "Sou desu ka. Zannen desu ne.", translation: "I see. That's a shame." },
+    { speaker: "Yumi", japanese: "あさって は ひま です よ！", romaji: "Asatte wa hima desu yo!", translation: "I'm free the day after tomorrow, though!" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "な-Adjectives function grammatically like nouns and use the copula (です/でした).",
+    "Use the particle な ONLY when placing the adjective directly before a noun.",
+    "Words like きれい and ゆうめい are な-Adjectives, despite ending in an 'i' sound.",
+    "Omotenashi is the spirit of selfless Japanese hospitality.",
+    "To describe 'how' an action is done (adverb), change な to に (e.g., shizuka ni - quietly)."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your mastery of な-Adjectives!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of these is a な-Adjective?",
+      options: ["おいしい", "あつい", "しずか", "たかい"],
+      correct: 2,
+      explanation: "Shizuka (quiet) is a な-adjective."
+    },
+    {
+      question: "How do you say 'The room is clean' politely?",
+      options: ["へや は きれいな です。", "へや は きれい です。", "へや は きれいくない です。", "へや は きれいだ。"],
+      correct: 1,
+      explanation: "You only use 'na' before a noun. Before 'desu', just use the root word."
+    },
+    {
+      question: "Which particle connects a な-adjective to a noun?",
+      options: ["の", "な", "に", "は"],
+      correct: 1,
+      explanation: "The particle な (na) is used for direct modification."
+    },
+    {
+      question: "What is the negative form of 'げんき' (is not healthy)?",
+      options: ["げんきくない", "げんき じゃありません", "げんき なくない", "げんき でした"],
+      correct: 1,
+      explanation: "Because they act like nouns, use 'ja arimasen' for the negative."
+    },
+    {
+      question: "Translate: 'A famous person.'",
+      options: ["ゆうめい ひと", "ゆうめい な ひと", "ゆうめい の ひと", "ゆうめい い ひと"],
+      correct: 1,
+      explanation: "Yuumei is a な-adjective, so it needs な before the noun ひと (person)."
+    },
+    {
+      question: "Is 'きれい' an い-adjective or a な-adjective?",
+      options: ["い-Adjective", "な-Adjective"],
+      correct: 1,
+      explanation: "It's a trap! Kirei is a な-adjective."
+    },
+    {
+      question: "Translate: 'きのう は ひま でした。'",
+      options: ["Yesterday I was free.", "Yesterday I was busy.", "Tomorrow I am free.", "Today is quiet."],
+      correct: 0,
+      explanation: "Kinou (yesterday) + hima (free) + deshita (was)."
+    },
+    {
+      question: "What does 'Omotenashi' mean?",
+      options: ["A type of food", "Selfless hospitality", "A quiet room", "A famous mountain"],
+      correct: 1,
+      explanation: "Omotenashi is the wholehearted spirit of Japanese hospitality."
+    },
+    {
+      question: "Which word means 'Convenient'?",
+      options: ["べんり", "ふべん", "げんき", "しずか"],
+      correct: 0,
+      explanation: "べんり (benri) means convenient."
+    },
+    {
+      question: "How do you conjugate 'すき' (like) into the past tense ('liked')?",
+      options: ["すきかった", "すき でした", "すき な かった", "すき じゃない"],
+      correct: 1,
+      explanation: "Use the past copula: Suki deshita."
+    },
+    {
+      question: "Translate: 'Kireina hana o kaimashita.'",
+      options: ["I bought beautiful flowers.", "The flowers are beautiful.", "I want beautiful flowers.", "Where are the flowers?"],
+      correct: 0,
+      explanation: "Kireina (beautiful) + hana (flowers) + kaimashita (bought)."
+    },
+    {
+      question: "Which word means 'Lively / Bustling'?",
+      options: ["しずか", "にぎやか", "ひま", "げんき"],
+      correct: 1,
+      explanation: "にぎやか (nigiyaka) means lively or bustling."
+    },
+    {
+      question: "What particle is used to turn a な-adjective into an adverb ('quietly')?",
+      options: ["な", "に", "の", "を"],
+      correct: 1,
+      explanation: "Change 'na' to 'ni' for adverbs (e.g., Shizuka ni yomimasu)."
+    },
+    {
+      question: "Fill in the blank: 'Tanaka-san wa totemo _____ desu.' (Mr. Tanaka is very energetic).",
+      options: ["げんき", "げんきな", "げんきに", "げんきくない"],
+      correct: 0,
+      explanation: "Before 'desu', use the root 'genki'."
+    },
+    {
+      question: "True or False: な-adjectives conjugate exactly like nouns.",
+      options: ["True", "False"],
+      correct: 0,
+      explanation: "True. They are often called 'adjectival nouns' for this reason."
+    }
+  ]}
+/>

@@ -1,0 +1,283 @@
+---
+title: "Chapter 31 — Causative Voice (させる)"
+level: "N4"
+chapter: 31
+description: "Learn how to use the causative voice (saseru) in Japanese to express making someone do something or letting someone do an action."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Causative Voice (させる)"
+  level="N4"
+  chapter={31}
+  objectives={[
+    "Conjugate verbs into the causative form.",
+    "Express 'making' someone do an action (force/command).",
+    "Express 'letting/allowing' someone to do an action (permission).",
+    "Combine the causative form with giving/receiving verbs (〜せていただく)."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In Japanese, when someone *causes* someone else to do an action—whether by forcing them ("The teacher made the students run") or permitting them ("The mother let the child play")—you use the **Causative Form** (使役形 - shiekikei). Let's learn how to conjugate and use this authoritative structure.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/31-causative-voice.webp"
+  alt="Anime pixel-art illustration of a learner comparing a coach making students run with a parent letting a child play in a garden."
+  width={1693}
+  height={929}
+/>
+
+## 1. Conjugating the Causative Form
+
+The conjugation rules for the causative form are very similar to the passive form, but we use `せる` instead of `れる`.
+
+### Group 1 (U-Verbs)
+Change the final `〜u` sound to the `〜a` sound, and add `せる` (seru).
+* 書く (kaku) ➔ 書かせる (kakaseru - to make/let write)
+* 飲む (nomu) ➔ 飲ませる (nomaseru - to make/let drink)
+* 待つ (matsu) ➔ 待たせる (mataseru - to make/let wait)
+* 手伝う (tetsudau) ➔ 手伝わせる (tetsudawaseru - to make/let help)
+
+### Group 2 (Ru-Verbs)
+Drop the `る` and add `させる` (saseru).
+* 食べる (taberu) ➔ 食べさせる (tabesaseru - to make/let eat)
+* 見る (miru) ➔ 見させる (misaseru - to make/let see)
+
+### Group 3 (Irregular Verbs)
+* 来る (kuru) ➔ 来させる (kosaseru - to make/let come)
+* する (suru) ➔ させる (saseru - to make/let do)
+
+---
+
+## 2. Making vs. Letting (Force vs. Permission)
+
+The causative form has two main meanings: **Force/Command** ("I made him do it") and **Permission** ("I let him do it"). The translation entirely depends on the context! 
+
+Both structures use the exact same grammar pattern. The key is knowing if the action is inherently undesirable (Force) or desirable (Permission).
+
+### A. Intransitive Verbs (No Direct Object)
+When using verbs that don't take a direct object (like run, go, cry), the person who is made/allowed to do the action is marked with `を`.
+**Pattern:** `[Director] は [Cast Member] を [Intransitive Causative]`
+
+<ExampleSentence client:load 
+  japanese="先生は学生を走らせました。"
+  romaji="sensei wa gakusei o hashirasemashita."
+  translation="The teacher made the students run. (Force)"
+/>
+
+<ExampleSentence client:load 
+  japanese="母は子供を公園で遊ばせました。"
+  romaji="haha wa kodomo o kouen de asobasemashita."
+  translation="The mother let the child play in the park. (Permission)"
+/>
+
+<ExampleSentence client:load 
+  japanese="コーチは選手たちを休ませました。"
+  romaji="koochi wa senshu-tachi o yasumasemashita."
+  translation="The coach let the players rest. (Permission)"
+/>
+
+### B. Transitive Verbs (Takes a Direct Object)
+To avoid having two `を` particles in one sentence, when the verb takes a direct object, the person made/allowed to do the action is marked with `に`.
+**Pattern:** `[Director] は [Cast Member] に [Direct Object] を [Transitive Causative]`
+
+<ExampleSentence client:load 
+  japanese="父は弟に部屋の掃除をさせました。"
+  romaji="chichi wa otouto ni heya no souji o sasemashita."
+  translation="My father made my younger brother clean the room. (Force)"
+/>
+
+<ExampleSentence client:load 
+  japanese="私は妹に私のパソコンを使わせました。"
+  romaji="watashi wa imouto ni watashi no pasokon o tsukawasemashita."
+  translation="I let my younger sister use my computer. (Permission)"
+/>
+
+<ExampleSentence client:load 
+  japanese="先生は学生に辞書を使わせました。"
+  romaji="sensei wa gakusei ni jisho o tsukawasemashita."
+  translation="The teacher let the students use dictionaries. (Permission)"
+/>
+
+> [!TIP]
+> Think of a movie set. The speaker is the Director (は). The person performing the action is the Cast Member (に/を). The Director causes the Cast Member to act!
+
+## 3. Asking for Permission: 〜せてください
+
+When you want to ask someone for permission to do something (literally: "Please let me do..."), you combine the causative form `〜せて` with `ください`.
+
+This is a very polite and common way to offer to do something or ask to be excused.
+
+<GrammarBox client:load 
+  pattern="Causative て-form + ください"
+  meaning="Please let me do [verb]. / Allow me to do [verb]."
+  formation="Verb-sasete + kudasai"
+  examples={[
+    { japanese: "今日は早く帰らせてください。", romaji: "kyou wa hayaku kaerasete kudasai.", translation: "Please let me go home early today." },
+    { japanese: "写真を撮らせてください。", romaji: "shashin o torasete kudasai.", translation: "Please allow me to take a picture." },
+    { japanese: "私にその仕事をやらせてください。", romaji: "watashi ni sono shigoto o yarasete kudasai.", translation: "Please let me do that job." }
+  ]}
+/>
+
+## 4. Cultural Insight: Parent-Child Dynamics and Authority
+
+In Japanese society, the causative form is frequently used within families, especially from parents to children. It reflects the hierarchical nature of the Japanese family structure.
+
+*   **Education and Discipline**: Parents often use the "Force" meaning to ensure children fulfill their responsibilities, such as `勉強させる` (making them study) or `手伝わせる` (making them help).
+*   **Encouraging Independence**: Conversely, "Permission" is used to foster growth, like `好きなことをさせる` (letting them do what they like) or `一人で旅行させる` (letting them travel alone).
+
+Understanding the relationship between the speaker (the "Director") and the performer (the "Cast Member") is crucial. Using the causative form toward a superior (like your boss) without adding polite expressions like `〜てください` or `〜ていただく` can sound extremely rude and bossy. Always consider the social hierarchy before "causing" someone to act!
+
+
+In extremely polite business settings, you will hear `〜せていただきます` (I humbly receive the favor of you letting me do...), which is practically a staple of Japanese corporate emails. Example: `休ませていただきます` - "I will (receive the favor of you letting me) take a day off."
+
+## Contextual Dialogues
+
+Let's see how Tanaka and Suzuki use the causative form in the workplace.
+
+<ConversationDialog client:load 
+  title="Talking About the Boss (上司について)"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki-san, you look busy today too.", japanese: "鈴木さん、今日も忙しそうですね。", romaji: "Suzuki-san, kyou mo isogashisou desu ne." },
+    { speaker: "Suzuki", translation: "Yes. The section manager made me write this long report.", japanese: "ええ。課長にこの長いレポートを書かせたんです。", romaji: "Ee. Kachou ni kono nagai repooto o kakaseta n desu." },
+    { speaker: "Tanaka", translation: "Oh, the manager made you write it? That's tough.", japanese: "あ、課長が書かせたんですか。それは大変ですね。", romaji: "A, kachou ga kakaseta n desu ka. Sore wa taihen desu ne." },
+    { speaker: "Suzuki", translation: "Moreover, he won't let me go home early today.", japanese: "しかも、今日は早く帰らせてくれません。", romaji: "Shikamo, kyou wa hayaku kaerasete kuremasen." },
+    { speaker: "Tanaka", translation: "By the way, regarding tomorrow's meeting, please let me explain the plan.", japanese: "ところで、明日の会議ですが、私に計画を説明させてください。", romaji: "Tokorode, ashita no kaigi desu ga, watashi ni kousou o setsumei sasete kudasai." },
+    { speaker: "Suzuki", translation: "Understood. Then I will leave the explanation to you.", japanese: "わかりました。では、説明は田中さんに任せます。", romaji: "Wakarimashita. Dewa, setsumei wa Tanaka-san ni makasemasu." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="A Favor from Mom (お母さんへのお願い)"
+  lines={[
+    { speaker: "Ken", translation: "Mom, can I play games now?", japanese: "お母さん、今からゲームをしてもいい？", romaji: "Okaasan, ima kara geemu o shite mo ii?" },
+    { speaker: "Mom", translation: "No. First, you have to let your younger brother use the computer for his homework.", japanese: "だめよ。先に弟に宿題のためにパソコンを使わせなさい。", romaji: "Dame yo. Saki ni otouto ni shukudai no tame ni pasokon o tsukawasenasai." },
+    { speaker: "Ken", translation: "Eh? He's using it again? Then, please let me go to the park with my friends.", japanese: "えー、また使わせるの？じゃあ、友達と公園に行かせてください。", romaji: "Ee, mata tsukawaseru no? Jaa, tomodachi to kouen ni ikasete kudasai." },
+    { speaker: "Mom", translation: "If you finish your homework, I'll let you go.", japanese: "宿題が終わったら、行かせてあげるわ。", romaji: "Shukudai ga owattara, ikasete ageru wa." },
+    { speaker: "Ken", translation: "Okay! I'll do it right away!", japanese: "わかった！すぐやるよ！", romaji: "Wakatta! Sugu yaru yo!" }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Causative verbs mean 'to make' or 'to let' someone do something.",
+    "Conjugation ends in せる (Group 1) or させる (Group 2 and Irregular).",
+    "For intransitive verbs, mark the person doing the action with を.",
+    "For transitive verbs, mark the person doing the action with に to avoid double を.",
+    "Use 〜せてください to ask for permission: 'Please let me...'"
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the Causative Form!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the causative form of the Group 1 verb '読む' (yomu - to read)?",
+      options: ["読ませる", "読みせる", "読めせる", "読むさせる"],
+      correct: 0,
+      explanation: "Change 'mu' to 'ma' and add 'seru' ➔ 読ませる (to make/let read)."
+    },
+    {
+      question: "What is the causative form of '食べる' (taberu - to eat)?",
+      options: ["食べせる", "食べらせる", "食べさせる", "食べまれる"],
+      correct: 2,
+      explanation: "For Group 2 verbs, drop 'ru' and add 'saseru' ➔ 食べさせる (to make/let eat)."
+    },
+    {
+      question: "Translate: 'The teacher made the students write kanji.'",
+      options: ["先生は学生が漢字を書かえました。", "先生は学生に漢字を書かせました。", "先生は学生を漢字を書かせました。", "学生は先生に漢字を書かせました。"],
+      correct: 1,
+      explanation: "Transitive action (writing kanji requires を). Director (先生) は Cast Member (学生) に Action ➔ 学生に漢字を書かせました。"
+    },
+    {
+      question: "Which particle is used for the person doing the action if the verb is INTRANSITIVE (like run, wait, go)?",
+      options: ["は", "に", "を", "が"],
+      correct: 2,
+      explanation: "To spread the particles, the person who is made to run/wait is marked with 'を'. (e.g., 子供を走らせる)."
+    },
+    {
+      question: "Translate: 'Please let me think about it.'",
+      options: ["考えさせます。", "考えさせてください。", "考えさせてもいいですか。", "考えてください。"],
+      correct: 1,
+      explanation: "考える ➔ 考えさせる ➔ 考えさせて + ください ➔ 考えさせてください (Please let me think/consider)."
+    },
+    {
+      question: "What is the causative form of the irregular verb '来る' (kuru - to come)?",
+      options: ["きさせる", "こさせる", "くるせる", "こらせる"],
+      correct: 1,
+      explanation: "来る becomes 来させる (kosaseru)."
+    },
+    {
+      question: "In the sentence '母は子供に野菜を食べさせた', what is the meaning?",
+      options: ["The mother ate the child's vegetables.", "The child let the mother eat vegetables.", "The mother made/let the child eat vegetables.", "The child made the mother eat vegetables."],
+      correct: 2,
+      explanation: "母 (Director) は 子供 (Cast) に 食べさせた (caused to eat)."
+    },
+    {
+      question: "What is the causative form of '待つ' (matsu - to wait)?",
+      options: ["待たせる", "待ちゃせる", "待ちせる", "待たさせる"],
+      correct: 0,
+      explanation: "Change 'tsu' to 'ta' and add 'seru' ➔ 待たせる (to make someone wait)."
+    },
+    {
+      question: "How do you say 'Please let me do it' using the causative form?",
+      options: ["私がさせます", "私にさせてください", "私がするください", "私にしてあげます"],
+      correct: 1,
+      explanation: "する ➔ させる ➔ させて + ください. ➔ (私に)させてください."
+    },
+    {
+      question: "What does '休ませていただきます' mean in business Japanese?",
+      options: ["You will take a day off.", "I am forcing you to take a day off.", "I humbly receive the favor of you letting me take a day off (I am taking a day off).", "Please do not take a day off."],
+      correct: 2,
+      explanation: "休ませる (let rest) + いただく (humbly receive). It is the standard polite phrase for taking leave."
+    },
+    {
+      question: "Which is biologically correct grammar: '犬に走らせた' or '犬を走らせた'?",
+      options: ["犬に走らせた", "犬を走らせた", "Both are equally correct.", "Neither is correct."],
+      correct: 1,
+      explanation: "走る (to run) is an intransitive verb, so the subject who is made to run is marked with 'を'."
+    },
+    {
+      question: "If a friend says '少しゲームを遊ばせて！', what do they mean?",
+      options: ["Let's play a game!", "Please let me play the game (a little)!", "I made someone play the game!", "Do you want to play?"],
+      correct: 1,
+      explanation: "遊ばせて is the casual version of 遊ばせてください (Please let me play)."
+    },
+    {
+      question: "What is the causative form of '行く' (iku - to go)?",
+      options: ["行かせる", "行きせる", "行かさせる", "行こせる"],
+      correct: 0,
+      explanation: "Change 'ku' to 'ka' and add 'seru' ➔ 行かせる."
+    },
+    {
+      question: "In the dialogue, Tanaka says '私に計画を説明させてください'. Why?",
+      options: ["He is forcing Suzuki to explain.", "He is asking for permission to explain the plan himself.", "He refuses to explain.", "He wants to listen to the explanation."],
+      correct: 1,
+      explanation: "説明させてください translates literally to 'Please let me explain'."
+    },
+    {
+      question: "Can the causative form be used for both 'force' and 'permission'?",
+      options: ["No, it only means 'force'.", "No, it only means 'permission'.", "Yes, the context and relationship dictate whether it means force or permission.", "Only Group 1 means force, and Group 2 means permission."],
+      correct: 2,
+      explanation: "Grammatically they are identical. Forcing a child to study and letting a child play both use the causative conjugation."
+    }
+  ]}
+/>

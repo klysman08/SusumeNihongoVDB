@@ -1,0 +1,55 @@
+---
+title: "Chapter 64 — N3 Integrated Capstone"
+level: "N3"
+chapter: 64
+unit: 6
+unitTitle: "Natural and Integrated Japanese"
+topics: "Cumulative grammar discrimination, reading, listening, production, and independent next steps"
+description: "Complete an integrated N3 capstone using grammar, vocabulary, reading, listening, and practical production."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="N3 Integrated Capstone" level="N3" chapter={64} objectives={["Select grammar from meaning, source, control, and register.", "Read practical and argumentative texts under a time target.", "Follow a spoken decision and produce a coherent N3-level response."]} />
+<SectionIntro level="N3">This capstone measures integration rather than pattern recognition. Complete each task before revealing answers. Record which errors come from vocabulary, grammar connection, nuance, reference tracking, or time pressure; that diagnosis should guide your next review cycle.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "総合", reading: "そうごう", meaning: "integrated; comprehensive", type: "noun" }, { word: "根拠", reading: "こんきょ", meaning: "basis; evidence", type: "noun" }, { word: "修正", reading: "しゅうせい", meaning: "correction; revision", type: "noun" }, { word: "振り返る", reading: "ふりかえる", meaning: "to reflect; review", type: "verb" }, { word: "弱点", reading: "じゃくてん", meaning: "weak point", type: "noun" }, { word: "継続", reading: "けいぞく", meaning: "continuation", type: "noun" }]} />
+<CommonMistake title="A capstone score is a diagnosis, not a label"><p>Separate careless errors from systematic gaps. Review the chapter connected to each repeated error, then retake the relevant task with new examples rather than memorising the answer.</p></CommonMistake>
+
+## 1. Production challenge
+<PracticeBlock client:load title="N3 production" instructions="Write your answer first. The model is one natural possibility, not the only correct response." items={[
+  { prompt: "Your workplace introduced a new rule. Explain the external decision, the rule now in force, and one effort you will make.", answer: "来月から出勤日を記録することになりました。毎週金曜日までに入力することになっています。忘れないように、予定表に印を付けるつもりです。", explanation: "The response separates external decision, standing rule, prevention, and intention." },
+  { prompt: "Recommend a balanced study method using one concession and one qualified judgement.", answer: "文法を覚えても、実際に使わなければ身につくとは限りません。間違いを恐れることはなく、短い文章でも毎日書くべきだと思います。", explanation: "ても concedes, とは限らない qualifies, ことはない reassures, and べき gives a reasoned recommendation." },
+  { prompt: "Report evidence and draw a conclusion about a recent change in your area.", answer: "駅前の空き店舗が減ったことから、利用者が戻ってきたと考えられます。新しい店が三軒開いたので、人通りも増えているわけです。", explanation: "ことから supplies evidence and わけだ states the supported conclusion." }
+]} />
+
+## 2. Timed reading
+<ReadingPractice client:load title="Trial bicycle-sharing programme" genre="public report" targetTime="7 minutes" passage={<>市は昨年、駅周辺の交通を改善するために、自転車を共同で利用できるサービスを試験的に始めた。利用記録を調査した結果、平日の朝と夕方に利用が集中していることが分かった。通勤に便利だという意見が多い一方で、返却場所に自転車が一台も残っていない場合があるという不満も出ている。市は利用者が多い時間に自転車を移動させることを考えているが、人件費が増えるため、すぐ実施できるとは限らない。そこで、まず返却場所の数を増やし、その結果を見てから本格的な対策を決めることになった。つまり、サービスを続ける方針は変わらないものの、運営方法についてはまだ検討が必要だということだ。</>} glossary={[{ word: "試験的", reading: "しけんてき", meaning: "on a trial basis" }, { word: "人件費", reading: "じんけんひ", meaning: "personnel cost" }, { word: "本格的", reading: "ほんかくてき", meaning: "full-scale" }]} questions={[{ question: "What did the usage records show?", answer: "Use concentrates in weekday mornings and evenings.", explanation: "調査した結果 introduces the finding." }, { question: "Why may bicycles not be moved immediately?", answer: "Moving them would increase personnel costs.", explanation: "ため gives the cause and とは限らない removes certainty." }, { question: "What will the city do first?", answer: "Increase the number of return locations.", explanation: "The final plan follows そこで and precedes the later full-scale decision." }, { question: "What remains undecided?", answer: "The detailed operating method.", explanation: "つまり summarises that continuation is settled but operations need further study." }]} />
+
+## 3. Listening decision
+<ListeningPractice client:load title="Revising a community event" situation="Listen twice. On the first pass, identify the problem; on the second, identify the final arrangement." script="日曜日の交流会ですが、雨が降る可能性が高いそうです。公園で行えないことはありませんが、参加者には小さい子どもも多いので、無理をするべきではないと思います。市民センターに確認したところ、午後なら広い部屋が空いているとのことです。では、開始を一時間遅らせて、会場を市民センターに変更することにしましょう。参加者が間違えないように、今日中にメールで知らせます。" questions={[{ question: "Why do the speakers reject the park?", answer: "Rain is likely and many participants have small children.", explanation: "The speakers admit it is technically possible but judge it unwise." }, { question: "What is the final arrangement?", answer: "Move to the civic centre and start one hour later.", explanation: "The final ことにしましょう states the agreed decision." }, { question: "What action must happen today?", answer: "Email participants so that they do not go to the wrong place.", explanation: "間違えないように states the preventive purpose." }]} />
+
+<ChapterSummary takeaways={["N3 control comes from identifying agency, evidence, source, register, condition, and paragraph function.", "Practical comprehension requires tracking the final action and every restriction—not translating every word.", "Use errors to select a focused review unit, then practise the same relationship in a new context."]} />
+
+## Final Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "The organisation decided that the event will move online: オンラインで行う＿＿。", options: ["ことにした", "ことになった", "ようにした", "つもりだ"], correct: 1, explanation: "From the participant's viewpoint, this is an external decision." },
+  { question: "子どもにも分かる＿＿説明した。", options: ["ために", "ように", "には", "結果"], correct: 1, explanation: "Another person's understanding is a desired result." },
+  { question: "調査した＿＿、利用者が増えたことが分かった。", options: ["結果", "ことから", "わけ", "一方"], correct: 0, explanation: "The investigation produced the finding." },
+  { question: "The schedule says it arrives at five, so it should be here: 五時に着く＿＿。", options: ["そうにない", "はずだ", "くせに", "ことはない"], correct: 1, explanation: "はず rests on the timetable as evidence." },
+  { question: "予約番号＿＿分かれば確認できます。", options: ["こそ", "さえ", "だらけ", "ばかり"], correct: 1, explanation: "さえ〜ば marks a minimum sufficient condition." },
+  { question: "初心者＿＿、自然に話せる。", options: ["くせに", "にしては", "だらけで", "しかなく"], correct: 1, explanation: "The ability exceeds the expected beginner standard." },
+  { question: "高い物が必ず良い＿＿。", options: ["べきだ", "わけではない", "に違いない", "ことになっている"], correct: 1, explanation: "わけではない rejects the full generalisation." },
+  { question: "国＿＿制度が異なる。", options: ["にとって", "によって", "に対して", "に関する"], correct: 1, explanation: "によって marks variation by country." },
+  { question: "外へ出た＿＿、強い風が吹いた。", options: ["際は", "とたん", "うちに", "てからでないと"], correct: 1, explanation: "とたん marks the sudden immediate event." },
+  { question: "The report was too long, so I rewrote it: 長すぎたので＿＿。", options: ["書き切った", "書き直した", "書き合った", "書きかけた"], correct: 1, explanation: "直す adds corrective repetition." },
+  { question: "売上は減る＿＿だ。", options: ["気味", "っぽい", "一方", "に比べて"], correct: 2, explanation: "一方だ marks a continuing one-direction trend." },
+  { question: "料金は無料です。＿＿、予約が必要です。", options: ["つまり", "そのため", "ただし", "例えば"], correct: 2, explanation: "ただし adds a restriction." }
+]} />

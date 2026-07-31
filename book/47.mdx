@@ -1,0 +1,92 @@
+---
+title: "Chapter 47 — Decisions, Rules, and Change"
+level: "N3"
+chapter: 47
+unit: 2
+unitTitle: "Time, Change, and Plans"
+topics: "Personal decisions, external arrangements, rules, effort, and change"
+description: "Distinguish personal decisions, outside arrangements, established rules, deliberate effort, and resulting change."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Decisions, Rules, and Change" level="N3" chapter={47} objectives={["Separate personal choice from an externally determined outcome.", "Distinguish rules from one-time arrangements.", "Describe deliberate effort and the change that results from it."]} />
+
+<SectionIntro level="N3">English often uses “decide” or “become” for all five patterns in this chapter. Japanese marks who controls the action: the speaker, another person or institution, an established system, deliberate repeated effort, or a change that has gradually become true.</SectionIntro>
+
+<VocabTable romajiMode="toggle" data={[
+  { word: "配属", reading: "はいぞく", romaji: "haizoku", meaning: "assignment to a department", type: "noun" },
+  { word: "規則", reading: "きそく", romaji: "kisoku", meaning: "rule; regulation", type: "noun" },
+  { word: "習慣", reading: "しゅうかん", romaji: "shuukan", meaning: "habit", type: "noun" },
+  { word: "変更", reading: "へんこう", romaji: "henkou", meaning: "change; alteration", type: "noun" },
+  { word: "意識する", reading: "いしきする", romaji: "ishiki suru", meaning: "to make a conscious effort", type: "verb" },
+  { word: "自然に", reading: "しぜんに", romaji: "shizen ni", meaning: "naturally", type: "adv" }
+]} />
+
+## 1. Choice, outside decision, or standing rule
+
+<PatternCompare client:load title="Who controls the outcome?" items={[
+  { pattern: "V-る／V-ないことにする", meaning: "make a personal decision", use: "The subject deliberately chooses an action or policy.", example: "今年は車を買わないことにした。", translation: "I decided not to buy a car this year.", register: "neutral" },
+  { pattern: "V-る／V-ないことになる", meaning: "it is decided; circumstances result in", use: "The decision is presented as coming from outside the subject, or as the outcome of circumstances.", example: "来月、大阪支社へ転勤することになった。", translation: "It has been decided that I will transfer to the Osaka branch next month.", register: "neutral" },
+  { pattern: "V-る／V-ないことになっている", meaning: "it is the rule or established arrangement", use: "Use for schedules, systems, and rules already in force—not merely a decision made moments ago.", example: "この寮では、十一時までに戻ることになっている。", translation: "Residents of this dormitory are required to return by eleven.", register: "rules" }
+]} />
+
+<GrammarBox client:load romajiMode="toggle" pattern="〜ことにする・〜ことになる・〜ことになっている" meaning="mark personal choice, an outside outcome, or an established rule" formation="Dictionary or ない-form + ことにする／ことになる／ことになっている" examples={[
+  { japanese: "話し合った結果、今回は参加しないことにしました。", romaji: "hanashiatta kekka, konkai wa sanka shinai koto ni shimashita.", translation: "After discussing it, we decided not to participate this time." },
+  { japanese: "台風のため、式は来週行われることになりました。", romaji: "taifuu no tame, shiki wa raishuu okonawareru koto ni narimashita.", translation: "Because of the typhoon, it was decided that the ceremony would be held next week." }
+]} />
+
+## 2. Deliberate effort and resulting change
+
+<PatternCompare client:load title="Effort versus achieved change" items={[
+  { pattern: "V-る／V-ないようにする", meaning: "make an effort to; take care to", use: "A continuing, deliberate practice. It does not guarantee success.", example: "会議では、結論から話すようにしています。", translation: "In meetings, I make a point of stating the conclusion first.", register: "deliberate" },
+  { pattern: "V-る／V-ないようになる", meaning: "come to; reach a changed state", use: "Describes a new ability, habit, or state that has developed.", example: "練習して、敬語が少し使えるようになった。", translation: "Through practice, I have become able to use some honorific language.", register: "result" }
+]} />
+
+<CommonMistake title="Effort is not the same as success"><p><strong>忘れないようにしています</strong> means “I make an effort not to forget.” <strong>忘れないようになりました</strong> means the change has actually occurred: “I no longer tend to forget.”</p></CommonMistake>
+
+## 3. Context dialogue
+
+<ConversationDialog client:load romajiMode="toggle" title="A change at work" lines={[
+  { speaker: "Mika", japanese: "四月から企画部に配属されることになったんです。", romaji: "shigatsu kara kikakubu ni haizoku sareru koto ni nattan desu.", translation: "It has been decided that I’ll be assigned to Planning from April." },
+  { speaker: "Ren", japanese: "そうなんですか。働き方も変わりそうですね。", romaji: "sou nan desu ka. hatarakikata mo kawari sou desu ne.", translation: "Really? It sounds as though your way of working will change too." },
+  { speaker: "Mika", japanese: "はい。これからは、予定を早めに共有するようにします。", romaji: "hai. kore kara wa, yotei o hayame ni kyouyuu suru you ni shimasu.", translation: "Yes. From now on, I’ll make sure to share schedules early." },
+  { speaker: "Ren", japanese: "続ければ、自然にできるようになりますよ。", romaji: "tsuzukereba, shizen ni dekiru you ni narimasu yo.", translation: "If you keep doing that, it will become natural." }
+]} />
+
+<PracticeBlock client:load instructions="Choose the form that matches control and time, then compare with the model answer." items={[
+  { prompt: "The university has decided that next Monday's class will be online.", hint: "The speaker did not make this decision.", answer: "来週の月曜日は、オンラインで授業をすることになりました。", explanation: "ことになる presents an external decision." },
+  { prompt: "It is a company rule that staff wear identification cards.", hint: "This is an established rule.", answer: "社員は身分証をつけることになっています。", explanation: "ことになっている describes a standing system or rule." },
+  { prompt: "I make a point of checking unfamiliar words immediately.", answer: "分からない言葉は、すぐ調べるようにしています。", explanation: "ようにしている presents a continuing deliberate habit." }
+]} />
+
+<ReadingPractice client:load title="New shared-office rules" genre="workplace notice" targetTime="2 minutes" passage={<>来月から、会議室の予約方法が変わることになりました。利用する人は、前日までに社内サイトで予約することになっています。急な会議の場合も、使用を始める前に空き状況を確認するようにしてください。最近、予約をしないで使う人が増えたため、この規則を設けることにしました。</>} glossary={[{ word: "設ける", reading: "もうける", meaning: "to establish" }, { word: "空き状況", reading: "あきじょうきょう", meaning: "availability" }]} questions={[{ question: "Which change was decided externally for employees?", answer: "The reservation method will change next month.", explanation: "変わることになりました presents the new organisational decision." }, { question: "What did the organisation itself decide to do?", answer: "It decided to establish the rule.", explanation: "規則を設けることにしました identifies the organisation's deliberate choice." }]} />
+
+<ListeningPractice client:load title="A study habit" situation="A student explains a recent change. Listen for effort and result." script="最近、寝る前に十分だけ日本語を読むようにしています。初めは大変でしたが、短い記事なら辞書を使わずに読めるようになりました。" questions={[{ question: "What deliberate habit has the student adopted?", answer: "Reading Japanese for ten minutes before bed.", explanation: "読むようにしています marks the continuing effort." }, { question: "What can the student now do?", answer: "Read short articles without a dictionary.", explanation: "読めるようになりました marks the achieved change." }]} />
+
+<ChapterSummary takeaways={["ことにする marks a deliberate choice; ことになる removes the decision from the subject.", "ことになっている describes a rule, schedule, or established arrangement.", "ようにする is effort; ようになる is the resulting change."]} />
+
+## Knowledge Check
+
+<QuizBlock client:load questions={[
+  { question: "The school has decided that the trip will be cancelled. Choose the best completion: 遠足は中止する＿＿。", options: ["ことにした", "ことになった", "ようにした", "ようになった"], correct: 1, explanation: "The school decision is presented from the affected person's viewpoint, so ことになった is appropriate." },
+  { question: "Which sentence describes an established library rule?", options: ["本を二週間で返すことにした。", "本を二週間で返すことになった。", "本を二週間で返すことになっている。", "本を二週間で返すようになった。"], correct: 2, explanation: "ことになっている describes a rule already in force." },
+  { question: "毎朝ニュースを読む＿＿が、忙しい日は忘れることもある。", options: ["ことになった", "ようにしている", "ようになった", "ことになっている"], correct: 1, explanation: "The second clause shows an effort rather than a fully achieved habit." },
+  { question: "After months of practice, I can understand announcements: アナウンスが分かる＿＿。", options: ["ことにした", "ことになっている", "ようにした", "ようになった"], correct: 3, explanation: "ようになった describes a developed ability." },
+  { question: "Why is 来月から東京で働くことにした different from ことになった?", options: ["It is more formal", "It presents the move as the speaker's decision", "It describes a permanent rule", "It means the move is impossible"], correct: 1, explanation: "ことにした keeps agency with the person who made the choice." },
+  { question: "Choose the natural sentence for a newly announced company policy.", options: ["来月から在宅勤務を週二回することになりました。", "来月から在宅勤務を週二回するようになりました。", "来月から在宅勤務を週二回できることにしました。", "来月から在宅勤務を週二回したことになりました。"], correct: 0, explanation: "ことになりました presents the announced external arrangement." },
+  { question: "Which form best completes: 健康のため、夜遅く食べない＿＿。", options: ["ようにしています", "ようになっています", "ことになりました", "ことになります"], correct: 0, explanation: "This is the speaker's continuing deliberate effort." },
+  { question: "What does 日本語で夢を見るようになった imply?", options: ["The speaker decided to dream", "Dreaming is a school rule", "A change has occurred naturally over time", "Someone ordered the speaker to dream"], correct: 2, explanation: "ようになった presents a developed state, not a deliberate single decision." }
+]} />

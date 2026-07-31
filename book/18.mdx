@@ -1,0 +1,310 @@
+---
+title: "Chapter 18 — Counters Part 1 & the て-form (Connector)"
+level: "N5"
+chapter: "18"
+description: "Learn how to count objects in Japanese using the native number system and specific counters for small items, and master the essential て-form (te-form)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Counters Part 1 & the て-form (Connector)"
+  level="N5"
+  chapter="18"
+  objectives={[
+    "Master the native Japanese counting system (一つ, 二つ...) for general objects.",
+    "Learn specific counters for small/compact items (〜個) and thin items (〜枚).",
+    "Conjugate verbs into the て-form (te-form) to link multiple actions.",
+    "Explore the Japanese culture of Omiyage (souvenir giving)."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In English, we say "three books," "three cars," and "three people." The word "three" never changes. In Japanese, however, you cannot just say a number. You must use a **Counter**—a specific suffix that depends on the shape, size, or type of the object you are counting!
+
+Additionally, this chapter introduces the **て-form (te-form)**, the "connector" of the Japanese language. Together, these tools allow you to describe complex scenarios like "I bought two apples and three oranges."
+</SectionIntro>
+
+<BookImage
+  src="/book-images/18-counters-te-form.webp"
+  alt="Anime pixel-art illustration of omiyage items counted with counters and linked by a て-form connector."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Universal Counters: 〜つ (tsu)
+
+If you don't know the specific counter for an object, the native Japanese number system is your "safety net." These are used for generic items, abstract concepts, or anything that doesn't have a more specific counter.
+
+<VocabTable data={[
+  { word: 'ひとつ', reading: 'ひとつ', romaji: 'hitotsu', meaning: '1 (item)', type: 'Counter' },
+  { word: 'ふたつ', reading: 'ふたつ', romaji: 'futatsu', meaning: '2 (items)', type: 'Counter' },
+  { word: 'みっつ', reading: 'みっつ', romaji: 'mittsu', meaning: '3 (items)', type: 'Counter' },
+  { word: 'よっつ', reading: 'よっつ', romaji: 'yottsu', meaning: '4 (items)', type: 'Counter' },
+  { word: 'いつつ', reading: 'いつつ', romaji: 'itsutsu', meaning: '5 (items)', type: 'Counter' },
+  { word: 'むっつ', reading: 'むっつ', romaji: 'muttsu', meaning: '6 (items)', type: 'Counter' },
+  { word: 'ななつ', reading: 'ななつ', romaji: 'nanatsu', meaning: '7 (items)', type: 'Counter' },
+  { word: 'やっつ', reading: 'やっつ', romaji: 'yattsu', meaning: '8 (items)', type: 'Counter' },
+  { word: 'ここのつ', reading: 'ここのつ', romaji: 'kokonotsu', meaning: '9 (items)', type: 'Counter' },
+  { word: 'とお', reading: 'とお', romaji: 'too', meaning: '10 (items)', type: 'Counter' }
+]} />
+
+<GrammarBox client:load 
+  pattern="[Object] を [Number+Counter] [Verb]"
+  meaning="Counting objects in a sentence."
+  formation="The counter usually comes AFTER the particle を and BEFORE the verb."
+  examples={[
+    { japanese: "りんご を ふたつ たべました。", romaji: "Ringo o futatsu tabemashita.", translation: "I ate two apples." },
+    { japanese: "ハンバーガー を みっつ ください。", romaji: "Hanbaagaa o mittsu kudasai.", translation: "Three hamburgers, please." },
+    { japanese: "かばん が ひとつ あります。", romaji: "Kaban ga hitotsu arimasu.", translation: "There is one bag." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="みかん を いつつ かいました。"
+  romaji="Mikan o itsutsu kaimashita."
+  translation="I bought five mandarin oranges."
+/>
+<ExampleSentence client:load 
+  japanese="いす を よっつ ください。"
+  romaji="Isu o yottsu kudasai."
+  translation="Four chairs, please."
+/>
+<ExampleSentence client:load 
+  japanese="へや に テーブル が ふたつ あります。"
+  romaji="Heya ni teeburu ga futatsu arimasu."
+  translation="There are two tables in the room."
+/>
+
+## 2. Small & Flat Items: 〜個 (ko) and 〜枚 (mai)
+
+While `〜つ` is universal, Japanese people prefer specific counters when the shape is clear.
+
+- **〜個 (ko):** For small, round, or compact objects (apples, eggs, candy).
+- **〜枚 (mai):** For thin, flat objects (paper, shirts, plates, tickets).
+
+<VocabTable data={[
+  { word: 'いっこ', reading: 'いっこ', romaji: 'ikko', meaning: '1 (small item)', type: 'Counter' },
+  { word: 'にこ', reading: 'にこ', romaji: 'niko', meaning: '2 (small items)', type: 'Counter' },
+  { word: 'さんこ', reading: 'さんこ', romaji: 'sanko', meaning: '3 (small items)', type: 'Counter' },
+  { word: 'いちまい', reading: 'いちまい', romaji: 'ichi-mai', meaning: '1 (flat item)', type: 'Counter' },
+  { word: 'にまい', reading: 'にまい', romaji: 'ni-mai', meaning: '2 (flat items)', type: 'Counter' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="たまご を ろっこ かいました。"
+  romaji="Tamago o rokko kaimashita."
+  translation="I bought six eggs."
+/>
+<ExampleSentence client:load 
+  japanese="きっぷ を にまい かって ください。"
+  romaji="Kippu o nimai katte kudasai."
+  translation="Please buy two tickets."
+/>
+<ExampleSentence client:load 
+  japanese="シャツ を さんまい もっています。"
+  romaji="Shatsu o sanmai motteimasu."
+  translation="I own three shirts."
+/>
+
+## 3. The て-form (The Connector)
+
+The **て-form** is the most versatile conjugation in Japanese. It allows you to link verbs together without ending the sentence.
+
+**Conjugation Rules:**
+- **Group 2 (ru):** Drop る ➔ add て (taberu ➔ tabete).
+- **Group 1 (u):** Use the "te-form song" (うつる➔って, むぶぬ➔んで, く➔いて, ぐ➔いで, す➔して).
+- **Group 3 (Irregular):** する ➔ して, くる ➔ きて.
+
+<GrammarBox client:load 
+  pattern="(Verb 1 て-form)、(Verb 2)"
+  meaning="Do Action 1, AND THEN Action 2."
+  formation="[Verb て] + [Verb]"
+  examples={[
+    { japanese: "みせ へ いって、パン を かいました。", romaji: "Mise e itte, pan o kaimashita.", translation: "I went to the store and bought bread." },
+    { japanese: "て を あらって、ごはん を たべます。", romaji: "Te o aratte, gohan o tabemasu.", translation: "I wash my hands and eat." },
+    { japanese: "ちょっと まって ください。", romaji: "Chotto matte kudasai.", translation: "Please wait a moment. (matsu ➔ matte)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="あさ、おきて、コーヒー を のみました。"
+  romaji="Asa, okite, koohii o nomimashita."
+  translation="In the morning, I woke up and drank coffee."
+/>
+<ExampleSentence client:load 
+  japanese="ほん を よんで、ねます。"
+  romaji="Hon o yonde, nemasu."
+  translation="I will read a book and go to sleep."
+/>
+<ExampleSentence client:load 
+  japanese="にほんご を べんきょうして、えいが を みました。"
+  romaji="Nihongo o benkyoushite, eiga o mimashita."
+  translation="I studied Japanese and watched a movie."
+/>
+
+## 4. Cultural Note: Omiyage Culture (お土産)
+
+In Japan, **Omiyage** (souvenirs) are much more than just travel mementos. They are a social tool used to show gratitude to colleagues, friends, and family.
+
+- **Not just for yourself:** Unlike "souvenirs" in the West, Omiyage are almost always intended to be given away.
+- **Regional Specialties:** Each region in Japan has its own *Meibutsu* (famous product), usually a specific food like *Yatsuhashi* in Kyoto or *Ringo* (apples) in Aomori.
+- **Counting Gifts:** When buying Omiyage, you'll use counters constantly! 
+  - *Okashi o **jukko** kaimashita.* (I bought **10** sweets.)
+  - *Hagaki o **gomai** kaimashita.* (I bought **5** postcards.)
+
+The presentation is key—Omiyage are always beautifully wrapped, reflecting the Japanese aesthetic of care and respect.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/18-counters-te-form-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of omiyage shopping dialogue practice with sweets, postcards, apples, counters, and て-form connector cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Shopping for Omiyage"
+  lines={[
+    { speaker: "Smith", japanese: "すみません、この おかし を いつ つ ください。", romaji: "Sumimasen, kono okashi o itsutsu kudasai.", translation: "Excuse me, five of these sweets, please." },
+    { speaker: "Clerk", japanese: "はい。ほか に なに か あります か。", romaji: "Hai. Hoka ni nani ka arimasu ka?", translation: "Yes. Is there anything else?" },
+    { speaker: "Smith", japanese: "ええと、ポストカード を さんまい ください。あと、きれいな はこ を ひとつ おねがいします。", romaji: "Eeto, posutokaado o sanmai kudasai. Ato, kireina hako o hitotsu onegaishimasu.", translation: "Umm, three postcards, please. And one beautiful box, please." },
+    { speaker: "Clerk", japanese: "わかりました。ぜんぶ で ２５００えん です。", romaji: "Wakarimashita. Zenbu de nisen gohyaku-en desu.", translation: "Understood. That's 2,500 yen in total." },
+    { speaker: "Smith", japanese: "カード で はらって、かえります。", romaji: "Kaado de haratte, kaerimasu.", translation: "I'll pay by card and then go home." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="A Busy Day"
+  lines={[
+    { speaker: "Tanaka", japanese: "きのう、なに を しました か。", romaji: "Kinou, nani o shimashita ka?", translation: "What did you do yesterday?" },
+    { speaker: "Lee", japanese: "デパート へ いって、シャツ を にまい かいました。それから、ともだち に あいました。", romaji: "Depaato e itte, shatsu o nimai kaimashita. Sorekara, tomodachi ni aimashita.", translation: "I went to the department store and bought two shirts. After that, I met a friend." },
+    { speaker: "Tanaka", japanese: "いい です ね。わたし も かいもの を して、ごはん を たべました。", romaji: "Ii desu ne. Watashi mo kaimono o shite, gohan o tabemashita.", translation: "That's nice. I also did some shopping and ate a meal." },
+    { speaker: "Lee", japanese: "りんご を みっつ もらいました。たべます か。", romaji: "Ringo o mittsu moraimashita. Tabemasu ka?", translation: "I received three apples. Do you want to eat one?" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Japanese uses specific counters based on the item's shape and type.",
+    "一つ (hitotsu) to 十 (too) is the universal 'safety net' counting system.",
+    "Use 〜個 (ko) for small/compact items and 〜枚 (mai) for thin/flat items.",
+    "The counter usually sits between the particle を and the verb.",
+    "The て-form (te-form) links multiple actions together sequentially.",
+    "Omiyage (souvenirs) are an essential part of Japanese social etiquette and gift-giving."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your counting and connecting skills!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which counter is used for flat items like paper or shirts?",
+      options: ["〜つ (tsu)", "〜個 (ko)", "〜枚 (mai)", "〜人 (nin)"],
+      correct: 2,
+      explanation: "〜枚 (mai) is used for thin, flat objects."
+    },
+    {
+      question: "How do you say 'three items' using the universal system?",
+      options: ["ひとつ", "ふたつ", "みっつ", "よっつ"],
+      correct: 2,
+      explanation: "みっつ (mittsu) means three."
+    },
+    {
+      japanese: "きっぷ を ____ かいました。",
+      question: "Fill in the blank for 'bought two tickets'.",
+      options: ["ふたつ", "にまい", "にこ", "にじ"],
+      correct: 1,
+      explanation: "Tickets are flat, so we use にまい (nimai)."
+    },
+    {
+      question: "What is the te-form of 'たべる' (to eat)?",
+      options: ["たべった", "たべて", "たべして", "たべんで"],
+      correct: 1,
+      explanation: "たべる is Group 2. Drop る and add て."
+    },
+    {
+      question: "Translate: 'Please wait a moment.'",
+      options: ["まって ください。", "まちて ください。", "またないで ください。", "まつの ください。"],
+      correct: 0,
+      explanation: "Matsu (wait) ➔ Matte (te-form) + ください."
+    },
+    {
+      question: "How do you say 'eight items' in the universal system?",
+      options: ["ななつ", "やっつ", "ここのつ", "とお"],
+      correct: 1,
+      explanation: "やっつ (yattsu) is eight."
+    },
+    {
+      question: "What is the te-form of the irregular verb 'する' (to do)?",
+      options: ["すって", "して", "すんで", "きて"],
+      correct: 1,
+      explanation: "する is irregular; its te-form is always して."
+    },
+    {
+      question: "Translate: 'I ate two apples.'",
+      options: ["りんご を にまい たべました。", "りんご を ふたつ たべました。", "りんご を ひとつ たべました。", "りんご を ににん たべました。"],
+      correct: 1,
+      explanation: "Apples can use the universal 'futatsu' or specific 'niko'."
+    },
+    {
+      question: "What is 'Omiyage'?",
+      options: ["A type of sushi", "A souvenir given to others", "A New Year's card", "A counting system"],
+      correct: 1,
+      explanation: "Omiyage are souvenirs brought back from a trip specifically to give to others."
+    },
+    {
+      question: "Which of these is the correct te-form for 'のむ' (to drink)?",
+      options: ["のって", "のんで", "のみて", "のんでした"],
+      correct: 1,
+      explanation: "Verbs ending in 'mu' change to 'nde'. Nonde."
+    },
+    {
+      question: "Translate: 'Asa okite, koohii o nomimasu.'",
+      options: ["I wake up and drink coffee.", "I drink coffee before waking up.", "I want to wake up and drink coffee.", "Please wake up and drink coffee."],
+      correct: 0,
+      explanation: "Okite (te-form of okiru) connects the two actions."
+    },
+    {
+      question: "How many is 'とお' (too)?",
+      options: ["5", "8", "10", "12"],
+      correct: 2,
+      explanation: "とお (too) is ten. Note it's the only one in the set without 'tsu'."
+    },
+    {
+      question: "Which counter would you use for 'eggs'?",
+      options: ["〜枚 (mai)", "〜個 (ko)", "〜じ (ji)", "〜がつ (gatsu)"],
+      correct: 1,
+      explanation: "〜個 (ko) is used for small, round objects like eggs."
+    },
+    {
+      question: "What is the te-form of 'いく' (to go)?",
+      options: ["いいて", "いって", "いきて", "いんで"],
+      correct: 1,
+      explanation: "Iku is the ultimate exception: it becomes いって (itte)."
+    },
+    {
+      question: "Where does the counter usually sit in a sentence?",
+      options: ["At the very beginning", "Between the object particle (を) and the verb", "After the verb", "Before the subject"],
+      correct: 1,
+      explanation: "Standard placement is [Object] を [Number+Counter] [Verb]."
+    }
+  ]}
+/>

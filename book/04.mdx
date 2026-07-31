@@ -1,0 +1,260 @@
+---
+title: "Chapter 04 — Pronouns & Particle も"
+level: "N5"
+chapter: "04"
+description: "Expand your ability to refer to people and things. Learn personal pronouns, demonstratives (this, that), and how to say 'also' or 'too' using the particle 'mo'."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Pronouns & Particle も"
+  level="N5"
+  chapter="04"
+  objectives={[
+    "Learn Japanese personal pronouns and when to use them.",
+    "Master demonstrative pronouns (Ko-So-A-Do system).",
+    "Use the particle も (mo) to express 'also' or 'too'.",
+    "Understand the use of Japanese honorifics like -san, -kun, and -chan."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In Japanese, we often avoid using "I" or "You" once the context is established. However, knowing when and how to use pronouns is essential for clear communication. In this chapter, we will also learn the **Ko-So-A-Do** system for pointing at objects and the particle **も**, which allows you to add information to your sentences.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/04-pronouns-particle-mo.webp"
+  alt="Anime pixel-art illustration of learners practicing これ, それ, あれ, and も around a classroom table with distance markers."
+  width={1672}
+  height={941}
+/>
+
+## 1. Personal Pronouns
+
+While English uses pronouns constantly, Japanese often omits them if it is obvious who is speaking.
+
+<VocabTable data={[
+  { word: 'わたし', romaji: 'watashi', meaning: 'I / Me (Standard)', type: 'Pronoun' },
+  { word: 'あなた', romaji: 'anata', meaning: 'You (Use sparingly)', type: 'Pronoun' },
+  { word: 'かれ', romaji: 'kare', meaning: 'He / Boyfriend', type: 'Pronoun' },
+  { word: 'かのじょ', romaji: 'kanojo', meaning: 'She / Girlfriend', type: 'Pronoun' },
+  { word: 'わたしたち', romaji: 'watashitachi', meaning: 'We', type: 'Pronoun' }
+]} />
+
+> [!TIP]
+> Instead of saying "You" (anata), it is much more polite and common in Japan to refer to someone by their **Name + Honorific** (e.g., Tanaka-san).
+
+<ExampleSentence client:load 
+  japanese="わたし は 日本語 の 学生 です。"
+  romaji="Watashi wa Nihongo no gakusei desu."
+  translation="I am a student of the Japanese language."
+/>
+
+<ExampleSentence client:load 
+  japanese="かれ は わたしたち の 先生 です。"
+  romaji="Kare wa watashitachi no sensei desu."
+  translation="He is our teacher."
+/>
+
+<ExampleSentence client:load 
+  japanese="あなた は 日本人 です か。"
+  romaji="Anata wa Nihonjin desu ka."
+  translation="Are you Japanese?"
+/>
+
+## 2. Demonstrative Pronouns (Ko-So-A-Do)
+
+Japanese uses a systematic way to point at things based on their distance from the speaker and listener.
+
+- **これ (Kore):** This (Near the speaker)
+- **それ (Sore):** That (Near the listener)
+- **あれ (Are):** That over there (Far from both)
+- **どれ (Dore):** Which one? (Question)
+
+<GrammarBox client:load 
+  pattern="これ / それ / あれ ＋ は ＋ [Noun] ＋ です"
+  meaning="Identifying objects based on distance."
+  formation="Pronoun + は + Noun + です"
+  examples={[
+    { japanese: "これ は わたし の 本 です。", romaji: "Kore wa watashi no hon desu.", translation: "This is my book." },
+    { japanese: "それ は なん です か。", romaji: "Sore wa nan desu ka.", translation: "What is that (near you)?" },
+    { japanese: "あれ は 先生 の 車 です。", romaji: "Are wa sensei no kuruma desu.", translation: "That over there is the teacher's car." }
+  ]}
+/>
+
+## 3. The "Also" Particle: も (mo)
+
+The particle も (mo) means "also" or "too". It is unique because it **replaces** the particles は (wa), が (ga), and を (o).
+
+<GrammarBox client:load 
+  pattern="[Noun] ＋ も"
+  meaning="Expresses 'also' or 'too'."
+  formation="Noun + も (Replaces は, が, を)"
+  examples={[
+    { japanese: "わたし は 学生 です。 アリさん も 学生 です。", romaji: "Watashi wa gakusei desu. Ari-san mo gakusei desu.", translation: "I am a student. Ali is ALSO a student." },
+    { japanese: "これ は ペン です。 それ も ペン です。", romaji: "Kore wa pen desu. Sore mo pen desu.", translation: "This is a pen. That is also a pen." },
+    { japanese: "りんご を たべます。 バナナ も たべます。", romaji: "Ringo o tabemasu. Banana mo tabemasu.", translation: "I eat apples. I also eat bananas." }
+  ]}
+/>
+
+## 4. Cultural Note: Japanese Names & Honorifics
+
+In Japan, you rarely call someone by their first name unless you are very close. Usually, you use their **Family Name + Honorific**.
+- **-san (さん):** The most common honorific, equivalent to Mr., Ms., or Mrs. Use it for almost everyone.
+- **-kun (君):** Typically used for boys or by superiors to subordinates.
+- **-chan (ちゃん):** A cute honorific used for children, female friends, or pets.
+- **-sama (様):** Extremely formal, used for customers or deities.
+
+Never use an honorific on your own name! It sounds very arrogant.
+
+## Practical Conversations
+
+<BookImage
+  src="/book-images/04-pronouns-mo-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of students using これ, それ, あれ, and も while identifying books in a classroom."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load 
+  title="In the Classroom"
+  lines={[
+    { speaker: "Anna", japanese: "すみません、それ は あなた の 本 です か。", romaji: "Sumimasen, sore wa anata no hon desu ka.", translation: "Excuse me, is that your book?" },
+    { speaker: "Tanaka", japanese: "はい、これ は わたし の 本 です。", romaji: "Hai, kore wa watashi no hon desu.", translation: "Yes, this is my book." },
+    { speaker: "Anna", japanese: "これ も あなた の です か。", romaji: "Kore mo anata no desu ka.", translation: "Is this (one) also yours?" },
+    { speaker: "Tanaka", japanese: "いいえ、それ は わたし の ではありません。 あれ は たなかさん の です。", romaji: "Iie, sore wa watashi no dewa arimasen. Are wa Tanaka-san no desu.", translation: "No, that is not mine. That one over there is Mr. Tanaka's." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Introducing Friends"
+  lines={[
+    { speaker: "Sato", japanese: "はじめまして。 さとう です。", romaji: "Hajimemashite. Satou desu.", translation: "Nice to meet you. I am Sato." },
+    { speaker: "Ken", japanese: "はじめまして。 けん です。 かのじょ は アンナさん です。", romaji: "Hajimemashite. Ken desu. Kanojo wa Anna-san desu.", translation: "Nice to meet you. I am Ken. She is Anna." },
+    { speaker: "Sato", japanese: "アンナさん も 学生 です か。", romaji: "Anna-san mo gakusei desu ka.", translation: "Is Anna also a student?" },
+    { speaker: "Ken", japanese: "はい、わたしたち は 学生 です。", romaji: "Hai, watashitachi wa gakusei desu.", translation: "Yes, we are students." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Personal pronouns like わたし (I) are used, but often omitted when context is clear.",
+    "Use 'Family Name + さん' instead of 'You' (anata) to be polite.",
+    "The Ko-So-A-Do system (これ, それ, あれ) helps identify objects based on distance.",
+    "The particle も (mo) means 'also' or 'too' and replaces は, が, and を.",
+    "Never use honorifics like -san on your own name."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of pronouns and the particle も!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which pronoun is the most standard way to say 'I' or 'Me'?",
+      options: ["あなた", "わたし", "かれ", "わたしたち"],
+      correct: 1,
+      explanation: "わたし (Watashi) is the standard, polite pronoun for 'I'."
+    },
+    {
+      question: "Which word means 'That (near the listener)'?",
+      options: ["これ", "それ", "あれ", "どれ"],
+      correct: 1,
+      explanation: "それ (Sore) refers to something near the person you are talking to."
+    },
+    {
+      question: "Which particle means 'also' or 'too'?",
+      options: ["は", "の", "も", "を"],
+      correct: 2,
+      explanation: "も (mo) is the particle for 'also' or 'too'."
+    },
+    {
+      question: "Translate: 'わたし も 学生 です。'",
+      options: ["I am a student", "I am also a student", "My student", "Are you a student?"],
+      correct: 1,
+      explanation: "わたし (I) + も (also) + 学生 です (am a student)."
+    },
+    {
+      question: "Which honorific is the most versatile and safe to use for almost anyone?",
+      options: ["-kun", "-chan", "-san", "-sama"],
+      correct: 2,
+      explanation: "-san is the standard polite honorific."
+    },
+    {
+      question: "What does the particle も replace when used in a sentence?",
+      options: ["の", "に", "は, が, and を", "と"],
+      correct: 2,
+      explanation: "も replaces the topic, subject, and object markers."
+    },
+    {
+      question: "How do you say 'We' in Japanese?",
+      options: ["わたし", "あなたたち", "わたしたち", "かれら"],
+      correct: 2,
+      explanation: "Adding 'tachi' to 'watashi' makes it plural: We."
+    },
+    {
+      question: "Which word is used to point at something far from both the speaker and listener?",
+      options: ["これ", "それ", "あれ", "どれ"],
+      correct: 2,
+      explanation: "あれ (Are) is used for things 'over there'."
+    },
+    {
+      question: "True or False: You should add '-san' to your own name when introducing yourself.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. You never use honorifics for yourself."
+    },
+    {
+      question: "What does 'かのじょ' mean?",
+      options: ["He", "She / Girlfriend", "We", "You"],
+      correct: 1,
+      explanation: "かのじょ (Kanojo) can mean 'She' or 'Girlfriend'."
+    },
+    {
+      question: "To say 'This is ALSO your book', which particle fills the blank? これ ____ あなた の 本 です。",
+      options: ["は", "も", "の", "を"],
+      correct: 1,
+      explanation: "も means 'also / too' and replaces は here, so これも = 'this one too'."
+    },
+    {
+      question: "Which demonstrative is used to ask 'Which one?'",
+      options: ["これ", "それ", "あれ", "どれ"],
+      correct: 3,
+      explanation: "どれ (Dore) is the question word for choosing among items."
+    },
+    {
+      question: "Translate: 'Tanaka-san mo Nihonjin desu.'",
+      options: ["Mr. Tanaka is Japanese.", "Is Mr. Tanaka Japanese?", "Mr. Tanaka is also Japanese.", "I am also Japanese."],
+      correct: 2,
+      explanation: "Tanaka-san + mo (also) + Nihonjin (Japanese person) + desu (is)."
+    },
+    {
+      question: "What is the most polite way to address a customer?",
+      options: ["-kun", "-san", "-sama", "-chan"],
+      correct: 2,
+      explanation: "-sama is the highly formal honorific for customers."
+    },
+    {
+      question: "In the Ko-So-A-Do system, which prefix refers to the speaker's area?",
+      options: ["Ko-", "So-", "A-", "Do-"],
+      correct: 0,
+      explanation: "Ko- (Kore, Koko, etc.) always refers to the area near the speaker."
+    }
+  ]}
+/>

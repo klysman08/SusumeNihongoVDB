@@ -1,0 +1,263 @@
+---
+title: "Chapter 07 — Noun-Desu: Affirmative & Negative"
+level: "N5"
+chapter: "07"
+description: "Learn the foundational 'A is B' sentence structure. Master the copula 'desu' in its affirmative and negative forms to introduce yourself and describe the world."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Noun-Desu: Affirmative & Negative"
+  level="N5"
+  chapter="07"
+  objectives={[
+    "Understand the 'A is B' sentence structure using the particle は.",
+    "Master the polite copula です (affirmative) and じゃありません (negative).",
+    "Learn the basics of Jiko Shoukai (Self-introduction).",
+    "Distinguish between formal and casual ways to say 'is not'."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In English, the verb "to be" (am, is, are) is the most common word. In Japanese, this role is filled by the **Copula**. The most basic sentence you can make is "A is B" (e.g., "I am a student"). In this chapter, we will learn how to declare what things are, how to politely deny them, and how to introduce ourselves to others using the proper cultural etiquette.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/07-noun-desu.webp"
+  alt="Anime pixel-art illustration of a learner practicing polite A is B and is not B noun sentences during a self-introduction."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Affirmative: [Noun A] は [Noun B] です
+
+To say "A is B," you mark the topic (A) with **は (wa)** and end the sentence with **です (desu)**.
+
+<GrammarBox client:load 
+  pattern="[Noun A] は [Noun B] です"
+  meaning="A is B (Polite Present Affirmative)."
+  formation="Noun A + は + Noun B + です"
+  examples={[
+    { japanese: "わたし は がくせい です。", romaji: "Watashi wa gakusei desu.", translation: "I am a student." },
+    { japanese: "たなかさん は せんせい です。", romaji: "Tanaka-san wa sensei desu.", translation: "Mr. Tanaka is a teacher." },
+    { japanese: "これ は わたしの ほんです。", romaji: "Kore wa watashi no hon desu.", translation: "This is my book." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="あした は にちようび です。"
+  romaji="Ashita wa nichiyoubi desu."
+  translation="Tomorrow is Sunday."
+/>
+
+<ExampleSentence client:load 
+  japanese="かのじょ は にほんじん です。"
+  romaji="Kanojo wa Nihonjin desu."
+  translation="She is Japanese."
+/>
+
+<ExampleSentence client:load 
+  japanese="きょう は あつい です。"
+  romaji="Kyou wa atsui desu."
+  translation="Today is hot."
+/>
+
+## 2. Negative: [Noun A] は [Noun B] じゃありません
+
+To say "A is NOT B," we change the ending to **じゃありません (ja arimasen)**. This is the standard polite way to negate a noun.
+
+<GrammarBox client:load 
+  pattern="[Noun A] は [Noun B] じゃありません"
+  meaning="A is not B (Polite Present Negative)."
+  formation="Noun A + は + Noun B + じゃありません"
+  examples={[
+    { japanese: "わたし は いしゃ じゃありません。", romaji: "Watashi wa isha ja arimasen.", translation: "I am not a doctor." },
+    { japanese: "これ は ペン じゃありません。", romaji: "Kore wa pen ja arimasen.", translation: "This is not a pen." },
+    { japanese: "きょう は げつようび じゃありません。", romaji: "Kyou wa getsuyoubi ja arimasen.", translation: "Today is not Monday." }
+  ]}
+/>
+
+> [!NOTE]
+> **Politeness Levels:**
+> - **じゃありません (Ja arimasen):** Standard polite (spoken).
+> - **ではありません (Dewa arimasen):** Formal/Written.
+> - **じゃない (Ja nai):** Casual (friends/family).
+
+<ExampleSentence client:load 
+  japanese="あのひと は がくせい じゃありません。"
+  romaji="Ano hito wa gakusei ja arimasen."
+  translation="That person is not a student."
+/>
+
+<ExampleSentence client:load 
+  japanese="にほんご は かんたん じゃありません。"
+  romaji="Nihongo wa kantan ja arimasen."
+  translation="Japanese is not easy."
+/>
+
+<ExampleSentence client:load 
+  japanese="それ は わたしの じゃありません。"
+  romaji="Sore wa watashi no ja arimasen."
+  translation="That is not mine."
+/>
+
+## 3. Cultural Note: Jiko Shoukai (自己紹介)
+
+A self-introduction is a crucial part of Japanese social life. Whether at school, work, or a party, there is a standard format:
+1. **Hajimemashite:** "Nice to meet you" (Literally: "It's the first time").
+2. **[Name] desu:** "I am [Name]."
+3. **Yoroshiku onegaishimasu:** "Please treat me well" (Literally: "I ask for your favor").
+
+**The Bow (Ojigi):** When doing Jiko Shoukai, it is common to bow slightly. Keep your back straight and bend from the hips. A 15-degree bow is standard for casual introductions, while a 30-degree bow is for business or superiors.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/07-noun-desu-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of polite self-introductions and です versus じゃありません practice with profession cards."
+  width={1717}
+  height={916}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Meeting a New Colleague"
+  lines={[
+    { speaker: "Tanaka", japanese: "はじめまして。 たなか です。 よろしく おねがいします。", romaji: "Hajimemashite. Tanaka desu. Yoroshiku onegaishimasu.", translation: "Nice to meet you. I am Tanaka. Please treat me well." },
+    { speaker: "Smith", japanese: "はじめまして。 スミス です。 こちらこそ よろしく おねがいします。", romaji: "Hajimemashite. Sumisu desu. Kochirakoso yoroshiku onegaishimasu.", translation: "Nice to meet you. I am Smith. Likewise, please treat me well." },
+    { speaker: "Tanaka", japanese: "スミスさん は エンジニア です か。", romaji: "Sumisu-san wa enjinia desu ka.", translation: "Are you an engineer, Mr. Smith?" },
+    { speaker: "Smith", japanese: "いいえ、 エンジニア じゃありません。 かいしゃいん です。", romaji: "Iie, enjinia ja arimasen. Kaishain desu.", translation: "No, I am not an engineer. I am a company employee." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Correcting a Misunderstanding"
+  lines={[
+    { speaker: "Anna", japanese: "あのひと は 先生 です か。", romaji: "Ano hito wa sensei desu ka.", translation: "Is that person a teacher?" },
+    { speaker: "Ken", japanese: "いいえ、 せんせい じゃありません。 がくせい です よ。", romaji: "Iie, sensei ja arimasen. Gakusei desu yo.", translation: "No, they are not a teacher. They are a student." },
+    { speaker: "Anna", japanese: "そうですか。 あの ほん も 学生 の です か。", romaji: "Sou desu ka. Ano hon mo gakusei no desu ka.", translation: "I see. Is that book also the student's?" },
+    { speaker: "Ken", japanese: "はい、 そう です。", romaji: "Hai, sou desu.", translation: "Yes, that's right." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "The copula 'desu' (です) links a topic to a noun (A is B).",
+    "To make a sentence negative ('is not'), use 'ja arimasen' (じゃありません).",
+    "Self-introductions start with 'Hajimemashite' and end with 'Yoroshiku onegaishimasu'.",
+    "Bow slightly during introductions to show respect.",
+    "Japanese word order stays the same for affirmative and negative; only the ending changes."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the Japanese copula!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of these means 'I am a student'?",
+      options: ["わたし は がくせい です。", "わたし は がくせい じゃありません。", "わたし は せんせい です。", "あなた は がくせい です か。"],
+      correct: 0,
+      explanation: "わたし (I) + は (topic) + がくせい (student) + です (is)."
+    },
+    {
+      question: "What is the polite negative form of 'desu'?",
+      options: ["じゃありません", "です", "でした", "じゃありませんでした"],
+      correct: 0,
+      explanation: "じゃありません (ja arimasen) is the standard polite way to say 'is not'."
+    },
+    {
+      question: "How do you start a self-introduction (Jiko Shoukai)?",
+      options: ["Arigatou", "Hajimemashite", "Sumimasen", "Oyasumi"],
+      correct: 1,
+      explanation: "Hajimemashite (Nice to meet you) is the standard opening."
+    },
+    {
+      question: "What does 'Yoroshiku onegaishimasu' mean in an introduction?",
+      options: ["I am sorry", "Thank you", "Please treat me well", "Goodbye"],
+      correct: 2,
+      explanation: "It is a polite request for future good relations."
+    },
+    {
+      question: "Translate: 'Tanaka-san wa sensei ja arimasen.'",
+      options: ["Mr. Tanaka is a teacher.", "Mr. Tanaka is a student.", "Mr. Tanaka is not a teacher.", "Is Mr. Tanaka a teacher?"],
+      correct: 2,
+      explanation: "Sensei (teacher) + ja arimasen (is not)."
+    },
+    {
+      question: "Which particle marks the topic of the sentence?",
+      options: ["の", "を", "は", "が"],
+      correct: 2,
+      explanation: "は (wa) is the topic marker."
+    },
+    {
+      question: "What is the casual version of 'ja arimasen'?",
+      options: ["dewa arimasen", "ja nai", "desu", "deshita"],
+      correct: 1,
+      explanation: "Ja nai is the casual/informal negative."
+    },
+    {
+      question: "Fill in the blank: 'Kyou wa nichiyoubi ____.' (Today IS Sunday).",
+      options: ["ja arimasen", "desu", "ka", "no"],
+      correct: 1,
+      explanation: "Desu is the affirmative 'is'."
+    },
+    {
+      question: "How do you say 'Are you Japanese?' politely?",
+      options: ["Anata wa Nihonjin desu.", "Anata wa Nihonjin ja arimasen.", "Anata wa Nihonjin desu ka.", "Hajimemashite."],
+      correct: 2,
+      explanation: "Adding 'ka' to the end makes it a question."
+    },
+    {
+      question: "Which bow is appropriate for a casual self-introduction?",
+      options: ["15 degrees", "30 degrees", "45 degrees", "90 degrees"],
+      correct: 0,
+      explanation: "A slight 15-degree bow (eshaku) is standard for casual settings."
+    },
+    {
+      question: "Translate: 'I am not a doctor.'",
+      options: ["わたし は いしゃ です。", "わたし は いしゃ じゃありません。", "わたし は せんせい です。", "わたし は いしゃ じゃない。"],
+      correct: 1,
+      explanation: "Assuming a polite context, 'ja arimasen' is the best choice."
+    },
+    {
+      question: "What is the more formal/written version of 'ja arimasen'?",
+      options: ["desu", "ja nai", "dewa arimasen", "deshita"],
+      correct: 2,
+      explanation: "Dewa arimasen is used in writing and formal speeches."
+    },
+    {
+      question: "What does 'Kochirakoso' mean in a conversation?",
+      options: ["Excuse me", "Likewise / Same here", "Goodbye", "What?"],
+      correct: 1,
+      explanation: "It is used to return a sentiment like 'Nice to meet you' or 'Thank you'."
+    },
+    {
+      question: "True or False: In Japanese, the copula 'desu' changes based on the person (I am vs. You are).",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. 'Desu' stays the same regardless of the subject."
+    },
+    {
+      question: "Fill in the blank: 'Kore wa watashi ____ hon desu.' (This is MY book).",
+      options: ["は", "を", "の", "に"],
+      correct: 2,
+      explanation: "の (no) is the possession particle."
+    }
+  ]}
+/>

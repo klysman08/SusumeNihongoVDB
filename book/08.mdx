@@ -1,0 +1,287 @@
+---
+title: "Chapter 08 — Time & Particle に"
+level: "N5"
+chapter: "08"
+description: "Master the clock in Japanese! Learn how to tell time, count minutes, and use the particle 'ni' to specify exactly when an action occurs."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Time & Particle に"
+  level="N5"
+  chapter="08"
+  objectives={[
+    "Tell the time in hours (じ) and minutes (ふん/ぷん).",
+    "Identify irregular readings for hours like 4, 7, and 9.",
+    "Use the particle に to mark the specific time an action happens.",
+    "Understand the cultural importance of punctuality in Japan."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Knowing how to tell time is one of the most practical skills you can learn in any language. In Japanese, the system is quite logical, but there are several irregular pronunciations you must master. In this chapter, we will learn the clock, the difference between AM and PM, and the essential particle **に (ni)**, which acts like the English "at" in sentences like "I wake up **at** 7 o'clock."
+</SectionIntro>
+
+<BookImage
+  src="/book-images/08-time-particle-ni.webp"
+  alt="Anime pixel-art illustration of a learner using clocks, schedule cards, and に to mark a specific time."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Telling the Hour: 〜じ (ji)
+
+To say the hour, simply add **じ (ji)** to the number. Pay close attention to the irregulars!
+
+<VocabTable data={[
+  { word: 'いちじ', romaji: 'ichi-ji', meaning: '1:00', type: 'Time' },
+  { word: 'にじ', romaji: 'ni-ji', meaning: '2:00', type: 'Time' },
+  { word: 'さんじ', romaji: 'san-ji', meaning: '3:00', type: 'Time' },
+  { word: 'よじ', romaji: 'yo-ji', meaning: '4:00 (IRREGULAR)', type: 'Time' },
+  { word: 'ごじ', romaji: 'go-ji', meaning: '5:00', type: 'Time' },
+  { word: 'ろくじ', romaji: 'roku-ji', meaning: '6:00', type: 'Time' },
+  { word: 'しちじ', romaji: 'shichi-ji', meaning: '7:00 (IRREGULAR)', type: 'Time' },
+  { word: 'はちじ', romaji: 'hachi-ji', meaning: '8:00', type: 'Time' },
+  { word: 'くじ', romaji: 'ku-ji', meaning: '9:00 (IRREGULAR)', type: 'Time' },
+  { word: 'じゅうじ', romaji: 'juu-ji', meaning: '10:00', type: 'Time' },
+  { word: 'じゅういちじ', romaji: 'juu-ichi-ji', meaning: '11:00', type: 'Time' },
+  { word: 'じゅうにじ', romaji: 'juu-ni-ji', meaning: '12:00', type: 'Time' }
+]} />
+
+> [!CAUTION]
+> - **4 o'clock** is **yo-ji** (never yon-ji or shi-ji).
+> - **7 o'clock** is **shichi-ji** (rarely nana-ji).
+> - **9 o'clock** is **ku-ji** (never kyuu-ji).
+
+## 2. Telling Minutes: 〜ふん / 〜ぷん (fun / pun)
+
+Minutes are a bit more complex because the pronunciation changes between **fun** and **pun** based on the previous sound.
+
+- **〜ぷん (pun):** 1, 3, 4, 6, 8, 10
+- **〜ふん (fun):** 2, 5, 7, 9
+- **Half past:** Use **〜じ はん (ji han)**.
+
+<GrammarBox client:load 
+  pattern="[Number] ＋ じ ＋ [Number] ＋ ふん/ぷん"
+  meaning="Expressing a specific time on the clock."
+  formation="Hour + じ + Minute + ふん/ぷん"
+  examples={[
+    { japanese: "いま なんじ です か。", romaji: "Ima nan-ji desu ka.", translation: "What time is it now?" },
+    { japanese: "ごぜん はちじ です。", romaji: "Gozen hachi-ji desu.", translation: "It is 8:00 AM." },
+    { japanese: "ごご さんじ じゅっぷん です。", romaji: "Gogo san-ji juppun desu.", translation: "It is 3:10 PM." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="じゅうじ はん です。"
+  romaji="Juu-ji han desu."
+  translation="It is 10:30."
+/>
+
+<ExampleSentence client:load 
+  japanese="ごぜん よじ じゅうごふん です。"
+  romaji="Gozen yo-ji juu-go-fun desu."
+  translation="It is 4:15 AM."
+/>
+
+<ExampleSentence client:load 
+  japanese="ろくじ ごじゅっぷん です。"
+  romaji="Roku-ji go-juppun desu."
+  translation="It is 6:50."
+/>
+
+## 3. The Time Particle: に (ni)
+
+When an action happens at a *specific* point in time, you must use the particle **に (ni)**.
+
+<GrammarBox client:load 
+  pattern="[Time] ＋ に ＋ [Action Verb]"
+  meaning="At [time], I do [action]."
+  formation="Time + に + Verb"
+  examples={[
+    { japanese: "しちじ に おきます。", romaji: "Shichi-ji ni okimasu.", translation: "I wake up at 7:00." },
+    { japanese: "じゅうにじ に ごはん を たべます。", romaji: "Juu-ni-ji ni gohan o tabemasu.", translation: "I eat a meal at 12:00." },
+    { japanese: "じゅういちじ に ねます。", romaji: "Juu-ichi-ji ni nemasu.", translation: "I go to sleep at 11:00." }
+  ]}
+/>
+
+> [!TIP]
+> **When NOT to use に:**
+> Do not use **に** with relative time words like "today" (kyou), "tomorrow" (ashita), or "every day" (mainichi). Only use it for specific numbers/calendar points!
+
+<ExampleSentence client:load 
+  japanese="くじ に だいがく へ いきます。"
+  romaji="Ku-ji ni daigaku e ikimasu."
+  translation="I go to the university at 9:00."
+/>
+
+<ExampleSentence client:load 
+  japanese="どようび に パーティー が あります。"
+  romaji="Doyoubi ni paatii ga arimasu."
+  translation="There is a party on Saturday."
+/>
+
+<ExampleSentence client:load 
+  japanese="なんじ に きます か。"
+  romaji="Nan-ji ni kimasu ka."
+  translation="What time will you come?"
+/>
+
+## 4. Cultural Note: Japanese Punctuality (時間に正確)
+
+Japan is world-famous for its punctuality. This applies to trains, business meetings, and social gatherings.
+- **The "5-Minute Rule":** It is often expected that you arrive 5 minutes *before* the scheduled time. Arriving exactly on time is sometimes considered "cutting it close."
+- **Train Precision:** Japanese trains are so precise that if a train is delayed by more than a minute, the company may issue a "delay certificate" (*chien-shoumeisho*) for employees to show their bosses.
+- **Social Respect:** Being on time is seen as a sign of respect for the other person's time. If you are going to be even 5 minutes late, it is polite to send a message immediately.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/08-time-ni-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of learners checking clocks and train time while practicing に with time expressions."
+  width={1672}
+  height={941}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Planning a Meeting"
+  lines={[
+    { speaker: "Tanaka", japanese: "すみません、 いま なんじ です か。", romaji: "Sumimasen, ima nan-ji desu ka.", translation: "Excuse me, what time is it now?" },
+    { speaker: "Alice", japanese: "ごご よじ じゅっぷん です。", romaji: "Gogo yo-ji juppun desu.", translation: "It is 4:10 PM." },
+    { speaker: "Tanaka", japanese: "そうですか。 なんじ に かえります か。", romaji: "Sou desu ka. Nan-ji ni kaerimasu ka.", translation: "I see. What time will you go home?" },
+    { speaker: "Alice", japanese: "ろくじ はん に かえります。", romaji: "Roku-ji han ni kaerimasu.", translation: "I will go home at 6:30." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Catching the Train"
+  lines={[
+    { speaker: "Staff", japanese: "でんしゃ は くじ じゅうごふん です。", romaji: "Densha wa ku-ji juu-go-fun desu.", translation: "The train is at 9:15." },
+    { speaker: "Ken", japanese: "あ！ いま くじ じゅっぷん です！", romaji: "A! Ima ku-ji juppun desu!", translation: "Ah! It's 9:10 now!" },
+    { speaker: "Staff", japanese: "いそいで ください！", romaji: "Isoide kudasai!", translation: "Please hurry!" },
+    { speaker: "Ken", japanese: "はい、 ありがとうございます！", romaji: "Hai, arigatou gozaimasu!", translation: "Yes, thank you very much!" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Hours are Number + じ (ji). Remember exceptions: 4 (yo-ji), 7 (shichi-ji), 9 (ku-ji).",
+    "Minutes are Number + ふん/ぷん (fun/pun). 'Half past' is 'han'.",
+    "Use 'gozen' for AM and 'gogo' for PM BEFORE the time.",
+    "The particle に (ni) marks the specific time an action happens (e.g., at 7:00).",
+    "Punctuality is a core value in Japanese culture; try to arrive 5 minutes early!"
+  ]}
+/>
+
+## Knowledge Check
+
+Test your clock-reading skills!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "How do you say 4:00 in Japanese?",
+      options: ["yon-ji", "shi-ji", "yo-ji", "yotsu-ji"],
+      correct: 2,
+      explanation: "4:00 is the irregular reading 'yo-ji'."
+    },
+    {
+      question: "What is the correct reading for 9:00?",
+      options: ["kyuu-ji", "ku-ji", "kokono-ji", "nana-ji"],
+      correct: 1,
+      explanation: "9:00 is always 'ku-ji'."
+    },
+    {
+      question: "Which particle means 'at' when used with time?",
+      options: ["は", "を", "に", "の"],
+      correct: 2,
+      explanation: "に (ni) marks a specific point in time."
+    },
+    {
+      question: "How do you say 'half past' (e.g., 3:30)?",
+      options: ["san-ji juu-bun", "san-ji han", "san-ji han-pun", "san-ji go-fun"],
+      correct: 1,
+      explanation: "はん (han) means 'half'."
+    },
+    {
+      question: "Translate: 'I wake up at 7:00.'",
+      options: ["shichi-ji ni okimasu", "nana-ji ni okimasu", "shichi-ji o okimasu", "shichi-ji wa okimasu"],
+      correct: 0,
+      explanation: "Shichi-ji (7:00) + ni (at) + okimasu (wake up)."
+    },
+    {
+      question: "Does 'kyou' (today) take the particle 'ni'?",
+      options: ["Yes", "No"],
+      correct: 1,
+      explanation: "No. Relative time words like 'kyou', 'ashita', or 'mainichi' do not use 'ni'."
+    },
+    {
+      question: "What does 'gozen' mean?",
+      options: ["AM", "PM", "Noon", "Midnight"],
+      correct: 0,
+      explanation: "Gozen (午前) refers to the morning (AM)."
+    },
+    {
+      question: "How do you say 10:10?",
+      options: ["juu-ji juu-fun", "juu-ji juppun", "juu-ji juu-bun", "juu-ji pun"],
+      correct: 1,
+      explanation: "10 minutes is 'juppun'."
+    },
+    {
+      question: "Translate: 'Gogo san-ji ni ikimasu.'",
+      options: ["I go at 3:00 AM.", "I go at 3:00 PM.", "I go with 3 people.", "I go to 3 places."],
+      correct: 1,
+      explanation: "Gogo = PM; san-ji = 3:00; ni = at; ikimasu = go."
+    },
+    {
+      question: "Which is the correct 7:00 reading?",
+      options: ["nana-ji", "shichi-ji", "shichi-nichi", "nana-nichi"],
+      correct: 1,
+      explanation: "Shichi-ji is the standard way to say 7 o'clock."
+    },
+    {
+      question: "What is 'han' in 'juu-ni-ji han'?",
+      options: ["12:00", "12:15", "12:30", "12:45"],
+      correct: 2,
+      explanation: "12:30."
+    },
+    {
+      question: "If a meeting is at 10:00, what time should you arrive according to Japanese etiquette?",
+      options: ["10:05", "10:00 exactly", "9:55", "Anytime before 10:15"],
+      correct: 2,
+      explanation: "Arriving 5 minutes early is considered standard and polite."
+    },
+    {
+      question: "Fill in the blank: 'Mainichi shichi-ji _____ okimasu.'",
+      options: ["に", "は", "を", "の"],
+      correct: 0,
+      explanation: "Shichi-ji is a specific time, so it requires 'ni'."
+    },
+    {
+      question: "How do you ask 'What time is it now?'",
+      options: ["Ima nan-ji desu ka.", "Ima nan-nichi desu ka.", "Ima nani desu ka.", "Ima dare desu ka."],
+      correct: 0,
+      explanation: "Nan-ji means 'what time'."
+    },
+    {
+      question: "Translate: 'Roku-ji go-juppun'",
+      options: ["6:05", "6:15", "6:50", "5:06"],
+      correct: 2,
+      explanation: "Roku-ji (6:00) + go-juppun (50 minutes)."
+    }
+  ]}
+/>

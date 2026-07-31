@@ -1,0 +1,52 @@
+---
+title: "Chapter 52 — Appearance, Inference, and Reports"
+level: "N3"
+chapter: 52
+unit: 3
+unitTitle: "Purpose, Cause, and Evidence"
+topics: "Visual appearance, evidence-based inference, hearsay, expectation, and certainty"
+description: "Distinguish what looks true, what evidence suggests, what you heard, and what logic makes likely."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Appearance, Inference, and Reports" level="N3" chapter={52} objectives={["Separate visual そうだ from hearsay そうだ.", "Choose ようだ, みたいだ, and らしい by evidence and register.", "Express logical expectation and strong inference with はず and に違いない."]} />
+<SectionIntro level="N3">Intermediate Japanese carefully separates direct appearance, an inference from evidence, information received from a source, and the speaker's own degree of certainty.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "予報", reading: "よほう", meaning: "forecast", type: "noun" }, { word: "様子", reading: "ようす", meaning: "appearance; situation", type: "noun" }, { word: "情報", reading: "じょうほう", meaning: "information", type: "noun" }, { word: "確実", reading: "かくじつ", meaning: "certain; reliable", type: "adj" }, { word: "判断する", reading: "はんだんする", meaning: "to judge", type: "verb" }, { word: "噂", reading: "うわさ", meaning: "rumour", type: "noun" }]} />
+
+<PatternCompare client:load title="What is the source?" items={[
+  { pattern: "ます-stem／adj stem + そうだ", meaning: "looks as though", use: "A direct impression from appearance. Negative forms include なさそう and そうにない.", example: "空が暗くて、雨が降りそうだ。", translation: "The sky is dark; it looks as though it will rain.", register: "direct appearance" },
+  { pattern: "plain form + そうだ", meaning: "I hear that", use: "Reports information without asserting direct evidence. だ remains before そうだ after nouns and な-adjectives.", example: "予報によると、今夜は雪が降るそうだ。", translation: "According to the forecast, it will snow tonight.", register: "hearsay" },
+  { pattern: "plain + ようだ／みたいだ", meaning: "it appears; it seems", use: "Inference from evidence. ようだ is neutral/written; みたいだ is conversational.", example: "電気がついている。まだ誰かいるようだ。", translation: "The lights are on. It seems someone is still there.", register: "inference" },
+  { pattern: "plain + らしい", meaning: "apparently; characteristically", use: "Often reports indirect information; with a noun it can also mean 'typical of'.", example: "田中さんは来月退職するらしい。", translation: "Apparently, Mr Tanaka will retire next month.", register: "indirect" }
+]} />
+
+<PatternCompare client:load title="How certain is the speaker?" items={[
+  { pattern: "plain + はずだ", meaning: "should be; is expected to", use: "The expectation follows from a schedule, fact, promise, or other logical basis.", example: "メールを送ったので、もう届いているはずだ。", translation: "I sent the email, so it should have arrived by now.", register: "reasoned expectation" },
+  { pattern: "plain + に違いない", meaning: "must be; no doubt", use: "A strong speaker inference. It is confident, but still an inference rather than verified fact.", example: "足跡がある。誰かがここを通ったに違いない。", translation: "There are footprints. Someone must have passed here.", register: "strong inference" }
+]} />
+<CommonMistake title="The two そうだ patterns connect differently"><p><strong>おいしそうだ</strong> is a visual judgement and drops the adjective's final い. <strong>おいしいそうだ</strong> reports that somebody said it is delicious. Do not mix their formations.</p></CommonMistake>
+<PracticeBlock client:load instructions="State the information source as precisely as possible." items={[{ prompt: "You see a child rubbing their eyes and infer they are sleepy.", answer: "あの子は眠そうです。", explanation: "The judgement comes directly from appearance." }, { prompt: "A notice says the museum will close next month.", answer: "お知らせによると、美術館は来月閉館するそうです。", explanation: "Plain form + そうだ reports the notice." }, { prompt: "The train left on time, so expect it to arrive by six.", answer: "電車は時間どおりに出たので、六時までに着くはずです。", explanation: "はず expresses a reasoned expectation." }]} />
+<ReadingPractice client:load title="A missing parcel" genre="message exchange" targetTime="3 minutes" passage={<>配達記録によると、荷物は昨日の午後に届いたそうです。しかし、玄関の前にも宅配ボックスにもありません。隣の部屋の前に似た箱が置いてあるので、配達員が部屋番号を間違えたのかもしれません。箱の大きさから見て、私の荷物に違いありませんが、勝手に持ってくるわけにはいきません。まず隣の人に確認するつもりです。</>} glossary={[{ word: "配達記録", reading: "はいたつきろく", meaning: "delivery record" }, { word: "勝手に", reading: "かってに", meaning: "without permission" }]} questions={[{ question: "Which information is reported rather than directly observed?", answer: "That the parcel was delivered yesterday afternoon.", explanation: "届いたそうです cites the delivery record." }, { question: "Why does the writer strongly think the neighbouring box is theirs?", answer: "Its size matches the expected parcel.", explanation: "に違いありません marks a strong inference from that evidence." }]} />
+<ListeningPractice client:load title="Will the shop be open?" situation="Listen for expectation and indirect information." script="この店は月曜日が休みらしいですが、今日は祝日なので開いているはずです。ウェブサイトにも特別営業と書いてありました。" questions={[{ question: "Why does the speaker expect the shop to be open?", answer: "It is a public holiday and the website says it has special opening hours.", explanation: "はずです rests on stated evidence." }]} />
+<ChapterSummary takeaways={["Stem + そうだ describes appearance; plain + そうだ reports hearsay.", "ようだ and conversational みたいだ infer from evidence; らしい often conveys indirect information.", "はず is a reasoned expectation; に違いない is the speaker's strong inference."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "この料理は辛＿＿。見ただけで汗が出てきた。", options: ["いそうだ", "そうだ", "だそうだ", "らしいそうだ"], correct: 1, explanation: "辛そうだ is visual appearance; the final い is removed." },
+  { question: "ニュースでは、台風が近づいている＿＿。", options: ["そうだ", "そうにない", "ようにする", "みたいにする"], correct: 0, explanation: "Plain form + そうだ reports the news." },
+  { question: "電気が消えている。もう帰った＿＿。", options: ["ためだ", "ようだ", "つもりだ", "ことにした"], correct: 1, explanation: "ようだ presents an inference from the observed state." },
+  { question: "Which is conversational?", options: ["雨が降るみたい。", "雨が降るとのことです。", "雨が降るに違いございません。", "雨が降ることから。"], correct: 0, explanation: "みたい is common in conversation." },
+  { question: "The meeting is on the calendar, so it should start at two: 二時に始まる＿＿。", options: ["らしい", "そう", "はずだ", "みたいに"], correct: 2, explanation: "The schedule provides a logical basis for はず." },
+  { question: "What does 子どもらしい mean in この絵は子どもらしい?", options: ["A child reportedly painted it", "It is childlike or typical of a child", "It looks delicious", "It must be false"], correct: 1, explanation: "Noun + らしい can mean characteristic of that noun." },
+  { question: "Choose the correct hearsay formation.", options: ["静かそうだ", "静かだそうだ", "静かなそうだ", "静かにそうだ"], correct: 1, explanation: "A な-adjective retains だ before hearsay そうだ." },
+  { question: "足跡と壊れた窓を見て、泥棒が入った＿＿。", options: ["ことにした", "に違いない", "そうにない", "ために"], correct: 1, explanation: "The speaker makes a strong inference from evidence." }
+]} />

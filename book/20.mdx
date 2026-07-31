@@ -1,0 +1,260 @@
+---
+title: "Chapter 20 — N5 Review & Capstone"
+level: "N5"
+chapter: "20"
+description: "Synthesize everything you have learned in the N5 curriculum through comprehensive review, complex dialogues, and a final assessment of your skills."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="N5 Review & Capstone"
+  level="N5"
+  chapter="20"
+  objectives={[
+    "Review core N5 particles and their interactions in complex sentences.",
+    "Consolidate verb and adjective conjugations (Present, Past, Negative, て-form).",
+    "Synthesize counting, comparison, and expressions of desire.",
+    "Master the cultural nuances of Omotenashi in daily Japanese life."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Congratulations! You have reached the final milestone of the N5 curriculum. You have transformed from someone who only knew "Konnichiwa" into a student who can describe their day, count objects and people, express complex desires, compare alternatives, and link multiple actions together.
+
+This chapter is a **Synthesis**. We won't introduce new rules; instead, we will see how all the pieces of the puzzle fit together in real-world scenarios. Take a deep breath—you are ready for the N5 Capstone!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/20-n5-capstone.webp"
+  alt="Anime pixel-art illustration of N5 Japanese grammar, counters, particles, and verb cards fitting together like a capstone puzzle."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Particle & Tense Engine
+
+The foundation of your Japanese is built on how you link nouns to actions across time.
+
+<GrammarBox client:load 
+  pattern="Comprehensive Particle & Tense Review"
+  meaning="Linking who, what, where, and when across time."
+  formation="[Topic] は [Time] に [Location] で [Object] を [Verb (Tense)]"
+  examples={[
+    { japanese: "きのう は しちじ に ともだち と レストラン で すし を たべました。", romaji: "Kinou wa shichi-ji ni tomodachi to resutoran de sushi o tabemashita.", translation: "Yesterday at 7:00, I ate sushi at a restaurant with a friend." },
+    { japanese: "あした は どこ へ も いきません。いえ で べんきょうしたい です。", romaji: "Ashita wa doko e mo ikimasen. Ie de benkyou shitai desu.", translation: "Tomorrow I'm not going anywhere. I want to study at home." },
+    { japanese: "にほんご は むずかしい です が、とても おもしろい です。", romaji: "Nihongo wa muzukashii desu ga, totemo omoshiroi desu.", translation: "Japanese is difficult, but it's very interesting." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="せんしゅう は とても いそがしかった です。"
+  romaji="Senshuu wa totemo isogashikatta desu."
+  translation="Last week was very busy."
+/>
+<ExampleSentence client:load 
+  japanese="コーヒー を のんで、ほん を よみました。"
+  romaji="Koohii o nonde, hon o yomimashita."
+  translation="I drank coffee and read a book."
+/>
+<ExampleSentence client:load 
+  japanese="この かばん は あの かばん より やすい です。"
+  romaji="Kono kaban wa ano kaban yori yasui desu."
+  translation="This bag is cheaper than that bag."
+/>
+
+## 2. Counting & Desire Review
+
+Expressing what you want and how many you need is the key to surviving in Japan.
+
+<VocabTable data={[
+  { word: 'ほしい', romaji: 'hoshii', meaning: 'Want (object)', type: 'Adj' },
+  { word: '〜たい', romaji: '-tai', meaning: 'Want to (action)', type: 'Suffix' },
+  { word: 'ひとり / ふたり', romaji: 'hitori / futari', meaning: '1 / 2 people', type: 'Counter' },
+  { word: 'ひとつ / ふたつ', romaji: 'hitotsu / futatsu', meaning: '1 / 2 items', type: 'Counter' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="おちゃ を ふたつ ください。"
+  romaji="Ocha o futatsu kudasai."
+  translation="Two green teas, please."
+/>
+<ExampleSentence client:load 
+  japanese="あたらしい くるま が ほしい です。"
+  romaji="Atarashii kuruma ga hoshii desu."
+  translation="I want a new car."
+/>
+<ExampleSentence client:load 
+  japanese="さんにん で にほん へ いきたい です。"
+  romaji="San-nin de Nihon e ikitai desu."
+  translation="I want to go to Japan with three people."
+/>
+
+## 3. Cultural Note: Omotenashi in Daily Life
+
+Throughout this book, we have mentioned **Omotenashi** (selfless hospitality). As you finish N5, it's important to see how this affects your language choices:
+
+- **Politeness as Care:** Using `〜ます` and `〜です` isn't just about rules; it's about making the listener feel comfortable (*Anshin*).
+- **Indirectness:** Instead of saying "I don't like it," a Japanese person might say *"Chotto..."* (It's a bit...). This "space" (*Ma*) prevents conflict.
+- **Anticipation:** A good host anticipates that you might want more water (*Omizu ga hoshii*) before you even ask for it (*Kudasai*).
+
+Your ability to use Japanese correctly shows your respect for these cultural values. Speaking N5 Japanese is your entry ticket into this world of mutual respect and harmony.
+
+## Conversation Practice: The Final Challenge
+
+<BookImage
+  src="/book-images/20-n5-capstone-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of N5 capstone dialogue practice with Asakusa travel, train, temple, camera, omiyage, counters, and comparison cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+### Dialogue 1: A Day in Tokyo (Roleplay)
+
+<ConversationDialog client:load 
+  title="A Day in Tokyo"
+  lines={[
+    { speaker: "Smith", japanese: "たなかさん、あした は ひま です か。", romaji: "Tanaka-san, ashita wa hima desu ka?", translation: "Mr. Tanaka, are you free tomorrow?" },
+    { speaker: "Tanaka", japanese: "はい、ひま です よ。どこか へ いきたい です か。", romaji: "Hai, hima desu yo. Dokoka e ikitai desu ka?", translation: "Yes, I am. Do you want to go somewhere?" },
+    { speaker: "Smith", japanese: "あさくさ へ いきたい です。ふるい おてら を みて、しゃしん を とりたい です。", romaji: "Asakusa e ikitai desu. Furui otera o mite, shashin o toritai desu.", translation: "I want to go to Asakusa. I want to see old temples and take photos." },
+    { speaker: "Tanaka", japanese: "いい です ね。あさくさ は とても きれい です よ。なに で いきます か。", romaji: "Ii desu ne. Asakusa wa totemo kirei desu yo. Nani de ikimasu ka?", translation: "That's nice. Asakusa is very beautiful. How shall we go?" },
+    { speaker: "Smith", japanese: "でんしゃ で いきましょう。バス より はやい です から。", romaji: "Densha de ikimashou. Basu yori hayai desu kara.", translation: "Let's go by train. Because it's faster than the bus." }
+  ]}
+/>
+
+### Dialogue 2: At the Gift Shop
+
+<ConversationDialog client:load 
+  title="Choosing Omiyage"
+  lines={[
+    { speaker: "Smith", japanese: "すみません、この おかし を ごこ ください。", romaji: "Sumimasen, kono okashi o goko kudasai.", translation: "Excuse me, five of these sweets, please." },
+    { speaker: "Clerk", japanese: "はい。ひとつ ５００えん です。ほか に なに か あります か。", romaji: "Hai. Hitotsu gohyaku-en desu. Hoka ni nani ka arimasu ka?", translation: "Yes. They are 500 yen each. Is there anything else?" },
+    { speaker: "Smith", japanese: "この ポストカード を さんまい おねがいします。あと、ちいさい はこ が ほしい です。", romaji: "Kono posutokaado o sanmai onegaishimasu. Ato, chiisai hako ga hoshii desu.", translation: "Three of these postcards, please. Also, I want a small box." },
+    { speaker: "Clerk", japanese: "わかりました。ぜんぶ で ２０００えん です。", romaji: "Wakarimashita. Zenbu de nisen-en desu.", translation: "Understood. That will be 2,000 yen in total." },
+    { speaker: "Smith", japanese: "はい。きのう も ここ で かいました。とても いい みせ です ね。", romaji: "Hai. Kinou mo koko de kaimashita. Totemo ii mise desu ne.", translation: "Yes. I bought here yesterday too. It's a very good shop, isn't it?" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "N5 grammar relies on the SOV structure and correct particle usage (wa, ga, o, ni, de, e).",
+    "Tense is expressed through verb endings (mashita) and adjective endings (katta/deshita).",
+    "Counters must match the object type (tsu, ko, mai, nin, jikan).",
+    "Comparison uses 'A wa B yori' and 'A no hou ga'.",
+    "Desire is expressed with 'hoshii' (nouns) and '-tai' (actions).",
+    "The て-form is the essential 'glue' for linking sequential actions.",
+    "Omotenashi is the spirit of hospitality that guides Japanese social interaction."
+  ]}
+/>
+
+## N5 Mega-Quiz: Final Assessment
+
+Test your comprehensive N5 knowledge!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which particle marks the direct object of a verb?",
+      options: ["は", "が", "を", "に"],
+      correct: 2,
+      explanation: "を (o) marks the direct object receiving the action."
+    },
+    {
+      question: "What is the past tense of 'おいしい' (delicious)?",
+      options: ["おいしい でした", "おいしかった", "おいしい かった", "おいしく でした"],
+      correct: 1,
+      explanation: "い-adjectives drop the final い and add かった."
+    },
+    {
+      question: "How do you conjugate 'のむ' (to drink) into 'want to drink'?",
+      options: ["のむたい", "のみたい", "のまたい", "のもたい"],
+      correct: 1,
+      explanation: "Verb stem (nomi) + tai."
+    },
+    {
+      question: "Translate: 'I ate with two people.'",
+      options: ["ふたり と たべました。", "ふたり で たべました。", "ににん と たべました。", "ふたつ と たべました。"],
+      correct: 0,
+      explanation: "Futari (2 people) + to (with) + tabemashita (ate)."
+    },
+    {
+      question: "Which particle means 'because' at the end of a sentence?",
+      options: ["から", "まで", "より", "ので"],
+      correct: 0,
+      explanation: "から (kara) means 'because' when following a reason."
+    },
+    {
+      question: "What is the te-form of 'いく' (to go)?",
+      options: ["いいて", "いって", "いきて", "いんで"],
+      correct: 1,
+      explanation: "Iku is an exception and becomes いって (itte)."
+    },
+    {
+      question: "Translate: 'Which is bigger: Japan or Brazil?'",
+      options: ["にほん と ブラジル と どちら が おおきい です か。", "にほん は ブラジル より おおきい です。", "ブラジル の ほう が おおきい です。", "にほん が いちばん おおきい です。"],
+      correct: 0,
+      explanation: "A to B to dochira ga... asks for a comparison between two."
+    },
+    {
+      question: "How do you say 'It was not cold'?",
+      options: ["さむくない でした", "さむくなかった です", "さむい じゃありませんでした", "さむい くなかった"],
+      correct: 1,
+      explanation: "Past negative of さむい is さむくなかった."
+    },
+    {
+      question: "Which counter is used for flat objects like shirts or paper?",
+      options: ["〜つ", "〜個", "〜枚", "〜人"],
+      correct: 2,
+      explanation: "〜枚 (mai) is the counter for flat things."
+    },
+    {
+      question: "Translate: 'I wake up, drink coffee, and go to school.'",
+      options: ["おきて、コーヒー を のんで、がっこう へ いきます。", "おきます、コーヒー を のみます、がっこう へ いきます。", "おきて、コーヒー を のむ、がっこう へ いく。", "おきて、コーヒー を のんで、がっこう へ いきたい。"],
+      correct: 0,
+      explanation: "The te-form connects sequential actions."
+    },
+    {
+      question: "What is the polite negative of 'くる' (to come)?",
+      options: ["きません", "こません", "くません", "きない"],
+      correct: 0,
+      explanation: "Kuru ➔ Kimasu ➔ Kimasen."
+    },
+    {
+      question: "Which word means 'the most'?",
+      options: ["とても", "いちばん", "ちょっと", "あまり"],
+      correct: 1,
+      explanation: "いちばん (ichiban) means 'number one' or 'the most'."
+    },
+    {
+      question: "Translate: 'I want money.'",
+      options: ["おかね が ほしい です。", "おかね を ほしい です。", "おかね が ほしいたい です。", "おかね を ほしいたい です。"],
+      correct: 0,
+      explanation: "Hoshii (desire for object) takes the particle が."
+    },
+    {
+      question: "What does 'Omotenashi' emphasize?",
+      options: ["Speed", "Selfless hospitality", "Lowest price", "Modern technology"],
+      correct: 1,
+      explanation: "Omotenashi is the spirit of wholehearted hospitality."
+    },
+    {
+      question: "How many is 'みっつ'?",
+      options: ["1", "2", "3", "4"],
+      correct: 2,
+      explanation: "Mittsu is the native counter for three items."
+    }
+  ]}
+/>

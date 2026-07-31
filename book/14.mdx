@@ -1,0 +1,290 @@
+---
+title: "Chapter 14 — Adjectives Part 1: い-Adjectives"
+level: "N5"
+chapter: "14"
+description: "Discover how to describe the world using い-Adjectives. Learn how these words conjugate like verbs to express tense and negativity."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Adjectives Part 1: い-Adjectives"
+  level="N5"
+  chapter="14"
+  objectives={[
+    "Identify い-Adjectives and distinguish them from other word groups.",
+    "Conjugate い-Adjectives into present, past, and negative forms.",
+    "Use adjectives to modify nouns directly.",
+    "Appreciate the cultural connection between adjectives and the four seasons."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In Japanese, adjectives are more than just describing words—they are like mini-verbs! They can change their endings to show if something *is* hot, *was* hot, or *is not* hot. There are two main groups of adjectives, and today we are focusing on the first group: **い-Adjectives (i-adjectives)**. These words always end in the hiragana character **い** and are incredibly versatile.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/14-i-adjectives.webp"
+  alt="Anime pixel-art illustration of a learner sorting い-adjective cards across seasons and tense endings."
+  width={1536}
+  height={1024}
+/>
+
+## 1. What are い-Adjectives?
+
+い-adjectives normally end in the hiragana **い** and conjugate by changing that ending. However, not every word ending in い is an い-adjective: common な-adjectives such as **きれい** and **ゆうめい** must be learned separately. Japanese adjectives do not literally contain “is”; rather, い-adjectives can form a plain predicate without a copula.
+
+<VocabTable data={[
+  { word: 'たかい', romaji: 'takai', meaning: 'Expensive / Tall', type: 'い-Adj' },
+  { word: 'やすい', romaji: 'yasui', meaning: 'Cheap', type: 'い-Adj' },
+  { word: 'おいしい', romaji: 'oishii', meaning: 'Delicious', type: 'い-Adj' },
+  { word: 'あつい', romaji: 'atsui', meaning: 'Hot', type: 'い-Adj' },
+  { word: 'さむい', romaji: 'samui', meaning: 'Cold', type: 'い-Adj' },
+  { word: 'おもしろい', romaji: 'omoshiroi', meaning: 'Interesting', type: 'い-Adj' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="この すし は おいしい です。"
+  romaji="Kono sushi wa oishii desu."
+  translation="This sushi is delicious."
+/>
+<ExampleSentence client:load 
+  japanese="あの ビル は たかい です。"
+  romaji="Ano biru wa takai desu."
+  translation="That building over there is tall."
+/>
+<ExampleSentence client:load 
+  japanese="きょう は あつい です ね。"
+  romaji="Kyou wa atsui desu ne."
+  translation="It's hot today, isn't it?"
+/>
+
+## 2. Conjugating い-Adjectives
+
+Unlike nouns, you **change the adjective itself** to show tense. To conjugate, you drop the final **い** and add a new ending.
+
+| Tense | Ending | Example (たかい) | Meaning |
+| :--- | :--- | :--- | :--- |
+| Present Affirmative | 〜い (desu) | たかい です | Is expensive |
+| Present Negative | 〜くない (desu) | たかくない です | Is not expensive |
+| Past Affirmative | 〜かった (desu) | たかかった です | Was expensive |
+| Past Negative | 〜くなかった (desu) | たかくなかった です | Was not expensive |
+
+<GrammarBox client:load 
+  pattern="[Adjective Root] ＋ [Ending]"
+  meaning="Conjugating for tense and negativity."
+  formation="Drop the final 'i' and attach the appropriate suffix."
+  examples={[
+    { japanese: "きのう は さむかった です。", romaji: "Kinou wa samukatta desu.", translation: "Yesterday was cold." },
+    { japanese: "この ほん は おもしろくない です。", romaji: "Kono hon wa omoshirokunai desu.", translation: "This book is not interesting." },
+    { japanese: "テスト は むずかしくなかった です。", romaji: "Tesuto wa muzukashikunakatta desu.", translation: "The test was not difficult." }
+  ]}
+/>
+
+<ExampleSentence client:load  
+  japanese="あさごはん は やすかった です。"
+  romaji="Asagohan wa yasukatta desu."
+  translation="Breakfast was cheap."
+/>
+<ExampleSentence client:load 
+  japanese="えいが は おもしろかった です か。"
+  romaji="Eiga wa omoshirokatta desu ka."
+  translation="Was the movie interesting?"
+/>
+<ExampleSentence client:load 
+  japanese="コーヒー は つめたくない です。"
+  romaji="Koohii wa tsumetakunai desu."
+  translation="The coffee is not cold."
+/>
+
+
+## 3. Direct Noun Modification
+
+To describe a noun directly (e.g., "A delicious apple"), you simply place the adjective in its dictionary form directly before the noun. No particle is needed!
+
+<GrammarBox client:load 
+  pattern="[い-Adjective] ＋ [Noun]"
+  meaning="Modifying a noun directly."
+  formation="Dictionary form adjective + Noun."
+  examples={[
+    { japanese: "おいしい りんご です。", romaji: "Oishii ringo desu.", translation: "It is a delicious apple." },
+    { japanese: "たかい とけい を かいました。", romaji: "Takai tokei o kaimashita.", translation: "I bought an expensive watch." },
+    { japanese: "あつい おちゃ を のみます。", romaji: "Atsui ocha o nomimasu.", translation: "I drink hot tea." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="おもしろい ほん を よみました。"
+  romaji="Omoshiroi hon o yomimashita."
+  translation="I read an interesting book."
+/>
+<ExampleSentence client:load 
+  japanese="さむい くに に いきます。"
+  romaji="Samui kuni ni ikimasu."
+  translation="I am going to a cold country."
+/>
+<ExampleSentence client:load 
+  japanese="やすい カメラ は どこ です か。"
+  romaji="Yasui kamera wa doko desu ka."
+  translation="Where is a cheap camera?"
+/>
+
+## 4. Cultural Note: The Four Seasons and Nature (四季)
+
+Japanese culture has a profound appreciation for the four seasons (*Shiki*). This is reflected in the language, where many adjectives are used to describe the specific "feeling" of a season.
+- **Haru (Spring):** Associated with *atatakai* (warm) and *utsukushii* (beautiful) cherry blossoms.
+- **Natsu (Summer):** Described as *atsui* (hot) and *mushi-atsui* (humid). Summer is the time for *nigiyaka* (lively) festivals.
+- **Aki (Autumn):** Known for *suzushii* (cool) breezes and the *kirei* (beautiful) changing leaves.
+- **Fuyu (Winter):** Characterized as *samui* (cold) and *shiroi* (white) snow.
+- **Kachou Fuugetsu (花鳥風月):** A four-character idiom literally meaning "Flower, Bird, Wind, Moon." It represents the traditional themes of natural beauty in Japanese aesthetics.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/14-i-adjectives-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of ramen and seaside trip dialogue practice with い-adjective cards like おいしい, あつい, よかった, and さむくなかった."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Talking About Food"
+  lines={[
+    { speaker: "Alice", japanese: "その ラーメン は おいしい です か。", romaji: "Sono raamen wa oishii desu ka?", translation: "Is that ramen delicious?" },
+    { speaker: "Tanaka", japanese: "はい、 とても おいしい です。 でも、 ちょっと あつい です。", romaji: "Hai, totemo oishii desu. Demo, chotto atsui desu.", translation: "Yes, it's very delicious. But it's a bit hot." },
+    { speaker: "Alice", japanese: "たかい です か。", romaji: "Takai desu ka?", translation: "Is it expensive?" },
+    { speaker: "Tanaka", japanese: "いいえ、 やすかった です よ。 ８００えん です。", romaji: "Iie, yasukatta desu yo. Happyaku-en desu.", translation: "No, it was cheap. It's 800 yen." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Last Weekend's Trip"
+  lines={[
+    { speaker: "Ken", japanese: "きのう、 どこ へ いきました か。", romaji: "Kinou, doko e ikimashita ka?", translation: "Where did you go yesterday?" },
+    { speaker: "Yumi", japanese: "うみ へ いきました。 とても おもしろかった です！", romaji: "Umi e ikimashita. Totemo omoshirokatta desu!", translation: "I went to the sea. It was very interesting!" },
+    { speaker: "Ken", japanese: "てんき は よかった です か。", romaji: "Tenki wa yokatta desu ka?", translation: "Was the weather good?" },
+    { speaker: "Yumi", japanese: "はい、 さむくなかった です。", romaji: "Hai, samukunakatta desu.", translation: "Yes, it wasn't cold." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "い-adjectives normally end in hiragana い, but words such as きれい and ゆうめい are な-adjectives.",
+    "To conjugate, drop the final い and add: 〜くない (neg), 〜かった (past), or 〜くなかった (past neg).",
+    "Modify nouns directly by placing the adjective before the noun (e.g., おいしい すし).",
+    "Japanese culture values the specific descriptive qualities of each of the four seasons.",
+    "The word 'yoi' (good) is irregular; its root changes to 'yoku' in all forms except present affirmative."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your adjective conjugation skills!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of these is an い-Adjective?",
+      options: ["しずか", "きれい", "たかい", "べんり"],
+      correct: 2,
+      explanation: "Takai (expensive/tall) ends in a native hiragana い, making it a true い-adjective."
+    },
+    {
+      question: "How do you make 'あつい' (hot) negative ('is not hot')?",
+      options: ["あつい じゃありません", "あつくない", "あつくなかった", "あつい ない"],
+      correct: 1,
+      explanation: "Drop the final い and add 〜くない: Atsukunai."
+    },
+    {
+      question: "What is the past tense of 'さむい' (cold)?",
+      options: ["さむい でした", "さむかった", "さむかったです", "さむくない"],
+      correct: 1,
+      explanation: "Drop the final い and add 〜かった: Samukatta."
+    },
+    {
+      question: "Translate: 'An interesting book.'",
+      options: ["おもしろい な ほん", "おもしろい の ほん", "おもしろい ほん", "おもしろい に ほん"],
+      correct: 2,
+      explanation: "い-adjectives modify nouns directly with no particle."
+    },
+    {
+      question: "Which tense is 'やすかった'?",
+      options: ["Present Affirmative", "Present Negative", "Past Affirmative", "Past Negative"],
+      correct: 2,
+      explanation: "The 〜かった ending signifies past affirmative (was cheap)."
+    },
+    {
+      question: "How do you conjugate 'いい' (good) into the negative ('is not good')?",
+      options: ["いいくない", "よくない", "いくない", "よかったです"],
+      correct: 1,
+      explanation: "Irregular: The root of 'ii' changes to 'yoku' for all conjugations. Therefore, Yokunai."
+    },
+    {
+      question: "Translate: 'The test was not difficult.' (difficult = むずかしい)",
+      options: ["テスト は むずかしくなかった です。", "テスト は むずかしくない です。", "テスト は むずかしい じゃありません。", "テスト は むずかしかっだ です。"],
+      correct: 0,
+      explanation: "Past negative is formed by dropping い and adding 〜くなかった."
+    },
+    {
+      question: "Which word means 'Cheap'?",
+      options: ["たかい", "やすい", "おいしい", "あつい"],
+      correct: 1,
+      explanation: "やすい (yasui) means cheap."
+    },
+    {
+      question: "What does 'atsui' mean?",
+      options: ["Cold", "Warm", "Hot", "Cool"],
+      correct: 2,
+      explanation: "Atsui means hot (weather or objects)."
+    },
+    {
+      question: "Fill in the blank: 'Kinou wa _____ desu.' (Yesterday was cold).",
+      options: ["さむい", "さむかった", "さむくない", "さむくなかった"],
+      correct: 1,
+      explanation: "Kinou (yesterday) requires the past tense: Samukatta."
+    },
+    {
+      question: "What is 'Winter' in Japanese?",
+      options: ["はる", "なつ", "あき", "ふゆ"],
+      correct: 3,
+      explanation: "Fuyu is winter."
+    },
+    {
+      question: "Translate: 'Utsukushii hana.'",
+      options: ["Hot flower", "Beautiful flower", "Interesting flower", "Cheap flower"],
+      correct: 1,
+      explanation: "Utsukushii means beautiful; hana means flower."
+    },
+    {
+      question: "Which is the correct past negative for 'おいしい'?",
+      options: ["おいしくない", "おいしかった", "おいしくなかった", "おいしい じゃありませんでした"],
+      correct: 2,
+      explanation: "Oishikunakatta (was not delicious)."
+    },
+    {
+      question: "How do you say 'It's hot, isn't it?'",
+      options: ["あつい です か。", "あつい です ね。", "あつい です よ。", "あつい です。"],
+      correct: 1,
+      explanation: "The particle 'ne' is used for seeking agreement/confirmation."
+    },
+    {
+      question: "True or False: い-adjectives conjugate by changing the final 'i' to 'desu'.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. You change the adjective ending, and 'desu' is added afterward for politeness."
+    }
+  ]}
+/>

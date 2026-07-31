@@ -1,0 +1,295 @@
+---
+title: "Chapter 19 — Counters Part 2: People & Time"
+level: "N5"
+chapter: "19"
+description: "Master the counters for people and time durations, and learn how to compare items and quantities using comparative and superlative structures."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Counters Part 2: People & Time"
+  level="N5"
+  chapter="19"
+  objectives={[
+    "Count people correctly using 〜人 (nin) and the irregulars (hitori, futari).",
+    "Express time durations using 〜時間 (jikan), 〜日 (nichi), and 〜ヶ月 (kagetsu).",
+    "Compare two or more items using より (than) and ほう (more).",
+    "State the 'best' or 'most' using いちばん (ichiban).",
+    "Understand the etiquette of gift-giving and the significance of numbers."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Now that you can count objects, it's time to count the most important things of all: people and time! Whether you are making a reservation for three or describing a vacation that lasted five days, these counters are essential for daily life. 
+
+Furthermore, we will learn how to **compare** these things. "Which is faster?" "Who is taller?" "What is the best food in Japan?" By the end of this chapter, you'll be able to express preferences and make informed choices.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/19-counters-people-time.webp"
+  alt="Anime pixel-art illustration of people and time counters with comparison cards for より and いちばん."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Counting People: 〜人 (nin)
+
+Counting people uses the suffix **〜人 (nin)**. However, the first two are famously irregular and must be memorized separately.
+
+<VocabTable data={[
+  { word: 'ひとり', reading: 'ひとり', romaji: 'hitori', meaning: '1 person (IRREGULAR)', type: 'Counter' },
+  { word: 'ふたり', reading: 'ふたり', romaji: 'futari', meaning: '2 people (IRREGULAR)', type: 'Counter' },
+  { word: 'さんにん', reading: 'さんにん', romaji: 'san-nin', meaning: '3 people', type: 'Counter' },
+  { word: 'よにん', reading: 'よにん', romaji: 'yo-nin', meaning: '4 people (IRREGULAR)', type: 'Counter' },
+  { word: 'ごにん', reading: 'ごにん', romaji: 'go-nin', meaning: '5 people', type: 'Counter' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="かぞく は よにん です。"
+  romaji="Kazoku wa yo-nin desu."
+  translation="There are four people in my family."
+/>
+<ExampleSentence client:load 
+  japanese="ひとりで びじゅつかん へ いきました。"
+  romaji="Hitori de bijutsukan e ikimashita."
+  translation="I went to the art museum alone (by 1 person)."
+/>
+<ExampleSentence client:load 
+  japanese="あそこ に おんなのひと が さんにん います。"
+  romaji="Asoko ni onnanohito ga san-nin imasu."
+  translation="There are three women over there."
+/>
+
+## 2. Counting Time Durations
+
+To express *how long* something lasts (rather than the time on a clock), we use different suffixes.
+
+- **〜時間 (jikan):** Hours (e.g., *san-jikan* = 3 hours).
+- **〜日 (nichi / -ka):** Days (e.g., *futsuka* = 2 days). *Note: 〜かん (kan) is an optional suffix that emphasizes a span, e.g. futsuka-kan.*
+- **〜週間 (shuukan):** Weeks.
+- **〜ヶ月 (kagetsu):** Months.
+
+<GrammarBox client:load 
+  pattern="[Number] ＋ [Time Counter]"
+  meaning="Expressing duration."
+  formation="Number + Time Counter"
+  examples={[
+    { japanese: "まいにち はちじかん ねます。", romaji: "Mainichi hachi-jikan nemasu.", translation: "I sleep for eight hours every day." },
+    { japanese: "にほん に いっしゅうかん います。", romaji: "Nihon ni isshuukan imasu.", translation: "I will be in Japan for one week." },
+    { japanese: "にかげつ べんきょうしました。", romaji: "Ni-kagetsu benkyoushimashita.", translation: "I studied for two months." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="ここ から えき まで じゅっぷん かかります。"
+  romaji="Koko kara eki made juppun kakarimasu."
+  translation="It takes ten minutes from here to the station."
+/>
+<ExampleSentence client:load 
+  japanese="さんじかん えいが を みました。"
+  romaji="San-jikan eiga o mimashita."
+  translation="I watched a movie for three hours."
+/>
+<ExampleSentence client:load 
+  japanese="なつやすみ は にしゅうかん でした。"
+  romaji="Natsuyasumi wa ni-shuukan deshita."
+  translation="The summer vacation was two weeks long."
+/>
+
+## 3. Comparison: より, ほう, and いちばん
+
+Japanese adjectives don't have "-er" or "-est" forms. Instead, we use particles and adverbs to show comparison.
+
+- **A は B より [Adj] です:** A is more [Adj] than B.
+- **A と B と どちら が [Adj] ですか:** Between A and B, which is more [Adj]?
+- **A の ほう が [Adj] です:** A is the one that is more [Adj].
+- **[Group] で [Noun] が いちばん [Adj] です:** Within [Group], [Noun] is the most [Adj].
+
+<GrammarBox client:load 
+  pattern="Comparison Structures"
+  meaning="Choosing the better or best alternative."
+  formation="[A] wa [B] yori... / [Winner] no hou ga..."
+  examples={[
+    { japanese: "でんしゃ は バス より はやい です。", romaji: "Densha wa basu yori hayai desu.", translation: "The train is faster than the bus." },
+    { japanese: "ねこ の ほう が すき です。", romaji: "Neko no hou ga suki desu.", translation: "I like cats more (the cat side is liked)." },
+    { japanese: "にほんご で かんじ が いちばん むずかしい です。", romaji: "Nihongo de kanji ga ichiban muzukashii desu.", translation: "In Japanese, kanji is the most difficult." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="コーヒー と おちゃ と どちら が すき です か。"
+  romaji="Koohii to ocha to dochira ga suki desu ka?"
+  translation="Which do you like more: coffee or tea?"
+/>
+<ExampleSentence client:load 
+  japanese="くだもの の なかで、りんご が いちばん すき です。"
+  romaji="Kudamono no naka de, ringo ga ichiban suki desu."
+  translation="Out of all fruits, I like apples the most."
+/>
+<ExampleSentence client:load 
+  japanese="きょう は きのう より さむい です ね。"
+  romaji="Kyou wa kinou yori samui desu ne."
+  translation="Today is colder than yesterday, isn't it?"
+/>
+
+## 4. Cultural Note: Gift-Giving Etiquette (Zoutou)
+
+In Japan, the numbers you use when giving gifts are deeply significant. This culture of **Zoutou** (giving and returning) follows strict rules:
+
+- **Avoid 4 and 9:** The number 4 (*shi*) sounds like the word for "death," and 9 (*ku*) sounds like "suffering." You should never give a set of 4 or 9 items (like 4 plates or 9 flowers).
+- **Odd Numbers are Best:** Odd numbers (3, 5, 7) are generally considered auspicious and "unbreakable," symbolizing a lasting relationship.
+- **Presentation:** Gifts are always presented with both hands and often accompanied by the humble phrase *"Tsumaranai mono desu ga..."* (It's a boring thing, but [please accept it]).
+- **Counting Recipients:** When planning gifts for a group, you must count the people (**〜人**) and ensure you have enough for everyone, as leaving someone out is a major social faux pas.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/19-counters-comparison-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of restaurant reservation and study comparison dialogue practice with people counters, time range, より, ほう, and いちばん cards."
+  width={1717}
+  height={916}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Making a Reservation"
+  lines={[
+    { speaker: "Smith", japanese: "すみません、きょう の しちじ に よにん で よやく したい です。", romaji: "Sumimasen, kyou no shichi-ji ni yo-nin de yoyaku shitai desu.", translation: "Excuse me, I'd like to make a reservation for four people at 7:00 today." },
+    { speaker: "Staff", japanese: "はい。しちじ から くじ まで です か。", romaji: "Hai. Shichi-ji kara ku-ji made desu ka?", translation: "Yes. Is that from 7:00 until 9:00?" },
+    { speaker: "Smith", japanese: "いいえ、じゅうじ まで おねがいします。さんにん は くるま で きます。わたし は あるいて いきます。", romaji: "Iie, juu-ji made onegaishimasu. San-nin wa kuruma de kimasu. Watashi wa aruite ikimasu.", translation: "No, until 10:00, please. Three people will come by car. I will go on foot." },
+    { speaker: "Staff", japanese: "わかりました。おまちして おります。", romaji: "Wakarimashita. Omachishite orimasu.", translation: "Understood. We look forward to seeing you." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Talking About Preferences"
+  lines={[
+    { speaker: "Tanaka", japanese: "スミスさん、にほんご の べんきょう は どう ですか。", romaji: "Sumisu-san, nihongo no benkyou wa dou desu ka?", translation: "Mr. Smith, how is your Japanese study going?" },
+    { speaker: "Smith", japanese: "むずかしい です。とくに かんじ が いちばん むずかしい です。", romaji: "Muzukashii desu. Tokuni kanji ga ichiban muzukashii desu.", translation: "It's difficult. Especially kanji is the most difficult." },
+    { speaker: "Tanaka", japanese: "ひらがな と カタカナ と どちら が すき です か。", romaji: "Hiragana to katakana to dochira ga suki desu ka?", translation: "Which do you like more: Hiragana or Katakana?" },
+    { speaker: "Smith", japanese: "ひらがな の ほう が すき です。カタカナ より かわいい です から。", romaji: "Hiragana no hou ga suki desu. Katakana yori kawaii desu kara.", translation: "I like Hiragana more. Because it's cuter than Katakana." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Counting people uses 〜人 (nin); 1 and 2 are irregular (hitori, futari).",
+    "Durations use suffixes like 〜時間 (hours), 〜週間 (weeks), and 〜ヶ月 (months).",
+    "Use より (yori) to mean 'than' when comparing two things.",
+    "Use 〜の ほう が (...no hou ga) to highlight the superior or preferred alternative.",
+    "いちばん (ichiban) indicates the superlative (the most/best).",
+    "In gift-giving, avoid the numbers 4 and 9 due to their unlucky associations."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your skills with people, time, and comparison!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "How do you say 'two people' in Japanese?",
+      options: ["ににん", "ふたり", "ひとつ", "ふたつ"],
+      correct: 1,
+      explanation: "ふたり (futari) is the irregular counter for two people."
+    },
+    {
+      question: "Which particle means 'than' in a comparison?",
+      options: ["から", "まで", "より", "ほう"],
+      correct: 2,
+      explanation: "より (yori) is used to establish the baseline for comparison (than)."
+    },
+    {
+      question: "How do you say 'three hours'?",
+      options: ["さんじ", "さんじかん", "さんにん", "さんしゅう"],
+      correct: 1,
+      explanation: "〜時間 (jikan) is the suffix for hour durations."
+    },
+    {
+      question: "Translate: 'I like dogs more than cats.'",
+      options: ["いぬ は ねこ より すき です。", "いぬ と ねこ と どちら が すき です か。", "いぬ が いちばん すき です。", "いぬ は ねこ ほう です。"],
+      correct: 0,
+      explanation: "Inu (Dog) wa Neko (Cat) yori (than) suki desu (is liked)."
+    },
+    {
+      question: "Which number is considered unlucky for gifts because it sounds like 'death'?",
+      options: ["3", "4", "7", "8"],
+      correct: 1,
+      explanation: "4 (shi) is often avoided because it is a homophone for death."
+    },
+    {
+      question: "Translate: 'ひとり で いきました。'",
+      options: ["I went with a friend.", "I went alone.", "I went with two people.", "Who went?"],
+      correct: 1,
+      explanation: "Hitori de means 'by oneself' or 'alone'."
+    },
+    {
+      question: "How do you say 'the most' or 'number one'?",
+      options: ["とても", "ちょっと", "いちばん", "あまり"],
+      correct: 2,
+      explanation: "いちばん (ichiban) is used for superlatives."
+    },
+    {
+      question: "How many people are in 'よにん'?",
+      options: ["3", "4", "5", "8"],
+      correct: 1,
+      explanation: "よにん (yo-nin) is four people."
+    },
+    {
+      question: "Translate: 'Which is faster: the bus or the train?'",
+      options: ["バス と でんしゃ と どちら が はやい です か。", "バス は でんしゃ より はやい です。", "でんしゃ の ほう が はやい です。", "バス は はやい です。"],
+      correct: 0,
+      explanation: "A to B to dochira ga... is the standard question for comparing two items."
+    },
+    {
+      question: "How do you say 'one month'?",
+      options: ["いちがつ", "いっしゅうかん", "いっかげつ", "いちにち"],
+      correct: 2,
+      explanation: "〜ヶ月 (kagetsu) is used for month durations. One month is 'ikkagetsu'."
+    },
+    {
+      question: "Translate: 'Hokkaido is the coldest.'",
+      options: ["ほっかいどう は とても さむい です。", "ほっかいどう が いちばん さむい です。", "ほっかいどう は とうきょう より さむい です。", "ほっかいどう の ほう が さむい です。"],
+      correct: 1,
+      explanation: "Ichiban (the most) + samui (cold)."
+    },
+    {
+      question: "Which of these is used for 'one person'?",
+      options: ["いちにん", "ひとつ", "ひとり", "いちまい"],
+      correct: 2,
+      explanation: "ひとり (hitori) is the irregular counter for one person."
+    },
+    {
+      question: "Translate: 'It takes two weeks.'",
+      options: ["にじかん かかります。", "にしゅうかん かかります。", "にかげつ かかります。", "ににん かかります。"],
+      correct: 1,
+      explanation: "〜週間 (shuukan) is the counter for weeks."
+    },
+    {
+      question: "In the phrase 'A no hou ga...', what does 'hou' literally mean?",
+      options: ["Fast", "Side / Alternative", "Better", "Than"],
+      correct: 1,
+      explanation: "Hou literally means direction or side. You are pointing to 'A's side' as the preferred one."
+    },
+    {
+      question: "True or False: In Japan, you should give gifts in sets of 9 to show great respect.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. 9 (ku) is associated with suffering and is generally avoided in gift-giving."
+    }
+  ]}
+/>

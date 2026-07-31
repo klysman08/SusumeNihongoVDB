@@ -1,0 +1,270 @@
+---
+title: "Chapter 29 — Conditionals (ば, と, なら)"
+level: "N4"
+chapter: 29
+description: "Master the remaining Japanese conditionals (ba, to, nara) to express natural consequences, general truths, and contextual advice."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Conditionals (ば, と, なら)"
+  level="N4"
+  chapter={29}
+  objectives={[
+    "Understand how to use the 〜ば conditional for hypothetical situations and advice.",
+    "Use the 〜と conditional for natural consequences and inevitable results.",
+    "Use the 〜なら conditional to react to context or offer specific advice.",
+    "Understand the nuanced differences between たら, ば, と, and なら."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In the previous chapter, we learned that `〜たら` is the most versatile conditional, handling "if/when" and sequential past discoveries. However, Japanese has three other conditionals—`ば`, `と`, and `なら`—that convey very specific nuances. `ば` is excellent for advice, `と` is used for inevitable facts, and `なら` is used to react to what someone just said. Let's master these precise tools!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/29-conditionals-ba-to-nara.webp"
+  alt="Anime pixel-art illustration of an open study toolkit with conditional cards, a compass, seasonal cycle, route map, notebook, and miniature landscapes."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The ば Conditional (Hypothetical & Advice)
+
+The `〜ば` form strongly emphasizes the *condition* required for a particular result. It often translates to "provided that..." or "so long as...". It is incredibly common in advice and idioms (like `〜ばいいです` - "It would be good if you do...").
+
+### Formation
+* **Group 1 Verbs:** Change the final `u` sound to an `e` sound and add `ば`. (書く ➔ 書けば)
+* **Group 2 Verbs:** Drop `る` and add `れば`. (食べる ➔ 食べれば)
+* **Irregular Verbs:** 来る ➔ 来れば (kureba), する ➔ すれば (sureba)
+* **I-Adjectives:** Drop `い` and add `ければ`. (安い ➔ 安ければ)
+* **Negative (Na-adj/Nouns):** 〜でなければ
+
+<GrammarBox client:load 
+  pattern="A〜ば、B。"
+  meaning="Provided that A happens, B will happen. (Strong focus on the condition)."
+  formation="Verb-e + ば / Adj-kereba"
+  examples={[
+    { japanese: "明日晴れれば、富士山が見えます。", romaji: "ashita harereba, fujisan ga miemasu.", translation: "Provided it is clear tomorrow, you can see Mount Fuji." },
+    { japanese: "薬を飲めば、熱が下がります。", romaji: "kusuri o nomeba, netsu ga sagarimasu.", translation: "If you take the medicine, the fever will go down." },
+    { japanese: "安ければ、それを買います。", romaji: "yasukereba, sore o kaimasu.", translation: "If it is cheap (provided it is cheap), I will buy it." }
+  ]}
+/>
+
+> [!WARNING]
+> While `〜ば` can be used for general "If" statements, you **cannot** use verbs of will/intention/request in the second half of the sentence (the B clause) if both clauses have the same subject. For example, `お金があれば、車を買いたい` (If I have money, I want to buy a car) works because "having" is a state, but `日本へ行けば、寿司を食べたい` is unnatural. Use `行ったら` instead!
+
+## 2. The と Conditional (Natural Consequence)
+
+The `〜と` conditional is used for absolute, guaranteed cause-and-effect relationships. Think of it as: "Whenever A happens, B *always* and *inevitably* follows." It is used for natural phenomena, giving directions, and machine operations.
+
+### Formation
+Simply add `と` immediately after the **dictionary form** (or plain negative form) of the verb.
+
+<GrammarBox client:load 
+  pattern="Dictionary Form + と、B。"
+  meaning="Whenever A happens, B naturally/always happens."
+  formation="Verb (Dictionary/Nai Form) + と"
+  examples={[
+    { japanese: "春になると、桜が咲きます。", romaji: "haru ni naru to, sakura ga sakimasu.", translation: "When spring comes, cherry blossoms (always) bloom." },
+    { japanese: "このボタンを押すと、お釣りが出ます。", romaji: "kono botan o osu to, otsuri ga demasu.", translation: "Whenever you press this button, change comes out." },
+    { japanese: "まっすぐ行くと、右に銀行があります。", romaji: "massugu iku to, migi ni ginkou ga arimasu.", translation: "If you go straight, the bank is on the right." }
+  ]}
+/>
+
+> [!IMPORTANT]
+> The second half of a `〜と` sentence **cannot** contain your personal intention, request, invitation, or command. You cannot say `春になると、ピクニックに行きたい` (When spring comes, I want to go on a picnic). You must use `春になったら`.
+
+## 3. The なら Conditional (Contextual Reaction)
+
+`〜なら` is used when you are reacting to context, especially something someone just said. It means "If *that* is the case..." or "As for [Noun]...". It is extremely common when offering advice based on a specific topic.
+
+### Formation
+Just attach `なら` to the plain form of the verb/adjective, or directly to a noun/na-adjective.
+
+<GrammarBox client:load 
+  pattern="[Context] + なら、B。"
+  meaning="If that is the case... / If it is about [Noun]..."
+  formation="Plain Form / Noun + なら"
+  examples={[
+    { japanese: "温泉に行くなら、箱根がいいですよ。", romaji: "onsen ni iku nara, Hakone ga ii desu yo.", translation: "If you are going to a hot spring, Hakone is good." },
+    { japanese: "パソコンなら、Macがおすすめです。", romaji: "pasokon nara, makku ga osusume desu.", translation: "If you're talking about computers, Mac is recommended." },
+    { japanese: "嫌なら、しなくてもいいです。", romaji: "iya nara, shinakute mo ii desu.", translation: "If you dislike it, you don't have to do it." }
+  ]}
+/>
+
+## Conditionals Summary Table
+
+When in doubt, use `〜たら`. But to sound like a native, know the specific use cases:
+
+| Form | Core Meaning | Best Used For |
+| :--- | :--- | :--- |
+| **たら (Tara)** | If / When | Everyday "If", sequential events, past discovery. The safest catch-all. |
+| **ば (Ba)** | Provided that... | Focusing on the condition itself, idioms, proverbs, "It would be good if..." |
+| **と (To)** | Whenever... | Pure facts, how machines work, nature, directions. No personal will allowed. |
+| **なら (Nara)** | If that's the case... | Reacting to someone's statement, offering topical advice. |
+
+## 4. Cultural Insight: The Inevitability of "To" in Nature
+
+The `〜と` conditional is uniquely suited for describing the natural world and seasonal changes in Japan. Because the seasons change so predictably and beautifully, Japanese people use `〜と` to emphasize the **inevitable connection** between time and nature.
+
+For example:
+* `「春になると、桜が咲きます。」` (When spring comes, cherry blossoms bloom.)
+* `「冬になると、雪が降ります。」` (When winter comes, it snows.)
+
+This usage reflects a deep cultural appreciation for the cycles of nature. Using `〜と` instead of `〜たら` or `〜ば` in these cases makes the statement feel more like a universal truth or a poetic observation rather than a simple hypothetical condition.
+
+---
+
+---
+
+## Contextual Dialogues
+
+### 1. Asking for Tech Advice (パソコンの相談)
+
+Listen to how these nuanced conditionals operate in a real conversation.
+
+<ConversationDialog client:load 
+  title="Asking for Tech Advice (パソコンの相談)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, my computer broke down.", japanese: "田中さん、パソコンが壊れてしまいました。", romaji: "Tanaka-san, pasokon ga kowarete shimaimashita." },
+    { speaker: "Tanaka", translation: "Oh no! If you press the power button, does anything happen?", japanese: "大変！電源ボタンを押すと、どうなりますか？", romaji: "Taihen! Dengen botan o osu to, dou narimasu ka?" },
+    { speaker: "Suzuki", translation: "Even if I press it, the screen stays completely black.", japanese: "ボタンを押しても、画面が真っ暗です。", romaji: "Botan o oshite mo, gamen ga makkura desu." },
+    { speaker: "Tanaka", translation: "If that's the case, you should buy a new one. If it's Macs, I know a little about them.", japanese: "それなら、新しいのを買ったほうがいいですよ。Macなら、少しわかります。", romaji: "Sore nara, atarashii no o katta hou ga ii desu yo. Makku nara, sukoshi wakarimasu." }
+  ]}
+/>
+
+### 2. Planning a Trip to Kyoto (京都旅行の相談)
+
+Using `なら` and `ば` for advice and conditions.
+
+<ConversationDialog client:load 
+  title="Planning a Trip to Kyoto (京都旅行の相談)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, if it's Kyoto, when is a good time to go?", japanese: "田中さん、京都ならいつ行くのがいいですか。", romaji: "Tanaka-san, Kyouto nara itsu iku no ga ii desu ka." },
+    { speaker: "Tanaka", translation: "If you go in autumn, the autumn leaves are very beautiful.", japanese: "秋に行けば、紅葉がとてもきれいですよ。", romaji: "Aki ni ikeba, kouyou ga totemo kirei desu yo." },
+    { speaker: "Suzuki", translation: "I see. If I have time, I'd like to go in November.", japanese: "そうですか。時間ができたら、11月に行きたいです。", romaji: "Sou desu ka. Jikan ga dekitara, juu-ichi gatsu ni ikitai desu." },
+    { speaker: "Tanaka", translation: "Whenever autumn comes, Kyoto gets very crowded, so it's better to reserve a hotel early.", japanese: "秋になると京都はとても混みますから、早くホテルを予約したほうがいいですよ。", romaji: "Aki ni naru to Kyouto wa totemo komimasu kara, hayaku hoteru o yoyaku shita hou ga ii desu yo." }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "〜ば expresses 'provided that' and focuses heavily on the condition setting up the result.",
+    "〜と expresses natural consequence ('whenever'). It cannot be used with personal intentions or requests.",
+    "〜なら reacts to contextual information ('if that's the case') and is great for targeted advice.",
+    "Each conditional has specific restrictions, whereas 〜たら is the most broadly applicable."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the precise Japanese conditionals!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which form is used for giving street directions or explaining how a machine works?",
+      options: ["〜と", "〜ば", "〜たら", "〜なら"],
+      correct: 0,
+      explanation: "〜と indicates a natural/guaranteed consequence. 'If you turn right, the hospital is there.'"
+    },
+    {
+      question: "What is the 〜ば form of '食べる' (to eat)?",
+      options: ["食べれば", "食べるば", "食べば", "食えれば"],
+      correct: 0,
+      explanation: "For Group 2 verbs, drop 'ru' and add 'reba' -> 食べれば (tabereba)."
+    },
+    {
+      question: "What is the 〜ば form of '行く' (to go)?",
+      options: ["行きれば", "行けば", "行くば", "行かば"],
+      correct: 1,
+      explanation: "For Group 1 verbs, change the final 'u' to 'e' and add 'ba' -> 行けば (ikeba)."
+    },
+    {
+      question: "If someone says 'I want to go to Hokkaido!', which conditional do you use to reply 'If it's Hokkaido, you should go in winter.'?",
+      options: ["北海道と、", "北海道なら、", "北海道は、", "北海道たら、"],
+      correct: 1,
+      explanation: "〜なら picks up a topic from context and offers advice. 'If it's Hokkaido (as you brought up)...'"
+    },
+    {
+      question: "Why is '春になると、花見に行きたい' INCORRECT?",
+      options: ["Because 'to' can only be used with verbs.", "Because 'to' cannot be followed by personal intent, wants, or requests.", "Because 'hanami' happens in autumn.", "Because it should be 春になるば."],
+      correct: 1,
+      explanation: "The second half of a 〜と sentence must describe an absolute, natural fact, not personal will or desire."
+    },
+    {
+      question: "What is the 〜ば form of the i-adjective '高い' (expensive)?",
+      options: ["高ければ", "高かったら", "高いば", "高けれら"],
+      correct: 0,
+      explanation: "Drop the 'い' and add 'ければ' -> 高ければ (takakereba)."
+    },
+    {
+      question: "Translate: 'Whenever you press this button, music plays.'",
+      options: ["このボタンを押せば、音楽が聞こえます。", "このボタンを押すと、音楽が鳴ります。", "このボタンを押したら、音楽が出ます。", "このボタンを押すなら、音楽があります。"],
+      correct: 1,
+      explanation: "This is a machine operation (guaranteed consequence). verb dictionary form + と -> 押すと、音楽が鳴ります。"
+    },
+    {
+      question: "What does 'それなら' mean in a conversation?",
+      options: ["Because of that...", "If that's the case...", "When that happens...", "Whenever that is..."],
+      correct: 1,
+      explanation: "それ (that) + なら (if it is) -> If that context you just mentioned is true..."
+    },
+    {
+      question: "In the dialogue, why did Suzuki say '安ければ、何でもいいです'?",
+      options: ["Because whenever it is cheap, anything is fine.", "Because provided that it's cheap, anything is fine.", "Because he wants to sell it cheaply.", "Because it is naturally cheap."],
+      correct: 1,
+      explanation: "He focuses strictly on the condition. The single requirement is being cheap (yasukereba)."
+    },
+    {
+      question: "What is the 〜ば form of '来る' (kuru)?",
+      options: ["くれば", "きれれば", "これば", "こられれば"],
+      correct: 0,
+      explanation: "来る is irregular. It becomes 来れば (kureba)."
+    },
+    {
+      question: "Which sentence is grammatically CORRECT?",
+      options: ["安くなると、買いたいです。", "お金があれば、ハワイに行きたいです。", "雨が降るなら、行きません。", "温泉に行くば、箱根がいいです。"],
+      correct: 1,
+      explanation: "'お金がある' describes a state, so it can be followed by an intention (行きたい) with 〜ば. (With active verbs, you can't end with intent, but stative verbs are fine)."
+    },
+    {
+      question: "What is the 〜ば form of 'いい' (good)?",
+      options: ["いいれば", "いいければ", "よければ", "よかったら"],
+      correct: 2,
+      explanation: "Since いい conjugates from よい, drop 'い' and add 'ければ' -> よければ (yokereba)."
+    },
+    {
+      question: "Which of the following describes a factual, unchanging reality?",
+      options: ["水は100度になると沸騰します。(Water boils at 100 degrees).", "水は100度になれば沸騰できます。", "水は100度になったら沸騰してください。", "水は100度なら沸騰します。"],
+      correct: 0,
+      explanation: "Natural, scientific facts use 'と'. (naru to futtou shimasu)."
+    },
+    {
+      question: "Translate: 'If you use it, you will understand.' (Focusing on the condition 'using it' leading to the result).",
+      options: ["使うとわかります。", "使ったらわかる。", "使えばわかります。", "使うならわかるよ。"],
+      correct: 2,
+      explanation: "使えばわかります (Tsukaeba wakarimasu) is a very common idiomatic pattern meaning 'Given the condition of using it, you will get it'."
+    },
+    {
+      question: "What is the correct form for the negative: 'If it is not cheap...' using 〜ば?",
+      options: ["安くなければ", "安くなかったら", "安くならないば", "安くないければ"],
+      correct: 0,
+      explanation: "安くない -> drop 'い' -> add 'ければ' -> 安くなければ (yasukunakereba)."
+    }
+  ]}
+/>

@@ -1,0 +1,121 @@
+---
+title: "Chapter 44 — Preparing and Completing Actions"
+level: "N3"
+chapter: 44
+unit: 1
+unitTitle: "Intermediate Foundations"
+topics: "Preparation, completion, trial, and direction of change"
+description: "Use 〜ておく, 〜てしまう, 〜てみる, 〜ていく, and 〜てくる to describe preparation, completion, attempts, and change."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Preparing and Completing Actions" level="N3" chapter={44} objectives={[
+  "Use 〜ておく to prepare or leave something ready.",
+  "Separate neutral completion from the regret or surprise of 〜てしまう.",
+  "Use 〜てみる for a trial and 〜ていく / 〜てくる for change over time.",
+  "Recognize casual contractions such as 〜とく and 〜ちゃう."
+]} />
+
+<SectionIntro level="N3">
+At N3, the て-form helps you describe an action's place in time: what you prepare before an event, what you finish completely, what you try for the first time, and how a change moves toward or away from the present. These patterns make everyday plans and stories much more precise.
+</SectionIntro>
+
+<VocabTable data={[
+  { word: "準備", reading: "じゅんび", romaji: "junbi", meaning: "preparation", type: "noun" },
+  { word: "片付ける", reading: "かたづける", romaji: "katazukeru", meaning: "to put away; tidy", type: "verb" },
+  { word: "うっかり", reading: "うっかり", romaji: "ukkari", meaning: "carelessly; by mistake", type: "adv" },
+  { word: "慣れる", reading: "なれる", romaji: "nareru", meaning: "to get used to", type: "verb" },
+  { word: "増える", reading: "ふえる", romaji: "fueru", meaning: "to increase", type: "verb" }
+]} />
+
+## 1. Prepare now for a later purpose: 〜ておく
+
+<GrammarBox client:load pattern="V ておく" meaning="Do V in advance; do V and leave the result ready." formation="Verb て-form + おく. Casual: 〜ておく → 〜とく." examples={[
+  { japanese: "出発前に、切符を買っておきます。", romaji: "shuppatsu mae ni, kippu o katte okimasu.", translation: "I will buy the ticket before we leave." },
+  { japanese: "忘れないように、予定をカレンダーに書いておいた。", romaji: "wasurenai you ni, yotei o karendaa ni kaite oita.", translation: "I wrote the plan on the calendar beforehand so I would not forget." },
+  { japanese: "後で話そう。資料を読んどくね。", romaji: "ato de hanasou. shiryou o yondoku ne.", translation: "Let's talk later. I will read the material beforehand." }
+]} />
+
+## 2. Finish completely—or express regret: 〜てしまう
+
+<GrammarBox client:load pattern="V てしまう" meaning="Finish completely; unfortunately / unexpectedly do V." formation="Verb て-form + しまう. Casual: 〜てしまう → 〜ちゃう / 〜じゃう." examples={[
+  { japanese: "レポートを今日中に書いてしまいます。", romaji: "repooto o kyoujuu ni kaite shimaimasu.", translation: "I will finish writing the report today." },
+  { japanese: "電車で財布を忘れてしまった。", romaji: "densha de saifu o wasurete shimatta.", translation: "Unfortunately, I left my wallet on the train." },
+  { japanese: "このケーキ、おいしくて全部食べちゃった。", romaji: "kono keeki, oishikute zenbu tabechatta.", translation: "This cake was so good that I ate it all." }
+]} />
+
+<CommonMistake title="Completion is not always regret">
+  <p>`〜てしまう` can simply mean that an action is fully finished. Regret or surprise comes from the context: losing a wallet suggests an unwanted outcome; finishing a report may be positive or neutral.</p>
+</CommonMistake>
+
+## 3. Try it, then track the direction of change
+
+<GrammarBox client:load pattern="V てみる" meaning="Try doing V and see what happens." formation="Verb て-form + みる." examples={[
+  { japanese: "分からない表現は、自分で調べてみてください。", romaji: "wakaranai hyougen wa, jibun de shirabete mite kudasai.", translation: "Please try looking up expressions you do not understand yourself." },
+  { japanese: "このアプリを使ってみたら、便利だった。", romaji: "kono apuri o tsukatte mitara, benri datta.", translation: "When I tried using this app, it was useful." }
+]} />
+
+<ParticleCompare client:load title="〜ていく and 〜てくる: where does the change point?" items={[
+  { label: "〜ていく", role: "From now onward; away from the present", example: "これから日本語を勉強していく。", note: "I will continue studying Japanese from now on." },
+  { label: "〜てくる", role: "Until now; toward the present", example: "日本語を三年間勉強してきた。", note: "I have studied Japanese for three years up to now." },
+  { label: "〜ていく", role: "A gradual future change", example: "これから暑くなっていく。", note: "It will gradually become hotter." },
+  { label: "〜てくる", role: "A change becoming noticeable now", example: "少しずつ分かってきた。", note: "I am gradually starting to understand." }
+]} />
+
+## 4. Context dialogue: planning a weekend trip
+
+<ConversationDialog client:load title="Before the trip" lines={[
+  { speaker: "Kenta", japanese: "ホテルはもう予約しておいた？", romaji: "hoteru wa mou yoyaku shite oita?", translation: "Have you already reserved the hotel?" },
+  { speaker: "Mai", japanese: "うん。でも、帰りの切符をまだ買ってないから、今夜調べてみる。", romaji: "un. demo, kaeri no kippu o mada katte nai kara, konya shirabete miru.", translation: "Yes. But I have not bought the return ticket yet, so I will try checking tonight." },
+  { speaker: "Kenta", japanese: "去年は予定を詰め込みすぎて、疲れてしまったよね。", romaji: "kyonen wa yotei o tsumekomisugite, tsukarete shimatta yo ne.", translation: "Last year we planned too much and ended up exhausted, right?" },
+  { speaker: "Mai", japanese: "そうだね。今回はゆっくり旅行していこう。", romaji: "sou da ne. konkai wa yukkuri ryokou shite ikou.", translation: "Right. This time, let's travel at an easy pace." }
+]} />
+
+## 5. Guided practice and reading
+
+1. “I will save the file beforehand.”
+2. “I accidentally deleted the file.”
+3. “Try asking the staff member.”
+4. “I have gradually become able to understand fast Japanese.”
+
+<details><summary>Check your answers</summary><ol><li>`ファイルを保存しておきます。`</li><li>`うっかりファイルを消してしまいました。`</li><li>`店員さんに聞いてみてください。`</li><li>`速い日本語が少しずつ分かってきました。`</li></ol></details>
+
+> 日本に来る前に、必要な書類を準備しておきました。最初の一週間は道に迷ってしまうこともありましたが、毎日外に出てみました。今では近所の店や駅まで、一人で行けるようになってきました。
+
+**Reading check:** Identify the preparation, the unwanted result, the attempt, and the change up to the present.
+
+Translation: “Before coming to Japan, I prepared the necessary documents. During the first week, I sometimes ended up getting lost, but I tried going out every day. Now I am gradually becoming able to go alone to nearby shops and the station.”
+
+## 6. Communication and flashcard review
+
+Describe a future event: name one thing you will prepare with `〜ておく`, one thing you want to try with `〜てみる`, and one change you expect with `〜ていく`.
+
+**Review flashcards:** `〜ておく` → preparation; `〜てしまう` → completion vs regret; `〜てみる` → trial; `〜ていく` → onward change; `〜てくる` → change up to now.
+
+<ChapterSummary takeaways={[
+  "〜ておく prepares an action or leaves its result ready for later.",
+  "〜てしまう can mean complete an action or express an unwanted, surprising outcome.",
+  "〜てみる means to try an action and discover the result.",
+  "〜ていく looks forward from now; 〜てくる looks back toward the present.",
+  "Casual contractions such as 読んどく and 食べちゃう are common in speech."
+]} />
+
+## Knowledge Check
+
+<QuizBlock client:load questions={[
+  { question: "Which phrase means 'prepare the documents in advance'?", options: ["資料を読んでしまう", "資料を準備しておく", "資料を準備してくる", "資料を準備するな"], correct: 1, explanation: "〜ておく marks preparation for a later purpose." },
+  { question: "What nuance does 財布を忘れてしまった usually have?", options: ["A future plan", "A completed action with regret", "A polite request", "A natural change"], correct: 1, explanation: "The context makes the completed action an unfortunate outcome." },
+  { question: "Which means 'Try eating this'?", options: ["これを食べておく", "これを食べてしまう", "これを食べてみる", "これを食べてくる"], correct: 2, explanation: "〜てみる means to try doing something." },
+  { question: "Which describes a change from the past up to now?", options: ["日本語を勉強していく", "日本語を勉強してきた", "日本語を勉強しておく", "日本語を勉強してしまう"], correct: 1, explanation: "〜てくる traces activity or change toward the present." },
+  { question: "What is the casual form of 食べてしまう?", options: ["食べとく", "食べちゃう", "食べてく", "食べなきゃ"], correct: 1, explanation: "てしまう commonly contracts to ちゃう after て." }
+]} />

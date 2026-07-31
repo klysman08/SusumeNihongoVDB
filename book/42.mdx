@@ -1,0 +1,205 @@
+---
+title: "Chapter 42 — Transitive and Intransitive Verbs"
+level: "N3"
+chapter: 42
+unit: 1
+unitTitle: "Intermediate Foundations"
+topics: "Transitivity, resultant states, preparation, and speaker control"
+description: "Describe intentional actions, natural changes, and prepared states with transitive and intransitive verb pairs."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import CultureNote from '../../components/book/CultureNote.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader
+  title="Transitive and Intransitive Verbs (他動詞・自動詞)"
+  level="N3"
+  chapter={42}
+  objectives={[
+    "Tell whether a verb describes an action on an object or a change in the subject.",
+    "Use common transitive–intransitive pairs with the appropriate particles.",
+    "Distinguish intransitive + ている from transitive + てある.",
+    "Use 〜ておく for preparation and a state intentionally left in place."
+  ]}
+/>
+
+<SectionIntro level="N3">
+Japanese often chooses a different verb depending on where the sentence places its focus. Did a person open the door? Use the transitive verb. Is the door open? Use the intransitive verb. At N3, that distinction helps you understand notices, workplace instructions, and subtle descriptions of result and intention.
+</SectionIntro>
+
+## 1. Action on an object or change in the subject?
+
+* **Transitive verbs (他動詞)** describe an agent doing something to an object. The object is commonly marked with `を`.
+* **Intransitive verbs (自動詞)** describe a thing changing, appearing, stopping, or being in a state. The thing is commonly marked with `が`.
+
+<VocabTable
+  data={[
+    { word: "他動詞", reading: "たどうし", romaji: "tadoushi", meaning: "transitive verb", type: "noun" },
+    { word: "自動詞", reading: "じどうし", romaji: "jidoushi", meaning: "intransitive verb", type: "noun" },
+    { word: "準備", reading: "じゅんび", romaji: "junbi", meaning: "preparation", type: "noun" },
+    { word: "片付ける", reading: "かたづける", romaji: "katazukeru", meaning: "to put away; tidy", type: "verb" },
+    { word: "決まる", reading: "きまる", romaji: "kimaru", meaning: "to be decided", type: "verb" },
+    { word: "掲示", reading: "けいじ", romaji: "keiji", meaning: "notice; posting", type: "noun" }
+  ]}
+/>
+
+| Meaning | Transitive: someone acts | Intransitive: something changes |
+|---|---|---|
+| open | ドアを**開ける** | ドアが**開く** |
+| close | 窓を**閉める** | 窓が**閉まる** |
+| turn on | 電気を**つける** | 電気が**つく** |
+| turn off | 電気を**消す** | 電気が**消える** |
+| break | コップを**壊す** | コップが**壊れる** |
+| decide | 予定を**決める** | 予定が**決まる** |
+
+<ParticleCompare
+  client:load
+  title="Same event, different focus"
+  items={[
+    { label: "を + 他動詞", role: "Someone performs an action", example: "田中さんがドアを開けた。", note: "Tanaka opened the door." },
+    { label: "が + 自動詞", role: "The subject changes state", example: "ドアが開いた。", note: "The door opened." },
+    { label: "が + 他動詞 + てある", role: "A purposeful result remains", example: "ドアが開けてある。", note: "The door has been left open on purpose." },
+    { label: "が + 自動詞 + ている", role: "A resultant state is visible", example: "ドアが開いている。", note: "The door is open." }
+  ]}
+/>
+
+## 2. 〜ている: action in progress or resultant state
+
+With many action verbs, `〜ている` means an action is in progress: `今、資料を読んでいます` (I am reading the document now). With an **intransitive verb of change**, it often describes the state after the change.
+
+<GrammarBox client:load
+  pattern="N が [intransitive verb] ている"
+  meaning="N is in the state resulting from the change."
+  formation="Use the て-form of an intransitive verb + いる."
+  examples={[
+    { japanese: "窓が閉まっています。", romaji: "mado ga shimatte imasu.", translation: "The window is closed." },
+    { japanese: "会議はもう始まっています。", romaji: "kaigi wa mou hajimatte imasu.", translation: "The meeting has already begun." },
+    { japanese: "電気が消えています。", romaji: "denki ga kiete imasu.", translation: "The light is off." }
+  ]}
+/>
+
+<ExampleSentence client:load
+  japanese="駅の前に新しい店ができています。"
+  romaji="eki no mae ni atarashii mise ga dekite imasu."
+  translation="A new shop has opened in front of the station."
+  note="できる is intransitive here: the shop has come into existence and is now there."
+/>
+
+## 3. 〜てある: a result intentionally prepared
+
+`〜てある` uses a **transitive** verb. It describes a state that a person intentionally created and left in place, often because it is useful for a purpose. The former object is usually marked with `が` or `は` because the resulting state is now the focus.
+
+<GrammarBox client:load
+  pattern="N が / は [transitive verb] てある"
+  meaning="N has been done and intentionally left that way."
+  formation="Use the て-form of a transitive verb + ある."
+  examples={[
+    { japanese: "会議の資料は人数分コピーしてあります。", romaji: "kaigi no shiryou wa ninzuubun kopii shite arimasu.", translation: "The meeting handouts have been copied for everyone." },
+    { japanese: "予定がカレンダーに書いてあります。", romaji: "yotei ga karendaa ni kaite arimasu.", translation: "The schedule has been written on the calendar." },
+    { japanese: "テーブルの上に花が飾ってあります。", romaji: "teeburu no ue ni hana ga kazatte arimasu.", translation: "Flowers have been displayed on the table." }
+  ]}
+/>
+
+<CommonMistake title="Do not use 〜てある for a natural state">
+  <p>`窓が閉まっている` simply describes a closed window. `窓が閉めてある` adds the idea that somebody deliberately closed it and left it closed. Use an intransitive verb with `〜ている` when the agent and purpose are not important.</p>
+</CommonMistake>
+
+## 4. 〜ておく: do something in advance
+
+`〜ておく` focuses on the **preparatory action**: do something beforehand, or do it and leave it as it is for later. It can appear as `〜とく` in casual speech.
+
+<GrammarBox client:load
+  pattern="V ておく"
+  meaning="Do V in advance; do V and leave it that way."
+  formation="Verb て-form + おく. Casual speech often shortens it: 調べておく → 調べとく."
+  examples={[
+    { japanese: "旅行の前に、ホテルを予約しておきます。", romaji: "ryokou no mae ni, hoteru o yoyaku shite okimasu.", translation: "I will reserve the hotel before the trip." },
+    { japanese: "忘れないように、必要な書類を机に置いておいた。", romaji: "wasurenai you ni, hitsuyou na shorui o tsukue ni oite oita.", translation: "I put the necessary documents on the desk beforehand so I would not forget them." },
+    { japanese: "後で見られるように、リンクを保存しておいて。", romaji: "ato de mirareru you ni, rinku o hozon shite oite.", translation: "Save the link so that we can look at it later." }
+  ]}
+/>
+
+**Quick contrast:** `資料がコピーしてある` describes the ready handouts; `資料をコピーしておく` describes the action of copying them beforehand.
+
+## 5. Context dialogue: getting the room ready
+
+<ConversationDialog client:load
+  title="Before the club meeting"
+  lines={[
+    { speaker: "Aya", japanese: "会議室の電気、もうついている？", romaji: "kaigishitsu no denki, mou tsuite iru?", translation: "Is the meeting-room light on already?" },
+    { speaker: "Sora", japanese: "うん。資料もテーブルに置いてあるよ。", romaji: "un. shiryou mo teeburu ni oite aru yo.", translation: "Yes. The documents have also been placed on the table." },
+    { speaker: "Aya", japanese: "ありがとう。参加者の名前は、あとで確認できるように一覧に書いておこう。", romaji: "arigatou. sankasha no namae wa, ato de kakunin dekiru you ni ichiran ni kaite okou.", translation: "Thanks. Let's write the participants' names on the list so we can check them later." },
+    { speaker: "Sora", japanese: "分かった。開始時間ももう決まっているから、入口に掲示しておくね。", romaji: "wakatta. kaishi jikan mo mou kimatte iru kara, iriguchi ni keiji shite oku ne.", translation: "Okay. The start time has already been decided, so I will post it at the entrance." }
+  ]}
+/>
+
+<CultureNote title="Descriptions that reduce blame" ja="表現">
+  <p>When reporting an accident or an inconvenient change, Japanese often uses an intransitive verb such as <strong>コップが割れました</strong> (“The glass broke”). This can keep the focus on the event rather than immediately naming a person. It does not erase responsibility; it simply changes the sentence's perspective.</p>
+</CultureNote>
+
+## 6. Guided practice
+
+Choose the best expression for each situation.
+
+1. The window is closed; you are simply observing it.
+2. The window has been deliberately closed to keep the room warm.
+3. You will print the handouts before tomorrow's meeting.
+4. The schedule has already been decided.
+
+<details>
+  <summary>Check your answers</summary>
+  <ol>
+    <li>`窓が閉まっています。`</li>
+    <li>`窓が閉めてあります。`</li>
+    <li>`明日の会議の前に資料を印刷しておきます。`</li>
+    <li>`予定がもう決まっています。`</li>
+  </ol>
+</details>
+
+## 7. Reading practice: library notice
+
+> 来週の読書会は二階の会議室で行います。部屋の入口に参加者の名札が置いてありますので、来た人は自分の名札を取ってください。資料は会議の前日に印刷しておきます。窓が開いていたら、閉めてください。
+
+**Reading check:** Find one example each of (1) `〜てある`, (2) `〜ておく`, and (3) an intransitive verb. What information does each one emphasize?
+
+Translation: “Next week's reading group will be held in the second-floor meeting room. Participants' name tags have been placed at the room entrance, so please take your own when you arrive. We will print the materials the day before the meeting. If the window is open, please close it.”
+
+## 8. Communication and flashcard review
+
+**Speak or write:** describe how you would prepare a room for visitors. Include one state with `〜てある`, one preparation with `〜ておく`, and one intransitive change with `〜ている`.
+
+**Review flashcards:** `開ける / 開く`; `閉める / 閉まる`; `〜ている` resultant state; `〜てある` intentional state; `〜ておく` preparation.
+
+<ChapterSummary
+  takeaways={[
+    "Transitive verbs focus on an agent acting on an object; intransitive verbs focus on a subject's change or state.",
+    "Intransitive + ている often describes the state after a change: ドアが開いている.",
+    "Transitive + てある describes a state deliberately created and left in place.",
+    "〜ておく focuses on doing something in advance or leaving it ready for later.",
+    "Choosing the verb pair changes the sentence's perspective, not merely its particle."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock
+  client:load
+  questions={[
+    { question: "Which sentence means 'The door opened'?", options: ["ドアを開けた。", "ドアが開いた。", "ドアが開けてある。", "ドアを開いている。"], correct: 1, explanation: "開く is intransitive, so the door is the subject marked with が." },
+    { question: "What does 資料がコピーしてある emphasize?", options: ["Someone is copying the documents now", "The documents are ready because someone copied them intentionally", "The documents copied themselves", "The documents will be copied tomorrow"], correct: 1, explanation: "Transitive + てある describes an intentional resulting state." },
+    { question: "Which expression best means 'I will reserve a hotel in advance'?", options: ["ホテルが予約してある", "ホテルを予約しておく", "ホテルが予約している", "ホテルを予約するな"], correct: 1, explanation: "〜ておく expresses preparation in advance." },
+    { question: "Which is an intransitive verb?", options: ["消す", "閉める", "決める", "消える"], correct: 3, explanation: "消える means 'to go out/disappear' and describes a change in the subject." },
+    { question: "Which sentence simply describes a closed window, without emphasizing an intentional action?", options: ["窓が閉まっている", "窓が閉めてある", "窓を閉めておく", "窓を閉まる"], correct: 0, explanation: "閉まる is intransitive; 閉まっている describes the resultant state." },
+    { question: "What is the clearest difference between 〜てある and 〜ておく?", options: ["There is no difference", "〜てある describes a resulting state; 〜ておく describes preparing an action", "〜てある is only negative", "〜ておく is only for natural changes"], correct: 1, explanation: "〜てある focuses on the intentionally maintained state, while 〜ておく focuses on doing something beforehand." }
+  ]}
+/>

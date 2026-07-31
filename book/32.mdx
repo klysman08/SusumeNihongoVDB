@@ -1,0 +1,270 @@
+---
+title: "Chapter 32 — Causative-Passive (させられる)"
+level: "N4"
+chapter: 32
+description: "Combine the causative and passive forms in Japanese to express being made or forced to do something against your will."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Causative-Passive (させられる)"
+  level="N4"
+  chapter={32}
+  objectives={[
+    "Understand the concept of the combined causative-passive form.",
+    "Conjugate Group 1, Group 2, and Irregular verbs into this form.",
+    "Learn the common 'shorthand' conjugation for Group 1 verbs (〜される).",
+    "Use the causative-passive to complain about being forced to do an action."
+  ]}
+/>
+
+<SectionIntro level="N4">
+You have learned the **Passive** (`〜れる/られる`: an action is done to you) and the **Causative** (`〜せる/させる`: making/letting someone do an action). Now, we combine them! The **Causative-Passive** (`〜させられる`) literally means "I was made/forced to do an action by someone." It heavily implies reluctance or complaining. This is the ultimate "I didn't want to do it, but I had to" form!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/32-causative-passive.webp"
+  alt="Anime pixel-art illustration of a reluctant student guided by glowing causative-passive arrows and gears toward writing, cleaning, and running tasks."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Concept and Particles
+
+In a causative-passive sentence:
+1. **The subject (は/が)** is the person who was *forced* to do the action (usually the speaker).
+2. **The doer (に)** is the person who *forced* the action to happen.
+3. The sentiment is almost always **negative** (reluctance, annoyance, or obligation).
+
+<ExampleSentence client:load 
+  japanese="私は母に野菜を食べさせられました。"
+  romaji="watashi wa haha ni yasai o tabesaseraremashita."
+  translation="I was forced to eat vegetables by my mother. (I didn't want to!)"
+/>
+
+<ExampleSentence client:load 
+  japanese="子供の時、父に毎日勉強させられました。"
+  romaji="kodomo no toki, chichi ni mainichi benkyou saseraremashita."
+  translation="When I was a child, I was forced by my father to study every day."
+/>
+
+<ExampleSentence client:load 
+  japanese="学生は先生に教室を掃除させられました。"
+  romaji="gakusei wa sensei ni kyoushitsu o souji saseraremashita."
+  translation="The students were made to clean the classroom by the teacher."
+/>
+
+Compare this to the standard causative:
+* 母は私に野菜を食べ**させた**。 (Mom *made* me eat veggies - Focus on Mom's action).
+* 私は母に野菜を食べ**させられた**。 (I *was forced* to eat veggies by Mom - Focus on my suffering).
+
+## 2. Conjugation
+
+The conjugation is exactly what it sounds like: change the verb to the causative (`〜せる`), drop the `る`, and add the passive ending (`〜られる`). 
+
+### Group 2 (Ru-Verbs)
+Drop the `る` and add `させられる` (saserareru).
+* 食べる (taberu) ➔ 食べさせられる (tabesaserareru - forced to eat)
+* 見る (miru)      ➔ 見させられる (misaserareru - forced to watch)
+
+### Group 3 (Irregular)
+* 来る (kuru) ➔ 来させられる (kosaserareru - forced to come)
+* する (suru) ➔ させられる (saserareru - forced to do)
+
+<GrammarBox client:load 
+  pattern="[Cast Member] は [Director] に 〜させられる"
+  meaning="I was forced to do [verb] by [someone]."
+  formation="Verb-saserareru"
+  examples={[
+    { japanese: "私は先生に長い作文を書かせられました。", romaji: "watashi wa sensei ni nagai sakubun o kakaseraremashita.", translation: "I was forced by the teacher to write a long essay." },
+    { japanese: "彼は休みの日に会社へ来させられました。", romaji: "kare wa yasumi no hi ni kaisha e kosaseraremashita.", translation: "He was forced to come to the company on his day off." },
+    { japanese: "弟は母に買い物をさせられました。", romaji: "otouto wa haha ni kaimono o saseraremashita.", translation: "My younger brother was made to go shopping by my mother." }
+  ]}
+/>
+
+---
+
+## 3. The Group 1 Shortcut (〜される)
+
+For Group 1 verbs, changing from `U` ➔ `A` + `せる` + `られる` gets very long and tongue-twisting. For example: `書く` ➔ `書かせられる` (kakaserareru).
+
+Because this is a mouthful, most Group 1 verbs use a **shortcut form**.
+**Shortcut Rule:** Change the final `〜u` sound to the `〜a` sound, and add `される` (sareru).
+
+* 書く (kaku) ➔ 書かされる (kakasareru - forced to write)
+* 飲む (nomu) ➔ 飲まされる (nomasareru - forced to drink)
+* 待つ (matsu) ➔ 待たされる (matasareru - forced to wait)
+* 帰る (kaeru) ➔ 帰らされる (kaerasareru - forced to go home)
+
+> [!WARNING]
+> You **cannot** use the shortcut if the Group 1 verb ends in `〜す` (su), like `話す` (hanasu). Why? Because changing it would make `話さされる` (hanasasareru), which sounds terrible with the double "sa". For verbs ending in `す`, you must use the full form: `話させられる`.
+
+<GrammarBox client:load 
+  pattern="[Group 1 Verb-a] + される"
+  meaning="Short form for Group 1 Causative-Passive."
+  formation="Change U-row to A-row + される"
+  examples={[
+    { japanese: "友達に一時間も待たされました。", romaji: "tomodachi ni ichi-jikan mo matasaremashita.", translation: "I was made to wait for an hour by my friend." },
+    { japanese: "先輩にお酒を飲まされました。", romaji: "senpai ni osake o nomasaremashita.", translation: "I was forced to drink alcohol by my senior." },
+    { japanese: "上司に歌を歌わされました。", romaji: "joushi ni uta o utawasaremashita.", translation: "I was made to sing a song by my boss." }
+  ]}
+/>
+
+## 4. Cultural Insight: Workplace Hierarchy and the Causative-Passive
+
+In the Japanese workplace, the causative-passive form is a common way to express the realities of hierarchical relationships (*senpai-kouhai* or *joushi-buka*). 
+
+*   **Social Obligation**: Many tasks that aren't strictly part of a job description—such as staying late, attending drinking parties (*nomikai*), or performing at company events—are often described using the causative-passive. This reflects the pressure to comply with group harmony (*wa*) even when reluctant.
+*   **Venting and Empathy**: Using this form among colleagues often serves as a way to vent frustration while seeking empathy. If a coworker says `残業させられた` (I was made to work overtime), it acknowledges that the situation was out of their control, making it easier for others to offer sympathy.
+
+However, be careful! Using this form when talking *to* your superior about something they made you do would be highly inappropriate, as it explicitly highlights your reluctance and annoyance.
+
+
+## Contextual Dialogues
+
+Let's see Tanaka and Suzuki complaining about their work tasks.
+
+<ConversationDialog client:load 
+  title="Complaining About Work (仕事の愚痴)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, are you going home now? Good work today.", japanese: "田中さん、もう帰るんですか。お疲れ様です。", romaji: "Tanaka-san, mou kaeru n desu ka. Otsukaresama desu." },
+    { speaker: "Tanaka", translation: "Good work. Actually, today I was made to stand and work all day. My legs are tired.", japanese: "お疲れ様。実は今日、一日中立たされて仕事をしたんです。足が疲れました。", romaji: "Otsukaresama. Jitsu wa kyou, ichinichijuu tatasarete shigoto o shita n desu. Ashi ga tsukaremashita." },
+    { speaker: "Suzuki", translation: "Eh? Forced to stand? By the section manager?", japanese: "えっ？立たされたんですか。課長に？", romaji: "E? Tatasareta n desu ka. Kachou ni?" },
+    { speaker: "Tanaka", translation: "Yes. They told me there were not enough chairs in the storage room.", japanese: "はい。倉庫の椅子が足りないと言われて……。", romaji: "Hai. Souko no isu ga tarinai to iwarete......" },
+    { speaker: "Suzuki", translation: "That is terrible. As for me, I am being forced to write English emails now. I want to go home.", japanese: "それはひどいですね。私は今、英語のメールを書かされています。帰りたいです。", romaji: "Sore wa hidoi desu ne. Watashi wa ima, eigo no meeru o kakasarete imasu. Kaeritai desu." },
+    { speaker: "Tanaka", translation: "You are having a tough time too. Do your best!", japanese: "鈴木さんも大変ですね。頑張ってください！", romaji: "Suzuki-san mo taihen desu ne. Ganbatte kudasai!" }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="After School (放課後)"
+  lines={[
+    { speaker: "Hiro", translation: "Hey, why are you so late?", japanese: "ねえ、どうしてそんなに遅かったの？", romaji: "Nee, doushite sonna ni osokatta no?" },
+    { speaker: "Yumi", translation: "I was made to stay after school by the teacher to clean the gym.", japanese: "先生に放課後残らされて、体育館を掃除させられたの。", romaji: "Sensei ni houkago nokorasarete, taiikukan o souji saserareta no." },
+    { speaker: "Hiro", translation: "That's rough. I was also made to redo my math homework.", japanese: "それは大変だったね。僕も数学の宿題をやり直させられたよ。", romaji: "Sore wa taihen datta ne. Boku mo suugaku no shukudai o yarinaosaserareta yo." },
+    { speaker: "Yumi", translation: "It seems we both had a bad day. Let's go get some ice cream.", japanese: "お互いに大変な日だったね。アイスでも食べに行こう。", romaji: "Otagai ni taihen na hi datta ne. Aisu demo tabe ni ikou." },
+    { speaker: "Hiro", translation: "Sounds good! I was made to wait for you, so you're buying!", japanese: "いいよ！君を待たされたんだから、君のおごりね！", romaji: "Ii yo! Kimi o matasareta n da kara, kimi no ogori ne!" }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "The causative-passive means 'was forced to do' and carries a nuance of reluctance or suffering.",
+    "The person forced to act is the subject (私は). The person who forced them is marked with に.",
+    "Conjugation is Verb-Causative + られる (e.g., 食べさせられる).",
+    "Group 1 verbs usually use the shorter Verb-a + される form (飲む ➔ 飲まされる).",
+    "Verbs ending in 'す' (su) must rely on the long form (話す ➔ 話させられる)."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the Causative-Passive form!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the primary function of the causative-passive form?",
+      options: ["To express forcing someone else to do something.", "To respectfully ask for permission.", "To complain about being forced to do something against your will.", "To say you can do an action."],
+      correct: 2,
+      explanation: "Causative-passive means 'I was made to do [X]', heavily implying reluctance."
+    },
+    {
+      question: "What is the FULL causative-passive form of '書く' (kaku)?",
+      options: ["書かえられる", "書かされる", "書かせられる", "書かせれる"],
+      correct: 2,
+      explanation: "The full form adds られる to the causative stem: 書く ➔ 書かせる ➔ 書かせられる."
+    },
+    {
+      question: "What is the common SHORTCUT causative-passive form for '書く' (kaku)?",
+      options: ["書かされる", "書かせる", "書かれる", "書きされる"],
+      correct: 0,
+      explanation: "Group 1 shortcut: change 'u' to 'a' and add される. kaku ➔ kakasareru (書かされる)."
+    },
+    {
+      question: "Which form is NOT correct for the verb '話す' (hanasu - to speak)?",
+      options: ["話させる (causative)", "話される (passive)", "話させられる (causative-passive)", "話さされる (causative-passive shortcut)"],
+      correct: 3,
+      explanation: "Verbs ending in 'su' cannot use the 'sareru' shortcut because 'sa-sa' sounds unnatural. You must use the long form: 話させられる."
+    },
+    {
+      question: "Translate: 'I was forced to wait for an hour by my friend.'",
+      options: ["友達を一時間も待たされました。", "友達に一時間も待たせました。", "私は友達に一時間も待たされました。", "私は友達を一時間待たせられました。"],
+      correct: 2,
+      explanation: "私 (the sufferer) は + 友達 (the compeller) に + 待たされる (short form of forced to wait)."
+    },
+    {
+      question: "What is the causative-passive form of 'する' (to do)?",
+      options: ["しさせられる", "させられる", "される", "しようられる"],
+      correct: 1,
+      explanation: "する becomes させる (causative) ➔ させられる (causative-passive)."
+    },
+    {
+      question: "In the sentence '先生に本を〜', which verb fits 'forced to read' (yomu)?",
+      options: ["読みさせられました", "読まれました", "読ませました", "読まされました"],
+      correct: 3,
+      explanation: "読む (Group 1) ➔ 読まされる (short form causative-passive) ➔ 読まされました."
+    },
+    {
+      question: "What is the causative-passive form of '来る' (kuru)?",
+      options: ["こらされる", "きさせられる", "こらせられる", "こさせられる"],
+      correct: 3,
+      explanation: "来る ➔ 来させる (kosaseru) ➔ 来させられる (kosaserareru)."
+    },
+    {
+      question: "What is the difference between '飲まされました' and '飲みました'?",
+      options: ["飲まされました means 'I drank voluntarily'.", "飲まされました means 'I was forced to drink'.", "飲まされました means 'I made someone drink'.", "飲まされました means 'I can drink'."],
+      correct: 1,
+      explanation: "飲まされる is the causative-passive suffix indicating forced coercion."
+    },
+    {
+      question: "What is the causative-passive form of Group 2 verb '食べる' (taberu)?",
+      options: ["食べらされる", "食べさせられる", "食べられる", "食べさせる"],
+      correct: 1,
+      explanation: "Group 2 ONLY uses the long form: 食べさせる (causative) ➔ 食べさせられる."
+    },
+    {
+      question: "In the dialogue, why does Tanaka say '立たされて仕事をした'?",
+      options: ["He stood up by himself.", "He was forced to stand and work (due to no chairs).", "He forced Suzuki to stand.", "He can stand and work."],
+      correct: 1,
+      explanation: "立つ (tatsu - to stand) ➔ 立たされる (forced to stand). He uses the te-form (立たされて) to connect it to doing work."
+    },
+    {
+      question: "Select the correct particle pair for: '(I) was forced to buy a bag by my sister.' (___) 妹 (___) カバンを買わされた。",
+      options: ["私に / 妹は", "私は / 妹に", "私が / 妹が", "私に / 妹を"],
+      correct: 1,
+      explanation: "私(the victim) は + 妹(the enforcer) に."
+    },
+    {
+      question: "What is the shortcut causative-passive for '走る' (hashiru - to run)?",
+      options: ["走らせられる", "走れる", "走らされる", "走らせる"],
+      correct: 2,
+      explanation: "走る is a Group 1 verb (u-verb) despite ending in iru. hashiru ➔ hashiraseru (走らせる) ➔ hashirasareru (走らされる)."
+    },
+    {
+      question: "Translate: 'He was forced to come to the company on Sunday.'",
+      options: ["彼は日曜日に会社に来させられました。", "彼は日曜日に会社へ来られました。", "彼は日曜日に会社に来させました。", "彼は会社に日曜日へ来させられました。"],
+      correct: 0,
+      explanation: "彼 (He/Victim) は + 日曜日に + 会社に + 来させられました (kuru = kosaserareru)."
+    },
+    {
+      question: "If '泣く' (naku) is to cry, what does '泣かされた' mean?",
+      options: ["I cried happily.", "I was made to cry (someone brought me to tears).", "I can cry.", "I did not cry."],
+      correct: 1,
+      explanation: "泣かされる is the causative-passive indicating someone forcefully caused you to cry."
+    }
+  ]}
+/>

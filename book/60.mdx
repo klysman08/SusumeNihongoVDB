@@ -1,0 +1,50 @@
+---
+title: "Chapter 60 — Degree, Comparison, and Tendencies"
+level: "N3"
+chapter: 60
+unit: 5
+unitTitle: "Written and Lexical Japanese"
+topics: "Proportional change, comparison, one-way trends, frequent tendencies, slight conditions, and characteristic behaviour"
+description: "Describe degree and developing tendencies with ば〜ほど, に比べて, 一方だ, がち, 気味, and っぽい."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Degree, Comparison, and Tendencies" level="N3" chapter={60} objectives={["Describe two quantities changing together.", "Separate objective comparison from a one-direction trend.", "Choose among repeated tendency, mild condition, and characteristic -ish quality."]} />
+<SectionIntro level="N3">N3 descriptions often track change rather than state a simple comparison. They also distinguish what happens repeatedly, what is slightly present now, and what feels characteristic of a person or thing.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "傾向", reading: "けいこう", meaning: "tendency; trend", type: "noun" }, { word: "割合", reading: "わりあい", meaning: "proportion", type: "noun" }, { word: "上昇", reading: "じょうしょう", meaning: "rise; increase", type: "noun" }, { word: "減少", reading: "げんしょう", meaning: "decrease", type: "noun" }, { word: "比較する", reading: "ひかくする", meaning: "to compare", type: "verb" }, { word: "不安定", reading: "ふあんてい", meaning: "unstable", type: "adj" }]} />
+<PatternCompare client:load title="Static comparison or moving trend?" items={[
+  { pattern: "V-ばV-るほど", meaning: "the more…, the more…", use: "Two degrees change proportionally. Repeat the same verb or adjective in conditional and plain form.", example: "使えば使うほど、便利さが分かる。", translation: "The more you use it, the more you understand its convenience.", register: "proportional" },
+  { pattern: "Nに比べて", meaning: "compared with", use: "Establishes an explicit comparison standard.", example: "去年に比べて、利用者が二割増えた。", translation: "Compared with last year, users increased by twenty per cent.", register: "comparison" },
+  { pattern: "V-る一方だ", meaning: "continue to; increasingly", use: "A change keeps moving in one direction, frequently an undesirable one.", example: "空き家は増える一方だ。", translation: "The number of vacant houses keeps increasing.", register: "one-way trend" }
+]} />
+<PatternCompare client:load title="What kind of tendency?" items={[
+  { pattern: "stem + がち", meaning: "tend to; frequently", use: "A recurring, usually undesirable tendency. Often describes behaviour or repeated situations.", example: "忙しいと、食事が不規則になりがちだ。", translation: "When busy, meals tend to become irregular.", register: "recurring" },
+  { pattern: "stem／N + 気味", meaning: "slightly; showing signs of", use: "A mild present condition or recent tendency, often physical or negative.", example: "最近、少し疲れ気味です。", translation: "I have been feeling a little tired lately.", register: "mild condition" },
+  { pattern: "N／stem + っぽい", meaning: "-ish; prone to; characteristic", use: "An informal perceived quality, appearance, or disposition.", example: "この服は汚れっぽい色なので避けよう。", translation: "This colour looks as though it will show dirt easily, so I’ll avoid it.", register: "informal quality" }
+]} />
+<CommonMistake title="がち and 気味 do not describe the same time scale"><p><strong>忘れがちだ</strong> describes repeated forgetting. <strong>忘れ気味だ</strong> describes a recent or mild tendency. Choose according to whether the focus is recurrence or current condition.</p></CommonMistake>
+<PracticeBlock client:load instructions="Describe the comparison or tendency precisely." items={[{ prompt: "The more you read, the faster you become.", answer: "読めば読むほど、速く読めるようになります。", explanation: "ば〜ほど links proportional development." }, { prompt: "Compared with the city, this town has lower rent.", answer: "都会に比べて、この町は家賃が安いです。", explanation: "に比べて establishes the comparison standard." }, { prompt: "You have been slightly feverish recently.", answer: "最近、少し熱っぽいです。", explanation: "っぽい describes the perceived feverish quality." }]} />
+<ReadingPractice client:load title="Changes in the town centre" genre="survey commentary" targetTime="4 minutes" passage={<>十年前に比べて、駅前に住む若い人の割合が増えました。交通が便利になればなるほど、中心部の人気も高くなっています。一方で、昔からある店は減る一方です。新しい住民は地域の活動に参加する機会が少なく、近所との関係も弱くなりがちだという意見があります。しかし、最近は若い世代が運営する行事も増え気味で、変化を悪いことだけだと考えるべきではありません。</>} glossary={[{ word: "中心部", reading: "ちゅうしんぶ", meaning: "central area" }, { word: "運営する", reading: "うんえいする", meaning: "to operate; organise" }]} questions={[{ question: "Which change is described as continuing in one direction?", answer: "Long-established shops continue to decrease.", explanation: "減る一方です marks the one-way trend." }, { question: "What mild recent tendency offers a more positive view?", answer: "Events run by younger generations have been increasing.", explanation: "増え気味 frames a recent emerging tendency." }]} />
+<ListeningPractice client:load title="A study tendency" situation="Listen for recurrence and proportional improvement." script="難しい問題は後回しにしがちでしたが、毎日少しずつ解けば解くほど、自信がついてきました。" questions={[{ question: "What repeated habit changed, and what grew?", answer: "The speaker tended to postpone hard problems; confidence grew through solving them daily.", explanation: "がち marks recurrence and ば〜ほど proportional change." }]} />
+<ChapterSummary takeaways={["ば〜ほど links proportional change; に比べて supplies a comparison standard.", "一方だ tracks a continuing one-direction change.", "がち is recurring tendency, 気味 is a mild present condition, and っぽい is an informal characteristic quality."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "練習すればする＿＿、上手になる。", options: ["一方", "ほど", "気味", "っぽく"], correct: 1, explanation: "ば〜ほど expresses proportional change." },
+  { question: "先月＿＿、売上が増えた。", options: ["に比べて", "にとって", "に対して", "において"], correct: 0, explanation: "先月 is the comparison standard." },
+  { question: "物価は上がる＿＿だ。", options: ["気味", "がち", "一方", "ほど"], correct: 2, explanation: "一方だ marks a continuing trend in one direction." },
+  { question: "忙しい人は運動不足になり＿＿。", options: ["っぽい", "気味", "がちだ", "一方を"], correct: 2, explanation: "がち describes a recurring undesirable tendency." },
+  { question: "最近、風邪＿＿です。", options: ["一方", "気味", "ほど", "に比べて"], correct: 1, explanation: "風邪気味 means showing mild signs of a cold." },
+  { question: "子ども＿＿デザイン", options: ["がち", "気味", "っぽい", "一方"], correct: 2, explanation: "っぽい describes a childlike quality." },
+  { question: "Which focuses on repeated behaviour?", options: ["忘れがち", "忘れ気味", "子どもっぽい", "増える一方"], correct: 0, explanation: "がち describes repeated tendency." },
+  { question: "The more expensive it is, the better is NOT always true: 高ければ高い＿＿良いとは限らない。", options: ["気味", "ほど", "一方", "っぽく"], correct: 1, explanation: "高ければ高いほど supplies the proportional frame." }
+]} />

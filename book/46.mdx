@@ -1,0 +1,132 @@
+---
+title: "Chapter 46 — Continuing and Repeated Actions"
+level: "N3"
+chapter: 46
+unit: 2
+unitTitle: "Time, Change, and Plans"
+topics: "Repeated action, intervals, and linked gradual change"
+description: "Describe actions that continue, repeat, and change gradually with 〜続ける, 〜たびに, 〜ごとに, 〜につれて, and 〜にしたがって."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import CultureNote from '../../components/book/CultureNote.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Continuing and Repeated Actions" level="N3" chapter={46} objectives={[
+  "Use 〜続ける and 繰り返す to describe sustained and repeated actions.",
+  "Distinguish 〜たびに from 〜ごとに for recurrence and intervals.",
+  "Use 〜につれて and 〜にしたがって for gradual linked changes.",
+  "Choose expressions that match an intentional action, a regular interval, or a natural trend."
+]} />
+
+<SectionIntro level="N3">
+Intermediate Japanese often describes patterns rather than one-time events. You may want to say that you keep practicing, feel nervous every time you speak, clean the office every week, or notice that your understanding grows as you read more. This chapter gives you the tools to express those repeated and gradual relationships.
+</SectionIntro>
+
+<VocabTable data={[
+  { word: "繰り返す", reading: "くりかえす", romaji: "kurikaesu", meaning: "to repeat", type: "verb" },
+  { word: "傾向", reading: "けいこう", romaji: "keikou", meaning: "tendency; trend", type: "noun" },
+  { word: "徐々に", reading: "じょじょに", romaji: "jojo ni", meaning: "gradually", type: "adv" },
+  { word: "経験", reading: "けいけん", romaji: "keiken", meaning: "experience", type: "noun" },
+  { word: "自信", reading: "じしん", romaji: "jishin", meaning: "confidence", type: "noun" }
+]} />
+
+## 1. Keep doing it, or do it again
+
+<GrammarBox client:load pattern="V-ます stem + 続ける" meaning="Continue doing V." formation="Remove ます from the polite form and add 続ける." examples={[
+  { japanese: "毎日漢字を覚え続けています。", romaji: "mainichi kanji o oboe tsuzukete imasu.", translation: "I continue memorizing kanji every day." },
+  { japanese: "雨が降り続いたので、試合は中止になった。", romaji: "ame ga furitsuzuita node, shiai wa chuushi ni natta.", translation: "Because the rain kept falling, the match was cancelled." },
+  { japanese: "難しくても、話し続けてみてください。", romaji: "muzukashikute mo, hanashitsuzukete mite kudasai.", translation: "Even if it is difficult, please keep trying to speak." }
+]} />
+
+`繰り返す` means to repeat an action or event, often deliberately: `同じ発音を繰り返す` (repeat the same pronunciation). It does not necessarily mean the action is continuous without stopping.
+
+<CommonMistake title="続ける is not simply 'many times'">
+  <p>Use `〜続ける` for sustained continuation. Use `繰り返す` when the same action happens again and again. A learner can `練習を続ける` over months and `同じ文を繰り返す` during one exercise.</p>
+</CommonMistake>
+
+## 2. Every time, or at every interval
+
+<ParticleCompare client:load title="〜たびに and 〜ごとに" items={[
+  { label: "V-るたびに", role: "each time an event happens", example: "この歌を聞くたびに、旅行を思い出す。", note: "Every time I hear this song, I remember the trip." },
+  { label: "N のたびに", role: "on each occasion", example: "試験のたびに、緊張する。", note: "I get nervous at every exam." },
+  { label: "N ごとに", role: "at a regular interval or for each unit", example: "一週間ごとに部屋を掃除する。", note: "I clean the room every week." },
+  { label: "N ごとに", role: "each item in a set", example: "人ごとに考え方が違う。", note: "Each person thinks differently." }
+]} />
+
+`〜たびに` fits a recurring event and its recurring result. `〜ごとに` is especially natural with measurable units such as days, pages, stations, or groups.
+
+## 3. Changes that move together
+
+<GrammarBox client:load pattern="N に つれて / V-る に つれて" meaning="As N changes, another change happens gradually along with it." formation="Noun + につれて; dictionary verb + につれて." examples={[
+  { japanese: "日本語を勉強するにつれて、聞き取れる言葉が増えてきた。", romaji: "nihongo o benkyou suru ni tsurete, kikitoreru kotoba ga fuete kita.", translation: "As I study Japanese, the words I can catch have gradually increased." },
+  { japanese: "季節が変わるにつれて、日が短くなる。", romaji: "kisetsu ga kawaru ni tsurete, hi ga mijikaku naru.", translation: "As the season changes, the days become shorter." }
+]} />
+
+<GrammarBox client:load pattern="N に したがって / V-る に したがって" meaning="As; in accordance with. A formal expression for a gradual change or following a rule." formation="Noun + にしたがって; dictionary verb + にしたがって." examples={[
+  { japanese: "年齢が上がるにしたがって、責任も大きくなる。", romaji: "nenrei ga agaru ni shitagatte, sekinin mo ookiku naru.", translation: "As people get older, their responsibilities also increase." },
+  { japanese: "案内にしたがって、こちらにお並びください。", romaji: "annai ni shitagatte, kochira ni onarabi kudasai.", translation: "Please line up here according to the instructions." }
+]} />
+
+`〜につれて` is common in everyday descriptions of natural trends. `〜にしたがって` is slightly more formal and can also mean “following” an instruction, rule, or plan.
+
+## 4. Context dialogue: noticing progress
+
+<ConversationDialog client:load title="After a speaking practice session" lines={[
+  { speaker: "Emi", japanese: "毎週会話練習を続けているけど、まだ緊張する。", romaji: "maishuu kaiwa renshuu o tsuzukete iru kedo, mada kinchou suru.", translation: "I keep practicing conversation every week, but I still get nervous." },
+  { speaker: "Daichi", japanese: "でも、話すたびに前より長く説明できているよ。", romaji: "demo, hanasu tabi ni mae yori nagaku setsumei dekite iru yo.", translation: "But every time you speak, you can explain for longer than before." },
+  { speaker: "Emi", japanese: "本当？勉強を続けるにつれて、自信も出てくるかな。", romaji: "hontou? benkyou o tsuzukeru ni tsurete, jishin mo detekuru kana.", translation: "Really? I wonder if confidence will come as I continue studying." },
+  { speaker: "Daichi", japanese: "もちろん。一か月ごとに録音を聞き返したら、変化が分かると思う。", romaji: "mochiron. ikkagetsu goto ni rokuon o kikikaeshitara, henka ga wakaru to omou.", translation: "Of course. If you listen back to your recordings every month, I think you will notice the change." }
+]} />
+
+<CultureNote title="Progress is often described as a process" ja="継続">
+  <p>In study, work, and training contexts, Japanese speakers frequently value steady continuation: <strong>続けることが大切です</strong> (“Continuing is important”). Expressions such as <strong>少しずつ</strong>, <strong>徐々に</strong>, and <strong>〜につれて</strong> help describe progress without claiming instant results.</p>
+</CultureNote>
+
+## 5. Guided practice and reading
+
+1. “Keep reading the article.”
+2. “Every time I visit Kyoto, I discover something new.”
+3. “We have a meeting every two weeks.”
+4. “As the number of users increases, the service becomes more convenient.”
+5. “Please follow the instructions.”
+
+<details><summary>Check your answers</summary><ol><li>`記事を読み続けてください。`</li><li>`京都を訪れるたびに、新しい発見がある。`</li><li>`二週間ごとに会議があります。`</li><li>`利用者が増えるにつれて、サービスは便利になる。`</li><li>`案内にしたがってください。`</li></ol></details>
+
+> 私は発音をよくするために、短い会話を毎日繰り返して練習しています。最初は録音を聞くたびに自分の間違いが気になりました。しかし、練習を続けるにつれて、少しずつ自然に話せるようになってきました。今は一週間ごとに録音を比べて、次に直したい点を決めています。
+
+**Reading check:** Find the repeated action, the emotional reaction that happens every time, the gradual change, and the regular interval.
+
+Translation: “To improve my pronunciation, I practice by repeating short conversations every day. At first, every time I listened to a recording, I worried about my mistakes. However, as I continued practicing, I gradually became able to speak more naturally. Now I compare recordings every week and decide what I want to improve next.”
+
+## 6. Communication and flashcard review
+
+Describe a skill you are building. Include one action you `〜続けている`, one event that happens `〜たびに`, and one gradual result with `〜につれて`.
+
+**Review flashcards:** `〜続ける`; `繰り返す`; `〜たびに`; `〜ごとに`; `〜につれて`; `〜にしたがって`.
+
+<ChapterSummary takeaways={[
+  "〜続ける describes a sustained action; 繰り返す describes repetition.",
+  "〜たびに links each occurrence of an event to a repeated result.",
+  "〜ごとに marks a regular interval or each unit in a set.",
+  "〜につれて describes gradual linked change; 〜にしたがって is more formal and can mean following instructions.",
+  "These patterns help describe habits, trends, and long-term progress."
+]} />
+
+## Knowledge Check
+
+<QuizBlock client:load questions={[
+  { question: "Which means 'keep practicing'?", options: ["練習を繰り返す", "練習し続ける", "練習するたびに", "練習ごとに"], correct: 1, explanation: "Verb stem + 続ける expresses continuing an action." },
+  { question: "Which is most natural for a regular interval?", options: ["三日たびに", "三日ごとに", "三日につれて", "三日にしたがって"], correct: 1, explanation: "ごとに is used for intervals such as every three days." },
+  { question: "What does 歌を聞くたびに、友達を思い出す mean?", options: ["I will hear the song", "Every time I hear the song, I remember my friend", "I keep hearing the song continuously", "I follow the song"], correct: 1, explanation: "たびに links each occurrence to the repeated result." },
+  { question: "Which expression is suited to a natural, gradual trend?", options: ["〜につれて", "〜るな", "〜てしまう", "〜たところ"], correct: 0, explanation: "につれて describes changes that progress together over time." },
+  { question: "Which meaning of 〜にしたがって appears in 案内にしたがってください?", options: ["In the middle of", "Every time", "Following the instructions", "Just after"], correct: 2, explanation: "にしたがって can mean 'in accordance with' an instruction or rule." }
+]} />

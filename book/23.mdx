@@ -1,0 +1,284 @@
+---
+title: "Chapter 23 — N4 Vocabulary (Expanding Your Word Bank)"
+level: "N4"
+chapter: 23
+description: "Expand your Japanese vocabulary with thematic words for family (humble vs. polite), the workplace, society, and expressing abstract emotions and feelings."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+import FamilyTable from '../../components/book/FamilyTable.tsx'
+
+<ChapterHeader 
+  title="N4 Vocabulary (Expanding Your Word Bank)"
+  level="N4"
+  chapter={23}
+  objectives={[
+    "Learn vocabulary for family members and relatives.",
+    "Understand essential terms for school and the workplace.",
+    "Master vocabulary for expressing emotions and describing people.",
+    "Practice using these words in common N4 contexts."
+  ]}
+/>
+
+<SectionIntro level="N4">
+As you advance to N4, grammar alone isn't enough; you need the words to fuel those sentence structures! This chapter organizes essential N4 vocabulary thematically. By grouping words into categories like family, work, and emotions, you can memorize them more naturally through association.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/23-n4-vocabulary-word-bank.webp"
+  alt="Anime pixel-art illustration of an N4 vocabulary word bank connecting family, workplace, and emotion themes."
+  width={1672}
+  height={941}
+/>
+
+## 1. Family & Relatives (家族と親戚)
+
+In Japanese, there are two sets of words for family members: **humble words** (used when talking about your *own* family) and **polite words** (used when talking about *someone else's* family). At N4, you need to know both sets.
+
+<FamilyTable client:load data={[
+  { meaning: 'Grandfather', humble: { word: '祖父', reading: 'そふ', romaji: 'sofu' }, polite: { word: 'おじいさん', romaji: 'ojiisan' } },
+  { meaning: 'Grandmother', humble: { word: '祖母', reading: 'そぼ', romaji: 'sobo' }, polite: { word: 'おばあさん', romaji: 'obaasan' } },
+  { meaning: 'Father', humble: { word: '父', reading: 'ちち', romaji: 'chichi' }, polite: { word: 'お父さん', reading: 'おとうさん', romaji: 'otousan' } },
+  { meaning: 'Mother', humble: { word: '母', reading: 'はは', romaji: 'haha' }, polite: { word: 'お母さん', reading: 'おかあさん', romaji: 'okaasan' } },
+  { meaning: 'Older brother', humble: { word: '兄', reading: 'あに', romaji: 'ani' }, polite: { word: 'お兄さん', reading: 'おにいさん', romaji: 'oniisan' } },
+  { meaning: 'Older sister', humble: { word: '姉', reading: 'あね', romaji: 'ane' }, polite: { word: 'お姉さん', reading: 'おねえさん', romaji: 'oneesan' } },
+  { meaning: 'Younger brother', humble: { word: '弟', reading: 'おとうと', romaji: 'otouto' }, polite: { word: '弟さん', reading: 'おとうとさん', romaji: 'otoutosan' } },
+  { meaning: 'Younger sister', humble: { word: '妹', reading: 'いもうと', romaji: 'imouto' }, polite: { word: '妹さん', reading: 'いもうとさん', romaji: 'imoutosan' } },
+  { meaning: 'Wife', humble: { word: '妻 / 家内', reading: 'つま / かない', romaji: 'tsuma / kanai' }, polite: { word: '奥さん', reading: 'おくさん', romaji: 'okusan' } },
+  { meaning: 'Husband', humble: { word: '夫 / 主人', reading: 'おっと / しゅじん', romaji: 'otto / shujin' }, polite: { word: 'ご主人', reading: 'ごしゅじん', romaji: 'goshujin' } }
+]} />
+
+<ExampleSentence client:load 
+  japanese="私の父はエンジニアですが、田中さんのお父さんは医者です。"
+  romaji="watashi no chichi wa enjinia desu ga, Tanaka-san no otousan wa isha desu."
+  translation="My father is an engineer, but Mr. Tanaka's father is a doctor."
+/>
+<ExampleSentence client:load 
+  japanese="週末は妻と一緒に買い物に行きます。"
+  romaji="shuumatsu wa tsuma to issho ni kaimono ni ikimasu."
+  translation="On weekends, I go shopping with my wife."
+/>
+<ExampleSentence client:load 
+  japanese="お姉さんはどこに住んでいますか。"
+  romaji="oneesan wa doko ni sunde imasu ka."
+  translation="Where does your older sister live?"
+/>
+
+### Cultural Insight: Family Hierarchy & Address
+
+In Japan, the way you address family members depends heavily on birth order. It is very common to call older siblings "Oniisan" (older brother) or "Oneesan" (older sister) instead of their names, even within the family. However, you rarely address younger siblings by a title; you just use their name followed by "-kun" or "-chan."
+
+When speaking to outsiders, you *always* use the humble terms (Chichi, Haha, etc.) for your own family, regardless of their age or status, because you are lowering your family's status to show respect to the listener.
+
+## 2. Workplace & Society (職場と社会)
+
+When working or interacting in Japanese society, you will frequently hear these nouns and verbs.
+
+<VocabTable data={[
+  { word: '社長', reading: 'しゃちょう', romaji: 'shachou', meaning: 'Company President', type: 'Noun' },
+  { word: '部長', reading: 'ぶちょう', romaji: 'buchou', meaning: 'Department Manager', type: 'Noun' },
+  { word: '課長', reading: 'かちょう', romaji: 'kachou', meaning: 'Section Manager', type: 'Noun' },
+  { word: '社員', reading: 'しゃいん', romaji: 'shain', meaning: 'Company Employee', type: 'Noun' },
+  { word: '会議', reading: 'かいぎ', romaji: 'kaigi', meaning: 'Meeting', type: 'Noun' },
+  { word: '出張', reading: 'しゅっちょう', romaji: 'shucchou', meaning: 'Business Trip', type: 'Noun' },
+  { word: '残業', reading: 'ざんぎょう', romaji: 'zangyou', meaning: 'Overtime Work', type: 'Noun' },
+  { word: '給料', reading: 'きゅうりょう', romaji: 'kyuuryou', meaning: 'Salary', type: 'Noun' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="明日の会議は午後三時から始まります。"
+  romaji="ashita no kaigi wa gogo san-ji kara hajimarimasu."
+  translation="Tomorrow's meeting starts from 3:00 PM."
+/>
+<ExampleSentence client:load 
+  japanese="来週、新しいプロジェクトのためにアメリカへ出張します。"
+  romaji="raishuu, atarashii purojekuto no tame ni amerika e shucchou shimasu."
+  translation="Next week, I will go on a business trip to America for the new project."
+/>
+<ExampleSentence client:load 
+  japanese="最近、残業が多くて、とても疲れています。"
+  romaji="saikin, zangyou ga ookute, totemo tsukarete imasu."
+  translation="Lately, I've had a lot of overtime work, so I am very tired."
+/>
+
+## 3. Emotions & Description (感情と様子)
+
+Expressing precisely how you feel or describing someone's character is vital for deep communication. 
+
+<VocabTable data={[
+  { word: '嬉しい', reading: 'うれしい', romaji: 'ureshii', meaning: 'Happy, glad', type: 'I-adj' },
+  { word: '悲しい', reading: 'かなしい', romaji: 'kanashii', meaning: 'Sad', type: 'I-adj' },
+  { word: '寂しい', reading: 'さびしい', romaji: 'sabishii', meaning: 'Lonely', type: 'I-adj' },
+  { word: '怖い', reading: 'こわい', romaji: 'kowai', meaning: 'Scary, frightened', type: 'I-adj' },
+  { word: '恥ずかしい', reading: 'はずかしい', romaji: 'hazukashii', meaning: 'Embarrassing, shy', type: 'I-adj' },
+  { word: '優しい', reading: 'やさしい', romaji: 'yasashii', meaning: 'Kind, gentle', type: 'I-adj' },
+  { word: '厳しい', reading: 'きびしい', romaji: 'kibishii', meaning: 'Strict, severe', type: 'I-adj' },
+  { word: '真面目な', reading: 'まじめな', romaji: 'majime na', meaning: 'Serious, earnest', type: 'Na-adj' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="テストに合格して、とても嬉しいです。"
+  romaji="tesuto ni goukaku shite, totemo ureshii desu."
+  translation="I passed the test, so I am very happy."
+/>
+<ExampleSentence client:load 
+  japanese="友達が転校してしまって、今は寂しいです。"
+  romaji="tomodachi ga tenkou shite shimatte, ima wa sabishii desu."
+  translation="My friend transferred schools, so now I am lonely."
+/>
+<ExampleSentence client:load 
+  japanese="山田先生は優しいですが、時には厳しいです。"
+  romaji="Yamada-sensei wa yasashii desu ga, toki ni wa kibishii desu."
+  translation="Professor Yamada is kind, but sometimes strict."
+/>
+
+---
+
+## Contextual Dialogues
+
+### Dialogue 1: Catching Up at Work (職場で)
+
+<ConversationDialog client:load 
+  title="Catching Up at Work"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, you look tired. Did you have a lot of overtime yesterday?", japanese: "鈴木さん、少し疲れているようですね。昨日は残業が多かったですか。", romaji: "Suzuki-san, sukoshi tsukarete iru you desu ne. Kinou wa zangyou ga ookatta desu ka." },
+    { speaker: "Suzuki", translation: "Yes, I was preparing for a meeting with the section manager.", japanese: "はい、課長との会議の準備をしていました。", romaji: "Hai, kachou to no kaigi no junbi o shite imashita." },
+    { speaker: "Tanaka", translation: "That must have been tough. By the way, how is your wife?", japanese: "それは大変でしたね。ところで、奥さんはお元気ですか。", romaji: "Sore wa taihen deshita ne. Tokorode, okusan wa ogenki desu ka." },
+    { speaker: "Suzuki", translation: "My wife is fine. But our son is sick, so I am a bit worried.", japanese: "妻は元気です。でも、息子が病気になってしまって、少し心配です。", romaji: "Tsuma wa genki desu. Demo, musuko ga byouki ni natte shimatte, sukoshi shinpai desu." },
+    { speaker: "Tanaka", translation: "Oh no... Please go home early today to be with your family.", japanese: "それは大変ですね。今日は早く帰って、家族といてください。", romaji: "Sore wa taihen desu ne. Kyou wa hayaku kaette, kazoku to ite kudasai." }
+  ]}
+/>
+
+### Dialogue 2: Talking About Family (家族の話)
+
+<ConversationDialog client:load 
+  title="Talking About Family"
+  lines={[
+    { speaker: "Abe", translation: "Sato, do you have any siblings?", japanese: "佐藤さん、兄弟がいますか。", romaji: "Satou-san, kyoudai ga imasu ka." },
+    { speaker: "Sato", translation: "Yes, I have an older sister and a younger brother.", japanese: "はい、姉と弟がいます。", romaji: "Hai, ane to otouto ga imasu." },
+    { speaker: "Abe", translation: "What does your older sister do?", japanese: "お姉さんは何をしていますか。", romaji: "Oneesan wa nani o shite imasu ka." },
+    { speaker: "Sato", translation: "My sister is a company employee. She is very serious (earnest).", japanese: "姉は会社員です。とても真面目な人ですよ。", romaji: "Ane wa kaishain desu. Totemo majimena hito desu yo." },
+    { speaker: "Abe", translation: "I see. My brother is still a student, so he is often busy with exams.", japanese: "そうですか。私の弟はまだ学生なので、よく試験で忙しいです。", romaji: "Sou desu ka. Watashi no otouto wa mada gakusei nanode, yoku shiken de isogashii desu." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "In Japanese, you use humble words (e.g., 父, 妻) for your own family, and polite words (e.g., お父さん, 奥さん) for other people's families.",
+    "Corporate hierarchy relies on specific vocabulary: 社長 (President), 部長 (Dept. Manager), 課長 (Section Manager).",
+    "Actions like 会議 (meeting), 出張 (business trip), and 残業 (overtime) are essential for discussing work life.",
+    "Words like 嬉しい (happy) and 寂しい (lonely) express your internal feelings vividly.",
+    "The way you address family members reflects Japanese social hierarchy and respect levels."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the N4 vocabulary introduced in this chapter!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which word should you use to talk about YOUR OWN mother to a stranger?",
+      options: ["母", "お母さん", "ママ", "奥さん"],
+      correct: 0,
+      explanation: "You use 母 (haha) to refer to your own mother when speaking with someone outside your family."
+    },
+    {
+      question: "Which word means 'Meeting'?",
+      options: ["授業", "給料", "残業", "会議"],
+      correct: 3,
+      explanation: "会議 (kaigi) means meeting. 授業 is class, 給料 is salary, and 残業 is overtime."
+    },
+    {
+      question: "How do you refer to someone else's husband?",
+      options: ["主人", "おっと", "ご主人", "奥さん"],
+      correct: 2,
+      explanation: "ご主人 (goshujin) is the respectful term for someone else's husband."
+    },
+    {
+      question: "What does '出張' (shucchou) mean?",
+      options: ["Commute", "Business trip", "Absence", "Promotion"],
+      correct: 1,
+      explanation: "出張 (shucchou) means a business trip."
+    },
+    {
+      question: "Which adjective means 'Strict'?",
+      options: ["優しい", "寂しい", "厳しい", "嬉しい"],
+      correct: 2,
+      explanation: "厳しい (kibishii) means strict. 優しい is kind, 寂しい is lonely, and 嬉しい is happy."
+    },
+    {
+      question: "What is the reading of '部長' (Department Manager)?",
+      options: ["しゃちょう", "かちょう", "ぶちょう", "てんちょう"],
+      correct: 2,
+      explanation: "部長 is read as 'buchou'."
+    },
+    {
+      question: "Which word implies 'Overtime work'?",
+      options: ["給料", "会社員", "残業", "出張"],
+      correct: 2,
+      explanation: "残業 (zangyou) is overtime work. ('Remaining work')"
+    },
+    {
+      question: "Translate: 'テストに合格して、とても嬉しいです。'",
+      options: ["I failed the test, so I am very sad.", "I passed the test, so I am very happy.", "I am studying hard for the test.", "The test was very difficult."],
+      correct: 1,
+      explanation: "嬉しい (ureshii) means happy. 合格して (passed)."
+    },
+    {
+      question: "What does '真面目' (majime) mean?",
+      options: ["Funny", "Serious / Earnest", "Lazy", "Scary"],
+      correct: 1,
+      explanation: "真面目 (majime) means serious, honest, or earnest."
+    },
+    {
+      question: "In the dialogue, why is Suzuki worried?",
+      options: ["He has too much overtime.", "His wife left him.", "His son is sick.", "He fired the section manager."],
+      correct: 2,
+      explanation: "Suzuki says '息子が病気になってしまって、少し心配です' (My son became sick, so I am a bit worried)."
+    },
+    {
+      question: "How do you refer to your OWN wife?",
+      options: ["奥さん", "奥様", "妻 (つま)", "ご主人"],
+      correct: 2,
+      explanation: "妻 (tsuma), or 家内 (kanai), is used for your own wife."
+    },
+    {
+      question: "What is the meaning of '恥ずかしい' (hazukashii)?",
+      options: ["Embarrassing / Shy", "Scary / Frightened", "Happy / Glad", "Loud / Noisy"],
+      correct: 0,
+      explanation: "恥ずかしい means embarrassing or feeling shy."
+    },
+    {
+      question: "What does '給料' (kyuuryou) mean?",
+      options: ["Taxes", "Salary", "Bonus", "Insurance"],
+      correct: 1,
+      explanation: "給料 translates directly to salary."
+    },
+    {
+      question: "How do you read '祖父' (my grandfather)?",
+      options: ["そぼ", "そふ", "おじいさん", "ちち"],
+      correct: 1,
+      explanation: "祖父 is read as 'sofu'."
+    },
+    {
+      question: "Which of these is the lowest rank in the standard Japanese corporate hierarchy?",
+      options: ["社長", "部長", "課長", "社員"],
+      correct: 3,
+      explanation: "社員 (shain) just means an employee. The ranks usually go: 社員 -> 課長 (Section Manager) -> 部長 (Department Manager) -> 社長 (President)."
+    }
+  ]}
+/>

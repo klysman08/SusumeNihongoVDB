@@ -1,0 +1,47 @@
+---
+title: "Chapter 56 — Advice and Qualified Judgement"
+level: "N3"
+chapter: 56
+unit: 4
+unitTitle: "Conditions and Nuance"
+topics: "Moral advice, reassurance, partial negation, possibility, and limits on generalisation"
+description: "Make careful judgements with べき, ことはない, わけではない, ないことはない, and とは限らない."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Advice and Qualified Judgement" level="N3" chapter={56} objectives={["Distinguish moral recommendation from practical advice.", "Reassure someone that an action is unnecessary.", "Reject only part of a claim instead of making a new absolute statement."]} />
+<SectionIntro level="N3">N3 communication often rewards restraint. These patterns let you recommend strongly, remove unnecessary pressure, admit limited possibility, and correct an overgeneralisation without rejecting everything.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "判断", reading: "はんだん", meaning: "judgement", type: "noun" }, { word: "責任", reading: "せきにん", meaning: "responsibility", type: "noun" }, { word: "必ずしも", reading: "かならずしも", meaning: "not necessarily", type: "adv" }, { word: "一般的", reading: "いっぱんてき", meaning: "general; typical", type: "adj" }, { word: "誤解", reading: "ごかい", meaning: "misunderstanding", type: "noun" }, { word: "無理", reading: "むり", meaning: "unreasonable; impossible", type: "adj" }]} />
+<PatternCompare client:load title="Recommendation or reassurance?" items={[
+  { pattern: "V-るべきだ／べきではない", meaning: "should; ought to / should not", use: "A strong judgement based on duty, principle, or expected conduct. It can sound imposing when aimed directly at another person.", example: "重要な変更は、利用者に説明すべきだ。", translation: "Important changes should be explained to users.", register: "strong judgement" },
+  { pattern: "V-ることはない", meaning: "there is no need to", use: "Reassures someone that an action or worry is unnecessary.", example: "一度失敗しただけで、諦めることはない。", translation: "There is no need to give up after failing once.", register: "reassurance" },
+  { pattern: "plain + わけではない", meaning: "it is not that; not necessarily", use: "Denies the full implication while leaving part of it possible or true.", example: "高い物がすべて良いわけではない。", translation: "It is not the case that every expensive thing is good.", register: "partial negation" },
+  { pattern: "ないことはない", meaning: "it is not impossible; can, but", use: "Reluctantly admits limited possibility, usually followed by a reservation.", example: "歩けないことはないが、一時間はかかる。", translation: "It is possible to walk, but it will take an hour.", register: "limited possibility" },
+  { pattern: "plain + とは限らない", meaning: "is not always necessarily", use: "Rejects a general rule by allowing exceptions.", example: "便利な方法が、だれにとっても簡単だとは限らない。", translation: "A convenient method is not necessarily easy for everyone.", register: "qualification" }
+]} />
+<CommonMistake title="Do not translate わけではない as a total no"><p><strong>嫌いなわけではない</strong> does not mean “I hate it.” It means “It is not that I dislike it,” often implying another reason for the speaker's behaviour.</p></CommonMistake>
+<PracticeBlock client:load instructions="Make the judgement as strong—or as limited—as requested." items={[{ prompt: "Strong principle: companies should protect customer information.", answer: "企業は顧客の情報を守るべきです。", explanation: "べき presents a normative responsibility." }, { prompt: "Reassure a learner that they do not need to memorise everything at once.", answer: "一度に全部覚えることはありません。", explanation: "ことはない removes unnecessary pressure." }, { prompt: "Qualify the claim that online lessons are always easier.", answer: "オンライン授業がいつも簡単だとは限りません。", explanation: "とは限らない allows exceptions." }]} />
+<ReadingPractice client:load title="Is the shortest route always best?" genre="opinion paragraph" targetTime="3 minutes" passage={<>目的地へ早く着きたいなら、最短の道を選ぶべきだと思うかもしれません。しかし、最短の道が最も歩きやすいとは限りません。階段が多かったり、夜は暗かったりする場合もあります。遠い道が必ずしも不便なわけではなく、安全で店も多いなら、むしろ安心して歩けます。地図の距離だけで判断することはありません。</>} glossary={[{ word: "最短", reading: "さいたん", meaning: "shortest" }, { word: "距離", reading: "きょり", meaning: "distance" }]} questions={[{ question: "Which generalisation does the writer reject?", answer: "That the shortest route is necessarily the easiest to walk.", explanation: "とは限りません explicitly allows exceptions." }, { question: "What does 不便なわけではなく correct?", answer: "The assumption that a longer route is automatically inconvenient.", explanation: "わけではない denies the full implication." }]} />
+<ListeningPractice client:load title="A reluctant possibility" situation="Listen for what is possible and why it is undesirable." script="今日中に完成できないことはありませんが、急ぐと間違いが増えるかもしれません。明日の朝まで待つべきだと思います。" questions={[{ question: "Can the work be finished today?", answer: "Technically yes, but rushing may cause more mistakes.", explanation: "ないことはない admits possibility with a reservation." }]} />
+<ChapterSummary takeaways={["べき expresses a strong normative judgement; ことはない reassures.", "わけではない denies a full implication rather than everything.", "ないことはない admits limited possibility; とは限らない allows exceptions to a generalisation."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "個人情報は慎重に扱う＿＿だ。", options: ["べき", "ことはない", "とは限らない", "そう"], correct: 0, explanation: "This is a principle-based responsibility." },
+  { question: "心配する＿＿。準備はできています。", options: ["べきだ", "ことはない", "わけだ", "に違いない"], correct: 1, explanation: "ことはない reassures that worry is unnecessary." },
+  { question: "嫌いな＿＿が、今日は食べたくない。", options: ["べきではない", "わけではない", "ことはない", "にしては"], correct: 1, explanation: "The speaker rejects dislike as the full explanation." },
+  { question: "行けない＿＿が、かなり遅くなる。", options: ["ことはない", "べきではない", "わけではない", "とは限らない"], correct: 0, explanation: "行けないことはない admits that going is possible, with a reservation." },
+  { question: "Famous restaurants are not necessarily good: 有名な店がいい＿＿。", options: ["べきだ", "とは限らない", "ことはない", "に違いない"], correct: 1, explanation: "とは限らない rejects the universal claim." },
+  { question: "Which is strongest as direct advice?", options: ["休んだほうがいい", "休むべきだ", "休むことはない", "休むとは限らない"], correct: 1, explanation: "べき carries a strong normative judgement." },
+  { question: "What nuance does 食べられないことはない have?", options: ["Absolutely cannot eat", "Can eat it, though there is some reservation", "Must eat", "Reportedly ate"], correct: 1, explanation: "The double negative admits limited possibility." },
+  { question: "必ずしも高いわけではない means…", options: ["It is definitely expensive", "It is not necessarily expensive", "It must not be expensive", "It used to be expensive"], correct: 1, explanation: "必ずしも with partial negation qualifies an assumption." }
+]} />

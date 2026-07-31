@@ -1,0 +1,299 @@
+---
+title: "Chapter 11 — Particle を & Verbs Part 2"
+level: "N5"
+chapter: "11"
+description: "Master the direct object particle を (o) and expand your verb vocabulary. Learn how to describe daily actions and navigate Japanese dining etiquette."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Particle を & Verbs Part 2"
+  level="N5"
+  chapter="11"
+  objectives={[
+    "Use the particle を (o) to identify the direct object of an action.",
+    "Expand your vocabulary with essential transitive verbs.",
+    "Form complete Subject-Object-Verb (SOV) sentences.",
+    "Understand the cultural importance of dining etiquette in Japan."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In previous chapters, we learned how to say "I go" or "I am." But what if you want to say "I eat sushi" or "I read a book"? To do this, you need a way to link the action (the verb) to the thing being acted upon (the object). In Japanese, this is the job of the **Particle を (o)**. By mastering this particle, you unlock the ability to describe almost any daily activity.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/11-particle-o-verbs.webp"
+  alt="Anime pixel-art illustration of a learner linking objects to action verbs with the particle を."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Direct Object Particle: を (o)
+
+The particle **を** marks the **Direct Object**—the person or thing that receives the action of the verb. 
+
+> [!CAUTION]
+> Although written as **を (wo)**, it is pronounced simply as **"o"** in modern Japanese. It is used exclusively as a particle.
+
+<GrammarBox client:load 
+  pattern="[Noun] を [Verb]"
+  meaning="Marks the object that is being acted upon."
+  formation="Object + を + Transitive Verb"
+  examples={[
+    { japanese: "みず を のみます。", romaji: "Mizu o nomimasu.", translation: "I drink water." },
+    { japanese: "ほん を よみます。", romaji: "Hon o yomimasu.", translation: "I read a book." },
+    { japanese: "テレビ を みます。", romaji: "Terebi o mimasu.", translation: "I watch TV." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="あさごはん を たべます。"
+  romaji="Asagohan o tabemasu."
+  translation="I eat breakfast."
+/>
+<ExampleSentence client:load 
+  japanese="てがみ を かきました。"
+  romaji="Tegami o kakimashita."
+  translation="I wrote a letter."
+/>
+<ExampleSentence client:load 
+  japanese="にほんご を べんきょうします。"
+  romaji="Nihongo o benkyoushimasu."
+  translation="I study Japanese."
+/>
+
+<CommonMistake client:load title="を marks the object — not the destination">
+
+Use **を** only for the *thing the verb acts on*. For where you go, use **に / へ**, not を:
+
+- ✅ ごはん **を** たべます — eat *rice* (object).
+- ✅ がっこう **へ** いきます — go *to school* (destination).
+- ❌ がっこう **を** いきます — "iku" (to go) doesn't act on the school.
+
+(One special case you'll meet later: を can mark the place you move *through* — 公園を歩く, "walk through the park" — but never the place you go *to*.)
+
+</CommonMistake>
+
+## 2. Transitive Verbs (Action Verbs)
+
+A "Transitive Verb" is an action that requires an object. You can't just "eat"—you have to eat *something*. Here are some of the most common transitive verbs you'll need for N5.
+
+<VocabTable data={[
+  { word: 'たべます', romaji: 'tabemasu', meaning: 'to eat', type: 'Verb' },
+  { word: 'のみます', romaji: 'nomimasu', meaning: 'to drink', type: 'Verb' },
+  { word: 'よみます', romaji: 'yomimasu', meaning: 'to read', type: 'Verb' },
+  { word: 'かきます', romaji: 'kakimasu', meaning: 'to write / draw', type: 'Verb' },
+  { word: 'みます', romaji: 'mimasu', meaning: 'to see / watch / look', type: 'Verb' },
+  { word: 'ききます', romaji: 'kikimasu', meaning: 'to listen / hear', type: 'Verb' },
+  { word: 'かいます', romaji: 'kaimasu', meaning: 'to buy', type: 'Verb' },
+  { word: 'とります', romaji: 'torimasu', meaning: 'to take (a photo)', type: 'Verb' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="おんがく を ききます。"
+  romaji="Ongaku o kikimasu."
+  translation="I listen to music."
+/>
+<ExampleSentence client:load 
+  japanese="しゃしん を とりました。"
+  romaji="Shashin o torimashita."
+  translation="I took a photo."
+/>
+<ExampleSentence client:load 
+  japanese="パン を かいます。"
+  romaji="Pan o kaimasu."
+  translation="I will buy bread."
+/>
+
+## 3. Sentence Structure: Topic-Object-Verb
+
+Remember that Japanese is an **SOV** (Subject-Object-Verb) language. The verb **always** comes at the end.
+
+<GrammarBox client:load 
+  pattern="[Topic] は [Object] を [Verb]"
+  meaning="The complete standard sentence structure for actions."
+  formation="Topic + は + Object + を + Verb"
+  examples={[
+    { japanese: "わたし は りんご を たべます。", romaji: "Watashi wa ringo o tabemasu.", translation: "I eat an apple." },
+    { japanese: "たなかさん は おさけ を のみません。", romaji: "Tanaka-san wa osake o nomimasen.", translation: "Mr. Tanaka does not drink alcohol." },
+    { japanese: "だれ が コーヒー を のみました か。", romaji: "Dare ga koohii o nomimashita ka.", translation: "Who drank the coffee?" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="ともだち は ざっし を よみました。"
+  romaji="Tomodachi wa zasshi o yomimashita."
+  translation="My friend read a magazine."
+/>
+<ExampleSentence client:load 
+  japanese="せんせい は ひらがな を かきます。"
+  romaji="Sensei wa hiragana o kakimasu."
+  translation="The teacher writes hiragana."
+/>
+<ExampleSentence client:load 
+  japanese="あね は えいが を みませんでした。"
+  romaji="Ane wa eiga o mimasen deshita."
+  translation="My older sister did not watch the movie."
+/>
+
+## 4. Cultural Note: Dining Etiquette (食事の作法)
+
+In Japan, eating is more than just nutrition; it is an act of gratitude. 
+- **Itadakimasu (いただきます):** Before eating, place your hands together and say this. It literally means "I humbly receive," acknowledging the sacrifice of the plants and animals and the hard work of the chef and farmers.
+- **Gochisousama deshita (ごちそうさまでした):** After finishing your meal, say this to express that "It was a feast." It shows appreciation for the effort put into the meal.
+- **Chopstick Taboos:** Never pass food directly from your chopsticks to another person's, and never stick your chopsticks vertically into a bowl of rice (this is associated with funeral rituals).
+- **Lifting Bowls:** It is perfectly polite (and often expected) to lift small bowls of rice or miso soup toward your mouth while eating.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/11-particle-o-verbs-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of café and weekend activity dialogue practice with を, eating, drinking, reading, watching, and study cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Lunch at a Cafe"
+  lines={[
+    { speaker: "Tanaka", japanese: "スミスさん、なに を たべます か。", romaji: "Sumisu-san, nani o tabemasu ka?", translation: "Mr. Smith, what will you eat?" },
+    { speaker: "Smith", japanese: "わたし は サンドイッチ を たべます。 たなかさん は？", romaji: "Watashi wa sandoitchi o tabemasu. Tanaka-san wa?", translation: "I will eat a sandwich. How about you, Tanaka?" },
+    { speaker: "Tanaka", japanese: "わたし は カレー を たべます。 それから、おちゃ を のみます。", romaji: "Watashi wa karee o tabemasu. Sorekara, ocha o nomimasu.", translation: "I will eat curry. And then, I'll drink green tea." },
+    { speaker: "Smith", japanese: "いい です ね。 あ、しゃしん を とりましょう！", romaji: "Ii desu ne. A, shashin o torimashou!", translation: "That's good. Oh, let's take a photo!" }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Weekend Activities"
+  lines={[
+    { speaker: "Alice", japanese: "きのう、 なに を しました か。", romaji: "Kinou, nani o shimashita ka?", translation: "What did you do yesterday?" },
+    { speaker: "Ken", japanese: "えいが を みました。 それから、 ほん を よみました。", romaji: "Eiga o mimashita. Sorekara, hon o yomimashita.", translation: "I watched a movie. And then, I read a book." },
+    { speaker: "Alice", japanese: "おんがく を ききました か。", romaji: "Ongaku o kikimashita ka?", translation: "Did you listen to music?" },
+    { speaker: "Ken", japanese: "いいえ、 ききませんでした。 べんきょう を しました。", romaji: "Iie, kikimasendeshita. Benkyou o shimashita.", translation: "No, I didn't. I studied." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "The particle を (o) marks the direct object of a verb.",
+    "Japanese follows the SOV (Subject-Object-Verb) structure.",
+    "Common transitive verbs include たべます, のみます, よみます, and みます.",
+    "Pronounce を as 'o', even though it's typed as 'wo'.",
+    "Always say 'Itadakimasu' before a meal and 'Gochisousama deshita' after."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the particle を and daily verbs!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which particle marks the direct object of a verb?",
+      options: ["は (wa)", "が (ga)", "を (o)", "に (ni)"],
+      correct: 2,
+      explanation: "を (o) is the direct object marker in Japanese."
+    },
+    {
+      question: "How is the particle を usually pronounced?",
+      options: ["wo", "o", "u", "ho"],
+      correct: 1,
+      explanation: "In modern Japanese, を is pronounced 'o'."
+    },
+    {
+      question: "Translate: 'I drink water.'",
+      options: ["みず は のみます。", "みず を のみます。", "みず が のみます。", "みず に のみます。"],
+      correct: 1,
+      explanation: "みず (water) is the object, so it takes を."
+    },
+    {
+      question: "Which word means 'to read'?",
+      options: ["たべます", "のみます", "よみます", "みます"],
+      correct: 2,
+      explanation: "よみます (yomimasu) means 'to read'."
+    },
+    {
+      question: "Where does the verb usually go in a Japanese sentence?",
+      options: ["At the beginning", "In the middle", "At the end", "It doesn't matter"],
+      correct: 2,
+      explanation: "Japanese is an SOV language; verbs come at the end."
+    },
+    {
+      question: "What do you say BEFORE eating a meal?",
+      options: ["Gochisousama", "Arigatou", "Itadakimasu", "Oyasumi"],
+      correct: 2,
+      explanation: "Itadakimasu is the standard phrase said before eating."
+    },
+    {
+      question: "Translate: 'I watch TV.'",
+      options: ["テレビ を みます。", "テレビ を よみます。", "テレビ を ききます。", "テレビ を かきます。"],
+      correct: 0,
+      explanation: "みます (mimasu) is used for watching TV or movies."
+    },
+    {
+      question: "Which of these is a 'Chopstick Taboo'?",
+      options: ["Lifting your bowl", "Passing food from chopstick to chopstick", "Eating rice", "Using chopsticks with sushi"],
+      correct: 1,
+      explanation: "Passing food between chopsticks mimics a funeral ritual and is highly offensive."
+    },
+    {
+      question: "Translate: 'Hon o yomimasu.'",
+      options: ["I eat a book.", "I read a book.", "I see a book.", "I write a book."],
+      correct: 1,
+      explanation: "Hon (book) + o (object) + yomimasu (read)."
+    },
+    {
+      question: "What is the polite negative of 'たべます'?",
+      options: ["たべません", "たべました", "たべませんで", "たべでした"],
+      correct: 0,
+      explanation: "The negative of 〜ます is 〜ません."
+    },
+    {
+      question: "How do you say 'I took a photo'?",
+      options: ["しゃしん を かきました。", "しゃしん を とりました。", "しゃしん を みました。", "しゃしん を ききました。"],
+      correct: 1,
+      explanation: "とりました (torimashita) is the past tense of 'to take' (a photo)."
+    },
+    {
+      question: "What does 'Sorekara' mean in a list of actions?",
+      options: ["Because", "Therefore", "And then / After that", "But"],
+      correct: 2,
+      explanation: "Sorekara is used to connect sequential actions."
+    },
+    {
+      question: "Translate: 'Nani o shimashita ka.'",
+      options: ["What are you doing?", "What did you do?", "Where are you going?", "Who are you?"],
+      correct: 1,
+      explanation: "Nani (what) + shimashita (did) + ka (?)."
+    },
+    {
+      question: "If you want to say 'I buy bread', which is correct?",
+      options: ["パン を かいます。", "パン を ききます。", "パン を みます。", "パン を きます。"],
+      correct: 0,
+      explanation: "かいます (kaimasu) means 'to buy'."
+    },
+    {
+      question: "What is said AFTER a meal?",
+      options: ["Itadakimasu", "Sayounara", "Gochisousama deshita", "Sumimasen"],
+      correct: 2,
+      explanation: "Gochisousama deshita is the polite phrase to finish a meal."
+    }
+  ]}
+/>

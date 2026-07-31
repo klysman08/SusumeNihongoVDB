@@ -1,0 +1,47 @@
+---
+title: "Chapter 57 — Formal Topics and Relationships"
+level: "N3"
+chapter: 57
+unit: 5
+unitTitle: "Written and Lexical Japanese"
+topics: "Topic, relation, target, viewpoint, method, and formal setting expressions"
+description: "Read formal relationships accurately with について, に関して, に対して, にとって, によって, and において."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Formal Topics and Relationships" level="N3" chapter={57} objectives={["Identify the role that follows each formal particle expression.", "Convert adverbial forms into noun-modifying forms.", "Avoid confusing viewpoint にとって with target に対して."]} />
+<SectionIntro level="N3">Formal notices and articles often compress relationships into に-expressions. Instead of translating every one as “about,” identify whether the noun is a topic, target, viewpoint, cause, means, agent, or setting.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "対象", reading: "たいしょう", meaning: "target; object", type: "noun" }, { word: "立場", reading: "たちば", meaning: "standpoint", type: "noun" }, { word: "手段", reading: "しゅだん", meaning: "means; method", type: "noun" }, { word: "制度", reading: "せいど", meaning: "system", type: "noun" }, { word: "実施", reading: "じっし", meaning: "implementation", type: "noun" }, { word: "影響", reading: "えいきょう", meaning: "influence", type: "noun" }]} />
+<PatternCompare client:load title="Name the relationship" items={[
+  { pattern: "Nについて／に関して", meaning: "about; regarding", use: "Introduces a topic. に関して is more formal; noun modifiers are についての and に関する.", example: "新しい制度に関する説明会を開きます。", translation: "We will hold an information session concerning the new system.", register: "topic" },
+  { pattern: "Nに対して／に対する", meaning: "toward; against; in contrast to", use: "Marks the target of an action or attitude, or establishes a contrast.", example: "利用者の質問に対して、担当者が回答した。", translation: "The person in charge answered the users' questions.", register: "target" },
+  { pattern: "Nにとって", meaning: "for; from the viewpoint of", use: "Evaluates something from a person's or group's standpoint. It does not mark the recipient of an action.", example: "留学生にとって、住居探しは大きな課題だ。", translation: "For international students, finding housing is a major challenge.", register: "viewpoint" },
+  { pattern: "Nによって／による", meaning: "by; through; depending on; due to", use: "Can mark means, cause, passive agent, or variation. Use context to classify it.", example: "地域によって、ごみの出し方が異なる。", translation: "Rubbish disposal methods differ by area.", register: "means / cause / agent" },
+  { pattern: "Nにおいて／における", meaning: "in; at; with regard to", use: "A formal setting in place, time, field, or situation.", example: "現代社会における教育の役割を考える。", translation: "Consider the role of education in modern society.", register: "formal setting" }
+]} />
+<CommonMistake title="にとって cannot mark a recipient"><p>Say <strong>学生に対して説明する</strong> for “explain to students.” <strong>学生にとって説明する</strong> is ungrammatical for that meaning because にとって establishes a viewpoint, not a target.</p></CommonMistake>
+<PracticeBlock client:load instructions="Choose the relationship, then use the correct noun-modifying form where needed." items={[{ prompt: "A survey concerning remote work (modify 調査).", answer: "在宅勤務に関する調査", explanation: "に関する modifies a following noun." }, { prompt: "For parents, the cost is a serious concern.", answer: "保護者にとって、費用は深刻な問題です。", explanation: "にとって establishes the parents' viewpoint." }, { prompt: "Rules differ depending on the country.", answer: "国によって、規則が異なります。", explanation: "によって marks variation by category." }]} />
+<ReadingPractice client:load title="Survey on working styles" genre="report summary" targetTime="4 minutes" passage={<>市内の企業における働き方の変化について調査を行った。調査によると、在宅勤務を導入した企業は全体の四割だった。通勤時間が減ることは社員にとって大きな利点である一方、管理職に対しては情報共有が難しいという意見も多かった。業種によって必要な対策が異なるため、一つの方法ですべてを解決することはできない。</>} glossary={[{ word: "業種", reading: "ぎょうしゅ", meaning: "type of industry" }, { word: "管理職", reading: "かんりしょく", meaning: "management personnel" }]} questions={[{ question: "Whose viewpoint is used to evaluate reduced commuting time?", answer: "Employees' viewpoint.", explanation: "社員にとって establishes that perspective." }, { question: "What varies by industry?", answer: "The measures that are required.", explanation: "業種によって marks variation." }]} />
+<ListeningPractice client:load title="Museum guidance" situation="Listen for topic and target." script="本日の講演では、地域文化の保存についてお話しします。講演後、専門家に対して直接質問する時間も設けています。" questions={[{ question: "What is the lecture about, and who receives questions?", answer: "It is about preserving local culture; the expert receives the questions.", explanation: "について marks topic and に対して marks target." }]} />
+<ChapterSummary takeaways={["について and に関して mark topics; their noun modifiers are についての and に関する.", "に対して marks a target or contrast; にとって marks a viewpoint.", "によって has several roles; において establishes a formal setting."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "環境問題＿＿研究", options: ["にとって", "に関する", "に対して", "において"], correct: 1, explanation: "に関する modifies 研究 with its topic." },
+  { question: "高齢者＿＿使いやすい設計だ。", options: ["にとって", "に対する", "による", "について"], correct: 0, explanation: "The evaluation is from older people's viewpoint." },
+  { question: "苦情＿＿会社が回答した。", options: ["において", "に対して", "にとって", "についての"], correct: 1, explanation: "The complaint is the target of the response." },
+  { question: "人＿＿意見が違う。", options: ["によって", "にとって", "に関して", "に対する"], correct: 0, explanation: "によって marks variation among people." },
+  { question: "会議＿＿決定された。", options: ["にとって", "において", "に対して", "についての"], correct: 1, explanation: "において formally marks the setting." },
+  { question: "Which can mark a passive agent?", options: ["によって", "にとって", "に関して", "においての"], correct: 0, explanation: "によって can mark the agent in formal passive sentences." },
+  { question: "Choose the correct noun modifier for において.", options: ["においての", "における", "においた", "におきの"], correct: 1, explanation: "における modifies a following noun." },
+  { question: "学生にとって説明する is wrong because…", options: ["students cannot be a topic", "にとって marks viewpoint, not the recipient of explanation", "説明する is intransitive", "formal Japanese forbids students"], correct: 1, explanation: "Use 学生に／に対して説明する for the target." }
+]} />

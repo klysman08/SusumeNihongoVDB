@@ -1,0 +1,50 @@
+---
+title: "Chapter 55 — Limits, Emphasis, and Typicality"
+level: "N3"
+chapter: 55
+unit: 4
+unitTitle: "Conditions and Nuance"
+topics: "No-choice limits, unexpected examples, focus, excess repetition, and undesirable abundance"
+description: "Control focus and speaker attitude with しかない, さえ, こそ, なんて, ばかり, and だらけ."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Limits, Emphasis, and Typicality" level="N3" chapter={55} objectives={["Express a lack of alternatives with しかない.", "Use focus particles without changing the intended attitude.", "Distinguish repeated behaviour from an undesirable abundance of things."]} />
+<SectionIntro level="N3">Intermediate focus expressions do more than limit a quantity. They show what the speaker considers surprising, central, trivial, excessive, or the only remaining option.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "選択肢", reading: "せんたくし", meaning: "choice; option", type: "noun" }, { word: "強調", reading: "きょうちょう", meaning: "emphasis", type: "noun" }, { word: "集中する", reading: "しゅうちゅうする", meaning: "to concentrate", type: "verb" }, { word: "欠点", reading: "けってん", meaning: "flaw", type: "noun" }, { word: "不満", reading: "ふまん", meaning: "complaint", type: "noun" }, { word: "散らかる", reading: "ちらかる", meaning: "to be untidy", type: "verb" }]} />
+<PatternCompare client:load title="What receives focus?" items={[
+  { pattern: "V-るしかない", meaning: "have no choice but", use: "All realistic alternatives have been excluded.", example: "電車が止まったので、歩いて帰るしかない。", translation: "The trains have stopped, so I have no choice but to walk home.", register: "no alternative" },
+  { pattern: "N（で）さえ", meaning: "even", use: "Selects an unexpected or extreme example to strengthen a statement.", example: "この漢字は日本人でさえ読み間違える。", translation: "Even Japanese people misread this kanji.", register: "unexpected example" },
+  { pattern: "Nこそ", meaning: "precisely; this is the very", use: "Places corrective or emphatic focus on the preceding noun.", example: "失敗した時こそ、原因を考えるべきだ。", translation: "It is precisely when you fail that you should consider the cause.", register: "strong focus" },
+  { pattern: "Nなんて", meaning: "something like; the very idea", use: "Can belittle, express surprise, or show modesty; tone and context are essential.", example: "一人で全部やるなんて、無理ですよ。", translation: "Doing all of that alone is impossible.", register: "spoken attitude" }
+]} />
+<PatternCompare client:load title="Too much of what?" items={[
+  { pattern: "V-てばかりいる", meaning: "do nothing but", use: "Criticises or highlights excessive repetition of an action.", example: "動画を見てばかりいないで、少し休みなさい。", translation: "Stop doing nothing but watching videos and take a break.", register: "repeated action" },
+  { pattern: "Nだらけ", meaning: "full of; covered in", use: "Describes an undesirable abundance of visible things, flaws, or mistakes.", example: "この作文は間違いだらけだ。", translation: "This composition is full of mistakes.", register: "negative abundance" }
+]} />
+<CommonMistake title="だらけ is normally negative"><p>Use <strong>花がたくさんある</strong> for a pleasant abundance. <strong>花だらけ</strong> is possible only when the speaker frames the abundance as excessive, messy, or otherwise marked.</p></CommonMistake>
+<PracticeBlock client:load instructions="Add the speaker stance indicated." items={[{ prompt: "There are no buses; walking is the only option.", answer: "バスがないので、歩くしかありません。", explanation: "しかない eliminates alternatives." }, { prompt: "Emphasise that now, precisely, is the important time.", answer: "今こそ行動する時です。", explanation: "こそ places corrective emphasis on 今." }, { prompt: "Criticise a report for containing mistakes everywhere.", answer: "この報告書は間違いだらけです。", explanation: "だらけ describes an undesirable abundance." }]} />
+<ReadingPractice client:load title="Changing a study routine" genre="personal reflection" targetTime="3 minutes" passage={<>以前は単語帳を眺めてばかりいて、実際に文章を書くことはほとんどありませんでした。その結果、意味を知っている単語でさえ会話では使えませんでした。試験に落ちた今こそ方法を変える時だと思い、毎日短い日記を書くことにしました。間違いだらけでも、先生に直してもらいながら続けるしかありません。</>} glossary={[{ word: "眺める", reading: "ながめる", meaning: "to look at; gaze at" }, { word: "直す", reading: "なおす", meaning: "to correct" }]} questions={[{ question: "What was excessive in the old routine?", answer: "Only looking at vocabulary books.", explanation: "眺めてばかりいて criticises repeated passive study." }, { question: "Why does the writer use 今こそ?", answer: "Failing the test made this the decisive moment to change methods.", explanation: "こそ strongly focuses the present moment." }]} />
+<ListeningPractice client:load title="No alternative" situation="Listen for the problem and remaining option." script="資料がまだ届いていませんが、会議は十時からです。今ある情報だけで説明するしかありません。" questions={[{ question: "What must the speaker do?", answer: "Explain using only the information currently available.", explanation: "しかありません shows that no realistic alternative remains." }]} />
+<ChapterSummary takeaways={["しかない removes alternatives; さえ selects an unexpected example.", "こそ strongly focuses; なんて conveys spoken attitude such as surprise or dismissal.", "てばかりいる targets repeated action; だらけ targets an undesirable abundance."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "終電が出たので、タクシーに乗る＿＿。", options: ["こそ", "しかない", "だらけ", "さえ"], correct: 1, explanation: "しかない means no alternative remains." },
+  { question: "専門家＿＿分からない問題だ。", options: ["でさえ", "だらけ", "ばかり", "しか"], correct: 0, explanation: "Even an expert is the unexpected extreme example." },
+  { question: "今日＿＿、長い間の努力が報われる日だ。", options: ["だらけ", "こそ", "ばかり", "しか"], correct: 1, explanation: "こそ emphatically focuses today." },
+  { question: "Which can sound dismissive depending on tone?", options: ["なんて", "結果", "ように", "ことから"], correct: 0, explanation: "なんて carries a context-dependent spoken attitude." },
+  { question: "ゲームをして＿＿いる。", options: ["だらけ", "こそ", "ばかり", "さえ"], correct: 2, explanation: "てばかりいる highlights excessive repeated action." },
+  { question: "泥＿＿の靴", options: ["しか", "こそ", "だらけ", "さえ"], correct: 2, explanation: "泥だらけ means covered in mud." },
+  { question: "Which sentence is positive and neutral rather than marked as excessive?", options: ["公園は花だらけだ。", "公園には花がたくさん咲いている。", "花を見てばかりいる公園だ。", "花しか公園だ。"], correct: 1, explanation: "たくさん states abundance without the negative colouring of だらけ." },
+  { question: "何も分からない時＿＿、基本に戻ろう。", options: ["こそ", "だらけ", "しかない", "なんてを"], correct: 0, explanation: "こそ strongly identifies that difficult moment as especially important." }
+]} />

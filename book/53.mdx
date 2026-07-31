@@ -1,0 +1,46 @@
+---
+title: "Chapter 53 — Conditions, Requirements, and Regret"
+level: "N3"
+chapter: 53
+unit: 4
+unitTitle: "Conditions and Nuance"
+topics: "Necessary conditions, minimum requirements, advice, hope, and counterfactual regret"
+description: "Build nuanced conditions with ないと, 限り, さえ〜ば, ばいい, and ばよかった."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Conditions, Requirements, and Regret" level="N3" chapter={53} objectives={["Express necessary and sufficient conditions.", "Give situational advice without overgeneralising.", "Describe counterfactual regret about a past choice."]} />
+<SectionIntro level="N3">N4 conditionals describe what happens if a condition is met. N3 adds a more useful question: is the condition necessary, sufficient, recommended, hoped for, or already impossible because the past cannot be changed?</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "条件", reading: "じょうけん", meaning: "condition", type: "noun" }, { word: "期限", reading: "きげん", meaning: "deadline", type: "noun" }, { word: "有効", reading: "ゆうこう", meaning: "valid; effective", type: "adj" }, { word: "満たす", reading: "みたす", meaning: "to satisfy; fulfil", type: "verb" }, { word: "後悔する", reading: "こうかいする", meaning: "to regret", type: "verb" }, { word: "申請", reading: "しんせい", meaning: "application", type: "noun" }]} />
+<PatternCompare client:load title="What kind of condition?" items={[
+  { pattern: "V-ないと／V-なければ", meaning: "unless; if not; must", use: "Marks a necessary condition. In conversation the result may be omitted, as in もう行かないと。", example: "今日申し込まないと、間に合いません。", translation: "Unless you apply today, you will not make the deadline.", register: "necessary" },
+  { pattern: "V-る／V-ない限り", meaning: "as long as; unless", use: "Defines the boundary within which a statement remains true.", example: "本人が同意しない限り、公開できません。", translation: "It cannot be made public unless the person agrees.", register: "boundary" },
+  { pattern: "Nさえ／V-さえすれば", meaning: "if only; provided that", use: "Presents one minimum condition as sufficient.", example: "予約番号さえ分かれば、確認できます。", translation: "As long as you know the reservation number, we can check it.", register: "minimum" },
+  { pattern: "ばいい／ばよかった", meaning: "should; it would be good if / should have", use: "ばいい gives a solution or hope. Past ばよかった regrets an unrealised alternative.", example: "分からなければ聞けばいい。もっと早く聞けばよかった。", translation: "If you do not understand, just ask. I should have asked sooner.", register: "advice / regret" }
+]} />
+<CommonMistake title="A sufficient condition is not always realistic"><p><strong>お金さえあれば幸せだ</strong> claims money alone is sufficient for happiness. Because <strong>さえ〜ば</strong> excludes other requirements, use it only when that strong claim is intended.</p></CommonMistake>
+<PracticeBlock client:load instructions="Express necessity, sufficiency, or regret." items={[{ prompt: "Unless the document is valid, the application cannot be accepted.", answer: "書類が有効でない限り、申請は受け付けられません。", explanation: "ない限り defines a necessary boundary." }, { prompt: "A passport alone is enough for identification.", answer: "パスポートさえあれば、本人確認ができます。", explanation: "さえ〜ば marks the minimum sufficient condition." }, { prompt: "You regret not reserving earlier.", answer: "もっと早く予約すればよかった。", explanation: "ばよかった evaluates an unrealised past alternative." }]} />
+<ReadingPractice client:load title="Workshop application conditions" genre="application guidance" targetTime="3 minutes" passage={<>この研修に参加するには、金曜日までに申請しなければなりません。ただし、定員に達しない限り、期限後でも受け付ける場合があります。経験は必要ありません。基本的な日本語が理解できさえすれば、だれでも参加できます。予定が変わった場合は、前日までに連絡してください。</>} glossary={[{ word: "定員", reading: "ていいん", meaning: "capacity" }, { word: "研修", reading: "けんしゅう", meaning: "training course" }]} questions={[{ question: "What is normally necessary to participate?", answer: "Applying by Friday.", explanation: "しなければなりません gives the standard requirement." }, { question: "What is the minimum language condition?", answer: "Being able to understand basic Japanese.", explanation: "理解できさえすれば marks it as sufficient." }]} />
+<ListeningPractice client:load title="A missed discount" situation="Listen for the condition that was not met." script="昨日までに申し込めば、二割引きだったんです。メールをもっとよく読めばよかったです。" questions={[{ question: "What does the speaker regret?", answer: "Not reading the email carefully enough and applying by yesterday.", explanation: "ばよかった marks the missed better choice." }]} />
+<ChapterSummary takeaways={["ないと and なければ mark necessity; 限り defines a boundary.", "さえ〜ば singles out a minimum sufficient condition.", "ばいい offers a solution or hope; ばよかった regrets a past alternative."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "急が＿＿、最終電車に間に合わない。", options: ["ないと", "さえ", "た結果", "そうで"], correct: 0, explanation: "ないと marks the necessary action." },
+  { question: "本人の許可がない＿＿、写真は使えない。", options: ["結果", "限り", "そう", "つもり"], correct: 1, explanation: "ない限り means unless permission exists." },
+  { question: "名前＿＿書けば、申し込めます。", options: ["こそ", "さえ", "まで", "ほど"], correct: 1, explanation: "さえ presents the minimum sufficient item." },
+  { question: "What does もっと休めばよかった express?", options: ["Future advice", "Regret about not resting more", "A company rule", "Strong certainty"], correct: 1, explanation: "Past ばよかった is counterfactual regret." },
+  { question: "Which means 'You only need to show this screen'?", options: ["この画面を見せないと。", "この画面さえ見せればいい。", "この画面を見せた結果だ。", "この画面を見せるに違いない。"], correct: 1, explanation: "さえ〜ばいい combines minimum sufficiency with advice." },
+  { question: "雨が降らない限り means…", options: ["because it rained", "as long as it does not rain", "even if it rains", "it looks rainy"], correct: 1, explanation: "ない限り sets the non-rain boundary." },
+  { question: "Choose the natural casual urgency.", options: ["もう行かないと。", "もう行きさえ。", "もう行った結果。", "もう行くらしいと。"], correct: 0, explanation: "The consequence of ないと can be omitted in conversation." },
+  { question: "Which form makes the strongest 'only requirement' claim?", options: ["なら", "さえ〜ば", "たら", "そうだ"], correct: 1, explanation: "さえ〜ば explicitly presents one condition as sufficient." }
+]} />

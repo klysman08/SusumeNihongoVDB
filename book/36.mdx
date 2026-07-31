@@ -1,0 +1,268 @@
+---
+title: "Chapter 36 — Expressing Obligation"
+level: "N4"
+chapter: 36
+description: "Learn how to express strong obligation (must do), lack of obligation (don't have to), and moral advice (should) in Japanese."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Expressing Obligation (Must, Must Not, Should)"
+  level="N4"
+  chapter={36}
+  objectives={[
+    "Understand the double-negative logic of 'Must do' (〜なければならない).",
+    "Learn the casual forms of obligation (〜なきゃ, 〜なくちゃ).",
+    "Express 'don't have to' using the negative te-form (〜なくてもいい).",
+    "Give strong moral/logical advice using 〜べき."
+  ]}
+/>
+
+<SectionIntro level="N4">
+Telling someone what they MUST do in Japanese involves a unique logic: you say, "If you don't do it, it won't be okay." This double-negative structure is the standard way to express obligation. In this chapter, we will master the nuances of "must," "don't have to," and the strong "should" used for social and moral expectations.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/36-obligation.webp"
+  alt="Anime pixel-art illustration of a learner choosing between glowing task paths with calendars, locks, a gateway, and compass symbols over a study desk."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Obligation: "Must Do"
+
+There are several ways to say "must do," but they all follow the same grammatical formula: take the **Nai-form** of a verb, drop the final `い`, and add a conditional suffix (`ければ` or `きゃ`) followed by `なりません` or `だめ`.
+
+The most formal and standard written form is **〜なければなりません**.
+*(Literally: If you do not do [verb], it will not become [okay]).*
+
+<GrammarBox client:load 
+  pattern="[Nai-form minus 'i'] + なければなりません"
+  meaning="Must do / Have to do [verb]."
+  formation="Verb-nakereba narimasen"
+  examples={[
+    { japanese: "明日は早く起きなければなりません。", romaji: "ashita wa hayaku okinakereba narimasen.", translation: "Tomorrow I must wake up early." },
+    { japanese: "毎日、薬を飲まなければなりません。", romaji: "mainichi, kusuri o nomanakereba narimasen.", translation: "I must take medicine every day." },
+    { japanese: "試験の前に、もっと勉強しなければなりません。", romaji: "shiken no mae ni, motto benkyou shinakereba narimasen.", translation: "I must study more before the exam." }
+  ]}
+/>
+
+### Casual Variations
+In spoken Japanese, `〜なければなりません` is often shortened for speed and natural flow.
+
+* **〜なきゃ(いけない/だめ):** The most common spoken casual form. 
+* **〜なくちゃ(いけない/だめ):** Similar to なきゃ, but slightly more colloquial.
+* **〜ないと(いけない/だめ):** Meaning "If I don't [do X], then [it's bad]."
+
+<ExampleSentence client:load 
+  japanese="もう遅いから、帰らなきゃ。"
+  romaji="mou osoi kara, kaeranakya."
+  translation="Because it's late already, I gotta go home."
+/>
+
+<ExampleSentence client:load 
+  japanese="あっ、レポートを出さなきゃいけないんだ。"
+  romaji="a, repooto o dasanakya ikenai n da."
+  translation="Oh, I have to submit the report."
+/>
+
+<ExampleSentence client:load 
+  japanese="明日、早く起きないとだめだよ。"
+  romaji="ashita, hayaku okinai to dame da yo."
+  translation="You must wake up early tomorrow, okay?"
+/>
+
+---
+
+## 2. Lack of Obligation: "Don't Have To"
+
+To say that an action is *unnecessary* ("you don't have to do it"), you use the negative te-form (`〜なくて`) followed by `もいいです`. 
+*(Literally: Even if you do not do [verb], it is fine).*
+
+<GrammarBox client:load 
+  pattern="[Nai-form minus 'i'] + なくてもいいです"
+  meaning="Do not have to do / It is okay not to do [verb]."
+  formation="Verb-nakute mo ii desu"
+  examples={[
+    { japanese: "明日は休みだから、早く起きなくてもいいです。", romaji: "ashita wa yasumi dakara, hayaku okinakute mo ii desu.", translation: "Tomorrow is a day off, so I don't have to wake up early." },
+    { japanese: "嫌いな物は、食べなくてもいいですよ。", romaji: "kirai na mono wa, tabenakute mo ii desu yo.", translation: "You don't have to eat things you dislike." },
+    { japanese: "急がなくてもいいです。時間は十分にあります。", romaji: "isoganakute mo ii desu. jikan wa juubun ni arimasu.", translation: "You don't have to hurry. There is plenty of time." }
+  ]}
+/>
+
+---
+
+## 3. Strong Advice: "Should" (〜べき)
+
+When you want to express that something is logically, societally, or morally the *right thing to do*, use `〜べき`. This is much stronger than the advice form `〜ほうがいい`. 
+
+**Formation:** Attach `べき` directly to the **Dictionary Form** of a verb. 
+*(Special Case: する can become either するべき or すべき).*
+
+<GrammarBox client:load 
+  pattern="Dictionary Form + べき"
+  meaning="Should do / Ought to do [verb] (Strong recommendation)."
+  formation="Verb-Dict + べき"
+  examples={[
+    { japanese: "約束は守るべきだ。", romaji: "yakusoku wa mamoru beki da.", translation: "Promises should be kept." },
+    { japanese: "学生はもっと勉強すべきです。", romaji: "gakusei wa motto benkyou subeki desu.", translation: "Students ought to study more." },
+    { japanese: "お年寄りには親切にするべきです。", romaji: "otoshiyori ni wa shinsetsu ni suru beki desu.", translation: "One should be kind to the elderly." }
+  ]}
+/>
+
+To say "should **not** do", keep the verb in the dictionary form and negate the べき: `〜べきではない`.
+
+<ExampleSentence client:load 
+  japanese="そんなひどいことを言うべきではありません。"
+  romaji="sonna hidoi koto o iu beki dewa arimasen."
+  translation="You should not say such terrible things."
+/>
+
+## Cultural Insight: Responsibility and "Giri"
+
+In Japanese society, obligation is often framed through **Giri** (義理 - social obligation) and **Sekinin** (責任 - responsibility). While English speakers might say "I have to" as a personal requirement, Japanese speakers often use `〜なければならない` to express a duty to the group (family, company, or society). 
+
+Failing to meet an obligation can cause **Meiwaku** (迷惑 - trouble/inconvenience) to others. This is why `〜べき` is so strong; it implies that failing to do the action violates the harmony of the group.
+
+## Contextual Dialogues
+
+### Dialogue 1: At the Doctor's Office
+<ConversationDialog client:load 
+  title="Talking to the Doctor"
+  lines={[
+    { speaker: "Doctor", translation: "You must take this medicine after every meal.", japanese: "毎食後、この薬を飲まなければなりません。", romaji: "Maishokugo, kono kusuri o nomanakereba narimasen." },
+    { speaker: "Patient", translation: "Do I have to come back next week too?", japanese: "来週も来なければなりませんか。", romaji: "Raishuu mo konakereba narimasen ka." },
+    { speaker: "Doctor", translation: "If you feel better, you don't have to come.", japanese: "具合がよくなったら、来なくてもいいですよ。", romaji: "Guai ga yokunattara, konakute mo ii desu yo." },
+    { speaker: "Patient", translation: "I see. I've gotta be careful about my health.", japanese: "わかりました。健康に気をつけなきゃ！", romaji: "Wakarimashita. Kenkou ni ki o tsukenakya!" }
+  ]}
+/>
+
+### Dialogue 2: Late Night at the Office
+<ConversationDialog client:load 
+  title="Working Overtime"
+  lines={[
+    { speaker: "Tanaka", translation: "I must finish this report by tomorrow.", japanese: "明日までにこのレポートを終わらせなければならないんです。", romaji: "Ashita made ni kono repooto o owarasenakereba naranai n desu." },
+    { speaker: "Suzuki", translation: "You shouldn't work too hard. You should sleep more.", japanese: "無理をするべきではありませんよ。もっと寝るべきです。", romaji: "Muri o suru beki dewa arimasen yo. Motto neru beki desu." },
+    { speaker: "Tanaka", translation: "I know, but I've gotta do it.", japanese: "わかっていますが、やらなきゃいけないんです。", romaji: "Wakatte imasu ga, yaranakya ikenai n desu." },
+    { speaker: "Suzuki", translation: "Well, if it's too difficult, you don't have to do it all alone.", japanese: "そうですか。大変なら、一人で全部やらなくてもいいですよ。手伝いましょうか。", romaji: "Sou desu ka. Taihen nara, hitori de zenbu yaranakute mo ii desu yo. Tetsudaimashou ka." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Strong obligation (must): 〜なければならない (Formal) / 〜なきゃ (Casual).",
+    "Lack of obligation (don't have to): 〜なくてもいい.",
+    "Moral/Social duty (should): Dictionary form + べき.",
+    "Strong prohibition of advice (should not): Dictionary form + べきではない.",
+    "Japanese obligation often reflects a sense of social responsibility toward the group."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of the following means 'I must go'?",
+      options: ["行かなくてもいいです", "行かなければなりません", "行きたいです", "行ってもいいです"],
+      correct: 1,
+      explanation: "〜なければなりません is the standard way to express 'must do'."
+    },
+    {
+      question: "What is the casual spoken form of '〜なければならない'?",
+      options: ["〜なくちゃ", "〜なきゃ", "〜ないと", "All of the above"],
+      correct: 3,
+      explanation: "なきゃ, なくちゃ, and ないと are all common casual ways to express 'must'."
+    },
+    {
+      question: "Translate: 'You don't have to hurry.'",
+      options: ["急がなければなりません", "急がなくてもいいです", "急ぐべきです", "急いではいけません"],
+      correct: 1,
+      explanation: "〜なくてもいい expresses that an action is not required."
+    },
+    {
+      question: "What form of the verb attaches to 'べき'?",
+      options: ["Nai-form", "Te-form", "Dictionary form", "Ta-form"],
+      correct: 2,
+      explanation: "べき attaches directly to the Plain/Dictionary form (e.g., 食べるべき)."
+    },
+    {
+      question: "Which pattern expresses a moral or societal expectation of 'should'?",
+      options: ["〜たほうがいい", "〜なければならない", "〜べき", "〜てください"],
+      correct: 2,
+      explanation: "べき implies an objective or moral 'ought to'."
+    },
+    {
+      question: "How do you say 'You should not lie'?",
+      options: ["嘘をつかないべきです", "嘘をつくべきではありません", "嘘をつかなくてもいいです", "嘘をつかなければなりません"],
+      correct: 1,
+      explanation: "To negate べき, use [Dictionary Verb] + べきではない."
+    },
+    {
+      question: "In the dialogue, the doctor says '来なくてもいいですよ'. What does this mean?",
+      options: ["You must not come.", "You should come.", "You don't have to come.", "You will come."],
+      correct: 2,
+      explanation: "〜なくてもいい cancels the obligation."
+    },
+    {
+      question: "Translate: 'I gotta study.' (Casual)",
+      options: ["勉強しなきゃ", "勉強しなくてもいい", "勉強するべきだ", "勉強しましょう"],
+      correct: 0,
+      explanation: "〜なきゃ is the common casual contraction of 〜なければならない."
+    },
+    {
+      question: "What is the special form of 'する' when used with 'べき'?",
+      options: ["しべき", "するべき / すべき", "されてべき", "しなきゃべき"],
+      correct: 1,
+      explanation: "Both 'suru beki' and the classical 'subeki' are used."
+    },
+    {
+      question: "What is the literal logic behind '行かなければならない'?",
+      options: ["If I go, it's bad.", "If I don't go, it won't become (okay).", "I want to go.", "I am going now."],
+      correct: 1,
+      explanation: "Double negative: [Nai-form + if] + [does not become]."
+    },
+    {
+      question: "If you see 'ゴミは捨てるべきだ', what kind of tone is it?",
+      options: ["A polite suggestion.", "A personal desire.", "A strong statement of social duty/common sense.", "A question."],
+      correct: 2,
+      explanation: "べき carries the weight of logic or social rules."
+    },
+    {
+      question: "Translate: 'It's okay if you don't eat it.'",
+      options: ["食べなければなりません", "食べなくてもいいです", "食べるべきではありません", "食べないでください"],
+      correct: 1,
+      explanation: "〜なくてもいい = it is fine even if not done."
+    },
+    {
+      question: "Which particle is used for the time limit in 'I must finish BY tomorrow'?",
+      options: ["まで", "までに", "から", "に"],
+      correct: 1,
+      explanation: "までに indicates a deadline (by a certain time)."
+    },
+    {
+      question: "Is '〜ほうがいい' or '〜べき' more appropriate for giving casual advice to a friend?",
+      options: ["〜べき is better.", "〜ほうがいい is better and less preachy.", "They are the same.", "Neither."],
+      correct: 1,
+      explanation: "〜ほうがいい is softer and more common for friendly suggestions."
+    },
+    {
+      question: "What does '帰らなくちゃいけない' mean?",
+      options: ["I don't want to go home.", "I must go home.", "I can go home.", "I shouldn't go home."],
+      correct: 1,
+      explanation: "〜なくちゃいけない is another variation of the 'must do' obligation."
+    }
+  ]}
+/>

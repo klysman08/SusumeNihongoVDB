@@ -1,0 +1,82 @@
+---
+title: "Chapter 48 — Plans and Intentions"
+level: "N3"
+chapter: 48
+unit: 2
+unitTitle: "Time, Change, and Plans"
+topics: "Intentions, tentative thoughts, schedules, and continuing commitments"
+description: "Choose naturally among intentions, tentative ideas, fixed schedules, and continuing personal commitments."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Plans and Intentions" level="N3" chapter={48} objectives={["Separate a firm intention from a tentative idea.", "Use 予定 for an arranged schedule rather than a wish.", "Describe an ongoing personal policy with ことにしている."]} />
+<SectionIntro level="N3">A plan can be a private intention, a thought still under consideration, a fixed item on a schedule, or a rule you repeatedly choose to follow. N3 questions often hide that difference behind the same English word.</SectionIntro>
+
+<VocabTable romajiMode="toggle" data={[
+  { word: "進学", reading: "しんがく", romaji: "shingaku", meaning: "advancing to further education", type: "noun" },
+  { word: "応募する", reading: "おうぼする", romaji: "oubo suru", meaning: "to apply", type: "verb" },
+  { word: "検討する", reading: "けんとうする", romaji: "kentou suru", meaning: "to consider carefully", type: "verb" },
+  { word: "日程", reading: "にってい", romaji: "nittei", meaning: "schedule; programme", type: "noun" },
+  { word: "延期", reading: "えんき", romaji: "enki", meaning: "postponement", type: "noun" },
+  { word: "方針", reading: "ほうしん", romaji: "houshin", meaning: "policy; course of action", type: "noun" }
+]} />
+
+## 1. Strength and status of a plan
+
+<PatternCompare client:load title="How settled is the plan?" items={[
+  { pattern: "V-る／V-ないつもりだ", meaning: "firm present intention", use: "States what the subject currently intends. It is not used to assert another person's intention without evidence.", example: "卒業後は日本で働くつもりです。", translation: "I intend to work in Japan after graduating.", register: "firm intention" },
+  { pattern: "V-ようと思う", meaning: "a decision or thought forming now", use: "Often softer and less settled than つもり. The volitional form highlights the speaker's will.", example: "今夜、先生に相談しようと思います。", translation: "I think I’ll consult the teacher tonight.", register: "forming intention" },
+  { pattern: "V-ることを考えている", meaning: "be considering", use: "The idea remains under consideration and may change.", example: "来年、大学院へ進むことを考えています。", translation: "I am considering going to graduate school next year.", register: "tentative" },
+  { pattern: "V-る／Nの予定だ", meaning: "scheduled or arranged", use: "Describes an event placed on a timetable or otherwise concretely arranged.", example: "面接は三時に始まる予定です。", translation: "The interview is scheduled to begin at three.", register: "scheduled" }
+]} />
+
+<GrammarBox client:load romajiMode="toggle" pattern="V-る／V-ないことにしている" meaning="maintain a personal rule or repeated commitment" formation="Dictionary or ない-form + ことにしている" examples={[
+  { japanese: "平日は、寝る前に仕事のメールを見ないことにしています。", romaji: "heijitsu wa, neru mae ni shigoto no meeru o minai koto ni shite imasu.", translation: "On weekdays, I make it a rule not to check work email before bed." },
+  { japanese: "新しい表現を覚えたら、その日のうちに使うことにしています。", romaji: "atarashii hyougen o oboetara, sono hi no uchi ni tsukau koto ni shite imasu.", translation: "When I learn a new expression, I make a point of using it that same day." }
+]} />
+
+<CommonMistake title="予定 is not simply another word for hope"><p><strong>日本へ行く予定です</strong> suggests an arranged trip. If it is only an idea, use <strong>行こうと思っています</strong> or <strong>行くことを考えています</strong>.</p></CommonMistake>
+
+<ConversationDialog client:load romajiMode="toggle" title="After graduation" lines={[
+  { speaker: "Aya", japanese: "卒業したら、どうするつもり？", romaji: "sotsugyou shitara, dou suru tsumori?", translation: "What do you intend to do after graduating?" },
+  { speaker: "Leo", japanese: "日本の会社に応募することを考えている。", romaji: "nihon no kaisha ni oubo suru koto o kangaete iru.", translation: "I’m considering applying to a Japanese company." },
+  { speaker: "Aya", japanese: "もう応募する会社は決めたの？", romaji: "mou oubo suru kaisha wa kimeta no?", translation: "Have you decided which company to apply to?" },
+  { speaker: "Leo", japanese: "まだ。でも、今週中に三社調べようと思っている。", romaji: "mada. demo, konshuujuu ni sansha shirabeyou to omotte iru.", translation: "Not yet. But I’m thinking of researching three companies this week." }
+]} />
+
+<PracticeBlock client:load instructions="Express each plan at the strength stated." items={[
+  { prompt: "A conference is formally scheduled for 18 September.", answer: "会議は九月十八日に開かれる予定です。", explanation: "予定 fits an arranged event." },
+  { prompt: "You are only considering moving closer to work.", answer: "職場の近くへ引っ越すことを考えています。", explanation: "ことを考えている leaves the idea open." },
+  { prompt: "You maintain a rule of speaking Japanese during lunch.", answer: "昼休みは日本語で話すことにしています。", explanation: "ことにしている presents a repeated personal policy." }
+]} />
+
+<ReadingPractice client:load title="Volunteer orientation" genre="email" targetTime="2 minutes" passage={<>来月から、地域の日本語教室でボランティアをする予定です。以前から参加しようと思っていましたが、仕事との両立が難しく、なかなか応募できませんでした。教室は毎週土曜日に開かれます。無理をしないために、初めの三か月は月に二回だけ参加することにしています。</>} glossary={[{ word: "両立", reading: "りょうりつ", meaning: "balancing two activities" }, { word: "地域", reading: "ちいき", meaning: "local community" }]} questions={[{ question: "Which plan is already arranged?", answer: "The writer will volunteer from next month.", explanation: "予定です marks the concrete arrangement." }, { question: "What continuing policy has the writer chosen?", answer: "To participate only twice a month for the first three months.", explanation: "ことにしています marks the personal rule." }]} />
+
+<ListeningPractice client:load title="A tentative weekend plan" situation="Listen for what is fixed and what is still undecided." script="土曜日は友達と美術館へ行く予定です。その後は新しいカフェに行こうと思っていますが、混んでいたら別の店にするつもりです。" questions={[{ question: "What is already scheduled?", answer: "Going to the art museum with a friend.", explanation: "予定です marks the arranged part." }, { question: "What might change depending on crowding?", answer: "Which café they visit.", explanation: "The final clause presents an intention conditional on the situation." }]} />
+
+<ChapterSummary takeaways={["つもり states a firm current intention; ようと思う often presents an intention as it forms.", "ことを考えている remains tentative, while 予定 describes a concrete schedule.", "ことにしている is a repeated personal rule, not an outside regulation."]} />
+
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "The flight is booked for 9:30. 飛行機は九時半に出発する＿＿です。", options: ["つもり", "予定", "ことを考えている", "よう"], correct: 1, explanation: "A booked departure is a schedule." },
+  { question: "I am considering studying abroad, but have not decided: 留学する＿＿。", options: ["予定です", "ことにしています", "ことを考えています", "つもりでした"], correct: 2, explanation: "ことを考えている leaves the idea under consideration." },
+  { question: "Which sentence expresses a continuing personal policy?", options: ["毎朝走る予定です。", "毎朝走ることにしています。", "毎朝走ろうと思いました。", "毎朝走ることになりました。"], correct: 1, explanation: "ことにしている describes an ongoing self-imposed rule." },
+  { question: "Which is least appropriate when asking directly about a manager's private intention?", options: ["部長は何をなさる予定ですか。", "部長は何をなさるつもりですか。", "今後の日程はどうなっていますか。", "会議は何時に始まる予定ですか。"], correct: 1, explanation: "つもり can sound intrusive when asserting or probing a superior's private intention." },
+  { question: "今夜は早く寝＿＿と思います。", options: ["る", "た", "よう", "て"], correct: 2, explanation: "ようと思う attaches to the volitional form: 寝よう." },
+  { question: "Which sentence clearly describes a fixed event?", options: ["来月引っ越そうと思う。", "来月引っ越すことを考えている。", "引っ越しは来月三日の予定だ。", "いつか引っ越すつもりだった。"], correct: 2, explanation: "A specified date with 予定 shows the most concrete arrangement." },
+  { question: "What nuance does 買わないつもりだ express?", options: ["A present intention not to buy", "An official ban", "A past accident", "A confirmed timetable"], correct: 0, explanation: "Negative plain form + つもり states an intention not to act." },
+  { question: "Which is natural for an idea that may still change?", options: ["転職することを考えています。", "転職することになっています。", "転職する予定にしています。", "転職しよう予定です。"], correct: 0, explanation: "ことを考えている presents an option under consideration." }
+]} />

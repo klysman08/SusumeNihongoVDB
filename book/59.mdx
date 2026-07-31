@@ -1,0 +1,47 @@
+---
+title: "Chapter 59 — Compound Verbs and Completion"
+level: "N3"
+chapter: 59
+unit: 5
+unitTitle: "Written and Lexical Japanese"
+topics: "Beginning, completion, repetition, mutual action, depth, and incomplete action through compound verbs"
+description: "Read productive compound verbs built from the ます-stem and understand how the second verb changes aspect and direction."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Compound Verbs and Completion" level="N3" chapter={59} objectives={["Decode productive ます-stem compound verbs.", "Distinguish completion from inability to finish.", "Use mutual, repeated, inward, and incomplete-action meanings naturally."]} />
+<SectionIntro level="N3">Japanese builds precise verbs by attaching a second verb to the ます-stem. Instead of memorising each as an unrelated word, learn the directional contribution of the second element.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "仕上げる", reading: "しあげる", meaning: "to finish; complete", type: "verb" }, { word: "見直す", reading: "みなおす", meaning: "to review; reconsider", type: "verb" }, { word: "話し合う", reading: "はなしあう", meaning: "to discuss together", type: "verb" }, { word: "書き込む", reading: "かきこむ", meaning: "to fill in; write into", type: "verb" }, { word: "使い切る", reading: "つかいきる", meaning: "to use up", type: "verb" }, { word: "読みかけ", reading: "よみかけ", meaning: "partly read", type: "noun" }]} />
+<PatternCompare client:load title="What does the second verb contribute?" items={[
+  { pattern: "stem + 始める／終わる", meaning: "begin / finish an activity", use: "Marks the boundary of an action. 終わる focuses on finishing the activity, not necessarily exhausting an object.", example: "雨が降り始めたので、作業を終えた。", translation: "It began to rain, so we ended the work.", register: "boundary" },
+  { pattern: "stem + 切る／切れない", meaning: "do completely / be unable to finish", use: "Completion reaches an exhaustive limit; 切れない means the amount exceeds one's capacity.", example: "量が多くて、一人では食べ切れない。", translation: "There is so much that I cannot finish it alone.", register: "exhaustive" },
+  { pattern: "stem + 直す", meaning: "do again; revise", use: "Repeats an action to correct or reconsider it.", example: "説明が分かりにくかったので、書き直した。", translation: "The explanation was unclear, so I rewrote it.", register: "corrective" },
+  { pattern: "stem + 合う", meaning: "do mutually or together", use: "Participants direct the action toward one another or collaborate.", example: "意見が違っても、話し合うことが大切だ。", translation: "Even when opinions differ, discussing them together is important.", register: "mutual" },
+  { pattern: "stem + 込む／かける", meaning: "move deeply/inward / begin but not finish", use: "込む often adds inward movement or intensity; かける leaves an action incomplete or just beginning.", example: "読みかけの本にメモを書き込んだ。", translation: "I wrote a note in the book I had started but not finished.", register: "direction / incomplete" }
+]} />
+<CommonMistake title="Not every combination is freely productive"><p>The patterns help decode unfamiliar compounds, but established usage still matters. Check a dictionary before inventing a new combination, especially with abstract verbs.</p></CommonMistake>
+<PracticeBlock client:load instructions="Build the compound verb that supplies the stated direction." items={[{ prompt: "Rewrite an email because it was too direct.", answer: "メールが直接的すぎたので、書き直しました。", explanation: "直す adds corrective repetition." }, { prompt: "The problem is too complex to explain completely.", answer: "問題が複雑で、説明し切れません。", explanation: "切れない marks inability to complete exhaustively." }, { prompt: "Students exchanged opinions with one another.", answer: "学生たちは意見を出し合いました。", explanation: "合う makes the contribution mutual." }]} />
+<ReadingPractice client:load title="Finishing a group report" genre="project diary" targetTime="3 minutes" passage={<>昨日、グループで報告書を仕上げました。最初の案は説明が長すぎたため、重要な部分だけ残して書き直しました。一人では気づかなかった問題も、互いに読み合うことで見つかりました。締め切りまでに全部確認し切れるか心配でしたが、最後まで集中して作業をやり切りました。</>} glossary={[{ word: "互いに", reading: "たがいに", meaning: "mutually" }, { word: "締め切り", reading: "しめきり", meaning: "deadline" }]} questions={[{ question: "Why was the first draft rewritten?", answer: "Its explanation was too long.", explanation: "書き直しました signals corrective repetition." }, { question: "What does やり切りました emphasise?", answer: "The group completed the work fully despite the difficulty.", explanation: "切る marks exhaustive completion." }]} />
+<ListeningPractice client:load title="An unfinished form" situation="Listen for the action that was started and the correction needed." script="申込書を書きかけたところで、住所が古いことに気づきました。新しい住所を確認してから、最初から書き直します。" questions={[{ question: "Was the form completed?", answer: "No. It was only partly written when the error was noticed.", explanation: "書きかけ marks an incomplete action." }]} />
+<ChapterSummary takeaways={["The ます-stem links to a second verb that supplies aspect or direction.", "切る marks exhaustive completion; 切れない marks inability to finish.", "直す repeats correctively, 合う acts mutually, 込む moves inward/deeply, and かける leaves an action incomplete."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "量が多くて食べ＿＿。", options: ["合わない", "切れない", "込まない", "直さない"], correct: 1, explanation: "切れない means unable to finish the full amount." },
+  { question: "文章の間違いを＿＿。", options: ["書き直す", "書き合う", "書き切れない", "書きかけるだけ"], correct: 0, explanation: "直す adds corrective repetition." },
+  { question: "二人で励まし＿＿。", options: ["切った", "込んだ", "合った", "かけた"], correct: 2, explanation: "合う marks a mutual action." },
+  { question: "読みかけの本 is…", options: ["a book read repeatedly", "a partly read book", "a book read aloud together", "a book that cannot be read"], correct: 1, explanation: "かけ marks an action begun but unfinished." },
+  { question: "Which emphasises using every last bit?", options: ["使い始める", "使い直す", "使い切る", "使い合う"], correct: 2, explanation: "切る adds exhaustive completion." },
+  { question: "申込書に名前を書き＿＿。", options: ["込む", "合う", "直る", "切れる"], correct: 0, explanation: "書き込む means write into or fill in." },
+  { question: "What is the form before a compound verb?", options: ["ない-form", "ます-stem", "たら-form", "imperative"], correct: 1, explanation: "Remove ます and attach the second verb." },
+  { question: "Which warning is accurate?", options: ["Every verb can combine freely", "Established lexical usage still matters", "Compound verbs are only formal", "The second verb has no meaning"], correct: 1, explanation: "The pattern is productive but not unrestricted." }
+]} />

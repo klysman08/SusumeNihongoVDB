@@ -1,0 +1,304 @@
+---
+title: "Chapter 27 — Volitional Form (よう / しよう)"
+level: "N4"
+chapter: 27
+description: "Learn how to express intentions, make casual invitations, and describe attempting an action in Japanese using the volitional form."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Volitional Form (よう / しよう)"
+  level="N4"
+  chapter={27}
+  objectives={[
+    "Form the Volitional Form for Group 1, Group 2, and Irregular verbs.",
+    "Use the Volitional Form as the casual equivalent of 〜ましょう (let's).",
+    "Express personal intentions using 〜ようと思う.",
+    "Describe attempting an action using 〜ようとする."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In N5, you learned to invite someone or suggest an action politely using `〜ましょう` (Let's). But how do you say "Let's go!" to your close friends? Or how do you express a strong internal intention to do something? The answer is the **Volitional Form** (意向形 - ikoukei). It is one of the most expressive verb forms in Japanese.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/27-volitional-form.webp"
+  alt="Anime pixel-art illustration of two friends deciding where to go on lantern-lit paths toward food stalls, a theater, a train, and Mount Fuji."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Conjugating the Volitional Form
+
+Conjugating into the volitional form follows simple rules depending on the verb group.
+
+### Group 1 (U-Verbs)
+Drop the final `〜u` sound and change it to the `〜ou` sound. In hiragana terms, change the `U-row` character to the `O-row` character, and add `う`.
+* 行く (iku) ➔ 行こう (ikou)
+* 飲む (nomu) ➔ 飲もう (nomou)
+* 会う (au)   ➔ 会おう (aou)
+
+### Group 2 (Ru-Verbs)
+Drop the `る` and add `よう`.
+* 食べる (taberu) ➔ 食べよう (tabeyou)
+* 見る (miru)      ➔ 見よう (miyou)
+
+### Group 3 (Irregular Verbs)
+* する (suru) ➔ しよう (shiyou)
+* 来る (kuru) ➔ 来よう (koyou)
+
+<ExampleSentence client:load 
+  japanese="今日から毎日運動しよう。"
+  romaji="kyou kara mainichi undou shiyou."
+  translation="Let's (or 'I shall') exercise every day starting today."
+/>
+
+<ExampleSentence client:load 
+  japanese="今夜は早く寝よう。"
+  romaji="kon-ya wa hayaku neyou."
+  translation="Let's go to bed early tonight."
+/>
+
+<ExampleSentence client:load 
+  japanese="明日もまたここに来よう。"
+  romaji="ashita mo mata koko ni koyou."
+  translation="Let's come here again tomorrow."
+/>
+
+## 2. Casual Invitations (Let's!)
+
+The most basic use of the plain volitional form is as the casual equivalent of polite `〜ましょう`. You use this with close friends, family, or people of lower status.
+
+<GrammarBox client:load 
+  pattern="Volitional Form"
+  meaning="Let's do [verb]. (Casual)"
+  formation="Conjugate verb to Volitional Form"
+  examples={[
+    { japanese: "明日、映画を見よう！", romaji: "ashita, eiga o miyou!", translation: "Let's watch a movie tomorrow!" },
+    { japanese: "疲れたから、少し休もう。", romaji: "tsukareta kara, sukoshi yasumou.", translation: "I'm tired, so let's rest a bit." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="お腹が空いたね。何か食べよう。"
+  romaji="onaka ga suita ne. Nani ka tabeyou."
+  translation="We're hungry, aren't we? Let's eat something."
+/>
+
+> [!NOTE]
+> If you add `か` to the end (`〜ようか`), it becomes slightly softer: "Shall we?" Example: `手伝おうか？` (Shall I help?).
+
+## 3. Expressing Intention: 〜ようと思う
+
+When you want to state a clear intention or plan to do something, you attach `と思う` (I think) to the volitional form.
+* **〜ようと思う:** I think I will... (A decision made just now, or a soft statement).
+* **〜ようと思っている:** I am thinking I will... (A decision made in the past that you are holding onto).
+
+<GrammarBox client:load 
+  pattern="Volitional Form + と思う / と思っている"
+  meaning="I intend to / I think I will do [verb]."
+  formation="Volitional Verb + と思う"
+  examples={[
+    { japanese: "来年、日本へ行こうと思っています。", romaji: "rainen, nihon e ikou to omotte imasu.", translation: "I am planning/thinking of going to Japan next year." },
+    { japanese: "今日は早く寝ようと思います。", romaji: "kyou wa hayaku neyou to omoimasu.", translation: "I think I will go to bed early today." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="卒業したら、先生になろうと思っています。"
+  romaji="sotsugyou shitara, sensei ni narou to omotte imasu."
+  translation="After graduating, I'm thinking of becoming a teacher."
+/>
+
+## 4. Attempting an Action: 〜ようとする
+
+When you *try* to do something, or are *just about* to do something, you use the volitional form followed by `とする`.
+
+If you use `〜ようとした` (past tense), it often implies you tried to do it, but failed or were interrupted.
+
+<GrammarBox client:load 
+  pattern="Volitional Form + とする"
+  meaning="To attempt to do / to be about to do [verb]."
+  formation="Volitional Verb + とする"
+  examples={[
+    { japanese: "電車に乗ろうとした時、ドアが閉まりました。", romaji: "densha ni norou to shita toki, doa ga shimarimashita.", translation: "When I was about to get on the train, the doors closed." },
+    { japanese: "犬はお風呂に入ろうとしません。", romaji: "inu wa ofuro ni hairou to shimasen.", translation: "The dog won't try to (refuses to) get in the bath." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="宿題をしようとしたけど、友達が来ました。"
+  romaji="shukudai o shiyou to shita kedo, tomodachi ga kimashita."
+  translation="I tried to do my homework, but a friend came over."
+/>
+
+> [!TIP]
+> Do not confuse `〜ようとする` (try/attempt making an effort) with `〜てみる` (do something to see what it's like). You use `乗ろうとする` when you are struggling to get on the train, but `乗ってみる` when you successfully get on to see if you like the train ride.
+
+## 5. Cultural Insight: The Volitional Form in Monologues
+
+The volitional form isn't just for inviting others; it's very frequently used in **monologues** (talking to oneself). When a Japanese person is about to start a task or makes a decision alone, they often mutter the volitional form to themselves to show determination or to signal their next move.
+
+Common examples:
+* `「よし、やろう！」` (Yosh, yarou!) - "Okay, let's do this!"
+* `「さて、帰ろうかな。」` (Sate, kaerou kana.) - "Well, I guess I'll head home."
+
+This usage helps the speaker focus and mentally prepare for the action. It's a natural part of daily life in Japan that you'll hear in offices, schools, and homes.
+
+---
+
+---
+
+## Contextual Dialogues
+
+### 1. Making Weekend Plans (週末の予定)
+
+Listen to how Tanaka and Suzuki use the volitional form to make plans and discuss their intentions.
+
+<ConversationDialog client:load 
+  title="Making Weekend Plans (週末の予定)"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, let's go drinking this weekend!", japanese: "鈴木さん、今週末、飲みに行こう！", romaji: "Suzuki-san, konshuumatsu, nomi ni ikou!" },
+    { speaker: "Suzuki", translation: "Ah, sorry. I am planning to study for the JLPT this weekend.", japanese: "あ、ごめん。今週末はJLPTの勉強をしようと思っているんだ。", romaji: "A, gomen. Konshuumatsu wa JLPT no benkyou o shiyou to omotte iru n da." },
+    { speaker: "Tanaka", translation: "I see. Are you going to take N4?", japanese: "そっか。N4を受けるの？", romaji: "Sokka. N4 o ukeru no?" },
+    { speaker: "Suzuki", translation: "Yeah. I tried to study yesterday too, but I immediately fell asleep.", japanese: "うん。昨日も勉強しようとしたんだけど、すぐに寝てしまったよ。", romaji: "Un. Kinou mo benkyou shiyou to shita n da kedo, sugu ni nete shimatta yo." },
+    { speaker: "Tanaka", translation: "Haha, do your best. Well then, I will drink alone.", japanese: "あはは、頑張って。じゃあ、僕は一人で飲もう。", romaji: "Ahaha, ganbatte. Jaa, boku wa hitori de nomou." }
+  ]}
+/>
+
+### 2. At the Restaurant (レストランで)
+
+Making decisions and suggestions casually.
+
+<ConversationDialog client:load 
+  title="At the Restaurant (レストランで)"
+  lines={[
+    { speaker: "Suzuki", translation: "Everything looks delicious. What shall we eat?", japanese: "全部美味しそうですね。何を食べようか。", romaji: "Zenbu oishisou desu ne. Nani o tabeyou ka." },
+    { speaker: "Tanaka", translation: "I'm thinking of having the pizza. Let's share it!", japanese: "僕はピザを食べようと思っているよ。一緒に食べよう！", romaji: "Boku wa piza o tabeyou to omotte iru yo. Issho ni tabeyou!" },
+    { speaker: "Suzuki", translation: "Good idea. I'll order some wine too.", japanese: "いいですね。ワインも頼もう。", romaji: "Ii desu ne. Wain mo tanomou." },
+    { speaker: "Tanaka", translation: "Wait, the waiter is busy. I'll try to call him when he comes near.", japanese: "待って、店員さんが忙しそうだ。近くに来たら、呼ぼうとしよう。", romaji: "Matte, ten-in san ga isogashisou da. Chikaku ni kitara, yobou to shiyou." }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "The Volitional form translates roughly to 'Let's...' or 'I shall...'",
+    "Group 1 verbs end in 〜ou, Group 2 end in 〜you, and Irregular verbs become しよう / 来よう.",
+    "Used alone, it is the casual equivalent of 〜ましょう.",
+    "Combined with と思う/と思っている, it expresses your intention or plan.",
+    "Combined with とする/とした, it expresses trying or attempting to do an action (often with an interrupting result)."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the Volitional Form!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the volitional form of '行く' (to go)?",
+      options: ["行こう", "行かよう", "行けよう", "行きよう"],
+      correct: 0,
+      explanation: "行く is a Group 1 verb. Change 'ku' to 'ko' and add 'u' -> 行こう."
+    },
+    {
+      question: "What is the volitional form of '食べる' (to eat)?",
+      options: ["食べろう", "食べよう", "食べおう", "食べむ"],
+      correct: 1,
+      explanation: "食べる is a Group 2 verb. Drop 'ru' and add 'you' -> 食べよう."
+    },
+    {
+      question: "Which represents the volitional form of '来る' (to come)?",
+      options: ["くよう", "きよう", "こよう", "きようとする"],
+      correct: 2,
+      explanation: "来る is an irregular verb. Its volitional form is 来よう (koyou)."
+    },
+    {
+      question: "Translate: 'Let's rest a bit.' (Casual)",
+      options: ["少し休んでいます。", "少し休もう。", "少し休めば。", "少し休む。"],
+      correct: 1,
+      explanation: "休もう (yasumou) is the casual volitional form of 休む (to rest)."
+    },
+    {
+      question: "What does '勉強しようと思っています' mean?",
+      options: ["I am studying right now.", "I think he is studying.", "I am planning/intending to study.", "I tried to study."],
+      correct: 2,
+      explanation: "Volitional form + と思っている expresses an ongoing personal intention or plan."
+    },
+    {
+      question: "What nuance does '乗ろうとした' have?",
+      options: ["I tried to get on (but probably failed or was interrupted).", "I got on to see what it was like.", "I am planning to get on.", "Let's get on."],
+      correct: 0,
+      explanation: "Volitional form + とした means 'I was about to' or 'I tried to', often implying the action was not completed."
+    },
+    {
+      question: "If a friend says '映画を見ようか', what are they saying?",
+      options: ["Do you watch movies?", "I will watch a movie.", "Shall we watch a movie?", "I want to watch a movie."],
+      correct: 2,
+      explanation: "Adding 'か' to the volitional form makes it a softer suggestion/invitation: 'Shall we...?'"
+    },
+    {
+      question: "Translate: 'I am planning to buy a new car.'",
+      options: ["新しい車を買うと思います。", "新しい車を買いたいと思います。", "新しい車を買おうと思っています。", "新しい車を買うとしています。"],
+      correct: 2,
+      explanation: "買う (Group 1) -> 買おう + と思っています = planning to buy."
+    },
+    {
+      question: "What is the difference between '〜ようと思う' and '〜ようと思っている'?",
+      options: ["They are exactly the same.", "思う is for writing, 思っている is for speaking.", "思う shows a decision made just right now, 思っている shows an intention held for a while.", "思う is polite, 思っている is casual."],
+      correct: 2,
+      explanation: "〜と思っている shows that you have been holding this intention for some time. 〜と思う is often for decisions made on the spot."
+    },
+    {
+      question: "In the dialogue, why did Suzuki fall asleep?",
+      options: ["Because he went drinking.", "He was about to study but fell asleep instead.", "Because he finished the JLPT.", "Because Tanaka told him to rest."],
+      correct: 1,
+      explanation: "He says '勉強しようとしたんだけど' (I tried/was about to study, but...)."
+    },
+    {
+      question: "What is the volitional form of 'する' (to do)?",
+      options: ["すろう", "さよう", "しょう", "しよう"],
+      correct: 3,
+      explanation: "する becomes しよう (shiyou)."
+    },
+    {
+      question: "Is it correct to use '〜ようと思っています' to express SOMEONE ELSE's intention?",
+      options: ["Yes, always.", "No, to express someone else's intention, you must use '〜がっている'.", "No, for a third party, you can only use '〜ようと思っています' or 'つもりです', not '〜ようと思う'.", "Yes, but only for family members."],
+      correct: 2,
+      explanation: "You cannot state what another person 'thinks' (思う) definitively, but you can say they 'are thinking' (思っている) based on their behavior, or report it."
+    },
+    {
+      question: "How do you casually say: 'Shall I help?'",
+      options: ["手伝いましょうか？", "手伝うか？", "手伝おうか？", "手伝ってみるか？"],
+      correct: 2,
+      explanation: "手伝って (help) -> 手伝う -> 手伝おう + か -> 手伝おうか？"
+    },
+    {
+      question: "What is the volitional form of the Group 1 verb '待つ' (to wait)?",
+      options: ["待とう", "待よう", "待たちよう", "待ちよう"],
+      correct: 0,
+      explanation: "待つ ending is 'tsu'. In the O-row, 'tsu' becomes 'to'. Add 'u' -> 待とう (matou)."
+    },
+    {
+      question: "Choose the correct translation: 'The baby won't try to sleep.'",
+      options: ["赤ちゃんは寝てみません。", "赤ちゃんは寝ようとしません。", "赤ちゃんは寝ようと思いません。", "赤ちゃんは寝るはずがありません。"],
+      correct: 1,
+      explanation: "Volitional form (寝よう) + としない (doesn't try to / refuses to)."
+    }
+  ]}
+/>

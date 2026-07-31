@@ -1,0 +1,309 @@
+---
+title: "Chapter 12 — Verb Groups & Dictionary Form"
+level: "N5"
+chapter: "12"
+description: "Unlock the master key to Japanese grammar by learning how to classify verbs into three groups based on their dictionary forms (u-verbs, ru-verbs, irregular)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Verb Groups & Dictionary Form"
+  level="N5"
+  chapter="12"
+  objectives={[
+    "Understand what the 'Dictionary Form' of a verb is.",
+    "Classify verbs into Group 1 (u-verbs), Group 2 (ru-verbs), or Group 3 (Irregular).",
+    "Identify exceptions to the classification rules.",
+    "Explore the concept of 'Ma' in Japanese language and rhythm."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In English, to know how to conjugate a verb, you only need to know it's a verb (e.g., eat ➔ eating, ate, eaten). But in Japanese, knowing it's a verb isn't enough! Every single Japanese verb belongs to one of **Three Groups**. The group a verb belongs to determines *exactly* how it will conjugate for tense, politeness, and every other grammar rule you will ever learn.
+
+You already used these groups to build the polite ます-form in Chapter 10. Here we formalize how to tell them apart, working from the **Dictionary Form**: the plain, unconjugated, casual form of the verb — the form you would look up in a dictionary. Master this and every later conjugation (て-form, potential, passive, causative…) falls into place. Let's learn the groups!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/12-verb-groups-dictionary.webp"
+  alt="Anime pixel-art illustration of Japanese dictionary-form verb cards sorted into three verb groups."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Group 1: The u-verbs (Godan Verbs)
+
+Group 1 is the largest verb group. To identify a Group 1 verb, look at its Dictionary Form ending. If it ends in any Hiragana character from the **"u" row** (other than る), it is 100% guaranteed to be a Group 1 verb!
+
+**Common Endings:**
+- 〜く (ku): かく (to write)
+- 〜す (su): はなす (to speak)
+- 〜つ (tsu): まつ (to wait)
+- 〜む (mu): のむ (to drink)
+- 〜う (u): かう (to buy)
+
+**The Catch:** Some Group 1 verbs *do* end in る (ru). If the sound right before the る is an **"a", "u", or "o"** sound, it is a Group 1 verb.
+- わか**る** (wakaru) [to understand]
+- つく**る** (tsukuru) [to make]
+
+<GrammarBox client:load 
+  pattern="[Verb] (Ends in 'u' sound)"
+  meaning="Dictionary Form of Group 1 verbs."
+  formation="The base form found in dictionaries."
+  examples={[
+    { japanese: "みず を のむ。", romaji: "Mizu o nomu.", translation: "I drink water. (Plain)" },
+    { japanese: "てがみ を かく。", romaji: "Tegami o kaku.", translation: "I write a letter. (Plain)" },
+    { japanese: "くるま に のる。", romaji: "Kuruma ni noru.", translation: "I ride in a car. (Plain)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="としょかん で ほん を よむ。"
+  romaji="Toshokan de hon o yomu."
+  translation="I read a book at the library."
+/>
+<ExampleSentence client:load 
+  japanese="あした、 かいもの に いく。"
+  romaji="Ashita, kaimono ni iku."
+  translation="Tomorrow, I'll go shopping."
+/>
+<ExampleSentence client:load 
+  japanese="おんがく を きく。"
+  romaji="Ongaku o kiku."
+  translation="I listen to music."
+/>
+
+## 2. Group 2: The ru-verbs (Ichidan Verbs)
+
+Group 2 verbs are the easiest verbs to conjugate. They **always** end in る (ru). 
+To identify a Group 2 verb, look at the sound right before the る. If it is an **"i" sound** or an **"e" sound**, then most of the time, it is a Group 2 verb!
+
+- **"i" sound + る:** みる (mi-ru), おきる (oki-ru)
+- **"e" sound + る:** たべる (tabe-ru), ねる (ne-ru)
+
+<GrammarBox client:load 
+  pattern="[i/e sound] ＋ る"
+  meaning="Dictionary Form of Group 2 verbs."
+  formation="Roots ending in 'i' or 'e' sounds + る."
+  examples={[
+    { japanese: "リンゴ を たべる。", romaji: "Ringo o taberu.", translation: "I eat an apple. (Plain)" },
+    { japanese: "テレビ を みる。", romaji: "Terebi o miru.", translation: "I watch TV. (Plain)" },
+    { japanese: "ベッド で ねる。", romaji: "Beddo de neru.", translation: "I sleep in the bed. (Plain)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="あさ、 しちじ に おきる。"
+  romaji="Asa, shichi-ji ni okiru."
+  translation="I wake up at 7:00 in the morning."
+/>
+<ExampleSentence client:load 
+  japanese="えいが を みる。"
+  romaji="Eiga o miru."
+  translation="I watch a movie."
+/>
+<ExampleSentence client:load 
+  japanese="ごはん を たべる。"
+  romaji="Gohan o taberu."
+  translation="I eat a meal."
+/>
+
+> [!WARNING]
+> **The Exceptions Trap!**
+> Some verbs *look* like Group 2 (end in i-ru or e-ru) but are secretly Group 1! 
+> - **かえる (kaeru)** - To return home
+> - **はいる (hairu)** - To enter
+> - **はしる (hashiru)** - To run
+
+## 3. Group 3: Irregular Verbs
+
+There are only **two** irregular verbs in the entire Japanese language. 
+1. **する (suru)** - To do
+2. **くる (kuru)** - To come
+
+<GrammarBox client:load 
+  pattern="する ／ くる"
+  meaning="The two irregular verbs in Japanese."
+  formation="Memorize these two separately."
+  examples={[
+    { japanese: "べんきょう を する。", romaji: "Benkyou o suru.", translation: "I study." },
+    { japanese: "テニス を する。", romaji: "Tenisu o suru.", translation: "I play tennis." },
+    { japanese: "あした くる。", romaji: "Ashita kuru.", translation: "I will come tomorrow." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="かいもの を する。"
+  romaji="Kaimono o suru."
+  translation="I do shopping."
+/>
+<ExampleSentence client:load 
+  japanese="ここに くる。"
+  romaji="Koko ni kuru."
+  translation="I come here."
+/>
+<ExampleSentence client:load 
+  japanese="さんぽ を する。"
+  romaji="Sanpo o suru."
+  translation="I take a walk."
+/>
+
+## 4. Cultural Note: The Concept of 'Ma' (間)
+
+In Japanese culture, **Ma (間)** refers to the "space," "interval," or "pause" between things. This concept is vital in everything from architecture and gardens to the Japanese language itself.
+- **In Language:** 'Ma' is the silence between words or the pause before a verb. It allows the listener to process information and adds weight to what is said.
+- **In Rhythm:** Japanese verbs often dictate the rhythm of a sentence. Understanding the group helps you maintain the correct 'Ma' during conjugation.
+- **In Art:** A minimalist Japanese painting uses empty space (Ma) to highlight the subject. Similarly, a well-timed pause in conversation is seen as a sign of intelligence and respect.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/12-verb-groups-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of friends planning weekend activities with dictionary-form verb cards for よむ, みる, する, たべる, and おきる."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Weekend Plans (Plain Style)"
+  lines={[
+    { speaker: "Tanaka", japanese: "あした、 なに を する？", romaji: "Ashita, nani o suru?", translation: "What are you going to do tomorrow?" },
+    { speaker: "Smith", japanese: "ほん を よむ。 たなかさん は？", romaji: "Hon o yomu. Tanaka-san wa?", translation: "I'll read a book. How about you, Tanaka?" },
+    { speaker: "Tanaka", japanese: "わたし は えいが を みる。 それから、 かいもの を する。", romaji: "Watashi wa eiga o miru. Sorekara, kaimono o suru.", translation: "I will watch a movie. And then, I'll do some shopping." },
+    { speaker: "Smith", japanese: "いい ね。 いっしょ に たべる？", romaji: "Ii ne. Issho ni taberu?", translation: "That's nice. Want to eat together?" }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Daily Routine"
+  lines={[
+    { speaker: "Ken", japanese: "毎日、 なんじ に おきる？", romaji: "Mainichi, nanji ni okiru?", translation: "What time do you wake up every day?" },
+    { speaker: "Yumi", japanese: "ろくじ に おきる。 それから、 はしる。", romaji: "Rokuji ni okiru. Sorekara, hashiru.", translation: "I wake up at 6:00. And then, I run." },
+    { speaker: "Ken", japanese: "すごい ね。 わたし は しちじ に おきる。", romaji: "Sugoi ne. Watashi wa shichiji ni okiru.", translation: "That's impressive. I wake up at 7:00." },
+    { speaker: "Yumi", japanese: "よる は いつ ねる？", romaji: "Yoru wa itsu neru?", translation: "When do you go to sleep at night?" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Japanese verbs are classified into three groups: Group 1 (u-verbs), Group 2 (ru-verbs), and Group 3 (Irregular).",
+    "The Dictionary Form is the plain, 'root' form of a verb.",
+    "Group 1 verbs end in any 'u' sound (ku, su, mu, etc.) or 'ru' preceded by a/u/o.",
+    "Group 2 verbs end in 'ru' preceded by i/e sounds.",
+    "Group 3 consists only of する (to do) and くる (to come).",
+    "The concept of 'Ma' emphasizes the importance of pauses and space in communication."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your ability to classify verbs!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which verb group does 'のむ' (to drink) belong to?",
+      options: ["Group 1", "Group 2", "Group 3", "Exception"],
+      correct: 0,
+      explanation: "Nomu ends in 'mu', which is a 'u' row character. It's a Group 1 verb."
+    },
+    {
+      question: "How do you identify a Group 2 verb?",
+      options: ["It ends in 'su'.", "It ends in 'ru' preceded by an 'i' or 'e' sound.", "It is always irregular.", "It ends in 'mu'."],
+      correct: 1,
+      explanation: "Group 2 verbs always end in る and have an 'i' or 'e' sound before it."
+    },
+    {
+      question: "Which of these is a Group 3 (Irregular) verb?",
+      options: ["たべる", "みる", "くる", "よむ"],
+      correct: 2,
+      explanation: "The two irregular verbs are する and くる."
+    },
+    {
+      question: "What group is 'かえる' (to return home)?",
+      options: ["Group 1", "Group 2", "Group 3", "It's an adjective"],
+      correct: 0,
+      explanation: "Kaeru is a famous exception. It looks like Group 2 but is actually Group 1."
+    },
+    {
+      question: "Which word means 'to watch / see'?",
+      options: ["きく", "みる", "かく", "よむ"],
+      correct: 1,
+      explanation: "みる (miru) means to see, watch, or look."
+    },
+    {
+      question: "What is the 'Dictionary Form'?",
+      options: ["The most polite form", "The plain, unconjugated base form", "The past tense form", "The negative form"],
+      correct: 1,
+      explanation: "The dictionary form is the raw verb as found in a dictionary."
+    },
+    {
+      question: "Which group does 'はなす' (to speak) belong to?",
+      options: ["Group 1", "Group 2", "Group 3", "It's a noun"],
+      correct: 0,
+      explanation: "It ends in 'su', making it a Group 1 verb."
+    },
+    {
+      question: "What does 'Ma' (間) refer to in Japanese culture?",
+      options: ["A type of tea", "A lucky number", "The concept of space or interval", "The verb 'to eat'"],
+      correct: 2,
+      explanation: "Ma refers to the space, pause, or interval between things."
+    },
+    {
+      question: "Group 1 verbs are also known as:",
+      options: ["Ichidan verbs", "Godan verbs", "Irregular verbs", "Noun verbs"],
+      correct: 1,
+      explanation: "Group 1 verbs are called Godan verbs because they conjugate across five rows of the hiragana chart."
+    },
+    {
+      question: "Translate: 'Hon o yomu.'",
+      options: ["I write a book.", "I read a book.", "I see a book.", "I buy a book."],
+      correct: 1,
+      explanation: "Yomu is the dictionary form of 'to read'."
+    },
+    {
+      question: "Which of these is a Group 2 verb?",
+      options: ["のる", "わかる", "ねる", "つく"],
+      correct: 2,
+      explanation: "Neru (ne + ru) has an 'e' sound before the ru, making it Group 2."
+    },
+    {
+      question: "What is the dictionary form of 'to do'?",
+      options: ["する", "くる", "きる", "ある"],
+      correct: 0,
+      explanation: "Suru is the irregular verb for 'to do'."
+    },
+    {
+      question: "Which prefix identifies the 'far from both' zone in Ko-So-A-Do?",
+      options: ["Ko", "So", "A", "Do"],
+      correct: 2,
+      explanation: "A (as in Ano, Are, Asoko) is for the distant zone."
+    },
+    {
+      question: "What group is 'つくえ'?",
+      options: ["Group 1", "Group 2", "Group 3", "It is a Noun, not a verb"],
+      correct: 3,
+      explanation: "Tsukue means 'desk'. It is not a verb."
+    },
+    {
+      question: "How do you say 'to wake up' in Japanese?",
+      options: ["ねる", "おきる", "たべる", "くる"],
+      correct: 1,
+      explanation: "Okiru is a Group 2 verb meaning 'to wake up'."
+    }
+  ]}
+/>

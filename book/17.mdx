@@ -1,0 +1,296 @@
+---
+title: "Chapter 17 — Past Tense: Nouns & Verbs"
+level: "N5"
+chapter: "17"
+description: "Master the art of looking back. Learn how to describe past events, states, and feelings by conjugating nouns, adjectives, and verbs into the past tense."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Past Tense: Nouns & Verbs"
+  level="N5"
+  chapter="17"
+  objectives={[
+    "Conjugate Nouns and な-adjectives into the past tense using でした.",
+    "Conjugate い-adjectives into the past tense using かった.",
+    "Master the polite verb past tense forms (ました and ませんでした).",
+    "Learn about Japanese New Year (Oshougatsu) traditions and reflections."
+  ]}
+/>
+
+<SectionIntro level="N5">
+To tell a story, you must be able to speak about the past. In Japanese, the way you "look back" depends on what kind of word you are using. Whether you are describing a state ("It was a holiday"), a feeling ("It was cold"), or an action ("I ate sushi"), this chapter provides the master key to all N5 past tense conjugations.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/17-past-tense.webp"
+  alt="Anime pixel-art illustration of a learner looking back at memory cards for Japanese past tense endings."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Past Tense for Nouns & な-Adjectives
+
+Nouns and な-adjectives are "lazy" conjugators. They don't change themselves; they rely entirely on the **Copula (です)** to change into the past tense.
+
+- **Affirmative:** [Noun] **でした (deshita)**
+- **Negative:** [Noun] **じゃありませんでした (ja arimasen deshita)**
+
+<GrammarBox client:load 
+  pattern="[Noun] ＋ でした"
+  meaning="It was [Noun]."
+  formation="Noun + でした / じゃありませんでした"
+  examples={[
+    { japanese: "きのう は やすみ でした。", romaji: "Kinou wa yasumi deshita.", translation: "Yesterday was a holiday." },
+    { japanese: "あめ じゃありませんでした。", romaji: "Ame ja arimasen deshita.", translation: "It was not rain." },
+    { japanese: "にほんご の しけん は かんたん でした。", romaji: "Nihongo no shiken wa kantan deshita.", translation: "The Japanese exam was easy." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="こどものとき、しずか でした。"
+  romaji="Kodomo no toki, shizuka deshita."
+  translation="When I was a child, I was quiet."
+/>
+<ExampleSentence client:load 
+  japanese="パーティー は にぎやか でした か。"
+  romaji="Paatii wa nigiyaka deshita ka?"
+  translation="Was the party lively?"
+/>
+<ExampleSentence client:load 
+  japanese="せんしゅう は ひま じゃありませんでした。"
+  romaji="Senshuu wa hima ja arimasen deshita."
+  translation="I was not free last week."
+/>
+
+## 2. Past Tense for い-Adjectives
+
+Unlike nouns, **い-adjectives** change their own endings. To make them past tense, you must drop the final **い** and add **かった (katta)**.
+
+<GrammarBox client:load 
+  pattern="[Adj Root] ＋ かった です"
+  meaning="It was [Adjective]."
+  formation="Drop い + add かった"
+  examples={[
+    { japanese: "あつかった です。", romaji: "Atsukatta desu.", translation: "It was hot." },
+    { japanese: "おもしろくなかった です。", romaji: "Omoshirokunai desu ➔ Omoshirokunakatta desu.", translation: "It was not interesting." },
+    { japanese: "てんき は よかった です。", romaji: "Tenki wa yokatta desu.", translation: "The weather was good. (ii ➔ yokatta)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="きのう の りょうり は おいしかった です。"
+  romaji="Kinou no ryouri wa oishikatta desu."
+  translation="Yesterday's meal was delicious."
+/>
+<ExampleSentence client:load 
+  japanese="テスト は むずかしくなかった です。"
+  romaji="Tesuto wa muzukashikunakatta desu."
+  translation="The test was not difficult."
+/>
+<ExampleSentence client:load 
+  japanese="きょねん の ふゆ は とても さむかった です。"
+  romaji="Kyonen no fuyu wa totemo samukatta desu."
+  translation="Last year's winter was very cold."
+/>
+
+## 3. Past Tense for Verbs (ます-Form)
+
+For polite verbs, the conjugation is consistent across all groups. You simply change the **ます** ending.
+
+- **Affirmative:** 〜**ました (mashita)**
+- **Negative:** 〜**ませんでした (masen deshita)**
+
+<GrammarBox client:load 
+  pattern="[Verb Stem] ＋ ました"
+  meaning="Performed the action in the past."
+  formation="Stem + ました / ませんでした"
+  examples={[
+    { japanese: "すし を たべました。", romaji: "Sushi o tabemashita.", translation: "I ate sushi." },
+    { japanese: "どこ へ も いきませんでした。", romaji: "Doko e mo ikimasen deshita.", translation: "I didn't go anywhere." },
+    { japanese: "だれ と あいました か。", romaji: "Dare to aimashita ka?", translation: "Who did you meet?" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="きのう は じゅうじ に ねました。"
+  romaji="Kinou wa juu-ji ni nemashita."
+  translation="Yesterday, I went to sleep at 10:00."
+/>
+<ExampleSentence client:load 
+  japanese="あさごはん を たべませんでした。"
+  romaji="Asagohan o tabemasen deshita."
+  translation="I didn't eat breakfast."
+/>
+<ExampleSentence client:load 
+  japanese="にほんご を たくさん べんきょうしました。"
+  romaji="Nihongo o takusan benkyoushimashita."
+  translation="I studied Japanese a lot."
+/>
+
+## 4. Cultural Note: New Year Reflections (Oshougatsu)
+
+In Japan, the New Year (**Oshougatsu**) is the most important holiday. It is a time for **reflection** on the past year and making wishes for the future.
+
+- **Hatsumode (初詣):** The first shrine or temple visit of the year. People thank the gods for the past year's safety and pray for a good new year.
+- **Osechi-ryouri (おせち料理):** Special traditional foods eaten during the first three days. Each ingredient has a symbolic meaning related to health, fertility, or harvest.
+- **Nengajou (年賀状):** New Year's greeting cards. People write about what **happened** in the past year and express hopes for the next.
+
+**Language Tip:** When reflecting, you will use the past tense constantly!
+- *Kyonen wa tanoshikatta desu.* (Last year was fun.)
+- *Takusan benkyou shimashita.* (I studied a lot.)
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/17-past-tense-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of Kyoto travel memories and New Year reflections with past-tense cards でした, ました, and よかった."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="After the Vacation"
+  lines={[
+    { speaker: "Alice", japanese: "しゅうまつ は なに を しました か。", romaji: "Shuumatsu wa nani o shimashita ka?", translation: "What did you do on the weekend?" },
+    { speaker: "Tanaka", japanese: "きょうと へ いきました。 とても きれい でした よ。", romaji: "Kyouto e ikimashita. Totemo kirei deshita yo.", translation: "I went to Kyoto. It was very beautiful." },
+    { speaker: "Alice", japanese: "てんき は よかった です か。", romaji: "Tenki wa yokatta desu ka?", translation: "Was the weather good?" },
+    { speaker: "Tanaka", japanese: "はい、あつかった です。 でも、おもしろかった です。", romaji: "Hai, atsukatta desu. Demo, omoshirokatta desu.", translation: "Yes, it was hot. But it was interesting." },
+    { speaker: "Alice", japanese: "なに を たべました か。", romaji: "Nani o tabemashita ka?", translation: "What did you eat?" },
+    { speaker: "Tanaka", japanese: "てんぷら を たべました。 おいしかった です！", romaji: "Tenpura o tabemashita. Oishikatta desu!", translation: "I ate tempura. It was delicious!" }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="New Year's Morning"
+  lines={[
+    { speaker: "Ken", japanese: "あけまして おめでとう ございます！ きょねん は どんな とし でした か。", romaji: "Akemashite omedetou gozaimasu! Kyonen wa donna toshi deshita ka?", translation: "Happy New Year! What kind of year was last year?" },
+    { speaker: "Yumi", japanese: "とても いそがしかった です。 でも、たのしかった です。", romaji: "Totemo isogashikatta desu. Demo, tanoshikatta desu.", translation: "It was very busy. But it was fun." },
+    { speaker: "Ken", japanese: "わたし は あまり べんきょう しませんでした。 ことし は がんばります！", romaji: "Watashi wa amari benkyou shimasen deshita. Kotoshi wa ganbarimasu!", translation: "I didn't study much. This year I'll work hard!" },
+    { speaker: "Yumi", japanese: "いっしょに はつもうで に いきませんか。", romaji: "Isshoni hatsumoude ni ikimasenka?", translation: "Won't you go with me for the first shrine visit?" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Nouns and な-adjectives use でした (was) and じゃありませんでした (was not).",
+    "い-adjectives drop the final い and add かった (was) or くなかった (was not).",
+    "Polite verbs use ました (did) and ませんでした (did not).",
+    "The adjective いい (good) becomes よかった (was good).",
+    "Questions about the past maintain the same word order; just change the verb/adjective ending and add か.",
+    "Japanese New Year is a time for reflecting on past events using these grammar forms."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your ability to describe the past!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "How do you conjugate 'たべます' (to eat) into the past tense?",
+      options: ["たべった", "たべました", "たべますでした", "たべましたでした"],
+      correct: 1,
+      explanation: "For polite verbs, change 〜ます to 〜ました."
+    },
+    {
+      question: "What is the past tense of the noun 'やすみ' (holiday/rest)?",
+      options: ["やすみかった", "やすみでした", "やすみした", "やすみでしたです"],
+      correct: 1,
+      explanation: "Nouns use でした to indicate the past state."
+    },
+    {
+      question: "Translate: 'It was hot.' (あつい = hot)",
+      options: ["あつい でした", "あつくでした", "あつかった です", "あつかったですでした"],
+      correct: 2,
+      explanation: "い-adjectives drop the final い and add かった."
+    },
+    {
+      question: "What is the negative past tense of 'いきました' (went)?",
+      options: ["いきませんでした", "いきなかった", "いきませんでしたでした", "いきじゃありませんでした"],
+      correct: 0,
+      explanation: "The polite negative past is 〜ませんでした."
+    },
+    {
+      question: "Translate: 'Yesterday was not a holiday.'",
+      options: ["きのう は やすみ かった です。", "きのう は やすみ じゃありませんでした。", "きのう は やすみ でした。", "きのう は やすみ くなかった です。"],
+      correct: 1,
+      explanation: "Noun negative past is じゃありませんでした."
+    },
+    {
+      question: "How do you conjugate 'いい' (good) into 'was good'?",
+      options: ["いいかった", "よかった", "よくでした", "いくなかった"],
+      correct: 1,
+      explanation: "Irregular: ii ➔ yoi ➔ yokatta."
+    },
+    {
+      question: "Translate: 'The movie was not interesting.' (おもしろい = interesting)",
+      options: ["えいが は おもしろくない でした。", "えいが は おもしろくなかった です。", "えいが は おもしろい じゃありませんでした。", "えいが は おもしろかった です。"],
+      correct: 1,
+      explanation: "Negative past for い-adjectives is 〜くなかった."
+    },
+    {
+      question: "Translate: 'Who did you meet?'",
+      options: ["だれ が あいました か。", "だれ と あいました か。", "だれ に あいました か。", "だれ を あいました か。"],
+      correct: 1,
+      explanation: "Dare to (With whom) + aimashita (met)."
+    },
+    {
+      question: "Which of the following describes a past action?",
+      options: ["べんきょうします", "べんきょうしました", "べんきょうしたい", "べんきょうして"],
+      correct: 1,
+      explanation: "〜ました indicates a completed action in the past."
+    },
+    {
+      question: "Translate: 'It was lively.' (にぎやか = lively [な-adj])",
+      options: ["にぎやかかった", "にぎやか でした", "にぎやか かった です", "にぎやか に なりました"],
+      correct: 1,
+      explanation: "な-adjectives conjugate like nouns using でした."
+    },
+    {
+      question: "How do you say 'I didn't eat anything'?",
+      options: ["なにも たべませんでした。", "なんでも たべました。", "なにか たべませんでした。", "だれも たべませんでした。"],
+      correct: 0,
+      explanation: "Nani mo (Nothing) + negative verb (tabemasen deshita)."
+    },
+    {
+      question: "What does 'Hatsumode' refer to?",
+      options: ["The first dream", "The first shrine visit", "Special New Year's food", "Greeting cards"],
+      correct: 1,
+      explanation: "Hatsumode is the traditional first shrine/temple visit of the year."
+    },
+    {
+      question: "Translate: 'Last week was busy.' (いそがしい = busy)",
+      options: ["せんしゅう は いそがしい でした。", "せんしゅう は いそがしかった です。", "せんしゅう は いそがしい かった。", "せんしゅう は いそがしかった でした。"],
+      correct: 1,
+      explanation: "い-adjective + かった です."
+    },
+    {
+      question: "If a sentence ends in '〜ませんでした', what do we know?",
+      options: ["It is present affirmative.", "It is past affirmative.", "It is past negative.", "It is a request."],
+      correct: 2,
+      explanation: "〜ませんでした is the polite past negative ending for verbs."
+    },
+    {
+      question: "True or False: Verbs and Adjectives use the same ending for the past tense.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. Verbs use 〜ました, while い-adjectives use 〜かった."
+    }
+  ]}
+/>

@@ -1,0 +1,306 @@
+---
+title: "Chapter 26 — Potential Form (できる & V-られる)"
+level: "N4"
+chapter: 26
+description: "Learn how to express ability, possibility, and capability in Japanese using the potential form of verbs (dekiru, rareru)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Potential Form (できる & V-られる)"
+  level="N4"
+  chapter={26}
+  objectives={[
+    "Understand the difference between personal ability and situational possibility.",
+    "Form the potential form for Group 1, Group 2, and Irregular verbs.",
+    "Learn the particle change from を to が when using potential verbs.",
+    "Practice using できる as an independent verb for ability."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, we simply add "can" or "be able to" before a verb. In Japanese, we *conjugate* the verb into the **Potential Form** (可能形 - kanoukei). This form is used to express both personal ability (skills you possess) and situational possibility (things conditions allow you to do). Let's unlock the power of "can"!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/26-potential-form.webp"
+  alt="Anime pixel-art illustration of a learner opening a glowing gate to scenes of abilities like writing, swimming, cooking, living with pets, and joining friends."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Using できる for Nouns and Group 3
+
+Before we look at conjugation, it is easiest to start with the verb `できる` (to be able to do/to be possible). 
+
+If a noun represents an action or a skill (like "tennis", "driving", "Japanese"), you can simply say:
+`[Noun] が できる`
+
+<GrammarBox client:load 
+  pattern="[Noun] が できる"
+  meaning="To be capable of [Noun] / to be able to do [Noun]."
+  formation="Action Noun + が + できる"
+  examples={[
+    { japanese: "私は日本語ができます。", romaji: "watashi wa nihongo ga dekimasu.", translation: "I can speak/use Japanese." },
+    { japanese: "田中さんはテニスができません。", romaji: "Tanaka-san wa tenisu ga dekimasen.", translation: "Mr. Tanaka cannot play tennis." }
+  ]}
+/>
+
+For **Group 3 Verbs** (Suru verbs), the potential form of `する` is simply `できる`. The potential form of `来る` (kuru) is `来られる` (korareru).
+
+<ExampleSentence client:load 
+  japanese="明日、パーティーに来られますか。"
+  romaji="ashita, paatii ni koraremasu ka."
+  translation="Can you come to the party tomorrow?"
+/>
+
+## 2. Conjugating Group 1 (U-Verbs)
+
+For Group 1 verbs, drop the final `〜u` sound and change it to the `〜eru` sound. In hiragana terms, change the `U-row` character to the `E-row` character, and add `る`.
+
+**Examples:**
+* 書く (kaku) → 書ける (kakeru) : Can write
+* 泳ぐ (oyogu) → 泳げる (oyogeru) : Can swim
+* 飲む (nomu) → 飲める (nomeru) : Can drink
+* 買う (kau) → 買える (kaeru) : Can buy
+
+<GrammarBox client:load 
+  pattern="[Group 1 Verb Root] + える (eru)"
+  meaning="To be able to do [Group 1 action]."
+  formation="u-row character ➔ e-row character + る"
+  examples={[
+    { japanese: "私はたくさんビールを飲めます。", romaji: "watashi wa takusan biiru o nomemasu.", translation: "I can drink a lot of beer." },
+    { japanese: "彼は漢字が書けません。", romaji: "kare wa kanji ga kakemasen.", translation: "He cannot write kanji." },
+    { japanese: "この川で泳げますか。", romaji: "kono kawa de oyogemasu ka.", translation: "Can you swim in this river?" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="日本料理が一人で作れます。"
+  romaji="nihon ryouri ga hitori de tsukuremasu."
+  translation="I can make Japanese food by myself."
+/>
+
+> [!IMPORTANT]
+> When a verb changes to the potential form, the direct object particle **を** usually changes to **が**. 
+> Example: 漢字**を**書く (I write kanji) ➔ 漢字**が**書ける (I can write kanji).
+
+## 3. Conjugating Group 2 (Ru-Verbs)
+
+For Group 2 verbs, drop the `る` and add `られる`. 
+
+**Examples:**
+* 食べる (taberu) → 食べられる (taberareru) : Can eat
+* 見る (miru) → 見られる (mirareru) : Can see
+* 起きる (okiru) → 起きられる (okirareru) : Can wake up
+
+<GrammarBox client:load 
+  pattern="[Group 2 Verb Stem] + られる"
+  meaning="To be able to do [Group 2 action]."
+  formation="Drop る ➔ Add られる"
+  examples={[
+    { japanese: "私は納豆が食べられます。", romaji: "watashi wa nattou ga taberaremasu.", translation: "I can eat natto." },
+    { japanese: "明日は早く起きられません。", romaji: "ashita wa hayaku okiraremasen.", translation: "I cannot wake up early tomorrow." },
+    { japanese: "日本語の映画が見られます。", romaji: "nihongo no eiga ga miraremasu.", translation: "I can watch Japanese movies." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="このアパートでペットが飼えますか。"
+  romaji="kono apaato de petto ga kaemasu ka."
+  translation="Can I keep a pet in this apartment? (Note: Kau is Group 1, but this shows situational possibility)."
+/>
+
+> [!NOTE]
+> In modern casual Japanese, many people drop the `ら` in Group 2 potential verbs (known as "ra-nuki kotoba"). For example, saying `食べれる` instead of `食べられる`. For the JLPT N4, you must know the proper `られる` form.
+
+
+## 4. Ability vs. Possibility
+
+The potential form in Japanese seamlessly covers two different English concepts:
+1. **Ability (能力):** The physical or mental skill you possess. (e.g., I can swim 100 meters).
+2. **Possibility/Situational (状況可能):** What the environment allows you to do. (e.g., I can buy a ticket here).
+
+<ExampleSentence client:load 
+  japanese="私の弟はまだ自転車に乗れません。"
+  romaji="watashi no otouto wa mada jitensha ni noremasen."
+  translation="My younger brother cannot ride a bicycle yet. (Ability)"
+/>
+
+<ExampleSentence client:load 
+  japanese="この図書館では、映画が見られます。"
+  romaji="kono toshokan de wa, eiga ga miraremasu."
+  translation="In this library, you can watch movies. (Possibility/Situation)"
+/>
+
+<ExampleSentence client:load 
+  japanese="このカードでチケットが買えます。"
+  romaji="kono kaado de chiketto ga kaemasu."
+  translation="With this card, you can buy a ticket. (Possibility/Situation)"
+/>
+
+## 5. Cultural Insight: Expressing Humility with Ability
+
+In Japanese culture, explicitly stating "I can do [X]" (〜ができる) can sometimes sound a bit boastful or overly direct. When Japanese people talk about their own skills, especially in formal or semi-formal situations, they often use hedging words like `少し` (a little) or `まだまだ` (not yet/still a long way to go) to show humility.
+
+For example, if someone asks "Can you speak Japanese?", a humble response would be:
+`「はい、少しだけ話せます。」` (Yes, I can speak just a little.)
+Even if the speaker is quite fluent, they might avoid saying `「はい、ペラペラです」` (Yes, I am fluent).
+
+Conversely, when talking about others, the potential form is a great way to show respect for their accomplishments.
+
+---
+
+---
+
+## Contextual Dialogues
+
+### 1. Talking About Skills (スキルの話)
+
+Listen to how Tanaka and Suzuki talk about their skills.
+
+<ConversationDialog client:load 
+  title="Talking About Skills (スキルの話)"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, can you speak English?", japanese: "鈴木さん、英語が話せますか。", romaji: "Suzuki-san, eigo ga hanasemasu ka." },
+    { speaker: "Suzuki", translation: "No, I cannot speak English at all. But, I can read a little bit of Spanish.", japanese: "いいえ、英語は全然話せません。でも、スペイン語が少し読めます。", romaji: "Iie, eigo wa zenzen hanasemasen. Demo, supeingo ga sukoshi yomemasu." },
+    { speaker: "Tanaka", translation: "That's amazing! Can you write it too?", japanese: "すごいですね！書くこともできますか。", romaji: "Sugoi desu ne! Kaku koto mo dekimasu ka." },
+    { speaker: "Suzuki", translation: "No, I cannot write difficult kanji or words yet.", japanese: "いいえ、難しい漢字や言葉はまだ書けません。", romaji: "Iie, muzukashii kanji ya kotoba wa mada kakemasen." }
+  ]}
+/>
+
+### 2. Can we use the meeting room? (会議室が使えますか)
+
+Practical use of potential form for situational possibility.
+
+<ConversationDialog client:load 
+  title="Can we use the meeting room? (会議室が使えますか)"
+  lines={[
+    { speaker: "Suzuki", translation: "By the way, can we use the meeting room today?", japanese: "ところで、今日会議室が使えますか。", romaji: "Tokorode, kyou kaigishitsu ga tsukaemasu ka." },
+    { speaker: "Tanaka", translation: "Yes, you can use it from 3 PM.", japanese: "はい、午後三時から使えますよ。", romaji: "Hai, gogo san-ji kara tsukaemasu yo." },
+    { speaker: "Suzuki", translation: "I see. Can I make a reservation now?", japanese: "そうですか。今予約できますか。", romaji: "Sou desu ka. Ima yoyaku dekimasu ka." },
+    { speaker: "Tanaka", translation: "Yes, you can do it on your computer.", japanese: "はい、パソコンでできますよ。", romaji: "Hai, pasokon de dekimasu yo." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "For nouns and Suru verbs, use [Noun]ができる to express ability.",
+    "Group 1 verbs change the 'u' sound to 'e' and add 'ru' (e.g., 飲む → 飲める).",
+    "Group 2 verbs drop 'ru' and add 'rareru' (e.g., 食べる → 食べられる).",
+    "Irregular verbs: する becomes できる, 来る becomes 来られる.",
+    "The direct object particle 'を' changes to 'が' when paired with the potential form.",
+    "The potential form can express both personal ability and situational possibility."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of the Potential form!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the potential form of the Group 1 verb '行く' (iku)?",
+      options: ["行かれる", "行ける", "行られる", "行える"],
+      correct: 1,
+      explanation: "Group 1: Drop the -u, add -eru. iku -> ikeru (行ける: can go)."
+    },
+    {
+      question: "What is the potential form of the Group 2 verb '見る' (miru)?",
+      options: ["見れる", "見られる", "見える", "見まる"],
+      correct: 1,
+      explanation: "Group 2: Drop the -ru, add -rareru. miru -> mirareru (見られる: can see)."
+    },
+    {
+      question: "Which particle typically replaces 'を' when using a potential verb?",
+      options: ["は", "に", "で", "が"],
+      correct: 3,
+      explanation: "The object of a potential verb is marked with 'が'. e.g., 本を読む -> 本が読める"
+    },
+    {
+      question: "Translate: 'Tanaka can eat natto.'",
+      options: ["田中さんは納豆を食べます。", "田中さんは納豆を食べられます。", "田中さんは納豆が食べられます。", "田中さんは納豆が好きです。"],
+      correct: 2,
+      explanation: "田中さんは (Tanaka) + 納豆が (natto) + 食べられます (can eat). The particle 'が' is used."
+    },
+    {
+      question: "What is the potential form of 'する' (to do)?",
+      options: ["すれる", "される", "できる", "しられる"],
+      correct: 2,
+      explanation: "The potential form of する is the independent verb できる."
+    },
+    {
+      question: "Which verb means 'can swim'?",
+      options: ["泳げる", "泳ぐ", "泳がれる", "泳げるれる"],
+      correct: 0,
+      explanation: "泳ぐ (oyogu) is Group 1. Replace 'gu' with 'geru' -> 泳げる (oyogeru)."
+    },
+    {
+      question: "What does 'ここでは写真が撮れます' mean?",
+      options: ["I am taking a photo here.", "You must take a photo here.", "You can take a photo here.", "I cannot take a photo here."],
+      correct: 2,
+      explanation: "撮れる (toreru) is the potential form of 撮る (toru). It indicates situational possibility (you are allowed/able to)."
+    },
+    {
+      question: "What is the potential form of '来る' (kuru)?",
+      options: ["こえる", "こられる", "きられる", "くるれる"],
+      correct: 1,
+      explanation: "The potential form of 来る is 来られる (korareru)."
+    },
+    {
+      question: "In the dialogue, why did Suzuki say 'スペイン語が少し読めます'?",
+      options: ["He read Spanish tomorrow.", "He is reading Spanish now.", "He can read a little Spanish.", "He wants to read Spanish."],
+      correct: 2,
+      explanation: "読めます (yomemasu) is the potential form of 読む (to read), meaning 'can read'."
+    },
+    {
+      question: "Which represents 'ra-nuki kotoba' (a casual dropped syllable) for '食べられる'?",
+      options: ["食べれる", "食える", "食べえる", "食べられるる"],
+      correct: 0,
+      explanation: "Dropping the 'ら' (ra) from 'taberareru' leaves 'tabereru' (食べれる), which is common in spoken Japanese but technically non-standard."
+    },
+    {
+      question: "Translate: 'I cannot drink coffee.'",
+      options: ["コーヒーを飲めません。", "コーヒーが飲まない。", "コーヒーが飲めません。", "コーヒーを飲みません。"],
+      correct: 2,
+      explanation: "コーヒーが (Particle が) + 飲めません (negative potential of nomu)."
+    },
+    {
+      question: "Which form is used for asking 'Can we use the meeting room?'",
+      options: ["使いますか", "使えますか", "使いたいです", "使いませんか"],
+      correct: 1,
+      explanation: "使う (tsukau - Group 1) -> 使える (tsukaeru - can use). 使えますか？ (can we use it?)."
+    },
+    {
+      question: "Is the sentence 'ギターができる' valid?",
+      options: ["No, you must use 弾ける (hikeru).", "Yes, it means 'I can play the guitar' by using Noun + できる.", "Yes, it means the guitar is broken.", "No, it must be ギターをできる."],
+      correct: 1,
+      explanation: "Using [Noun] + ことができる / ができる is a common shortcut to express ability with that noun."
+    },
+    {
+      question: "What is the potential form of '帰る' (kaeru - to go home)?",
+      options: ["帰られる", "帰れる", "帰えれる", "帰るれる"],
+      correct: 1,
+      explanation: "帰る is a Group 1 verb (u-verb) despite ending in eru. kaeru -> kaereru (帰れる: can go home)."
+    },
+    {
+      question: "If a person 'できない' (dekinai), what does that mean?",
+      options: ["They wanted to.", "They will do it.", "They cannot do it.", "They must do it."],
+      correct: 2,
+      explanation: "できない is the plain negative form of できる, meaning 'cannot'."
+    }
+  ]}
+/>

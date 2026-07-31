@@ -1,0 +1,256 @@
+---
+title: "Chapter 37 — Expressing Reason & Cause"
+level: "N4"
+chapter: 37
+description: "Expand beyond 'kara' and learn how to express reasons objectively, apologize correctly, and describe formal causes in Japanese."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Expressing Reason & Cause"
+  level="N4"
+  chapter={37}
+  objectives={[
+    "Review the subjective reason particle 〜から.",
+    "Learn the objective and polite reason conjunction 〜ので.",
+    "Use the て-form to express emotional reactions and light causes.",
+    "Understand the dual nature of 〜ために (Cause vs. Purpose)."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In N5, you learned that `〜から` means "because." However, if you apologize to your boss using `〜から`, it might sound entirely too defensive or subjective! Japanese has different grammar points for subjective reasons, objective facts, emotional triggers, and formal written causes. Mastering these nuances is key to sounding polite and professional.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/37-reason-cause.webp"
+  alt="Anime pixel-art illustration of a rainy train delay leading through glowing cause-and-effect icons to a polite bow and warm cafe conversation."
+  width={1693}
+  height={929}
+/>
+
+## 1. Subjective Reason: 〜から
+
+`〜から` attaches directly to the end of a sentence. It places the focus heavily on the **speaker's personal opinion, will, or subjective judgment**. Because it is subjective, it naturally pairs with commands, requests, or personal intentions.
+
+<GrammarBox client:load 
+  pattern="[Sentence 1] から、[Sentence 2]。"
+  meaning="Because [Sentence 1] (subjective reason), [Sentence 2]."
+  formation="Plain/Polite Form + から"
+  examples={[
+    { japanese: "危ないから、触らないでください。", romaji: "abunai kara, sawaranaide kudasai.", translation: "Because it is dangerous, please do not touch it." },
+    { japanese: "明日テストがあるから、今夜は勉強します。", romaji: "ashita tesuto ga aru kara, konya wa benkyou shimasu.", translation: "Because there's a test tomorrow, I will study tonight." },
+    { japanese: "美味しいから、たくさん食べてね。", romaji: "oishii kara, takusan tabete ne.", translation: "Because it's delicious, eat a lot, okay?" }
+  ]}
+/>
+
+## 2. Objective & Polite Reason: 〜ので
+
+`〜ので` is the polite, objective counterpart to `〜から`. It presents the reason as a natural sequence of events or a universally understood fact. It is the preferred way to state reasons in **business, formal requests, and apologies**.
+
+**Formation Rules:**
+* **Verbs & i-Adjectives:** Plain form + ので
+* **Na-Adjectives & Nouns:** Add `な` before ので (e.g., 静かなので、雨なので)
+
+<GrammarBox client:load 
+  pattern="[Sentence 1] ので、[Sentence 2]。"
+  meaning="Since/Because [Sentence 1] (objective reason), [Sentence 2]."
+  formation="Plain Form + ので (Noun/Na-Adj + なので)"
+  examples={[
+    { japanese: "お腹が痛いので、先に帰らせていただきます。", romaji: "onaka ga itai node, saki ni kaerasete itadakimasu.", translation: "Since my stomach hurts, I will (humbly) go home first." },
+    { japanese: "バスが遅れたので、会議に遅刻しました。", romaji: "basu ga okureta node, kaigi ni chikoku shimashita.", translation: "Since the bus was delayed, I was late for the meeting." },
+    { japanese: "今日は日曜日なので、銀行は休みです。", romaji: "kyou wa nichiyoubi na node, ginkou wa yasumi desu.", translation: "Since today is Sunday, the bank is closed." }
+  ]}
+/>
+
+> [!WARNING]
+> Because `〜ので` is an objective statement of fact, you generally **cannot** follow it with a strong personal command like `〜しなさい`. Use `〜から` for direct commands!
+
+## 3. Light Cause/Emotional Trigger: て-form / で
+
+You can use the `て-form` of a verb or adjective (or `で` for nouns) to indicate a natural, light cause. This is used when the result is an **uncontrollable emotion** or a **natural state**.
+
+<GrammarBox client:load 
+  pattern="[A て-form]、[B]。"
+  meaning="Because of A, B naturally happened/was felt."
+  formation="Verb-te / Adj-kute / Noun-de"
+  examples={[
+    { japanese: "ニュースを聞いて、びっくりしました。", romaji: "nyuusu o kiite, bikkuri shimashita.", translation: "I heard the news and was surprised." },
+    { japanese: "試験が難しくて、わかりませんでした。", romaji: "shiken ga muzukashikute, wakarimasen deshita.", translation: "The exam was difficult, so I didn't understand it." },
+    { japanese: "風邪で、学校を休みました。", romaji: "kaze de, gakkou o yasumimashita.", translation: "Because of a cold, I was absent from school." }
+  ]}
+/>
+
+## 4. Formal Cause & Purpose: 〜ために
+
+`〜ために` is formal and has two meanings depending on the context:
+
+### A. Formal Cause (Due to)
+<ExampleSentence client:load 
+  japanese="大雨のために、電車が止まっています。"
+  romaji="ooame no tame ni, densha ga tomatte imasu."
+  translation="Due to heavy rain, the train is stopped."
+/>
+
+### B. Purpose (In order to)
+<ExampleSentence client:load 
+  japanese="留学するために、お金を貯めています。"
+  romaji="ryuugaku suru tame ni, okane o tamete imasu."
+  translation="In order to study abroad, I am saving money."
+/>
+
+<ExampleSentence client:load 
+  japanese="健康のために、毎日走っています。"
+  romaji="kenkou no tame ni, mainichi hashitte imasu."
+  translation="For the sake of health, I run every day."
+/>
+
+---
+
+## Cultural Insight: The Art of the Japanese Excuse
+
+In Japanese culture, providing a reason is not just about giving information; it's about maintaining social harmony (**Wa**). Using `〜から` for an excuse can sound like you are trying to justify your actions or blame external factors. 
+
+By contrast, using `〜ので` suggests that the situation was a natural occurrence beyond your control, which sounds humbler and more apologetic. This is why in service industries or workplace apologies, you will almost exclusively hear `〜ので`. Even if you are late because you overslept, saying `寝坊したので` (Since I overslept) sounds softer than `寝坊したから`.
+
+## Contextual Dialogues
+
+### Dialogue 1: At the Office
+<ConversationDialog client:load 
+  title="Arriving Late"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki-san, you're late. The meeting has already started.", japanese: "鈴木さん、遅いですね。会議はもう始まっていますよ。", romaji: "Suzuki-san, osoi desu ne. Kaigi wa mou hajimatte imasu yo." },
+    { speaker: "Suzuki", translation: "I'm very sorry. Due to an accident, the train stopped.", japanese: "申し訳ありません。事故で電車が止まってしまったんです。", romaji: "Moushiwake arimasen. Jiko de densha ga tomatte shimatta n desu." },
+    { speaker: "Tanaka", translation: "I see. Since the manager was worried, please apologize later.", japanese: "そうですか。部長が心配していたので、後で謝っておいてくださいね。", romaji: "Sou desu ka. Buchou ga shinpai shite ita node, ato de ayamatte oite kudasai ne." }
+  ]}
+/>
+
+### Dialogue 2: Planning a Trip
+<ConversationDialog client:load 
+  title="Travel Preparation"
+  lines={[
+    { speaker: "Suzuki", translation: "I'm going to Hokkaido next week.", japanese: "来週、北海道へ行くんです。", romaji: "Raishuu, Hokkaidoo e iku n desu." },
+    { speaker: "Tanaka", translation: "Wow! In order to see the snow festival?", japanese: "いいですね！雪まつりを見るためですか。", romaji: "Ii desu ne! Yuki-matsuri o miru tame desu ka." },
+    { speaker: "Suzuki", translation: "Yes. It's famous, so I really want to see it.", japanese: "ええ。有名だから、どうしても見たいんです。", romaji: "Ee. Yuumei da kara, doushitemo mitai n desu." },
+    { speaker: "Tanaka", translation: "Hokkaido is cold, so please be careful.", japanese: "北海道は寒いので、気をつけてくださいね。", romaji: "Hokkaidoo wa samui node, ki o tsukete kudasai ne." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "〜から: Subjective reason, focuses on speaker's will/judgment.",
+    "〜ので: Objective reason, polite, used for apologies and formal requests.",
+    "て-form: Light cause for emotions, inability, or natural states.",
+    "〜ために: Formal cause (due to) or purposeful action (in order to).",
+    "Choice of reason particle affects politeness and perceived sincerity."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which is the most appropriate way to apologize for being late to a formal meeting?",
+      options: ["寝坊したから、遅れました。", "寝坊したので、遅れました。", "寝坊して、遅れました。", "寝坊するために、遅れました。"],
+      correct: 1,
+      explanation: "〜ので is polite and objective, making it the standard for apologies."
+    },
+    {
+      question: "What must be added between a Noun and 'node'?",
+      options: ["だ", "の", "な", "Nothing"],
+      correct: 2,
+      explanation: "Nouns and Na-adjectives require 'な' before 'ので' (e.g., 雨なので)."
+    },
+    {
+      question: "Translate: 'Because it's dangerous, don't go.'",
+      options: ["危ないから、行かないでください。", "危ないので、行かないでください。", "危なくて、行かないでください。", "危ないために、行かないでください。"],
+      correct: 0,
+      explanation: "〜から pairs best with direct requests and warnings."
+    },
+    {
+      question: "What does '〜ために' mean when followed by a purposeful action?",
+      options: ["Due to", "In order to", "Because of", "Instead of"],
+      correct: 1,
+      explanation: "When used with a controlled action, it indicates purpose."
+    },
+    {
+      question: "Translate: 'Because I heard the news, I was surprised.'",
+      options: ["ニュースを聞くために、びっくりしました。", "ニュースを聞いたので、びっくりしました。", "ニュースを聞いて、びっくりしました。", "ニュースを聞くから、びっくりしました。"],
+      correct: 2,
+      explanation: "The te-form is used for emotional triggers."
+    },
+    {
+      question: "In the sentence '風邪で休みます', what does 'で' indicate?",
+      options: ["Location", "Means", "Cause (due to)", "Time"],
+      correct: 2,
+      explanation: "Nouns followed by 'で' can indicate a natural cause like illness or weather."
+    },
+    {
+      question: "Why is '〜ので' considered more polite than '〜から'?",
+      options: ["It's harder to pronounce.", "It presents the reason as an objective fact rather than a personal excuse.", "It's only used by high-ranking officials.", "It means 'sorry'."],
+      correct: 1,
+      explanation: "Objectivity sounds humbler and less defensive in Japanese."
+    },
+    {
+      question: "Translate: 'Since it's Sunday, I'll sleep a lot.'",
+      options: ["日曜日なので、たくさん寝ます。", "日曜日から、たくさん寝ます。", "日曜日のために、たくさん寝ます。", "日曜日はたくさん寝ます。"],
+      correct: 0,
+      explanation: "日曜日 (Noun) + な + ので."
+    },
+    {
+      question: "What form is used before '〜ために' to express purpose?",
+      options: ["Nai-form", "Dictionary form", "Te-form", "Ta-form"],
+      correct: 1,
+      explanation: "Dictionary form + ために means 'in order to'."
+    },
+    {
+      question: "Which of the following describes an uncontrollable emotional result?",
+      options: ["怖くて、泣きました。", "怖いから、泣きました。", "怖いために、泣きました。", "怖いので、泣きました。"],
+      correct: 0,
+      explanation: "The te-form (怖くて) is perfect for linked emotional reactions."
+    },
+    {
+      question: "Translate: 'Due to the accident, the train is late.' (Formal)",
+      options: ["事故のために、電車が遅れています。", "事故から、電車が遅れています。", "事故ので、電車が遅れています。", "事故て、電車が遅れています。"],
+      correct: 0,
+      explanation: "Noun + のために = formal cause/due to."
+    },
+    {
+      question: "Can you use '〜て' for a reason followed by a command?",
+      options: ["Yes, always.", "No, it's strictly for emotions/natural results.", "Only in writing.", "Only with adjectives."],
+      correct: 1,
+      explanation: "The te-form reason cannot be followed by volitional actions like commands."
+    },
+    {
+      question: "In '旅行するために', what does the speaker want to do?",
+      options: ["Go on a trip.", "Avoid a trip.", "Because of a trip.", "During a trip."],
+      correct: 0,
+      explanation: "〜ために expresses the purpose of the following action."
+    },
+    {
+      question: "What is the past form of 'ので' for the verb 'iku'?",
+      options: ["いくので", "いったので", "いったから", "いったな"],
+      correct: 1,
+      explanation: "Past plain (いった) + ので."
+    },
+    {
+      question: "True or False: '〜から' focuses on the result more than the reason.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "Actually, '〜から' focuses on the speaker's reasoning/logic, while '〜ので' focuses on the objective result/sequence."
+    }
+  ]}
+/>

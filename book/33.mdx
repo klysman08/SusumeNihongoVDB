@@ -1,0 +1,308 @@
+---
+title: "Chapter 33 — Nominalization (の & こと)"
+level: "N4"
+chapter: 33
+description: "Learn how to turn sentences into nouns in Japanese using 'no' and 'koto' to express facts, actions, and perceptions."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Nominalization (の & こと)"
+  level="N4"
+  chapter={33}
+  objectives={[
+    "Learn how to nominalize (turn into a noun) entire clauses using の and こと.",
+    "Understand when の and こと are interchangeable.",
+    "Learn the specific grammar patterns that ONLY take の.",
+    "Learn the specific grammar patterns that ONLY take こと."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, you can turn a verb into a noun by adding "-ing" (e.g., "I like *swimming*") or "to" (e.g., "I like *to swim*"). In Japanese, we do this by adding `の` (no) or `こと` (koto) to the end of a plain-form sentence. This process is called **nominalization**, and it is essential for talking about actions or facts as concepts!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/33-nominalization-no-koto.webp"
+  alt="Anime pixel-art illustration of a learner placing action vignettes like swimming, reading, cooking, and travel into glowing concept boxes."
+  width={1672}
+  height={941}
+/>
+
+## 1. The Basics of Nominalization
+
+To turn a verb, adjective, or entire clause into a grammatical noun, simply put it in the **plain form** and attach `の` or `こと`.
+
+* 走る (to run) ➔ 走る**の** (running / the act of running)
+* 日本語を勉強する (to study Japanese) ➔ 日本語を勉強する**こと** (studying Japanese / the fact that one studies Japanese)
+
+For Na-adjectives and Nouns in the present affirmative, you must use `な` before `の` or `こと`.
+* 有名**な**の (being famous)
+* 学生**な**こと (being a student - slightly less common)
+
+<GrammarBox client:load 
+  pattern="Plain Form + の / こと"
+  meaning="Turning an action/state into a noun ('-ing' or 'to do')."
+  formation="Verb-Plain + の / こと"
+  examples={[
+    { japanese: "私は本を読むのが好きです。", romaji: "watashi wa hon o yomu no ga suki desu.", translation: "I like reading books (I like the act of reading)." },
+    { japanese: "漢字を書くことは難しいです。", romaji: "kanji o kaku koto wa muzukashii desu.", translation: "Writing kanji is difficult." },
+    { japanese: "夜遅く一人で歩くのは危ないです。", romaji: "yoru osoku hitori de aruku no wa abunai desu.", translation: "Walking alone late at night is dangerous." }
+  ]}
+/>
+
+> [!NOTE]
+> In many general sentences (like expressing likes, dislikes, or difficulty), `の` and `こと` are completely interchangeable. `読むのが好き` and `読むことが好き` mean the exact same thing, though `の` sounds slightly more casual and spoken.
+
+## 2. When to Use ONLY の
+
+There are specific situations where you **must** use `の`, and using `こと` is grammatically incorrect.
+
+### A. Verbs of Perception
+If the nominalized action is directly perceived by the senses (seeing, hearing, feeling), you must use `の`. Verbs like `見る` (see), `聞こえる` (hear), and `待つ` (wait/watch for) require `の`.
+
+<ExampleSentence client:load 
+  japanese="私は田中さんが走っているのを見ました。"
+  romaji="watashi wa Tanaka-san ga hashitte iru no o mimashita."
+  translation="I saw Tanaka running (I saw the physical action of him running)."
+/>
+
+<ExampleSentence client:load 
+  japanese="どこかで誰かが泣いているのが聞こえます。"
+  romaji="dokoka de dareka ga naite iru no ga kikoemasu."
+  translation="I can hear someone crying somewhere."
+/>
+
+<ExampleSentence client:load 
+  japanese="お湯が沸くのを待っています。"
+  romaji="oyu ga waku no o matte imasu."
+  translation="I am waiting for the water to boil."
+/>
+
+### B. Helping/Stopping (Direct Action)
+When you are directly assisting or preventing physical actions, use `の`. (e.g., `手伝う` - help, `止める` - stop/stop someone).
+
+<ExampleSentence client:load 
+  japanese="妹が部屋を掃除するのを手伝いました。"
+  romaji="imouto ga heya o souji suru no o tetsudaimashita."
+  translation="I helped my younger sister clean her room."
+/>
+
+<ExampleSentence client:load 
+  japanese="彼が会社を辞めるのを止めました。"
+  romaji="kare ga kaisha o yameru no o tomemashita."
+  translation="I stopped him from quitting the company."
+/>
+
+<ExampleSentence client:load 
+  japanese="子供が道路に飛び出すのを防ぎました。"
+  romaji="kodomo ga douro ni tobidasu no o fusegimashita."
+  translation="I prevented the child from jumping out into the road."
+/>
+
+## 3. When to Use ONLY こと
+
+Conversely, there are situations where you **must** use `こと` because you are discussing abstract facts, concepts, or using specific fixed grammar patterns.
+
+### A. Communication and Thinking
+If the main verb relates to communicating facts or internal thought (talking, telling, knowing, believing), use `こと`. Verbs like `話す` (speak), `伝える` (convey), and `信じる` (believe).
+
+<ExampleSentence client:load 
+  japanese="田中さんが結婚したことを知っていますか。"
+  romaji="Tanaka-san ga kekkon shita koto o shitte imasu ka."
+  translation="Do you know (the fact) that Tanaka got married?"
+/>
+
+<ExampleSentence client:load 
+  japanese="明日テストがあることを忘れました。"
+  romaji="ashita tesuto ga aru koto o wasuremashita."
+  translation="I forgot that there is a test tomorrow."
+/>
+
+<ExampleSentence client:load 
+  japanese="家族がいつも私を応援してくれていることを信じています。"
+  romaji="kazoku ga itsumo watashi o ouen shite kurete iru koto o shinjite imasu."
+  translation="I believe that my family is always supporting me."
+/>
+
+### B. Fixed Grammar Patterns
+In N5 and N4, you learned many patterns that exclusively use `こと`. You cannot swap these for `の`.
+* **〜ことができる:** Can do... (Ability)
+* **〜ことがある:** Have the experience of doing... (Past Experience)
+* **〜ことにする:** Decide to do...
+* **〜ことになる:** It has been decided that...
+
+<ExampleSentence client:load 
+  japanese="私は刺身を食べることができます。"
+  romaji="watashi wa sashimi o taberu koto ga dekimasu."
+  translation="I can eat sashimi. (You cannot say '食べるのができます')"
+/>
+
+<ExampleSentence client:load 
+  japanese="一度も富士山に登ったことがありません。"
+  romaji="ichido mo fujisan ni nobotta koto ga arimasen."
+  translation="I have never climbed Mount Fuji."
+/>
+
+<ExampleSentence client:load 
+  japanese="健康のために、毎日野菜を食べることにしました。"
+  romaji="kenkou no tame ni, mainichi yasai o taberu koto ni shimashita."
+  translation="I decided to eat vegetables every day for my health."
+/>
+
+## 4. Cultural Insight: Direct vs. Indirect Perception
+
+The choice between `の` and `こと` often reflects the Japanese emphasis on the distinction between **direct experience** and **abstract information**.
+
+*   **Shared Experience (`の`)**: When you use `の`, you are often implying a shared physical space or a direct witness to an event. It feels more immediate and personal. For example, `走っているのを見た` means you saw the person's legs moving in real-time.
+*   **Information Exchange (`こと`)**: Using `こと` treats the action as a "topic" or a piece of data. It’s used for news, rumors, or historical facts. If you say `結婚したことを聞いた`, you are focusing on the *news* of the marriage, not the ceremony itself.
+
+This nuance is vital in Japanese communication, where showing how you acquired information (via direct observation vs. report) helps establish the reliability and emotional distance of your statement.
+
+
+## Contextual Dialogues
+
+Let's see how Tanaka and Suzuki use `の` and `こと` in their daily conversation.
+
+<ConversationDialog client:load 
+  title="Talking About Hobbies and News (趣味とニュース)"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, what do you like doing on your days off?", japanese: "田中さん、休みの日は何をするのが好きですか。", romaji: "Tanaka-san, yasumi no hi wa nani o suru no ga suki desu ka." },
+    { speaker: "Tanaka", translation: "I like taking photos. Have you ever seen the photos I took?", japanese: "私は写真を撮るのが好きです。私が写真を撮ったのを見たことがありますか。", romaji: "Watashi wa shashin o toru no ga suki desu. Watashi ga shashin o totta no o mita koto ga arimasu ka." },
+    { speaker: "Suzuki", translation: "Yes, I saw them on Instagram. By the way, did you know that the department manager is going to America next month?", japanese: "はい、インスタグラムで見ましたよ。ところで、部長が来月アメリカへ行くことを知っていますか。", romaji: "Hai, insutaguramu de mimashita yo. Tokorode, buchou ga raigetsu amerika e iku koto o shitte imasu ka." },
+    { speaker: "Tanaka", translation: "Eh? I didn't know that. I am surprised.", japanese: "えっ？そのことは知りませんでした。驚きました。", romaji: "E? Sono koto wa shirimasen deshita. Odorokimashita." },
+    { speaker: "Suzuki", translation: "Right? Hearing him speak English is rare.", japanese: "そうでしょう？部長が英語を話すのを聞くのは珍しいですね。", romaji: "Sou deshou? Buchou ga eigo o hanasu no o kiku no wa mezurashii desu ne." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Weekend Plans (週末の予定)"
+  lines={[
+    { speaker: "Hiro", translation: "Yumi-san, can you play the piano?", japanese: "裕美さん、ピアノを弾くことができますか。", romaji: "Yumi-san, piano o hiku koto ga dekimasu ka." },
+    { speaker: "Yumi", translation: "Yes, but I'm not very good at it.", japanese: "はい、でもあまり上手じゃありません。", romaji: "Hai, demo amari jouzu ja arimasen." },
+    { speaker: "Hiro", translation: "I heard you playing the piano yesterday.", japanese: "昨日、裕美さんがピアノを弾いているのを聞きましたよ。", romaji: "Kinou, Yumi-san ga piano o hiite iru no o kikimashita yo." },
+    { speaker: "Yumi", translation: "Oh, really? I'm embarrassed. I've decided to practice every day from now on.", japanese: "あら、本当ですか？恥ずかしいです。これからは毎日練習することにしました。", romaji: "Ara, hontou desu ka? Hazukashii desu. Kore kara wa mainichi renshuu suru koto ni shimashita." },
+    { speaker: "Hiro", translation: "That's great. I'll help you carry the piano sometimes!", japanese: "いいですね。時々、ピアノを運ぶのを手伝いますよ！", romaji: "Ii desu ne. Tokidoki, piano o hakobu no o tetsudaimasu yo!" }
+  ]}
+/>
+
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Add の or こと to a plain form sentence to turn it into a noun ('Nominalization').",
+    "They are often interchangeable for general statements of preference or description (Like, Hate, Fun, Difficult).",
+    "Use ONLY の for direct sensory perception (seeing, hearing) and physical assistance (helping, stopping).",
+    "Use ONLY こと for abstract facts/communication (knowing, telling) and fixed N4 grammar patterns (ことができる, ことがある)."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of Nominalization!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "What is the function of の and こと after a plain verb?",
+      options: ["It turns the verb into the past tense.", "It makes the verb polite.", "It turns the whole clause into a noun.", "It changes the verb into the negative."],
+      correct: 2,
+      explanation: "This is called nominalization. 'To eat' becomes 'eating' or 'the act of eating'."
+    },
+    {
+      question: "Which of these is the correct way to nominalize '静か' (quiet - na-adjective)?",
+      options: ["静かの", "静かなの", "静かだの", "静かいの"],
+      correct: 1,
+      explanation: "Na-adjectives require 'な' before の or こと (e.g., 静かなの)."
+    },
+    {
+      question: "Which pattern is correct for 'I like watching movies'?",
+      options: ["映画を見るが好きです", "映画を見るのが好きです", "映画を見たが好きです", "映画を見てが好きです"],
+      correct: 1,
+      explanation: "You must nominalize the verb phrase before using 'が suki'. 見るの or 見ること works."
+    },
+    {
+      question: "If you physically hear someone singing, which nominalizer MUST you use?",
+      options: ["の", "こと", "もの", "ところ"],
+      correct: 0,
+      explanation: "Verbs of direct physical perception (seeing, hearing, feeling) require の. (e.g., 歌っているのを聞いた)."
+    },
+    {
+      question: "Translate: 'Do you know that Mr. Yamada quit the company?'",
+      options: ["山田さんが会社を辞めたのを知っていますか。", "山田さんが会社を辞めたことを知っていますか。", "山田さんが会社を辞めるのを知っていますか。", "山田さんが会社を辞めたが知っていますか。"],
+      correct: 1,
+      explanation: "When dealing with abstract facts or communicating information (using verbs like 知る, 話す, 伝える), こと is strongly preferred or required."
+    },
+    {
+      question: "Which of the following sentences is grammatically INCORRECT?",
+      options: ["日本へ行ったことがあります。", "日本へ行ったのがありません。", "ピアノを弾くことができます。", "走るのは速いです。"],
+      correct: 1,
+      explanation: "The grammar point for 'have the experience of' is fixed as ことがある. You cannot use の for it."
+    },
+    {
+      question: "If you want to say 'I helped my mother cook', which do you use?",
+      options: ["母が料理するのを手伝いました。", "母が料理することを作りました。", "母が料理することが手伝いました。", "母が料理したのを手伝いました。"],
+      correct: 0,
+      explanation: "手伝う (to help) requires 'の' because it is direct physical involvement in the action at that exact time."
+    },
+    {
+      question: "What does '勉強することは大切です' mean?",
+      options: ["I am studying importantly.", "Studying is important.", "The important thing is to study.", "I want to study importantly."],
+      correct: 1,
+      explanation: "勉強すること (Studying / The act of studying) は (is) 大切です (important)."
+    },
+    {
+      question: "If you 'wait for' someone to finish an action, which nominalizer do you use?",
+      options: ["こと", "の", "もの", "わけ"],
+      correct: 1,
+      explanation: "Waiting physically involves your senses/perception of the event happening in real time, so it takes 'の' (e.g., 終わるのを待つ)."
+    },
+    {
+      question: "In the dialogue, why did Tanaka say '私が写真を撮ったのを見たことがありますか'?",
+      options: ["Because 'seeing' a physical item requires 'の', followed by the fixed pattern 'ことがありますか'.", "Because 'の' and 'こと' mean the same thing there.", "Because it's a mistake.", "Because he wants to take a picture."],
+      correct: 0,
+      explanation: "He says '(写真を撮った)のを見た' - I saw the photos. Then he turns the *entire experience* into a question using the fixed '〜たことがある' pattern."
+    },
+    {
+      question: "Translate: 'It has been decided that I will go to America next year.'",
+      options: ["来年アメリカへ行くのにしました。", "来年アメリカへ行くことになりました。", "来年アメリカへ行くのがなりました。", "来年アメリカへ行くことにします。"],
+      correct: 1,
+      explanation: "〜ことになる is a fixed grammar pattern indicating a decision made by an outside force/group."
+    },
+    {
+      question: "Which verb does NOT require 'の' when it follows a nominalized clause?",
+      options: ["見る (to see)", "聞く (to hear)", "手伝う (to help)", "信じる (to believe)"],
+      correct: 3,
+      explanation: "信じる deals with abstract thought and facts, so it strongly prefers or requires 'こと'."
+    },
+    {
+      question: "What is the difference between '走るのが遅い' and '走ることが遅い'?",
+      options: ["The first is correct; the second sounds slightly unnatural but means the same.", "The first means I run slowly; the second means I don't run.", "The first is past tense; the second is present tense.", "There is no difference at all."],
+      correct: 0,
+      explanation: "For adjectives describing speed, skill, ease, or feeling (遅い, 早い, 難しい, 楽しい), 'の' is much more natural and common in spoken Japanese, though 'こと' is sometimes understood."
+    },
+    {
+      question: "Choose the correct sentence:",
+      options: ["私は田中さんが歌うのを見ました。", "私は田中さんが歌うことを見ました。", "私は田中さんが歌うが聞きました。", "私は田中さんが歌うことの好きです。"],
+      correct: 0,
+      explanation: "Seeing Tanaka sing requires 'の' because it's direct sensory perception: 歌うのを見た."
+    },
+    {
+      question: "If a teacher says '忘れないこと！', what does it mean?",
+      options: ["Don't forget the thing!", "Do not forget! (used as a strong, written rule).", "I will definitely forget!", "Please forget it!"],
+      correct: 1,
+      explanation: "When attached to a dictionary verb and placed at the end of a sentence, こと is used in written rules or strict orders meaning 'You must / You must not'."
+    }
+  ]}
+/>

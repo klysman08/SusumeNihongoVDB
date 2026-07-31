@@ -1,0 +1,262 @@
+---
+title: "Chapter 06 — Demonstrative Adjectives (この, その, あの, どの)"
+level: "N5"
+chapter: "06"
+description: "Master the demonstrative adjectives used to point at specific objects. Learn the difference between 'this' (kore) and 'this [noun]' (kono) and how to navigate Japanese shopping etiquette."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Demonstrative Adjectives (この・その・あの・どの)"
+  level="N5"
+  chapter="06"
+  objectives={[
+    "Distinguish between demonstrative pronouns (これ) and demonstrative adjectives (この).",
+    "Use この, その, あの, and どの to modify nouns based on distance.",
+    "Learn how to point at and choose items in a Japanese store.",
+    "Understand basic shopping etiquette in Japan."
+  ]}
+/>
+
+<SectionIntro level="N5">
+In Chapter 04, we learned **これ**, **それ**, and **あれ**, which stand alone as nouns ("This is a book"). In this chapter, we level up to **この**, **その**, and **あの**. These are demonstrative *adjectives*, meaning they **must** be followed by a noun ("This book is mine"). This system follows the same distance rules as before but allows for much more specific descriptions.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/06-demonstrative-adjectives.webp"
+  alt="Anime pixel-art illustration of a learner choosing specific shop items with この, その, あの, and どの demonstrative adjective cards."
+  width={1536}
+  height={1024}
+/>
+
+## 1. The Ko-So-A-Do System: Adjective Forms
+
+The **Ko-So-A-Do** prefixes (Ko = Near me, So = Near you, A = Far from both, Do = Which?) still apply. The only difference is that these versions **require a noun** immediately after them.
+
+<GrammarBox client:load 
+  pattern="この / その / あの / どの ＋ [Noun]"
+  meaning="Specifies a particular noun based on distance."
+  formation="Demonstrative Adjective + Noun"
+  examples={[
+    { japanese: "この ほん は わたし の です。", romaji: "Kono hon wa watashi no desu.", translation: "This book is mine." },
+    { japanese: "その かばん は だれ の です か。", romaji: "Sono kaban wa dare no desu ka.", translation: "Whose bag is that (near you)?" },
+    { japanese: "あの くるま は たかい です。", romaji: "Ano kuruma wa takai desu.", translation: "That car (over there) is expensive." }
+  ]}
+/>
+
+### Differences: これ vs この
+- **これ (Pronoun):** Stands alone. (これ は ほんです - This is a book.)
+- **この (Adjective):** Must touch a noun. (この ほん は おもしろいです - This book is interesting.)
+
+<ExampleSentence client:load 
+  japanese="どの ひと が たなかさん です か。"
+  romaji="Dono hito ga Tanaka-san desu ka."
+  translation="Which person is Mr. Tanaka?"
+/>
+
+<ExampleSentence client:load 
+  japanese="この ペン を ください。"
+  romaji="Kono pen o kudasai."
+  translation="Please give me this pen."
+/>
+
+<ExampleSentence client:load 
+  japanese="その とけい は いくら です か。"
+  romaji="Sono tokei wa ikura desu ka."
+  translation="How much is that watch (near you)?"
+/>
+
+## 2. Asking "Which one?": どの (Dono)
+
+When you have multiple items and want to ask "Which [noun]?", you use **どの**. It behaves exactly like its siblings.
+
+<GrammarBox client:load 
+  pattern="どの ＋ [Noun] ＋ です か"
+  meaning="Asking 'Which specific [noun]?'"
+  formation="どの + Noun + [rest of question] + か"
+  examples={[
+    { japanese: "どの かさ です か。", romaji: "Dono kasa desu ka.", translation: "Which umbrella is it?" },
+    { japanese: "どの カメラ が いい です か。", romaji: "Dono kamera ga ii desu ka.", translation: "Which camera is good?" },
+    { japanese: "さとうさん は どの ひと です か。", romaji: "Satou-san wa dono hito desu ka.", translation: "Which person is Mr. Sato?" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="あの たてもの は なん です か。"
+  romaji="Ano tatemono wa nan desu ka."
+  translation="What is that building over there?"
+/>
+
+<ExampleSentence client:load 
+  japanese="この ケーキ は おいしい です。"
+  romaji="Kono keeki wa oishii desu."
+  translation="This cake is delicious."
+/>
+
+<ExampleSentence client:load 
+  japanese="その じしょ は べんり です。"
+  romaji="Sono jisho wa benri desu."
+  translation="That dictionary (near you) is convenient."
+/>
+
+## 3. Cultural Note: Shopping Etiquette (買い物)
+
+Shopping in Japan is a polite, ritualized experience. Here are a few key points:
+- **Sumimasen:** Use this to get a clerk's attention.
+- **Kore o kudasai:** "Please give me this." (Used when you've decided).
+- **Trays for Money:** Most stores have a small tray (*tsuri-zara*) on the counter. Place your cash or card there rather than handing it directly to the clerk.
+- **Bowing:** Clerks will often bow when you enter (*Irasshaimase!*) and when you leave. A small nod back is sufficient.
+- **Pointing:** While pointing is common, it's considered more polite to use an open hand toward the item rather than a single finger for people or expensive items.
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/06-demonstratives-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of a clothing store conversation using この, その, あの, and どの to choose shirts."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="At the Clothing Store"
+  lines={[
+    { speaker: "Ken", japanese: "すみません。 その シャツ は いくら です か。", romaji: "Sumimasen. Sono shatsu wa ikura desu ka.", translation: "Excuse me. How much is that shirt (near you)?" },
+    { speaker: "Clerk", japanese: "これ です か。 これ は ３０００えん です。", romaji: "Kore desu ka. Kore wa san-zen en desu.", translation: "This one? This is 3,000 yen." },
+    { speaker: "Ken", japanese: "じゃあ、 あの あかい シャツ は いくら です か。", romaji: "Jaa, ano akai shatsu wa ikura desu ka.", translation: "Well then, how much is that red shirt over there?" },
+    { speaker: "Clerk", japanese: "あの シャツ は ４５００えん です。", romaji: "Ano shatsu wa yon-sen go-hyaku en desu.", translation: "That shirt is 4,500 yen." },
+    { speaker: "Ken", japanese: "そうですか。 この シャツ を ください。", romaji: "Sou desu ka. Kono shatsu o kudasai.", translation: "I see. Please give me this shirt (the one I am holding)." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Looking at Photos"
+  lines={[
+    { speaker: "Yumi", japanese: "これ は だれ です か。", romaji: "Kore wa dare desu ka.", translation: "Who is this?" },
+    { speaker: "Maki", japanese: "それ は わたし の かぞく です。", romaji: "Sore wa watashi no kazoku desu.", translation: "That is my family." },
+    { speaker: "Yumi", japanese: "どの ひと が おとうさん です か。", romaji: "Dono hito ga otousan desu ka.", translation: "Which person is your father?" },
+    { speaker: "Maki", japanese: "あの せ が たかい ひと です。", romaji: "Ano se ga takai hito desu.", translation: "It's that tall person over there." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "この (kono), その (sono), あの (ano), and どの (dono) are demonstrative adjectives.",
+    "Unlike これ, それ, and あれ, they MUST be followed by a noun.",
+    "この = near speaker, その = near listener, あの = far from both, どの = which?.",
+    "When shopping, use 'Sumimasen' to call a clerk and 'Kudasai' to buy an item.",
+    "Always use the money tray at the register if one is provided."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your mastery of the demonstrative adjectives!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which of these MUST be followed by a noun?",
+      options: ["これ (kore)", "この (kono)", "それ (sore)", "あれ (are)"],
+      correct: 1,
+      explanation: "この (kono) is an adjective and requires a noun (e.g., この ほん)."
+    },
+    {
+      question: "Which word means 'Which [noun]'?",
+      options: ["どの (dono)", "どれ (dore)", "なに (nani)", "だれ (dare)"],
+      correct: 0,
+      explanation: "どの (dono) asks 'which' about a specific noun that follows it."
+    },
+    {
+      question: "Translate: 'That car over there is expensive.'",
+      options: ["これ くるま は たかい です。", "その くるま は たかい です。", "あの くるま は たかい です。", "どの くるま は たかい です か。"],
+      correct: 2,
+      explanation: "あの (ano) refers to things far from both speaker and listener."
+    },
+    {
+      question: "True or False: 'この は ほんです' is a grammatically correct sentence.",
+      options: ["True", "False"],
+      correct: 1,
+      explanation: "False. この must be followed by a noun, like 'この ほん は わたし の です'."
+    },
+    {
+      question: "How do you ask 'Whose bag is that (near you)?'?",
+      options: ["この かばん は だれ の です か。", "その かばん は だれ の です か。", "あれ は だれ の です か。", "どの かばん です か。"],
+      correct: 1,
+      explanation: "その (sono) refers to items near the listener."
+    },
+    {
+      question: "In a Japanese store, where should you usually place your money?",
+      options: ["Directly into the clerk's hand", "On the counter", "In the small tray provided", "In a gift box"],
+      correct: 2,
+      explanation: "It is standard etiquette to use the money tray (tsuri-zara)."
+    },
+    {
+      question: "Which word completes the sentence: '_____ カメラ を ください。' (Please give me this camera [in my hand]).",
+      options: ["これ", "この", "それ", "その"],
+      correct: 1,
+      explanation: "Because it's followed by the noun 'camera', you use the adjective 'kono'."
+    },
+    {
+      question: "What is the polite phrase to use when you have decided to buy an item?",
+      options: ["Sumimasen", "Arigatou", "Kore o kudasai", "Irasshaimase"],
+      correct: 2,
+      explanation: "Kore o kudasai (Please give me this) is the standard way to purchase."
+    },
+    {
+      question: "Translate: 'Dono hito ga Tanaka-san desu ka.'",
+      options: ["Who is Tanaka-san?", "Where is Tanaka-san?", "Which person is Tanaka-san?", "Is that Tanaka-san?"],
+      correct: 2,
+      explanation: "Dono hito means 'which person'."
+    },
+    {
+      question: "What does the clerk say when you enter a store?",
+      options: ["Sayounara", "Sumimasen", "Irasshaimase", "Oyasumi"],
+      correct: 2,
+      explanation: "Irasshaimase means 'Welcome/Please come in'."
+    },
+    {
+      question: "Which prefix refers to the area far from both people?",
+      options: ["Ko-", "So-", "A-", "Do-"],
+      correct: 2,
+      explanation: "A- (Ano, Are, Asoko) is for the distant 'over there' zone."
+    },
+    {
+      question: "Fill in the blank: '_____ たてもの は なんですか。' (What is that building over there?)",
+      options: ["この", "その", "あの", "どの"],
+      correct: 2,
+      explanation: "あの (ano) is for distant objects."
+    },
+    {
+      question: "Which is more polite when pointing at an expensive item?",
+      options: ["One finger", "The whole hand", "Nodding your head", "Using a pen"],
+      correct: 1,
+      explanation: "An open palm is considered more polite than pointing with one finger."
+    },
+    {
+      question: "Translate: 'その とけい は いくら です か。'",
+      options: ["How much is this watch?", "How much is that watch (near you)?", "Whose watch is that?", "Which watch is it?"],
+      correct: 1,
+      explanation: "Sono refers to the listener's area; ikura means 'how much'."
+    },
+    {
+      question: "If you want to say 'This cake is delicious', which is correct?",
+      options: ["これ ケーキ は おいしい です。", "この ケーキ は おいしい です。", "ケーキ は これ です。", "おいしい ケーキ です。"],
+      correct: 1,
+      explanation: "この (kono) + noun is the correct structure."
+    }
+  ]}
+/>

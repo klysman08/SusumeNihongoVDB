@@ -1,0 +1,54 @@
+---
+title: "Chapter 62 — Natural Spoken Japanese"
+level: "N3"
+chapter: 62
+unit: 6
+unitTitle: "Natural and Integrated Japanese"
+topics: "Contractions, explanatory tone, confirmation, uncertainty, recollection, and contextual omission"
+description: "Understand common contractions, sentence endings, and omitted information without copying casual forms into formal writing."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Natural Spoken Japanese" level="N3" chapter={62} objectives={["Expand frequent contractions into their full forms.", "Interpret sentence-ending stance from context.", "Recover omitted subjects and objects without inventing information."]} />
+<SectionIntro level="N3">Natural conversation is not careless textbook Japanese. It is systematic compression supported by shared context. Recognition comes first: understand casual forms accurately before deciding whether the relationship allows you to use them.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "省略", reading: "しょうりゃく", meaning: "omission; abbreviation", type: "noun" }, { word: "文脈", reading: "ぶんみゃく", meaning: "context", type: "noun" }, { word: "確認", reading: "かくにん", meaning: "confirmation", type: "noun" }, { word: "独り言", reading: "ひとりごと", meaning: "speaking to oneself", type: "noun" }, { word: "思い出す", reading: "おもいだす", meaning: "to recall", type: "verb" }, { word: "くだけた", reading: "くだけた", meaning: "casual; informal", type: "adj" }]} />
+<PatternCompare client:load title="Recognise the full form" items={[
+  { pattern: "〜てる／〜でる", meaning: "〜ている／〜でいる", use: "The い is regularly omitted in casual speech.", example: "今、何してる？", translation: "What are you doing now?", register: "casual" },
+  { pattern: "〜ちゃう／〜じゃう", meaning: "〜てしまう／〜でしまう", use: "Can retain completion, regret, or accidental nuance.", example: "鍵を忘れちゃった。", translation: "I accidentally forgot my key.", register: "casual" },
+  { pattern: "〜なきゃ／〜なくちゃ", meaning: "〜なければ／〜なくては", use: "Often implies obligation when the result is omitted.", example: "もう帰らなきゃ。", translation: "I have to go home now.", register: "casual" },
+  { pattern: "〜って", meaning: "という／と言って／とは", use: "Marks quotation, topic, or a contracted という depending on syntax.", example: "明日は休みだって聞いた。", translation: "I heard that tomorrow is a holiday.", register: "spoken" }
+]} />
+<PatternCompare client:load title="What stance does the ending add?" items={[
+  { pattern: "〜んだ／んです", meaning: "explanation; shared context", use: "Links the statement to a reason, discovery, or background relevant now.", example: "今日は用事があるんです。", translation: "The thing is, I have something to do today.", register: "explanatory" },
+  { pattern: "〜んじゃない？", meaning: "isn't it; perhaps", use: "Offers an inference or seeks agreement; intonation affects force.", example: "もう始まってるんじゃない？", translation: "Hasn't it already started?", register: "inference" },
+  { pattern: "〜かな／かしら", meaning: "I wonder", use: "Marks self-directed uncertainty. かしら has traditionally feminine associations but usage varies.", example: "間に合うかな。", translation: "I wonder if I’ll make it.", register: "uncertain" },
+  { pattern: "〜っけ", meaning: "what was it again?", use: "Casually searches memory for previously known information.", example: "会議って何時からだっけ？", translation: "What time did the meeting start again?", register: "recollection" }
+]} />
+<CommonMistake title="Recognition does not equal universal permission"><p>Use these forms with friends and in relaxed settings. In applications, reports, and first-contact business communication, retain full forms and an appropriate polite register.</p></CommonMistake>
+<ConversationDialog client:load romajiMode="hidden" title="Finding the meeting room" lines={[{ speaker: "Rina", japanese: "会議って三階だっけ？", translation: "Was the meeting on the third floor again?" }, { speaker: "Kai", japanese: "四階じゃない？ さっき案内に書いてあったよ。", translation: "Wasn’t it the fourth floor? It was written on the sign a moment ago." }, { speaker: "Rina", japanese: "あ、本当だ。急がなきゃ。もう始まってるかもしれない。", translation: "Oh, you're right. We have to hurry. It may already have started." }, { speaker: "Kai", japanese: "資料、持ってきてる？", translation: "Did you bring the handouts?" }, { speaker: "Rina", japanese: "机に置いてきちゃった！", translation: "I left them on the desk!" }]} />
+<PracticeBlock client:load instructions="Expand the contraction or recover only what context supports." items={[{ prompt: "Expand 行かなきゃ into a full polite obligation.", answer: "行かなければなりません。", explanation: "なきゃ contracts なければ; context supplies the omitted obligation." }, { prompt: "Expand 読んじゃった while preserving completion/regret.", answer: "読んでしまった。", explanation: "じゃう follows a で-form." }, { prompt: "In A: 資料は？ B: 机に置いた, identify the omitted object in B.", answer: "資料を", explanation: "The prior topic makes the object recoverable; no subject is specified." }]} />
+<ReadingPractice client:load title="Chat versus formal message" genre="register comparison" targetTime="4 minutes" passage={<><p>友人へ：ごめん、電車遅れてる。先に入ってて。着いたら連絡する。</p><p>担当者へ：申し訳ありません。電車が遅れているため、到着が十分ほど遅れる見込みです。到着次第、ご連絡いたします。</p></>} glossary={[{ word: "到着次第", reading: "とうちゃくしだい", meaning: "as soon as I arrive" }, { word: "見込み", reading: "みこみ", meaning: "expectation; forecast" }]} questions={[{ question: "Which casual omissions or contractions appear in the first message?", answer: "遅れてる and 入ってて, plus omitted subjects and destination.", explanation: "Shared context supports the compressed friend-to-friend message." }, { question: "Why should the second version not use those forms?", answer: "It addresses a person in a formal role and must explicitly explain the delay.", explanation: "Register depends on relationship and purpose." }]} />
+<ListeningPractice client:load title="Remembering an appointment" situation="Listen for uncertainty and recollection." script="病院の予約、明日だっけ？ 午後だったと思うけど、何時だったかな。確認しなきゃ。" questions={[{ question: "What does the speaker know and what must they check?", answer: "They think it is tomorrow afternoon but cannot recall the exact time.", explanation: "っけ searches memory; かな expresses uncertainty; なきゃ implies obligation." }]} />
+<ChapterSummary takeaways={["Casual contractions follow regular form changes and retain the original grammar's meaning.", "Sentence endings express explanation, inference, uncertainty, or memory search.", "Recover omissions only from context, and keep full forms in formal writing."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "何してる？ expands to…", options: ["何をしている？", "何をしてしまう？", "何にした？", "何をしなければ？"], correct: 0, explanation: "てる contracts ている." },
+  { question: "飲んじゃった expands to…", options: ["飲んでいた", "飲んでしまった", "飲まなければ", "飲むという"], correct: 1, explanation: "でしまった contracts to じゃった." },
+  { question: "もう行かなくちゃ most often implies…", options: ["I reportedly went", "I have to go", "I might go", "I used to go"], correct: 1, explanation: "The omitted result of なくては supplies obligation." },
+  { question: "何時だっけ expresses…", options: ["formal certainty", "a search for remembered information", "a command", "visual appearance"], correct: 1, explanation: "っけ checks something previously known." },
+  { question: "Which is suitable in a formal report?", options: ["増えてる", "増えちゃった", "増加している", "増えなきゃ"], correct: 2, explanation: "The full written form matches formal register." },
+  { question: "明日は休みだって聞いた uses って as…", options: ["quotation content", "obligation", "comparison", "result"], correct: 0, explanation: "って contracts と in the reported content." },
+  { question: "間に合うかな is mainly…", options: ["a direct order", "self-directed uncertainty", "a past regret", "a formal rule"], correct: 1, explanation: "かな expresses 'I wonder'." },
+  { question: "Why can subjects disappear in conversation?", options: ["Japanese has no subjects", "Shared context makes them recoverable", "Only verbs carry politeness", "Casual speech has no grammar"], correct: 1, explanation: "Omission depends on recoverable context, not absence of syntax." }
+]} />

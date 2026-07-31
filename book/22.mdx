@@ -1,0 +1,633 @@
+---
+title: "Chapter 22 — 社会と仕事の漢字 (N4 Kanji Part 2: Society & Work)"
+level: "N4"
+chapter: 22
+description: "Expand your N4 kanji foundation with characters essential for school, education, company life, society, and expressing abstract feelings."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import KanjiCard from '../../components/book/KanjiCard.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="社会と仕事の漢字 (N4 Kanji Part 2: Society & Work)"
+  level="N4"
+  chapter={22}
+  objectives={[
+    "Learn kanji related to school, education, and study.",
+    "Understand kanji used for society, business, and work.",
+    "Recognize kanji for expressing emotions and thoughts.",
+    "Practice reading kanji combinations in professional and academic contexts."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In the previous chapter, we covered kanji for everyday life and the human body. As you transition into N4, you will increasingly encounter Japanese in academic, professional, and social environments. This chapter focuses on kanji related to school, business, society, and understanding others' minds and feelings. Let's build your professional vocabulary!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/22-n4-kanji-society-work.webp"
+  alt="Anime pixel-art illustration of N4 kanji for school, office work, society, and thoughts arranged around a classroom-office desk."
+  width={1536}
+  height={1024}
+/>
+
+## 1. School & Education (学校と教育)
+
+Education is highly valued in Japanese culture, and the vocabulary surrounding it is precise.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "教",
+      meaning: "Teach, Faith",
+      onyomi: "キョウ",
+      kunyomi: "おし・える、おそ・わる",
+      strokes: 11,
+      examples: [
+        { word: "教える", reading: "おしえる", meaning: "to teach" },
+        { word: "教室", reading: "きょうしつ", meaning: "classroom" },
+        { word: "教育", reading: "きょういく", meaning: "education" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "室",
+      meaning: "Room",
+      onyomi: "シツ",
+      kunyomi: "むろ",
+      strokes: 9,
+      examples: [
+        { word: "教室", reading: "きょうしつ", meaning: "classroom" },
+        { word: "和室", reading: "わしつ", meaning: "Japanese-style room" },
+        { word: "研究室", reading: "けんきゅうしつ", meaning: "laboratory/professor's office" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "習",
+      meaning: "Learn",
+      onyomi: "シュウ",
+      kunyomi: "なら・う",
+      strokes: 11,
+      examples: [
+        { word: "習う", reading: "ならう", meaning: "to learn (from someone)" },
+        { word: "学習", reading: "がくしゅう", meaning: "learning, study" },
+        { word: "練習", reading: "れんしゅう", meaning: "practice" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "勉",
+      meaning: "Exertion, Study",
+      onyomi: "ベン",
+      kunyomi: "つと・める",
+      strokes: 10,
+      examples: [
+        { word: "勉強", reading: "べんきょう", meaning: "study" },
+        { word: "勤勉", reading: "きんべん", meaning: "diligent" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "試",
+      meaning: "Test, Try",
+      onyomi: "シ",
+      kunyomi: "こころ・みる、ため・す",
+      strokes: 13,
+      examples: [
+        { word: "試験", reading: "しけん", meaning: "exam/test" },
+        { word: "試合", reading: "しあい", meaning: "match/game" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "験",
+      meaning: "Verification, Effect",
+      onyomi: "ケン、ゲン",
+      kunyomi: "-",
+      strokes: 18,
+      examples: [
+        { word: "試験", reading: "しけん", meaning: "exam/test" },
+        { word: "経験", reading: "けいけん", meaning: "experience" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "文",
+      meaning: "Sentence, Literature",
+      onyomi: "ブン、モン",
+      kunyomi: "ふみ",
+      strokes: 4,
+      examples: [
+        { word: "作文", reading: "さくぶん", meaning: "composition/essay" },
+        { word: "文学", reading: "ぶんがく", meaning: "literature" },
+        { word: "文法", reading: "ぶんぽう", meaning: "grammar" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "答",
+      meaning: "Answer",
+      onyomi: "トウ",
+      kunyomi: "こた・える",
+      strokes: 12,
+      examples: [
+        { word: "答える", reading: "こたえる", meaning: "to answer" },
+        { word: "答え", reading: "こたえ", meaning: "answer/response" }
+      ]
+    }}
+  />
+</div>
+
+<ExampleSentence client:load 
+  japanese="田中先生は日本語を教えています。"
+  romaji="Tanaka-sensei wa nihongo o oshiete imasu."
+  translation="Professor Tanaka teaches Japanese."
+/>
+<ExampleSentence client:load 
+  japanese="昨日の夜、漢字を復習しました。"
+  romaji="Kinou no yoru, kanji o fukushuu shimashita."
+  translation="Last night, I reviewed kanji."
+/>
+<ExampleSentence client:load 
+  japanese="この教室で英語を勉強します。"
+  romaji="Kono kyoushitsu de eigo o benkyou shimasu."
+  translation="I study English in this classroom."
+/>
+<ExampleSentence client:load 
+  japanese="来週の月曜日に、大切な試験があります。"
+  romaji="Raishuu no getsuyoubi ni, taisetsuna shiken ga arimasu."
+  translation="There is an important exam next Monday."
+/>
+<ExampleSentence client:load 
+  japanese="質問の答えを考えて、文を書いてください。"
+  romaji="Shitsumon no kotae o kangaete, bun o kaite kudasai."
+  translation="Think about the answer to the question and write a sentence."
+/>
+<ExampleSentence client:load 
+  japanese="ピアノの練習を毎日しています。"
+  romaji="Piano no renshuu o mainichi shite imasu."
+  translation="I practice the piano every day."
+/>
+
+## 2. Business & Society (仕事と社会)
+
+When working in Japan or dealing with companies, these are some of the most essential kanji.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "業",
+      meaning: "Business, Vocation, Industry",
+      onyomi: "ギョウ、ゴウ",
+      kunyomi: "わざ",
+      strokes: 13,
+      examples: [
+        { word: "授業", reading: "じゅぎょう", meaning: "class/lesson" },
+        { word: "産業", reading: "さんぎょう", meaning: "industry" },
+        { word: "営業", reading: "えいぎょう", meaning: "business, sales" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "働",
+      meaning: "Work",
+      onyomi: "ドウ",
+      kunyomi: "はたら・く",
+      strokes: 13,
+      examples: [
+        { word: "働く", reading: "はたらく", meaning: "to work" },
+        { word: "労働", reading: "ろうどう", meaning: "labor" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "社",
+      meaning: "Company, Shrine",
+      onyomi: "シャ",
+      kunyomi: "やしろ",
+      strokes: 7,
+      examples: [
+        { word: "会社", reading: "かいしゃ", meaning: "company" },
+        { word: "社会", reading: "しゃかい", meaning: "society" },
+        { word: "社長", reading: "しゃちょう", meaning: "company president" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "員",
+      meaning: "Employee, Member",
+      onyomi: "イン",
+      kunyomi: "-",
+      strokes: 10,
+      examples: [
+        { word: "会社員", reading: "かいしゃいん", meaning: "office worker" },
+        { word: "店員", reading: "てんいん", meaning: "shop assistant" },
+        { word: "社員", reading: "しゃいん", meaning: "company employee" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "院",
+      meaning: "Institution, Mansion",
+      onyomi: "イン",
+      kunyomi: "-",
+      strokes: 10,
+      examples: [
+        { word: "病院", reading: "びょういん", meaning: "hospital" },
+        { word: "大学院", reading: "だいがくいん", meaning: "graduate school" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "医",
+      meaning: "Doctor, Medicine",
+      onyomi: "イ",
+      kunyomi: "-",
+      strokes: 7,
+      examples: [
+        { word: "医者", reading: "いしゃ", meaning: "doctor" },
+        { word: "医学", reading: "いがく", meaning: "medical science" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "者",
+      meaning: "Person, Someone",
+      onyomi: "シャ",
+      kunyomi: "もの",
+      strokes: 8,
+      examples: [
+        { word: "医者", reading: "いしゃ", meaning: "doctor" },
+        { word: "学者", reading: "がくしゃ", meaning: "scholar" },
+        { word: "若者", reading: "わかもの", meaning: "young people" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "事",
+      meaning: "Thing, Matter, Incident",
+      onyomi: "ジ",
+      kunyomi: "こと",
+      strokes: 8,
+      examples: [
+        { word: "仕事", reading: "しごと", meaning: "work/job" },
+        { word: "大事", reading: "だいじ", meaning: "important" },
+        { word: "行事", reading: "ぎょうじ", meaning: "event" }
+      ]
+    }}
+  />
+</div>
+
+<ExampleSentence client:load 
+  japanese="私は日本の会社で働いています。"
+  romaji="Watashi wa nihon no kaisha de hataraite imasu."
+  translation="I work at a Japanese company."
+/>
+<ExampleSentence client:load 
+  japanese="スーパーの店員はとても親切でした。"
+  romaji="Suupaa no ten'in wa totemo shinsetsu deshita."
+  translation="The supermarket employee was very kind."
+/>
+<ExampleSentence client:load 
+  japanese="将来、医者になりたいと思っています。"
+  romaji="Shourai, isha ni naritai to omotte imasu."
+  translation="In the future, I want to become a doctor."
+/>
+<ExampleSentence client:load 
+  japanese="病気になったので、病院へ行きました。"
+  romaji="Byouki ni natta node, byouin e ikimashita."
+  translation="Since I became sick, I went to the hospital."
+/>
+<ExampleSentence client:load 
+  japanese="この仕事はとても大事です。"
+  romaji="Kono shigoto wa totemo daiji desu."
+  translation="This work is very important."
+/>
+<ExampleSentence client:load 
+  japanese="大学院で文学の勉強をしています。"
+  romaji="Daigakuin de bungaku no benkyou o shite imasu."
+  translation="I am studying literature at graduate school."
+/>
+
+## 3. Feeling and Thinking (感情と思考)
+
+To understand motives and emotions, you need kanji dealing with the mind and heart.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+  <KanjiCard client:load 
+    data={{
+      character: "心",
+      meaning: "Heart, Mind",
+      onyomi: "シン",
+      kunyomi: "こころ",
+      strokes: 4,
+      examples: [
+        { word: "心", reading: "こころ", meaning: "heart, mind" },
+        { word: "安心", reading: "あんしん", meaning: "relief, peace of mind" },
+        { word: "心配", reading: "しんぱい", meaning: "worry" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "思",
+      meaning: "Think",
+      onyomi: "シ",
+      kunyomi: "おも・う",
+      strokes: 9,
+      examples: [
+        { word: "思う", reading: "おもう", meaning: "to think, to feel" },
+        { word: "思い出す", reading: "おもいだす", meaning: "to remember, recall" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "考",
+      meaning: "Consider, Think",
+      onyomi: "コウ",
+      kunyomi: "かんが・える",
+      strokes: 6,
+      examples: [
+        { word: "考える", reading: "かんがえる", meaning: "to think over, consider" },
+        { word: "考え", reading: "かんがえ", meaning: "idea, thought" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "急",
+      meaning: "Hurry, Sudden",
+      onyomi: "キュウ",
+      kunyomi: "いそ・ぐ",
+      strokes: 9,
+      examples: [
+        { word: "急ぐ", reading: "いそぐ", meaning: "to hurry" },
+        { word: "急行", reading: "きゅうこう", meaning: "express (train)" },
+        { word: "急に", reading: "きゅうに", meaning: "suddenly" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "意",
+      meaning: "Mind, Meaning, Intention",
+      onyomi: "イ",
+      kunyomi: "-",
+      strokes: 13,
+      examples: [
+        { word: "意味", reading: "いみ", meaning: "meaning" },
+        { word: "意見", reading: "いけん", meaning: "opinion" },
+        { word: "注意", reading: "ちゅうい", meaning: "caution/attention" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "味",
+      meaning: "Taste, Flavor",
+      onyomi: "ミ",
+      kunyomi: "あじ",
+      strokes: 8,
+      examples: [
+        { word: "味", reading: "あじ", meaning: "taste" },
+        { word: "趣味", reading: "しゅみ", meaning: "hobby" },
+        { word: "興味", reading: "きょうみ", meaning: "interest" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "楽",
+      meaning: "Music, Pleasure, Ease",
+      onyomi: "ガク、ラク",
+      kunyomi: "たの・しい、たの・しむ",
+      strokes: 13,
+      examples: [
+        { word: "楽しい", reading: "たのしい", meaning: "fun" },
+        { word: "音楽", reading: "おんがく", meaning: "music" },
+        { word: "楽な", reading: "らくな", meaning: "easy/comfortable" }
+      ]
+    }}
+  />
+  <KanjiCard client:load 
+    data={{
+      character: "運",
+      meaning: "Carry, Luck, Destiny",
+      onyomi: "ウン",
+      kunyomi: "はこ・ぶ",
+      strokes: 12,
+      examples: [
+        { word: "運動", reading: "うんどう", meaning: "exercise" },
+        { word: "運転", reading: "うんてん", meaning: "driving" },
+        { word: "運ぶ", reading: "はこぶ", meaning: "to carry/transport" }
+      ]
+    }}
+  />
+</div>
+
+<ExampleSentence client:load 
+  japanese="明日は雨が降ると思います。"
+  romaji="Ashita wa ame ga furu to omoimasu."
+  translation="I think it will rain tomorrow."
+/>
+<ExampleSentence client:load 
+  japanese="よく考えてから、答えてください。"
+  romaji="Yoku kangaete kara, kotaete kudasai."
+  translation="Please answer after thinking carefully."
+/>
+<ExampleSentence client:load 
+  japanese="急がないと、電車に間に合いません。"
+  romaji="Isoganai to, densha ni maniaimasen."
+  translation="If you don't hurry, you won't be in time for the train."
+/>
+<ExampleSentence client:load 
+  japanese="この漢字の意味がわかりません。"
+  romaji="Kono kanji no imi ga wakarimasen."
+  translation="I don't understand the meaning of this kanji."
+/>
+<ExampleSentence client:load 
+  japanese="私の趣味は音楽を聞くことです。"
+  romaji="Watashi no shumi wa ongaku o kiku koto desu."
+  translation="My hobby is listening to music."
+/>
+<ExampleSentence client:load 
+  japanese="健康のために、毎日運動をしています。"
+  romaji="Kenkou no tame ni, mainichi undou o shite imasu."
+  translation="I exercise every day for my health."
+/>
+
+## 4. Cultural Insight: Japanese Work Culture (日本の仕事文化)
+
+The Japanese workplace is famous for its unique customs, many of which are reflected in the kanji we've studied.
+
+### Zangyou (残業) — Overtime
+The word **残業 (zangyou)** literally means "remaining work." In many Japanese companies, it is common to stay late until the task is finished or until the superior leaves. While this is changing with "Work-Life Balance" initiatives, the concept of dedication to the group remains strong.
+
+### Nomikai (飲み会) — Drinking Parties
+Socializing after work is considered a part of the job in many traditional companies. These parties, called **飲み会 (nomikai)**, are where employees can relax (to an extent) and speak more freely with their bosses. It's often said that "Nomunication" (Nomi + Communication) is essential for career building.
+
+### Punctuality (時間厳守)
+Being on time is non-negotiable. If a meeting starts at 9:00 AM, being there at 9:00 AM is considered "late." Most employees arrive at least 10 minutes early to be ready the moment the clock strikes.
+
+## Contextual Dialogues
+
+### Dialogue 1: Talking About the Future (将来について)
+
+<ConversationDialog client:load 
+  title="Talking About the Future"
+  lines={[
+    { speaker: "Tanaka", translation: "Suzuki, after graduating, what do you plan to do?", japanese: "鈴木さん、卒業した後、何をしようと考えていますか。", romaji: "Suzuki-san, sotsugyou shita ato, nani o shiyou to kangaete imasu ka." },
+    { speaker: "Suzuki", translation: "I think I want to work at an IT company.", japanese: "ITの会社で働きたいと思っています。", romaji: "Aitii no kaisha de hatarakitai to omotte imasu." },
+    { speaker: "Tanaka", translation: "That's nice. Are you studying programming now?", japanese: "いいですね。今、プログラミングを勉強していますか。", romaji: "Ii desu ne. Ima, puroguramingu o benkyou shite imasu ka." },
+    { speaker: "Suzuki", translation: "Yes, I am learning from a teacher. I review every single day.", japanese: "はい、先生に習っています。毎日復習していますよ。", romaji: "Hai, sensei ni naratte imasu. Mainichi fukushuu shite imasu yo." },
+    { speaker: "Tanaka", translation: "You are very diligent. You will become a great employee, rest assured.", japanese: "とても勤勉ですね。立派な会社員になるから、安心してください。", romaji: "Totemo kinben desu ne. Rippana kaishain ni naru kara, anshin shite kudasai." }
+  ]}
+/>
+
+### Dialogue 2: At the Hospital (病院にて)
+
+<ConversationDialog client:load 
+  title="A Visit to the Doctor"
+  lines={[
+    { speaker: "Doctor", translation: "How are you feeling today?", japanese: "今日はどうしましたか。", romaji: "Kyou wa dou shimashita ka." },
+    { speaker: "Patient", translation: "Since yesterday, my head hurts and I have a fever.", japanese: "昨日から、頭が痛くて熱があります。", romaji: "Kinou kara, atama ga itakute netsu ga arimasu." },
+    { speaker: "Doctor", translation: "I see. You should take this medicine and rest at home.", japanese: "そうですか。この薬を飲んで、家でゆっくり休んでください。", romaji: "Sou desu ka. Kono kusuri o nonde, ie de yukkuri yasunde kudasai." },
+    { speaker: "Patient", translation: "Will I be able to go to work tomorrow?", japanese: "明日は仕事に行けますか。", romaji: "Ashita wa shigoto ni ikemasu ka." },
+    { speaker: "Doctor", translation: "Please don't hurry. Your health is the most important thing.", japanese: "急がないでください。健康が一番大事ですよ。", romaji: "Isoganaide kudasai. Kenkou ga ichiban daiji desu yo." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "教, 室, 習, 勉, 試, 験 form the vocabulary for school and exams.",
+    "業, 働, 社, 員, 院, 医, 者, 事 describe the professional world and medical institutions.",
+    "心, 思, 考, 意, 味, 楽, 運 relate to internal thoughts, meanings, and physical movement/exercise.",
+    "Cultural terms like 残業 (overtime) and 病院 (hospital) are vital for navigating life in Japan.",
+    "Japanese often uses separate verbs for logical thinking (考える) and subjective thinking (思う)."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which verb means 'to teach'?",
+      options: ["習う", "教える", "働く", "考える"],
+      correct: 1,
+      explanation: "教える (oshieru) means to teach. 習う is to learn."
+    },
+    {
+      question: "Select the correct reading for '会社員'",
+      options: ["かいしゃいん", "がしゃいん", "かいじゃいん", "しゃかいいん"],
+      correct: 0,
+      explanation: "会 (kai) + 社 (sha) + 員 (in) = かいしゃいん (kaishain)."
+    },
+    {
+      question: "What does '試験' (shiken) mean?",
+      options: ["Match", "Experience", "Exam/Test", "Experiment"],
+      correct: 2,
+      explanation: "試験 means exam or test. 経験 is experience."
+    },
+    {
+      question: "Which kanji means 'doctor'?",
+      options: ["医者", "学者", "若者", "社員"],
+      correct: 0,
+      explanation: "医者 (isha) means doctor. 学者 is scholar."
+    },
+    {
+      question: "In what context do you use '考える' (kangaeru) vs '思う' (omou)?",
+      options: ["考える is for natural feelings; 思う is for deep consideration.", "考える is for deep consideration/logic; 思う is for natural feelings/opinions.", "They have exactly the same meaning and usage.", "考える is only for business; 思う is only for school."],
+      correct: 1,
+      explanation: "考える implies an active analytical process (pondering), while 思う is more subjective and feeling-based."
+    },
+    {
+      question: "What is the reading for '安心'?",
+      options: ["あこころ", "あんごころ", "あんしん", "やすしん"],
+      correct: 2,
+      explanation: "安心 is read as 'anshin' (peace of mind/relief)."
+    },
+    {
+      question: "Which kanji means 'hospital'?",
+      options: ["大学院", "少年院", "病院", "美容院"],
+      correct: 2,
+      explanation: "病院 (byouin) is hospital. 大学院 is graduate school."
+    },
+    {
+      question: "Read the word '興味'.",
+      options: ["きょうみ", "しゅみ", "いみ", "あじ"],
+      correct: 0,
+      explanation: "興味 is read as 'kyoumi', meaning interest."
+    },
+    {
+      question: "What does '意味' (imi) mean?",
+      options: ["Taste", "Opinion", "Meaning", "Attention"],
+      correct: 2,
+      explanation: "意味 (imi) means meaning."
+    },
+    {
+      question: "What does '勤勉' (kinben) mean?",
+      options: ["Lazy", "Clever", "Diligent", "Fast"],
+      correct: 2,
+      explanation: "勤勉 (kinben) means diligent, containing the 勉 from 勉強."
+    },
+    {
+      question: "What is the meaning of '趣味' (shumi)?",
+      options: ["Interest", "Hobby", "Taste", "Opinion"],
+      correct: 1,
+      explanation: "趣味 (shumi) means hobby."
+    },
+    {
+      question: "Choose the correct kanji for 'exercise'.",
+      options: ["運転", "運動", "運ぶ", "運命"],
+      correct: 1,
+      explanation: "運動 (undou) means exercise. 運転 is driving."
+    },
+    {
+      question: "What does '残業' (zangyou) refer to in Japanese culture?",
+      options: ["Lunch break", "Company party", "Overtime work", "Business trip"],
+      correct: 2,
+      explanation: "残業 (zangyou) is overtime work, often a significant part of Japanese work culture."
+    },
+    {
+      question: "Which word means 'grammar'?",
+      options: ["作文", "文学", "文法", "文字"],
+      correct: 2,
+      explanation: "文法 (bunpou) means grammar."
+    },
+    {
+      question: "What is the reading for '音楽'?",
+      options: ["おんがく", "おんらく", "たのしい", "がっき"],
+      correct: 0,
+      explanation: "音楽 is read as 'ongaku', meaning music."
+    }
+  ]}
+/>

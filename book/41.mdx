@@ -1,0 +1,206 @@
+---
+title: "Chapter 41 — Reviewing Verb Forms"
+level: "N3"
+chapter: 41
+unit: 1
+unitTitle: "Intermediate Foundations"
+topics: "Verb forms as connectors inside longer N3 sentences"
+description: "Refresh the core Japanese verb forms and learn to identify each form quickly inside longer N3 sentences."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ConjugationTable from '../../components/book/ConjugationTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader
+  title="Reviewing Verb Forms (動詞の活用)"
+  level="N3"
+  chapter={41}
+  objectives={[
+    "Recognize the dictionary, ます, て, た, and ない forms in longer sentences.",
+    "Rebuild potential and volitional forms from the dictionary form.",
+    "Recognize imperative and prohibition forms and their strength of tone.",
+    "Use a form's final verb to identify the role it plays in a sentence."
+  ]}
+/>
+
+<SectionIntro level="N3">
+N3 grammar combines forms you already know. Before learning longer patterns, make the basic forms automatic: find the final verb, identify its form, then ask what that form contributes—statement, connection, past event, negation, ability, intention, command, or prohibition. This chapter is a fast, practical reset rather than a first introduction.
+</SectionIntro>
+
+## 1. Form recognition starts with the dictionary form
+
+The **dictionary form** (辞書形) is the plain non-past affirmative form used in dictionaries: `読む`, `食べる`, `する`, `来る`. It can describe a future or habitual action, and it is the base used to build many N3 patterns.
+
+<VocabTable
+  data={[
+    { word: "活用", reading: "かつよう", romaji: "katsuyou", meaning: "conjugation; change of a word's form", type: "noun" },
+    { word: "辞書形", reading: "じしょけい", romaji: "jishokei", meaning: "dictionary form", type: "noun" },
+    { word: "可能形", reading: "かのうけい", romaji: "kanoukei", meaning: "potential form", type: "noun" },
+    { word: "意志形", reading: "いしけい", romaji: "ishikei", meaning: "volitional form", type: "noun" },
+    { word: "禁止", reading: "きんし", romaji: "kinshi", meaning: "prohibition", type: "noun" },
+    { word: "間に合う", reading: "まにあう", romaji: "maniau", meaning: "to be in time; make it", type: "verb" }
+  ]}
+/>
+
+<ConjugationTable
+  client:load
+  title="読む (yomu, Group 1) — key forms at a glance"
+  rows={[
+    { form: "Dictionary", japanese: "読む", romaji: "yomu", meaning: "read; will read", highlight: true },
+    { form: "Polite", japanese: "読みます", romaji: "yomimasu", meaning: "read (polite)" },
+    { form: "て-form", japanese: "読んで", romaji: "yonde", meaning: "read and…; please read" },
+    { form: "Past", japanese: "読んだ", romaji: "yonda", meaning: "read (plain past)" },
+    { form: "Negative", japanese: "読まない", romaji: "yomanai", meaning: "do not read" },
+    { form: "Potential", japanese: "読める", romaji: "yomeru", meaning: "can read" },
+    { form: "Volitional", japanese: "読もう", romaji: "yomou", meaning: "let's read; I will read" },
+    { form: "Imperative", japanese: "読め", romaji: "yome", meaning: "read! (strong command)" }
+  ]}
+  note="For Group 1 verbs, the final u-sound changes to e-sound + る for the potential form, and to o-sound + う for the volitional form."
+/>
+
+<ExampleSentence client:load
+  japanese="毎朝、ニュースを読んでから仕事を始めます。"
+  romaji="maiasa, nyuusu o yonde kara shigoto o hajimemasu."
+  translation="Every morning, I read the news and then start work."
+  note="読んで connects the first action to the next one."
+/>
+
+## 2. The five forms that hold a sentence together
+
+<GrammarBox client:load
+  pattern="Dictionary / ます / て / た / ない"
+  meaning="Core forms for non-past actions, politeness, connection, past events, and negation."
+  formation="Use the verb group to conjugate from the dictionary form."
+  examples={[
+    { japanese: "時間があれば、参加する。", romaji: "jikan ga areba, sanka suru.", translation: "If I have time, I will participate. (dictionary form)" },
+    { japanese: "資料を確認します。", romaji: "shiryou o kakunin shimasu.", translation: "I will check the documents. (polite form)" },
+    { japanese: "駅に着いて、友達に電話した。", romaji: "eki ni tsuite, tomodachi ni denwa shita.", translation: "I arrived at the station and called my friend. (て-form)" },
+    { japanese: "昨日見た映画は感動的だった。", romaji: "kinou mita eiga wa kandouteki datta.", translation: "The film I watched yesterday was moving. (た-form before a noun)" },
+    { japanese: "まだ返事が来ない。", romaji: "mada henji ga konai.", translation: "A reply has not come yet. (ない form)" }
+  ]}
+/>
+
+The same form can appear **inside** a longer structure. In `昨日見た映画` (the film I watched yesterday), `見た` is not the sentence's final action; it modifies `映画`. Locate the final predicate first, then trace the earlier forms.
+
+<CommonMistake title="Do not treat every て-form as “and”">
+  <p>`〜て` can connect actions, give a reason, make a request, or form a larger pattern such as `〜ている` and `〜てしまう`. Read what follows before translating it.</p>
+</CommonMistake>
+
+## 3. Ability and intention: potential and volitional forms
+
+<GrammarBox client:load
+  pattern="Potential form: V-える / V-られる / できる"
+  meaning="Can do; be able to do."
+  formation="Group 1: 書く → 書ける. Group 2: 食べる → 食べられる. する → できる. 来る → 来られる."
+  examples={[
+    { japanese: "この漢字は読めますか。", romaji: "kono kanji wa yomemasu ka.", translation: "Can you read this kanji?" },
+    { japanese: "ここから海が見られます。", romaji: "koko kara umi ga miraremasu.", translation: "You can see the sea from here." },
+    { japanese: "明日は参加できないかもしれません。", romaji: "ashita wa sanka dekinai kamoshiremasen.", translation: "I might not be able to participate tomorrow." }
+  ]}
+/>
+
+<GrammarBox client:load
+  pattern="Volitional form: V-よう / V-おう"
+  meaning="Let's…; I will…; an intention to act."
+  formation="Group 1: 行く → 行こう. Group 2: 食べる → 食べよう. する → しよう. 来る → 来よう."
+  examples={[
+    { japanese: "週末に復習しよう。", romaji: "shuumatsu ni fukushuu shiyou.", translation: "Let's review at the weekend." },
+    { japanese: "もう一度説明を聞こうと思う。", romaji: "mou ichido setsumei o kikou to omou.", translation: "I think I will listen to the explanation once more." },
+    { japanese: "早めに出発しようか。", romaji: "hayame ni shuppatsu shiyou ka.", translation: "Shall we leave a little early?" }
+  ]}
+/>
+
+> **Potential particle note:** with a potential verb, `が` often marks what is possible: `日本語が話せる`. In everyday Japanese, `を` is also common with some verbs, especially `読む` and `話す`; learn the whole expression rather than forcing one rule everywhere.
+
+## 4. Imperatives and prohibitions: recognize the tone
+
+The plain imperative (`急げ`, `待て`, `食べろ`) is forceful. You may encounter it in sports, emergencies, fiction, instructions, or close relationships, but it is usually inappropriate in polite conversation.
+
+<GrammarBox client:load
+  pattern="V-るな / V-てはいけない"
+  meaning="Don't do… / must not do…"
+  formation="Dictionary form + な is a strong prohibition. て-form + はいけない is less abrupt and common in rules."
+  examples={[
+    { japanese: "ここに入るな。", romaji: "koko ni hairu na.", translation: "Do not enter here. (strong sign or command)" },
+    { japanese: "試験中にスマホを使ってはいけません。", romaji: "shikenchuu ni sumaho o tsukatte wa ikemasen.", translation: "You must not use a smartphone during the exam." },
+    { japanese: "あきらめるな。", romaji: "akirameru na.", translation: "Don't give up. (encouraging but strong)" }
+  ]}
+/>
+
+For a polite request, choose `〜てください` or a softer request such as `〜てもらえますか`, not an imperative.
+
+## 5. Context dialogue: before the presentation
+
+<ConversationDialog client:load
+  title="Preparing for a presentation"
+  lines={[
+    { speaker: "Mika", japanese: "明日の発表、もう練習した？", romaji: "ashita no happyou, mou renshuu shita?", translation: "Have you practised for tomorrow's presentation yet?" },
+    { speaker: "Ren", japanese: "まだ全部はできていないけど、今夜もう一度読んでみる。", romaji: "mada zenbu wa dekite inai kedo, konya mou ichido yonde miru.", translation: "I have not done all of it yet, but I will try reading it once more tonight." },
+    { speaker: "Mika", japanese: "分からない言葉があったら、調べられるように辞書を持っていこう。", romaji: "wakaranai kotoba ga attara, shiraberareru you ni jisho o motte ikou.", translation: "Let's bring a dictionary so we can look up any words we do not understand." },
+    { speaker: "Ren", japanese: "そうしよう。焦らないで、ゆっくり話せば大丈夫だよ。", romaji: "sou shiyou. aseranaide, yukkuri hanaseba daijoubu da yo.", translation: "Let's do that. If you do not rush and speak slowly, you will be fine." }
+  ]}
+/>
+
+## 6. Guided practice
+
+1. Change `書く` into the potential form.
+2. Choose the best form: `昨日（見る）ドラマは面白かった。`
+3. Change `食べる` into the volitional form.
+4. Turn `ここで写真を撮る` into a clear rule: “You must not take photographs here.”
+
+<details>
+  <summary>Check your answers</summary>
+  <ol>
+    <li>`書ける`</li>
+    <li>`見た` — a plain past form modifies `ドラマ`.</li>
+    <li>`食べよう`</li>
+    <li>`ここで写真を撮ってはいけません。`</li>
+  </ol>
+</details>
+
+## 7. Reading practice: a note from a study group
+
+> 来週から、図書館でN3の勉強会を始めます。毎週土曜日の午後二時に集まって、短い記事を読んだり、文法を復習したりします。参加したい人は、金曜日までに名前を書いてください。難しい問題があっても、すぐにあきらめないで、一緒に考えましょう。
+
+**Reading check:** Which forms express (1) the group's plan, (2) activities that will happen at the meeting, and (3) the request to participants? Identify them before reading the translation.
+
+Translation: “Starting next week, we will hold an N3 study group at the library. We will meet at 2 p.m. every Saturday, read short articles, and review grammar. If you want to join, please write your name by Friday. Even if there is a difficult problem, do not give up immediately; let’s think about it together.”
+
+## 8. Communication and flashcard review
+
+**Speak or write:** describe a study plan using one volitional form, one potential form, and one negative form. For example: “This week, I will…, so that I can…; I will not….”
+
+**Review flashcards:** `辞書形` → role and example; `可能形` → how to form it; `意志形` → invitation vs personal intention; `〜るな` → tone and safer alternatives.
+
+<ChapterSummary
+  takeaways={[
+    "The dictionary form is the anchor for recognizing and building other forms.",
+    "The て-form has several jobs, so interpret it with the words that follow.",
+    "Plain past forms often modify a noun: 昨日見た映画.",
+    "Potential forms express ability or possibility; volitional forms express an invitation or intention.",
+    "Imperatives and dictionary form + な are strong; use polite request forms in normal conversation."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock
+  client:load
+  questions={[
+    { question: "Which is the potential form of 書く?", options: ["書こう", "書ける", "書いた", "書かない"], correct: 1, explanation: "For a Group 1 verb, change the final u-sound to e-sound + る: 書く → 書ける." },
+    { question: "In 昨日読んだ本, what does 読んだ do?", options: ["Makes a polite request", "Modifies 本", "Expresses ability", "Gives a command"], correct: 1, explanation: "The plain past form 読んだ is a relative clause modifying 本." },
+    { question: "Which form means 'Let's go'?", options: ["行ける", "行った", "行こう", "行くな"], correct: 2, explanation: "行こう is the volitional form of 行く." },
+    { question: "Which is the most appropriate phrase for a polite rule?", options: ["走るな", "走れ", "走ってはいけません", "走ろう"], correct: 2, explanation: "てはいけません expresses a rule without the abrupt force of an imperative or るな." },
+    { question: "What is the main warning when you see a て-form?", options: ["It always means 'and'", "It is always a request", "Its role depends on the surrounding pattern", "It always refers to the past"], correct: 2, explanation: "The て-form connects actions and also appears in requests, reasons, and many grammar patterns." },
+    { question: "Which sentence means 'I cannot attend tomorrow'?", options: ["明日は参加しよう。", "明日は参加できない。", "明日は参加した。", "明日は参加するな。"], correct: 1, explanation: "参加できない is the negative potential form: cannot attend." }
+  ]}
+/>

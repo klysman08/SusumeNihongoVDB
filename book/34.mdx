@@ -1,0 +1,268 @@
+---
+title: "Chapter 34 — Relative Clauses"
+level: "N4"
+chapter: 34
+description: "Expand your descriptive power in Japanese by learning how to modify nouns with entire sentences using relative clauses."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Relative Clauses (Noun Modification)"
+  level="N4"
+  chapter={34}
+  objectives={[
+    "Understand the structure and word order of relative clauses in Japanese compared to English.",
+    "Use plain form verbs and adjectives to modify nouns.",
+    "Master the particle change from は to が inside a relative clause.",
+    "Form complex descriptive sentences for subjects, objects, and locations."
+  ]}
+/>
+
+<SectionIntro level="N4">
+In English, if we want to describe a noun using an entire action, we use words like "who," "which," or "that" *after* the noun. For example: "The book **that I bought yesterday**." In Japanese, it is entirely reversed! The descriptive clause acts just like a simple adjective and comes *before* the noun: "**I-bought-yesterday** book." This structure is called a **Relative Clause** (連体修飾 - rentai shuushoku).
+</SectionIntro>
+
+<BookImage
+  src="/book-images/34-relative-clauses.webp"
+  alt="Anime pixel-art illustration of glowing action scenes flowing into a large book on a bookshelf, showing descriptions wrapping around nouns."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Basic Structure
+
+To make a relative clause, simply put an entire sentence into the **Plain Form** (dictionary form, ta-form, nai-form, etc.) and stick it directly in front of the noun you want to describe. Unlike in English, there are no special "relative pronouns" (who, which, that).
+
+* **Sentence:** 日本で買いました (I bought in Japan)
+* **Noun:** 時計 (Watch)
+* **Relative Clause:** [日本で買った] 時計 (The watch [that I bought in Japan])
+
+<GrammarBox client:load 
+  pattern="[Plain Form Modifying Clause] + Noun"
+  meaning="The [Noun] that/who [Modifying Clause]."
+  formation="Verb-Plain/Adj-Plain + Noun"
+  examples={[
+    { japanese: "これは私が書いた本です。", romaji: "kore wa watashi ga kaita hon desu.", translation: "This is the book that I wrote." },
+    { japanese: "東京行きの電車に乗る人は、こちらへ来てください。", romaji: "toukyou yuki no densha ni noru hito wa, kochira e kite kudasai.", translation: "The people who will ride the Tokyo-bound train, please come this way." },
+    { japanese: "美味しくないケーキは食べたくないです。", romaji: "oishikunai keeki wa tabetakunai desu.", translation: "I do not want to eat cake that is not delicious." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="昨日会った人は山田さんの奥さんです。"
+  romaji="kinou atta hito wa Yamada-san no okusan desu."
+  translation="The person [who I met yesterday] is Yamada-san's wife."
+/>
+
+<ExampleSentence client:load 
+  japanese="明日行くレストランの名前を教えてください。"
+  romaji="ashita iku resutoran no namae o oshiete kudasai."
+  translation="Please tell me the name of the restaurant [we are going to tomorrow]."
+/>
+
+<ExampleSentence client:load 
+  japanese="彼が住んでいる家はとても広いです。"
+  romaji="kare ga sunde iru ie wa totemo hiroi desu."
+  translation="The house [where he lives] is very spacious."
+/>
+
+## 2. The Critical Particle Rule (は ➔ が)
+
+This rule is a major stumbling block for learners: **Inside a relative clause, the subject particle `は` MUST change to `が` (or occasionally `の`).**
+
+Why? Because `は` marks the topic for the *entire* main sentence. If you force a `は` inside a tiny descriptive bubble, it breaks the sentence's balance.
+
+* **Main Sentence Subject:** 田中さん**は** (Tanaka is...)
+* **Incorrect Relative Clause:** [ 田中さん**は**作った ] ケーキ
+* **Correct Relative Clause:** [ 田中さん**が**作った ] ケーキ (The cake that Tanaka made)
+
+<GrammarBox client:load 
+  pattern="[Subject が Verb-Plain] + Noun"
+  meaning="The [Noun] that [Subject] [Verbs]."
+  formation="Subject + が + Plain Form + Noun"
+  examples={[
+    { japanese: "母が送ってくれた荷物が届きました。", romaji: "haha ga okutte kureta nimotsu ga todokimashita.", translation: "The package [that my mother sent me] has arrived." },
+    { japanese: "友達が教えてくれたアプリを使っています。", romaji: "tomodachi ga oshiete kureta apuri o tsukatte imasu.", translation: "I am using the app [that my friend told me about]." },
+    { japanese: "彼が歌う歌はいつも悲しいです。", romaji: "kare ga utau uta wa itsumo kanashii desu." , translation: "The songs [that he sings] are always sad." }
+  ]}
+/>
+
+> [!NOTE]
+> In written or slightly formal Japanese, the `が` inside a relative clause is often replaced with `の`. For example: `私の書いた本` (The book that I wrote). `私の` here does not mean "my book", it means I am the subject who did the action inside the clause!
+
+## 3. Placement in the Main Sentence
+
+A noun modified by a relative clause acts like any other noun unit. You can put this giant block anywhere a normal noun can go—as the subject, object, or location!
+
+### As the Subject (が/は)
+<ExampleSentence client:load 
+  japanese="昨日買ったカメラは壊れてしまいました。"
+  romaji="kinou katta kamera wa kowarete shimaimashita."
+  translation="The camera [that I bought yesterday] ended up breaking."
+/>
+
+### As the Direct Object (を)
+<ExampleSentence client:load 
+  japanese="山田さんが住んでいるアパートを見ました。"
+  romaji="Yamada-san ga sunde iru apaato o mimashita."
+  translation="I saw the apartment [where Yamada lives]."
+/>
+
+### As the Destination or Location (に/で)
+<ExampleSentence client:load 
+  japanese="初めて会ったレストランで食事をしました。"
+  romaji="hajimete atta resutoran de shokuji o shimashita."
+  translation="I had a meal at the restaurant [where we first met]."
+/>
+
+## Cultural Insight: Implicit Subjects in Japanese
+
+In Japanese relative clauses, the subject is very often omitted if it is clear from context (usually referring to the speaker or the listener). 
+
+* **Example:** 買った本 (Katta hon)
+  * Could mean: "The book **I** bought," "The book **you** bought," or even "The book **he** bought."
+
+This reflects the broader Japanese cultural value of **high-context communication**. Japanese speakers avoid redundancy and rely on the shared situation. If you are holding a book, saying `買った本` clearly implies you are the one who bought it. Explicitly saying `私が買った本` (The book that *I* bought) can sometimes sound overly emphatic or redundant unless you are specifically distinguishing it from a book someone else bought.
+
+## Contextual Dialogues
+
+### Dialogue 1: Finding a Lost Item
+<ConversationDialog client:load 
+  title="Looking for the Wallet"
+  lines={[
+    { speaker: "A", translation: "Did you see the wallet I put on the table earlier?", japanese: "さっきテーブルの上に置いた財布を見ませんでしたか。", romaji: "Sakki teeburu no ue ni oita saifu o mimasen deshita ka." },
+    { speaker: "B", translation: "Ah, the black wallet? I think Tanaka-san took it.", japanese: "あ、あの黒い財布ですか。田中さんが持っていったと思いますよ。", romaji: "A, ano kuroi saifu desu ka. Tanaka-san ga motte itta to omoimasu yo." },
+    { speaker: "A", translation: "Really? The money that was inside is important, so I'm worried.", japanese: "本当ですか。中に入っていたお金は大切なので、心配です。", romaji: "Hontou desu ka. Naka ni haitte ita okane wa taisetsu na node, shinpai desu." }
+  ]}
+/>
+
+### Dialogue 2: Describing a New Friend
+<ConversationDialog client:load 
+  title="Talking about Yamada-san"
+  lines={[
+    { speaker: "Suzuki", translation: "Tanaka-san, who is the person wearing the red dress over there?", japanese: "田中さん、あそこの赤いドレスを着ている人は誰ですか。", romaji: "Tanaka-san, asoko no akai doresu o kite iru hito wa dare desu ka." },
+    { speaker: "Tanaka", translation: "That's Yamada-san, who joined the company last month.", japanese: "あの人は先月会社に入った山田さんですよ。", romaji: "Ano hito wa sengetsu kaisha ni haitta Yamada-san desu yo." },
+    { speaker: "Suzuki", translation: "Oh, so she's the person who lived in America?", japanese: "あ、アメリカに住んでいた人ですか。", romaji: "A, Amerika ni sunde ita hito desu ka." },
+    { speaker: "Tanaka", translation: "Yes. She's a person who speaks English very well.", japanese: "ええ。英語がとても上手に話せる人です。", romaji: "Ee. Eigo ga totemo jouzu ni hanaseru hito desu." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Relative clauses describe a noun using an entire sentence.",
+    "The descriptive clause ALWAYS goes directly IN FRONT of the noun it modifies.",
+    "The modifying verb or adjective MUST be in the Plain Form (e.g., dictionary form, ta-form).",
+    "Inside the modifying clause, the subject particle は MUST change to が (or の).",
+    "Japanese often omits the subject in relative clauses if it's clear from context.",
+    "The resulting [Clause + Noun] unit can function as any part of a sentence (subject, object, etc.)."
+  ]}
+/>
+
+## Knowledge Check
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Where does the modifying clause go in relation to the noun it describes in Japanese?",
+      options: ["Immediately AFTER the noun.", "Immediately BEFORE the noun.", "At the end of the sentence.", "Between the subject and object."],
+      correct: 1,
+      explanation: "Japanese modifiers always precede the head noun. [私が作った] ケーキ (The cake I made)."
+    },
+    {
+      question: "Which form MUST the verb be in when making a relative clause?",
+      options: ["Polite form (〜ます)", "Plain form (dictionary, ta, nai, etc.)", "Te-form (〜て)", "Volitional form (〜よう)"],
+      correct: 1,
+      explanation: "Relative clauses always end in the plain form. You cannot use 'masu' or 'desu' inside the clause."
+    },
+    {
+      question: "What is the mandatory particle change for a subject inside a relative clause?",
+      options: ["は ➔ を", "は ➔ が", "が ➔ は", "を ➔ が"],
+      correct: 1,
+      explanation: "Inside a relative clause, the topic marker 'wa' cannot be used for the sub-subject; 'ga' (or 'no') must be used."
+    },
+    {
+      question: "Translate: 'The book that Tanaka is reading.'",
+      options: ["田中さんが読んでいる本", "田中さんは読む本", "本が田中さんに読んでいる", "田中さんが読んでいます本"],
+      correct: 0,
+      explanation: "[田中さんが読んでいる] (That Tanaka is reading) + 本 (book)."
+    },
+    {
+      question: "What does '東京に住んでいる友達' mean?",
+      options: ["A friend who went to Tokyo.", "A friend who lives in Tokyo.", "Tokyo is where my friend lives.", "I have a friend in Tokyo."],
+      correct: 1,
+      explanation: "[東京に住んでいる] (Who lives in Tokyo) modifies 友達 (friend)."
+    },
+    {
+      question: "Which phrase is correct for 'The song I listened to yesterday'?",
+      options: ["私が昨日聞いた歌", "私は昨日聞く歌", "昨日聞いたの歌", "私が聞いたの昨日歌"],
+      correct: 0,
+      explanation: "[私が昨日聞いた] (I listened to yesterday - past plain) + 歌 (song)."
+    },
+    {
+      question: "In the phrase '母の作った料理', what does 'の' indicate?",
+      options: ["Possession (My mother's dish)", "The subject of the action (The dish my mother made)", "Location", "Direction"],
+      correct: 1,
+      explanation: "In relative clauses, 'no' can replace 'ga' as the subject marker."
+    },
+    {
+      question: "If a subject is omitted in '買った本', what is the most likely meaning in a natural conversation?",
+      options: ["A book bought by someone random.", "The book I (the speaker) bought.", "Books aren't being bought.", "The book is buying something."],
+      correct: 1,
+      explanation: "Japanese is high-context; implicit subjects usually refer to the speaker or listener."
+    },
+    {
+      question: "Translate: 'I want to buy the shoes that are not expensive.'",
+      options: ["高くないの靴を買いたいです", "高くない靴を買いたいです", "高くないです靴を買いたいです", "高くありません靴を買いたいです"],
+      correct: 1,
+      explanation: "Plain negative adjective + Noun: [高くない] 靴."
+    },
+    {
+      question: "What is wrong with '私が昨日買いました本'?",
+      options: ["The particle が is wrong.", "The verb should be at the end of the sentence.", "It uses the polite form instead of the plain form.", "The noun should come first."],
+      correct: 2,
+      explanation: "Relative clauses must use plain forms (買った instead of 買いました)."
+    },
+    {
+      question: "Translate: 'The camera that broke yesterday.'",
+      options: ["昨日壊れたカメラ", "昨日壊れるカメラ", "昨日カメラが壊れた", "カメラが昨日壊れた"],
+      correct: 0,
+      explanation: "[昨日壊れた] (broke yesterday) + カメラ."
+    },
+    {
+      question: "Which particle marks the destination for '[私が明日行く] レストラン' in the full sentence 'I'm going to the restaurant...'?",
+      options: ["を", "は", "に", "が"],
+      correct: 2,
+      explanation: "The modified noun block functions like a noun. If you are going to it, you need 'ni' or 'e'."
+    },
+    {
+      question: "How do you say 'The person who speaks English well'?",
+      options: ["英語が上手に話す人", "英語を上手に話せます人", "英語が上手に話せる人", "人、英語を上手に話す"],
+      correct: 2,
+      explanation: "[英語が上手に話せる] (can speak English well - potential plain) + 人."
+    },
+    {
+      question: "In relative clauses, why can't we use 'wa' for the subject?",
+      options: ["Because 'wa' is too polite.", "Because 'wa' marks the main topic of the entire sentence.", "Because 'wa' only follows nouns.", "Because 'wa' is for negative sentences."],
+      correct: 1,
+      explanation: "The topic marker 'wa' has a scope that covers the entire sentence, which conflicts with the nested nature of a relative clause."
+    },
+    {
+      question: "Translate: 'The money that was inside the wallet.'",
+      options: ["財布の中に入っていたお金", "お金は財布に入っていました", "財布に入っていたのお金", "中に入っていたの財布"],
+      correct: 0,
+      explanation: "[財布の中に入っていた] (was inside the wallet) + お金 (money)."
+    }
+  ]}
+/>

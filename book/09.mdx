@@ -1,0 +1,294 @@
+---
+title: "Chapter 09 — Places & Particles へ and で"
+level: "N5"
+chapter: "09"
+description: "Expand your world by learning how to talk about where you are going and where you do things. Master the particles 'e' (direction) and 'de' (location/means)."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Places & Particles へ and で"
+  level="N5"
+  chapter="09"
+  objectives={[
+    "Use the particle へ (e) to indicate the destination of movement.",
+    "Use the particle で (de) to mark the location where an action happens.",
+    "Use the particle で (de) to express the means of transportation.",
+    "Navigate Japan's train culture and IC card system."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Now that you can tell time and introduce yourself, it's time to move! In Japanese, we use different particles depending on whether a place is a **destination** we are heading toward, or a **location** where we are performing an activity. We also use particles to explain *how* we get there. Let's explore the world of places and movement!
+</SectionIntro>
+
+<BookImage
+  src="/book-images/09-places-particles.webp"
+  alt="Anime pixel-art illustration of a learner navigating places with へ for destinations and で for actions and transportation."
+  width={1536}
+  height={1024}
+/>
+
+## 1. Destination: [Place] ＋ へ (e)
+
+When you are moving toward a place (going, coming, or returning), you mark that destination with **へ**.
+
+> [!CAUTION]
+> The Hiragana character **へ (he)** is pronounced **"e"** when it is used as a particle.
+
+<GrammarBox client:load 
+  pattern="[Place] ＋ へ ＋ [Movement Verb]"
+  meaning="Going toward a destination."
+  formation="Noun (Place) + へ + いきます / きます / かえります"
+  examples={[
+    { japanese: "がっこう へ いきます。", romaji: "Gakkou e ikimasu.", translation: "I go to school." },
+    { japanese: "にほん へ きました。", romaji: "Nihon e kimashita.", translation: "I came to Japan." },
+    { japanese: "うち へ かえります。", romaji: "Uchi e kaerimasu.", translation: "I am going home (returning home)." }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="どこ へ いきます か。"
+  romaji="Doko e ikimasu ka."
+  translation="Where are you going?"
+/>
+
+<ExampleSentence client:load 
+  japanese="あした、 だいがく へ いきます。"
+  romaji="Ashita, daigaku e ikimasu."
+  translation="Tomorrow, I will go to the university."
+/>
+
+<ExampleSentence client:load 
+  japanese="スーパー へ いきます。"
+  romaji="Suupaa e ikimasu."
+  translation="I am going to the supermarket."
+/>
+
+## 2. Location of Action: [Place] ＋ で (de)
+
+When you perform an action *at* a place (reading, eating, studying, etc.), you mark that place with **で**.
+
+<GrammarBox client:load 
+  pattern="[Place] ＋ で ＋ [Action Verb]"
+  meaning="Performing an action at a specific location."
+  formation="Noun (Place) + で + Verb"
+  examples={[
+    { japanese: "としょかん で ほん を よみます。", romaji: "Toshokan de hon o yomimasu.", translation: "I read books at the library." },
+    { japanese: "レストラン で ごはん を たべます。", romaji: "Resutoran de gohan o tabemasu.", translation: "I eat a meal at a restaurant." },
+    { japanese: "うち で にほんご を べんきょうします。", romaji: "Uchi de Nihongo o benkyoushimasu.", translation: "I study Japanese at home." }
+  ]}
+/>
+
+> [!TIP]
+> **へ vs. で:**
+> - Use **へ** for *movement* toward a goal (going to).
+> - Use **で** for *activity* happening in a spot (doing at).
+
+<ExampleSentence client:load 
+  japanese="どこ で べんきょうします か。"
+  romaji="Doko de benkyoushimasu ka."
+  translation="Where do you study?"
+/>
+
+<ExampleSentence client:load 
+  japanese="デパート で かばん を かいました。"
+  romaji="Depaato de kaban o kaimashita."
+  translation="I bought a bag at the department store."
+/>
+
+<ExampleSentence client:load 
+  japanese="あした、 こうえん で あいましょう。"
+  romaji="Ashita, kouen de aimashou."
+  translation="Let's meet at the park tomorrow."
+/>
+
+## 3. Means of Transport: [Vehicle] ＋ で (de)
+
+The particle **で** has another job! It also indicates the "means" or "tool" you use to do something. When followed by a movement verb, it tells us *how* you are traveling.
+
+<GrammarBox client:load 
+  pattern="[Vehicle] ＋ で ＋ いきます"
+  meaning="Going by [means of transport]."
+  formation="Noun (Vehicle) + で + Movement Verb"
+  examples={[
+    { japanese: "でんしゃ で いきます。", romaji: "Densha de ikimasu.", translation: "I go by train." },
+    { japanese: "くるま で うち へ かえります。", romaji: "Kuruma de uchi e kaerimasu.", translation: "I return home by car." },
+    { japanese: "じてんしゃ で きました。", romaji: "Jitensha de kimashita.", translation: "I came by bicycle." }
+  ]}
+/>
+
+> [!NOTE]
+> **Walking:** If you go on foot, you say **あるいて (aruite)**. You do NOT use the particle **で** here because "walking" is a form of the verb itself, not a separate tool/vehicle.
+
+<ParticleCompare
+  client:load
+  title="へ vs で vs に — the three place particles so far"
+  items={[
+    { label: "へ", role: "Destination (to)", example: "がっこう へ いきます。", note: "gakkou e ikimasu — moving toward a goal (with iku/kuru/kaeru)." },
+    { label: "で", role: "Location of action", example: "がっこう で べんきょうします。", note: "gakkou de benkyou shimasu — where an activity happens." },
+    { label: "に", role: "Point / existence", example: "しちじ に おきます。", note: "shichi-ji ni okimasu — a specific time (Ch.08) or where something exists (Ch.13)." },
+  ]}
+/>
+
+## 4. Cultural Note: Train Culture & IC Cards (電車)
+
+Trains are the lifeblood of Japan. The system is incredibly efficient but can be overwhelming for beginners.
+- **Quiet Zones:** Trains are generally quiet. Talking on the phone is strictly prohibited, and loud conversations are discouraged.
+- **IC Cards (Suica/Pasmo):** Instead of buying paper tickets, most people use rechargeable IC cards. You just tap them on the gate when you enter and exit. Today, these can even be stored on your smartphone.
+- **Priority Seats:** Look for the "Priority Seat" (*Yuusen-seki*) signs. These are reserved for the elderly, injured, pregnant, or those with disabilities. It is polite to offer your seat if someone in need is standing.
+- **Rush Hour:** Be prepared for "Kasshu" (crush) during morning and evening commutes in big cities like Tokyo!
+
+## Conversation Practice
+
+<BookImage
+  src="/book-images/09-places-particles-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of commute and lunch plans with train, taxi, destination, and へ and で particle cards."
+  width={1672}
+  height={941}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="The Morning Commute"
+  lines={[
+    { speaker: "Alice", japanese: "たなかさん、 毎日 どこ へ いきます か。", romaji: "Tanaka-san, mainichi doko e ikimasu ka.", translation: "Mr. Tanaka, where do you go every day?" },
+    { speaker: "Tanaka", japanese: "毎日 かいしゃ へ いきます。", romaji: "Mainichi kaisha e ikimasu.", translation: "I go to my company every day." },
+    { speaker: "Alice", japanese: "なに で いきます か。", romaji: "Nani de ikimasu ka.", translation: "How (by what means) do you go?" },
+    { speaker: "Tanaka", japanese: "でんしゃ で いきます。 アリスさん は？", romaji: "Densha de ikimasu. Arisu-san wa?", translation: "I go by train. How about you, Alice?" },
+    { speaker: "Alice", japanese: "わたし は あるいて だいがく へ いきます。", romaji: "Watashi wa aruite daigaku e ikimasu.", translation: "I walk to the university." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Lunch Plans"
+  lines={[
+    { speaker: "Ken", japanese: "今日 は どこ で ごはん を たべます か。", romaji: "Kyou wa doko de gohan o tabemasu ka.", translation: "Where will you eat today?" },
+    { speaker: "Yumi", japanese: "あの レストラン で たべます。 いっしょ に いきます か。", romaji: "Ano resutoran de tabemasu. Issho ni ikimasu ka.", translation: "I'll eat at that restaurant over there. Want to go together?" },
+    { speaker: "Ken", japanese: "はい、 いきましょう！ なに で いきます か。", romaji: "Hai, ikimashou! Nani de ikimasu ka.", translation: "Yes, let's go! How shall we get there?" },
+    { speaker: "Yumi", japanese: "タクシー で いきましょう。", romaji: "Takushii de ikimashou.", translation: "Let's go by taxi." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Use へ (e) for the destination of movement (going TO).",
+    "Use で (de) for the location of an activity (doing AT).",
+    "Use で (de) for the means of transport (by car, by train).",
+    "Say 'aruite' for 'on foot' (no particle).",
+    "Trains are quiet spaces; use IC cards for easy travel."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of places and particles!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which particle indicates the destination of movement?",
+      options: ["は", "へ", "で", "を"],
+      correct: 1,
+      explanation: "へ (e) is used for the destination you are heading toward."
+    },
+    {
+      question: "How is the destination particle へ pronounced?",
+      options: ["he", "ha", "e", "wa"],
+      correct: 2,
+      explanation: "As a particle, へ is pronounced 'e'."
+    },
+    {
+      question: "Which particle marks the location where an action happens?",
+      options: ["に", "で", "へ", "の"],
+      correct: 1,
+      explanation: "で (de) marks the spot where an activity takes place."
+    },
+    {
+      question: "Translate: 'I read books at the library.'",
+      options: ["としょかん へ ほん を よみます。", "としょかん で ほん を よみます。", "としょかん に ほん を よみます。", "としょかん の ほん を よみます。"],
+      correct: 1,
+      explanation: "Toshokan (library) + で (at) + hon o yomimasu (read books)."
+    },
+    {
+      question: "Which particle means 'by means of' (e.g., by train)?",
+      options: ["に", "で", "を", "へ"],
+      correct: 1,
+      explanation: "で (de) is used for transport and tools."
+    },
+    {
+      question: "How do you say 'I go on foot'?",
+      options: ["あるいて で いきます。", "あるいて いきます。", "あし で いきます。", "あるい で いきます。"],
+      correct: 1,
+      explanation: "あるいて (aruite) is the adverbial form for 'walking'; no particle is used."
+    },
+    {
+      question: "Translate: 'Densha de kaisha e ikimasu.'",
+      options: ["I go to the company by train.", "I go to the train station.", "I work at the company.", "The train goes to the company."],
+      correct: 0,
+      explanation: "Densha de (by train) + kaisha e (to company) + ikimasu (go)."
+    },
+    {
+      question: "What is an 'IC Card' used for in Japan?",
+      options: ["Calling friends", "Buying groceries and riding trains", "Entering hotels", "Identifying yourself"],
+      correct: 1,
+      explanation: "IC cards (Suica/Pasmo) are mainly for transport but also widely used at convenience stores."
+    },
+    {
+      question: "Fill in the blank: 'Resutoran _____ gohan o tabemasu.'",
+      options: ["へ", "で", "を", "に"],
+      correct: 1,
+      explanation: "Eating is an action happening *at* the restaurant, so 'de' is correct."
+    },
+    {
+      question: "What is the Japanese word for 'bicycle'?",
+      options: ["densha", "kuruma", "jitensha", "takushii"],
+      correct: 2,
+      explanation: "Jitensha means bicycle."
+    },
+    {
+      question: "Which is considered rude on a Japanese train?",
+      options: ["Reading a book", "Sleeping", "Talking loudly on a phone", "Using an IC card"],
+      correct: 2,
+      explanation: "Talking on phones is prohibited to maintain a quiet environment."
+    },
+    {
+      question: "How do you ask 'How (by what means) do you go?'",
+      options: ["Doko de ikimasu ka.", "Itsu ikimasu ka.", "Nani de ikimasu ka.", "Dare to ikimasu ka."],
+      correct: 2,
+      explanation: "Nani de means 'by what means'."
+    },
+    {
+      question: "Translate: 'Uchi e kaerimasu.'",
+      options: ["I go to the house.", "I return home.", "I am at home.", "I leave home."],
+      correct: 1,
+      explanation: "Kaerimasu specifically means 'to return home'."
+    },
+    {
+      question: "Which particle would you use to say you used 'chopsticks' to eat?",
+      options: ["を", "は", "で", "へ"],
+      correct: 2,
+      explanation: "で is used for tools as well as transport."
+    },
+    {
+      question: "Fill in the blank: 'Doko _____ ikimasu ka.' (Where are you going?)",
+      options: ["で", "へ", "を", "の"],
+      correct: 1,
+      explanation: "Since 'ikimasu' is a movement verb, 'e' is the correct destination marker."
+    }
+  ]}
+/>

@@ -1,0 +1,121 @@
+---
+title: "Chapter 45 — Actions in Progress"
+level: "N3"
+chapter: 45
+unit: 2
+unitTitle: "Time, Change, and Plans"
+topics: "Action stages, subjective recency, continuation, and interruption"
+description: "Describe an action just before it begins, in progress, just finished, recent, or interrupted in the middle."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Actions in Progress" level="N3" chapter={45} objectives={[
+  "Choose 〜るところ, 〜ているところ, or 〜たところ for an action's exact stage.",
+  "Use 〜たばかり for something that feels recent.",
+  "Use 〜て以来 for a continuing period since a past event.",
+  "Use 〜最中に to describe an interruption in the middle of an activity."
+]} />
+
+<SectionIntro level="N3">
+Japanese can locate an action with impressive precision. Instead of only saying “I am studying,” you can say that you are about to study, are right in the middle of studying, have just finished, or have continued something since a particular event. These distinctions are especially useful in conversation and JLPT listening.
+</SectionIntro>
+
+<VocabTable data={[
+  { word: "ところ", reading: "ところ", romaji: "tokoro", meaning: "point; stage; moment", type: "noun" },
+  { word: "最中", reading: "さいちゅう", romaji: "saichuu", meaning: "in the middle of", type: "noun" },
+  { word: "以来", reading: "いらい", romaji: "irai", meaning: "since; ever since", type: "noun" },
+  { word: "ちょうど", reading: "ちょうど", romaji: "choudo", meaning: "just; exactly", type: "adv" },
+  { word: "中断する", reading: "ちゅうだんする", romaji: "chuudan suru", meaning: "to interrupt; suspend", type: "verb" }
+]} />
+
+## 1. About to, in the middle of, or just finished
+
+<ParticleCompare client:load title="Three exact stages with ところ" items={[
+  { label: "V-るところ", role: "just about to begin", example: "今から出かけるところです。", note: "I am just about to go out now." },
+  { label: "V-ているところ", role: "in the middle of an action", example: "今、食事をしているところです。", note: "I am eating right now." },
+  { label: "V-たところ", role: "just finished", example: "今、駅に着いたところです。", note: "I have just arrived at the station." },
+  { label: "V-たばかり", role: "feels recent to the speaker", example: "日本語を習い始めたばかりです。", note: "I have only just started learning Japanese." }
+]} />
+
+<GrammarBox client:load pattern="V-る / V-ている / V-た ところ" meaning="Be just about to do / be in the middle of doing / have just done V." formation="Dictionary form, ている form, or plain past form + ところ." examples={[
+  { japanese: "これから会議が始まるところです。", romaji: "kore kara kaigi ga hajimaru tokoro desu.", translation: "The meeting is just about to start." },
+  { japanese: "部長と話しているところなので、後で電話します。", romaji: "buchou to hanashite iru tokoro na node, ato de denwa shimasu.", translation: "I am in the middle of talking with the manager, so I will call later." },
+  { japanese: "昼ご飯を食べたところです。", romaji: "hirugohan o tabeta tokoro desu.", translation: "I have just eaten lunch." }
+]} />
+
+<CommonMistake title="〜たところ and 〜たばかり are not interchangeable">
+  <p>`〜たところ` means the action finished immediately before now. `〜たばかり` means “recently” from the speaker's perspective, so it can cover a longer period: `去年日本に来たばかりです` can be natural when the speaker still feels new to Japan.</p>
+</CommonMistake>
+
+## 2. Since then, and in the middle of it
+
+<GrammarBox client:load pattern="V-て以来" meaning="Since doing V, and continuing until now." formation="Verb て-form + 以来." examples={[
+  { japanese: "日本に来て以来、毎日電車を使っています。", romaji: "nihon ni kite irai, mainichi densha o tsukatte imasu.", translation: "Since coming to Japan, I have used the train every day." },
+  { japanese: "彼に会って以来、連絡を取っていない。", romaji: "kare ni atte irai, renraku o totte inai.", translation: "Since meeting him, I have not been in contact." }
+]} />
+
+<GrammarBox client:load pattern="V-ている最中に / N の最中に" meaning="While in the middle of V / N, something happened." formation="Verb ている + 最中に, or noun + の最中に." examples={[
+  { japanese: "映画を見ている最中に、電話が鳴った。", romaji: "eiga o mite iru saichuu ni, denwa ga natta.", translation: "The phone rang while I was in the middle of watching a film." },
+  { japanese: "会議の最中に、停電になりました。", romaji: "kaigi no saichuu ni, teiden ni narimashita.", translation: "There was a power outage in the middle of the meeting." }
+]} />
+
+`最中に` often introduces an unexpected interruption. For a neutral simultaneous action, ordinary `〜ているとき` is usually a better choice.
+
+## 3. Context dialogue: a call at the wrong moment
+
+<ConversationDialog client:load title="Calling a classmate" lines={[
+  { speaker: "Noa", japanese: "今、電話しても大丈夫？", romaji: "ima, denwa shite mo daijoubu?", translation: "Is it okay to call now?" },
+  { speaker: "Riku", japanese: "ごめん、これから授業に出るところなんだ。", romaji: "gomen, kore kara jugyou ni deru tokoro nan da.", translation: "Sorry, I am just about to leave for class." },
+  { speaker: "Noa", japanese: "分かった。昨日のレポートはどうだった？", romaji: "wakatta. kinou no repooto wa dou datta?", translation: "Okay. How was yesterday's report?" },
+  { speaker: "Riku", japanese: "ちょうど出したところ。日本に来て以来、一番時間がかかったよ。", romaji: "choudo dashita tokoro. nihon ni kite irai, ichiban jikan ga kakatta yo.", translation: "I just submitted it. It took the most time since I came to Japan." }
+]} />
+
+## 4. Guided practice and reading
+
+1. “I am just about to leave.”
+2. “I am in the middle of writing an email.”
+3. “I have just started my new job.”
+4. “Since I met my tutor, I have studied regularly.”
+5. “The lights went out in the middle of the presentation.”
+
+<details><summary>Check your answers</summary><ol><li>`今から出かけるところです。`</li><li>`メールを書いているところです。`</li><li>`新しい仕事を始めたばかりです。`</li><li>`先生に会って以来、定期的に勉強しています。`</li><li>`発表の最中に、電気が消えました。`</li></ol></details>
+
+> 私は三か月前にこの町へ引っ越してきたばかりです。最初は店や駅の場所が分かりませんでしたが、毎日散歩しているうちに慣れてきました。昨日は友達と夕食を食べている最中に、近くで花火が始まりました。食べ終わったところで外に出て、少し見ることができました。
+
+**Reading check:** Which expression shows subjective recency? Which one marks an interruption? Which one means the meal had just ended?
+
+Translation: “I moved to this town only three months ago. At first I did not know where the shops and station were, but I gradually got used to it while walking every day. Yesterday, fireworks began nearby while I was in the middle of eating dinner with a friend. We went outside just after finishing and were able to watch for a while.”
+
+## 5. Communication and flashcard review
+
+Describe your current day with `〜るところ`, `〜ているところ`, or `〜たところ`. Then describe one habit you have continued `〜て以来` a past event.
+
+**Review flashcards:** `〜るところ`; `〜ているところ`; `〜たところ`; `〜たばかり`; `〜て以来`; `〜最中に`.
+
+<ChapterSummary takeaways={[
+  "ところ marks an exact stage: about to begin, in progress, or just finished.",
+  "〜たばかり expresses something the speaker considers recent, not necessarily immediate.",
+  "〜て以来 connects a past event to a continuing situation until now.",
+  "〜最中に highlights an event that interrupts an activity in progress.",
+  "Context decides whether a time expression is neutral, recent, or unexpectedly interrupted."
+]} />
+
+## Knowledge Check
+
+<QuizBlock client:load questions={[
+  { question: "Which phrase means 'I am just about to eat'?", options: ["食べたところです", "食べているところです", "食べるところです", "食べたばかりです"], correct: 2, explanation: "Dictionary form + ところ means the action is about to begin." },
+  { question: "Which is best for 'I have only just started learning Japanese'?", options: ["日本語を勉強するところです", "日本語を勉強したばかりです", "日本語を勉強して以来です", "日本語を勉強の最中です"], correct: 1, explanation: "Plain past + ばかり expresses subjective recency." },
+  { question: "What does 会議の最中に電話が鳴った emphasize?", options: ["A future plan", "An interruption during the meeting", "The meeting just ended", "A repeated action"], correct: 1, explanation: "最中に highlights an event occurring in the middle of an activity." },
+  { question: "Which expression connects a past event with a continuing situation?", options: ["〜て以来", "〜たところ", "〜るところ", "〜てしまう"], correct: 0, explanation: "〜て以来 means 'since doing V' and normally leads to a continuing result." },
+  { question: "Why can 去年始めたばかり still be natural?", options: ["ばかり always means exactly one minute ago", "ばかり describes what feels recent to the speaker", "It is a grammar mistake", "It means an action in progress"], correct: 1, explanation: "ばかり is subjective; the speaker can still feel new after a longer period." }
+]} />

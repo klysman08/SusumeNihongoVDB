@@ -1,0 +1,393 @@
+---
+title: "Chapter 03 — Numbers & Particles は and の"
+level: "N5"
+chapter: "03"
+description: "Learn to count in Japanese using Kanji and master the two most fundamental particles: the topic marker 'wa' and the possession marker 'no'."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import KanjiCard from '../../components/book/KanjiCard.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Numbers & Particles は and の"
+  level="N5"
+  chapter="03"
+  objectives={[
+    "Read and write Kanji for numbers 1-10 and large units (100, 1000, 10000).",
+    "Use the particle は (wa) to define the topic of a sentence.",
+    "Use the particle の (no) to show possession and link nouns.",
+    "Understand the cultural significance of numbers in Japan."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Now that you can read the phonetic scripts, it's time to introduce **Kanji**—characters that represent meanings. We'll start with the most basic building blocks: numbers. Additionally, we will learn how to connect these words into simple sentences using **Particles**, the "grammatical glue" of the Japanese language.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/03-numbers-particles.webp"
+  alt="Anime pixel-art illustration of Japanese number kanji cards connected by glowing particle paths for は and の on a cozy study desk."
+  width={1672}
+  height={941}
+/>
+
+## 1. Kanji for Numbers (一 〜 十)
+
+Japanese numbers from 1 to 10 are simple pictographs or symbols.
+
+<div className="grid grid-cols-1 md:grid-cols-1 gap-4 my-8">
+<KanjiCard client:load data={{
+  character: "一",
+  meaning: "One",
+  onyomi: "イチ (ichi)",
+  kunyomi: "ひと (hito)",
+  strokes: 1,
+  examples: [
+    { word: "一", reading: "いち", meaning: "One" },
+    { word: "一つ", reading: "ひとつ", meaning: "One thing" },
+    { word: "一月", reading: "いちがつ", meaning: "January" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "二",
+  meaning: "Two",
+  onyomi: "ニ (ni)",
+  kunyomi: "ふた (futa)",
+  strokes: 2,
+  examples: [
+    { word: "二", reading: "に", meaning: "Two" },
+    { word: "二つ", reading: "ふたつ", meaning: "Two things" },
+    { word: "二月", reading: "にがつ", meaning: "February" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "三",
+  meaning: "Three",
+  onyomi: "サン (san)",
+  kunyomi: "みっ (mit)",
+  strokes: 3,
+  examples: [
+    { word: "三", reading: "さん", meaning: "Three" },
+    { word: "三つ", reading: "みっつ", meaning: "Three things" },
+    { word: "三月", reading: "さんがつ", meaning: "March" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "四",
+  meaning: "Four",
+  onyomi: "シ (shi)",
+  kunyomi: "よん (yon)",
+  strokes: 5,
+  examples: [
+    { word: "四", reading: "よん", meaning: "Four" },
+    { word: "四つ", reading: "よっつ", meaning: "Four things" },
+    { word: "四月", reading: "しがつ", meaning: "April" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "五",
+  meaning: "Five",
+  onyomi: "ゴ (go)",
+  kunyomi: "いつ (itsu)",
+  strokes: 4,
+  examples: [
+    { word: "五", reading: "ご", meaning: "Five" },
+    { word: "五つ", reading: "いつつ", meaning: "Five things" },
+    { word: "五月", reading: "ごがつ", meaning: "May" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "六",
+  meaning: "Six",
+  onyomi: "ロク (roku)",
+  kunyomi: "むっ (mut)",
+  strokes: 4,
+  examples: [
+    { word: "六", reading: "ろく", meaning: "Six" },
+    { word: "六つ", reading: "むっつ", meaning: "Six things" },
+    { word: "六月", reading: "ろくがつ", meaning: "June" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "七",
+  meaning: "Seven",
+  onyomi: "シチ (shichi)",
+  kunyomi: "なな (nana)",
+  strokes: 2,
+  examples: [
+    { word: "七", reading: "なな", meaning: "Seven" },
+    { word: "七つ", reading: "ななつ", meaning: "Seven things" },
+    { word: "七月", reading: "しちがつ", meaning: "July" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "八",
+  meaning: "Eight",
+  onyomi: "ハチ (hachi)",
+  kunyomi: "やっ (yat)",
+  strokes: 2,
+  examples: [
+    { word: "八", reading: "はち", meaning: "Eight" },
+    { word: "八つ", reading: "やっつ", meaning: "Eight things" },
+    { word: "八月", reading: "はちがつ", meaning: "August" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "九",
+  meaning: "Nine",
+  onyomi: "キュウ (kyuu)",
+  kunyomi: "ここの (kokono)",
+  strokes: 2,
+  examples: [
+    { word: "九", reading: "きゅう", meaning: "Nine" },
+    { word: "九つ", reading: "ここのつ", meaning: "Nine things" },
+    { word: "九月", reading: "くがつ", meaning: "September" }
+  ]
+}} />
+<KanjiCard client:load data={{
+  character: "十",
+  meaning: "Ten",
+  onyomi: "ジュウ (juu)",
+  kunyomi: "とお (too)",
+  strokes: 2,
+  examples: [
+    { word: "十", reading: "じゅう", meaning: "Ten" },
+    { word: "十一", reading: "じゅういち", meaning: "Eleven" },
+    { word: "二十", reading: "にじゅう", meaning: "Twenty" }
+  ]
+}} />
+</div>
+
+## 2. Large Numbers (百, 千, 万)
+
+Japanese counts large numbers in units of 10,000 (万).
+
+<KanjiCard client:load data={{
+  character: "百",
+  meaning: "Hundred",
+  onyomi: "ヒャク (hyaku)",
+  kunyomi: "—",
+  strokes: 6,
+  examples: [
+    { word: "百", reading: "ひゃく", meaning: "One hundred" },
+    { word: "三百", reading: "さんびゃく", meaning: "Three hundred" },
+    { word: "六百", reading: "ろっぴゃく", meaning: "Six hundred" }
+  ]
+}} />
+
+<KanjiCard client:load data={{
+  character: "千",
+  meaning: "Thousand",
+  onyomi: "セン (sen)",
+  kunyomi: "ち (chi)",
+  strokes: 3,
+  examples: [
+    { word: "千", reading: "せん", meaning: "One thousand" },
+    { word: "三千", reading: "さんぜん", meaning: "Three thousand" },
+    { word: "八千", reading: "はっせん", meaning: "Eight thousand" }
+  ]
+}} />
+
+<KanjiCard client:load data={{
+  character: "万",
+  meaning: "Ten Thousand",
+  onyomi: "マン (man)",
+  kunyomi: "—",
+  strokes: 3,
+  examples: [
+    { word: "一万", reading: "いちまん", meaning: "Ten thousand" },
+    { word: "十万", reading: "じゅうまん", meaning: "One hundred thousand" },
+    { word: "百万", reading: "ひゃくまん", meaning: "One million" }
+  ]
+}} />
+
+## 3. The Topic Marker: は (wa)
+
+The particle は (wa) identifies what the sentence is about. Think of it as "As for [topic]...".
+
+> [!CAUTION]
+> As a particle, the character **は (ha)** is always pronounced **"wa"**.
+
+<GrammarBox client:load 
+  pattern="[Noun] ＋ は"
+  meaning="Identifies the topic of the sentence."
+  formation="Noun + は + [Description/State]"
+  examples={[
+    { japanese: "わたし は 学生 です。", romaji: "Watashi wa gakusei desu.", translation: "I am a student. (As for me, I am a student.)" },
+    { japanese: "これ は ペン です。", romaji: "Kore wa pen desu.", translation: "This is a pen." },
+    { japanese: "きょう は さんじゅうにち です。", romaji: "Kyou wa sanjuu-nichi desu.", translation: "Today is the 30th." }
+  ]}
+/>
+
+## 4. The Possession Marker: の (no)
+
+The particle の (no) connects two nouns, showing that the first noun possesses or modifies the second. It works like the English apostrophe-s ('s).
+
+<GrammarBox client:load 
+  pattern="[Noun 1] ＋ の ＋ [Noun 2]"
+  meaning="Shows possession or relationship (Noun 1's Noun 2)."
+  formation="Owner + の + Item"
+  examples={[
+    { japanese: "わたし の 本", romaji: "Watashi no hon", translation: "My book" },
+    { japanese: "先生 の 車", romaji: "Sensei no kuruma", translation: "The teacher's car" },
+    { japanese: "日本 の カメラ", romaji: "Nihon no kamera", translation: "A Japanese camera (Camera of Japan)" }
+  ]}
+/>
+
+## 5. Cultural Note: Lucky and Unlucky Numbers
+
+In Japan, numbers carry deep cultural meanings.
+- **Four (四):** Often avoided because one of its readings, *shi*, sounds exactly like the word for **Death** (死). You'll often see buildings without a 4th floor!
+- **Nine (九):** Sometimes considered unlucky because its reading *ku* sounds like **Suffering** (苦).
+- **Seven (七):** Considered lucky, much like in the West, and associated with the "Seven Lucky Gods" of Japanese mythology.
+- **Eight (八):** Very lucky because the Kanji widens at the bottom, suggesting growing prosperity.
+
+## Practical Conversations
+
+<BookImage
+  src="/book-images/03-numbers-particles-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of students practicing book ownership, Japanese number kanji, and は and の particle cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load 
+  title="Exchanging Information"
+  lines={[
+    { speaker: "Tanaka", japanese: "スミスさん、これ は あなた の 本 です か。", romaji: "Sumisu-san, kore wa anata no hon desu ka.", translation: "Mr. Smith, is this your book?" },
+    { speaker: "Smith", japanese: "いいえ、それ は わたし の 本 ではありません。", romaji: "Iie, sore wa watashi no hon dewa arimasen.", translation: "No, that is not my book." },
+    { speaker: "Tanaka", japanese: "だれ の です か。", romaji: "Dare no desu ka.", translation: "Whose is it?" },
+    { speaker: "Smith", japanese: "それ は アンナさん の 本 です。", romaji: "Sore wa Anna-san no hon desu.", translation: "That is Anna's book." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="Talking About Numbers"
+  lines={[
+    { speaker: "A", japanese: "電話番号 は なん です か。", romaji: "Denwa bangou wa nan desu ka.", translation: "What is your phone number?" },
+    { speaker: "B", japanese: "ぜろ・きゅう・ぜろ の いち・に・さん・よん です。", romaji: "Zero kyuu zero no ichi ni san yon desu.", translation: "It's 090-1234." },
+    { speaker: "A", japanese: "ありがとうございます。", romaji: "Arigatou gozaimasu.", translation: "Thank you very much." }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Kanji like 一, 二, 三 represent numerical values and meanings.",
+    "The particle は (wa) marks the topic of the sentence. It is written as 'ha'.",
+    "The particle の (no) shows possession or links nouns (Owner の Item).",
+    "Numbers 4 and 9 are often avoided in Japan due to unlucky homophones.",
+    "Japanese counts in units of 10,000 (万) for large numbers."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your understanding of numbers and basic particles!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which Kanji represents the number 'Three'?",
+      options: ["二", "四", "三", "川"],
+      correct: 2,
+      explanation: "三 is 3. One is 一, and Two is 二."
+    },
+    {
+      question: "How is the topic particle は pronounced?",
+      options: ["ha", "wa", "ba", "pa"],
+      correct: 1,
+      explanation: "Even though written as 'ha', it is pronounced 'wa' as a particle."
+    },
+    {
+      question: "Which particle should you use to say 'My cat'?",
+      options: ["は", "の", "が", "を"],
+      correct: 1,
+      explanation: "の (no) shows possession. わたしのねこ = my cat."
+    },
+    {
+      question: "What is the reading for '十一'?",
+      options: ["Juu", "Ichi-juu", "Juu-ichi", "Ni-juu"],
+      correct: 2,
+      explanation: "十 (10) + 一 (1) = 11 (Juu-ichi)."
+    },
+    {
+      question: "Why is the number 4 (四) often considered unlucky in Japan?",
+      options: ["It sounds like 'Suffering'", "It sounds like 'Death'", "It represents bad luck in war", "It is an even number"],
+      correct: 1,
+      explanation: "One reading for 4 is 'shi', which is a homophone for 'death'."
+    },
+    {
+      question: "Translate: 'わたし の 先生'",
+      options: ["I am a teacher", "My teacher", "The teacher's book", "Teacher and I"],
+      correct: 1,
+      explanation: "わたし (I) + の (possessive) + 先生 (teacher) = My teacher."
+    },
+    {
+      question: "What does the Kanji '十' represent?",
+      options: ["Five", "Seven", "Ten", "Thousand"],
+      correct: 2,
+      explanation: "十 is the Kanji for 10."
+    },
+    {
+      question: "In the sentence 'Tanaka-san wa gakusei desu', what is the topic?",
+      options: ["Gakusei", "Tanaka-san", "Desu", "Wa"],
+      correct: 1,
+      explanation: "The noun followed by 'wa' is the topic. Here, it is Tanaka-san."
+    },
+    {
+      question: "How do you write '100' in Kanji?",
+      options: ["千", "万", "百", "十"],
+      correct: 2,
+      explanation: "百 (hyaku) is 100."
+    },
+    {
+      question: "Which of these means 'Japan's car'?",
+      options: ["日本 は 車", "日本 の 車", "車 の 日本", "日本 を 車"],
+      correct: 1,
+      explanation: "日本 (Japan) + の + 車 (Car)."
+    },
+    {
+      question: "What is the reading for the Kanji '二'?",
+      options: ["Ichi", "San", "Ni", "Go"],
+      correct: 2,
+      explanation: "二 is read as 'ni'."
+    },
+    {
+      question: "Which particle acts like the English 's?",
+      options: ["は", "の", "を", "が"],
+      correct: 1,
+      explanation: "の (no) indicates possession or relationship."
+    },
+    {
+      question: "Translate: 'これ は なん です か。'",
+      options: ["Who is this?", "What is this?", "Where is this?", "Whose is this?"],
+      correct: 1,
+      explanation: "Kore (This) + wa (Topic) + nan (What) + desu ka (is?)."
+    },
+    {
+      question: "What is the Kanji for 'Thousand'?",
+      options: ["百", "千", "万", "十"],
+      correct: 1,
+      explanation: "千 (sen) is 1000."
+    },
+    {
+      question: "Which number is associated with 'Seven Lucky Gods'?",
+      options: ["四", "八", "七", "九"],
+      correct: 2,
+      explanation: "七 (7) is lucky and associated with the Shichi-fukujin."
+    }
+  ]}
+/>

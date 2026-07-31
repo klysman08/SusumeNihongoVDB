@@ -1,0 +1,50 @@
+---
+title: "Chapter 51 — Results and Logical Conclusions"
+level: "N3"
+chapter: 51
+unit: 3
+unitTitle: "Purpose, Cause, and Evidence"
+topics: "Results, evidence-based reasons, logical conclusions, and emphatic causes"
+description: "Connect events to results and explain conclusions with 結果, ことから, わけだ, and ということだ."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import KanjiCluster from '../../components/book/KanjiCluster.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Results and Logical Conclusions" level="N3" chapter={51} objectives={["Report the outcome of an action or investigation.", "Use observable facts as grounds for a conclusion.", "Explain what known information logically means."]} />
+<SectionIntro level="N3">A reason answers “why”; a conclusion answers “what follows from this information?” This chapter moves from events to outcomes, then from evidence to interpretation.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "調査", reading: "ちょうさ", meaning: "investigation; survey", type: "noun" }, { word: "結果", reading: "けっか", meaning: "result", type: "noun" }, { word: "判明する", reading: "はんめいする", meaning: "to become clear", type: "verb" }, { word: "根拠", reading: "こんきょ", meaning: "basis; grounds", type: "noun" }, { word: "共通", reading: "きょうつう", meaning: "common; shared", type: "adj" }, { word: "減少", reading: "げんしょう", meaning: "decrease", type: "noun" }]} />
+<KanjiCluster title="Evidence and outcomes" items={[{ character: "結", meaning: "tie; result", words: [{ word: "結果", reading: "けっか", meaning: "result" }, { word: "結論", reading: "けつろん", meaning: "conclusion" }] }, { character: "査", meaning: "inspect", words: [{ word: "調査", reading: "ちょうさ", meaning: "survey" }, { word: "検査", reading: "けんさ", meaning: "inspection; test" }] }]} />
+
+## 1. From action to outcome
+<PatternCompare client:load title="Result or evidential basis?" items={[
+  { pattern: "V-た結果／Nの結果", meaning: "as a result of", use: "Presents the outcome after an action, process, or investigation has run its course.", example: "話し合った結果、計画を延期することになった。", translation: "As a result of the discussion, the plan was postponed.", register: "neutral–formal" },
+  { pattern: "plain form + ことから", meaning: "from the fact that; based on", use: "Treats a fact, feature, or observation as evidence for a name, judgement, or inference.", example: "形が星に似ていることから、この名前が付けられた。", translation: "It was given this name because its shape resembles a star.", register: "written" },
+  { pattern: "plain form + わけだ", meaning: "that explains it; naturally it follows", use: "The speaker reaches or confirms a logical conclusion from information already presented.", example: "十年日本に住んでいたんですか。日本語が自然なわけですね。", translation: "You lived in Japan for ten years? No wonder your Japanese sounds natural.", register: "explanatory" },
+  { pattern: "plain form + ということだ", meaning: "that means; the information is that", use: "Restates the implication or reported content in a concise form.", example: "返事がないということは、まだ決めていないということだ。", translation: "No reply means that they have not decided yet.", register: "neutral" }
+]} />
+<CommonMistake title="わけだ is not a vague filler"><p>Use <strong>わけだ</strong> when a conclusion becomes understandable from stated evidence. It does not simply mean “because,” and it should not introduce an unrelated opinion.</p></CommonMistake>
+<PracticeBlock client:load instructions="Build the relationship requested." items={[{ prompt: "Report that a survey led to the service being changed.", answer: "利用者を調査した結果、サービスが変更されました。", explanation: "結果 presents the outcome of the completed survey." }, { prompt: "The lights are off and the door is locked; conclude that nobody is there.", answer: "電気が消えていて、鍵もかかっている。誰もいないわけだ。", explanation: "わけだ states the conclusion supported by the observations." }, { prompt: "Explain that the town got its name from the many cherry trees.", answer: "桜の木が多いことから、桜町と名付けられました。", explanation: "ことから presents a fact as the basis for the name." }]} />
+<ReadingPractice client:load title="Why the morning bus changed" genre="local report" targetTime="3 minutes" passage={<>市が利用状況を調査した結果、朝七時台のバスが特に混雑していることが分かりました。駅へ向かう学生と会社員が同じ時間に集中することから、遅れも発生しやすくなっていました。そこで来月から二便増やすことになりました。つまり、利用者が最も多い時間だけ運行間隔が短くなるということです。</>} glossary={[{ word: "便", reading: "びん", meaning: "service; scheduled run" }, { word: "運行間隔", reading: "うんこうかんかく", meaning: "service interval" }]} questions={[{ question: "What did the survey reveal?", answer: "The buses in the seven o'clock hour were especially crowded.", explanation: "調査した結果 introduces this finding." }, { question: "What will the timetable change mean?", answer: "Only the busiest period will have shorter intervals.", explanation: "ということです restates the practical implication." }]} />
+<ListeningPractice client:load title="Understanding a price difference" situation="Listen for the fact and the conclusion drawn from it." script="この店は材料を毎朝市場から直接仕入れているそうです。だから新鮮なのに値段も高すぎないわけですね。" questions={[{ question: "Why does the speaker now understand the quality and price?", answer: "The shop buys ingredients directly from the market each morning.", explanation: "わけですね marks the newly understood conclusion." }]} />
+<ChapterSummary takeaways={["結果 presents an outcome after a process.", "ことから turns an observable fact into grounds for a name or conclusion.", "わけだ explains what logically follows; ということだ restates an implication or report."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "検査した＿＿、機械に問題がないことが分かった。", options: ["ことから", "結果", "わけ", "ということ"], correct: 1, explanation: "The inspection produced a finding, so 結果 is appropriate." },
+  { question: "Which form best introduces evidence behind a place name?", options: ["ことから", "結果", "ために", "つもりで"], correct: 0, explanation: "ことから presents a characteristic as the grounds for naming." },
+  { question: "毎日三時間練習しているんですか。上手な＿＿。", options: ["結果です", "ことからです", "わけですね", "ためですね"], correct: 2, explanation: "わけですね acknowledges the now-understandable conclusion." },
+  { question: "What does 中止ということだ mean in a report?", options: ["It means/reports that it is cancelled", "It was cancelled accidentally", "It should be cancelled", "It is difficult to cancel"], correct: 0, explanation: "ということだ can state or summarise reported content." },
+  { question: "Choose the natural sentence.", options: ["調べる結果、分かった。", "調べた結果、分かった。", "調べたことからの結果だ。", "調べるわけ、分かった。"], correct: 1, explanation: "V-た結果 follows a completed action." },
+  { question: "A wet road is used as evidence that it rained. Which fits?", options: ["道がぬれた結果", "道がぬれていることから", "道をぬらすために", "道がぬれるつもりで"], correct: 1, explanation: "The present state is evidence for an inference." },
+  { question: "Which statement about わけだ is correct?", options: ["It always expresses obligation", "It marks a logical or newly understood conclusion", "It means accidental completion", "It only follows nouns"], correct: 1, explanation: "わけだ connects evidence or explanation with a conclusion." },
+  { question: "つまり、参加できない＿＿ですね。", options: ["結果", "ことから", "ということ", "ために"], correct: 2, explanation: "ということ restates what the previous information means." }
+]} />

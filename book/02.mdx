@@ -1,0 +1,339 @@
+---
+title: "Chapter 02 — カタカナ (Katakana) & Basic Greetings"
+level: "N5"
+chapter: "02"
+description: "Master Katakana, the script for loanwords, and learn essential Japanese greetings to start interacting in daily life."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+import KanaGrid from '../../components/book/KanaGrid.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import BookImage from '../../components/book/BookImage.tsx'
+
+<ChapterHeader 
+  title="Katakana & Basic Greetings"
+  level="N5"
+  chapter="02"
+  objectives={[
+    "Read and write the 46 base Katakana characters.",
+    "Understand long vowel marks (ー) and voiced sounds in Katakana.",
+    "Spell modern loanwords using the small ッ and extended katakana (ファ, ティ, ウィ).",
+    "Learn standard daily greetings and polite phrases.",
+    "Identify common loanwords (Gairaigo) used in Japanese daily life."
+  ]}
+/>
+
+<SectionIntro level="N5">
+Now that you've mastered Hiragana, it's time to meet its angular sibling: **Katakana**. Katakana represents the same sounds but is used for foreign words, names, and emphasis. Along with this new script, we will learn the most essential Japanese greetings (**Aisatsu**), which are the building blocks of polite Japanese society.
+</SectionIntro>
+
+<BookImage
+  src="/book-images/02-katakana-greetings.webp"
+  alt="Anime pixel-art illustration of a Japanese learner and a welcome-desk attendant bowing politely, surrounded by angular katakana-inspired shapes and everyday loanword objects."
+  width={1672}
+  height={941}
+/>
+
+## 1. The 46 Katakana Characters
+
+Katakana characters are sharper and more geometric than Hiragana. They are often simplified versions of Kanji.
+
+<KanaGrid client:load script="katakana" sections={['base', 'dakuten', 'yoon']} highlight={['shi', 'tsu', 'so', 'n']} />
+
+<CommonMistake client:load title="Four look-alikes: シ・ツ and ソ・ン">
+
+Be careful with **シ (shi) / ツ (tsu)** and **ソ (so) / ン (n)** — each pair looks almost identical. The difference is in the **stroke direction and angle**:
+
+- **シ** and **ン** end with a stroke swept **upward** from the bottom.
+- **ツ** and **ソ** end with a stroke drawn **downward** from the top.
+
+This is exactly why the stroke-order habits from Chapter 1 matter.
+
+</CommonMistake>
+
+## 2. Voiced Marks & Long Vowels
+
+Katakana uses the same **Dakuten** (゛) and **Handakuten** (゜) as Hiragana. Additionally, it uses a horizontal line (**ー**) called a *chouonpu* to indicate long vowel sounds.
+
+<GrammarBox client:load 
+  pattern="Katakana + ゛/ ゜ OR [Vowel] + ー"
+  meaning="Modifying sounds and extending vowels in Katakana."
+  formation="Character + Marks OR Character + ー"
+  examples={[
+    { japanese: "アメリカ (Amerika)", romaji: "Amerika", translation: "America" },
+    { japanese: "コーヒー (Koohii)", romaji: "Koohii", translation: "Coffee (Note the long vowels)" },
+    { japanese: "ベッド (Beddo)", romaji: "Beddo", translation: "Bed (Note the small 'tsu' ッ for double consonant)" }
+  ]}
+/>
+
+<ExampleSentence client:load 
+  japanese="パソコン を かいました。"
+  romaji="Pasokon o kaimashita."
+  translation="I bought a personal computer."
+  note="Pasokon (パソコン) is short for 'Personal Computer'."
+/>
+
+<ExampleSentence client:load 
+  japanese="ホテル は どこ です か。"
+  romaji="Hoteru wa doko desu ka."
+  translation="Where is the hotel?"
+/>
+
+<ExampleSentence client:load 
+  japanese="タクシー で いきます。"
+  romaji="Takushii de ikimasu."
+  translation="I will go by taxi."
+/>
+
+## 3. Double Consonants (The Small ッ, Sokuon)
+
+Just like hiragana's small っ, katakana uses a **small ッ** to double the consonant of the kana that follows. It appears constantly in loanwords adapted from English.
+
+<ExampleSentence client:load 
+  japanese="ベッド"
+  romaji="beddo"
+  translation="bed"
+  note="The small ッ doubles the 'd': be–(pause)–do."
+/>
+
+<ExampleSentence client:load 
+  japanese="カップ"
+  romaji="kappu"
+  translation="cup"
+  note="ッ + プ doubles the 'p'."
+/>
+
+<ExampleSentence client:load 
+  japanese="サッカー"
+  romaji="sakkaa"
+  translation="soccer"
+  note="Combines a double consonant (ッカ) and a long vowel (カー)."
+/>
+
+## 4. Extended Katakana (Modern Loanword Sounds)
+
+Because katakana exists to spell foreign words, Japanese added new combinations to capture sounds the base 46 cannot — like *fa*, *ti*, *wi*, and *je*. These are formed by writing a **small vowel kana** after a base kana (for example フ + small ェ = フェ, *fe*).
+
+<KanaGrid client:load script="katakana" sections={['extended']} />
+
+<ExampleSentence client:load 
+  japanese="ファイル"
+  romaji="fairu"
+  translation="file"
+  note="ファ (fa) — impossible to spell with the base kana alone."
+/>
+
+<ExampleSentence client:load 
+  japanese="パーティー"
+  romaji="paatii"
+  translation="party"
+  note="ティ (ti), plus the long vowels パー and ティー."
+/>
+
+<ExampleSentence client:load 
+  japanese="ウェブサイト"
+  romaji="webusaito"
+  translation="website"
+  note="ウェ (we) captures the English 'we' sound."
+/>
+
+## 5. Essential Greetings (Aisatsu)
+
+Greetings are the heart of Japanese communication. They are often set phrases that should be memorized as a whole.
+
+<VocabTable data={[
+  { word: 'おはようございます', romaji: 'ohayou gozaimasu', meaning: 'Good morning (Polite)', type: 'Greeting' },
+  { word: 'こんにちは', romaji: 'konnichiwa', meaning: 'Good afternoon / Hello', type: 'Greeting' },
+  { word: 'こんばんは', romaji: 'konbanwa', meaning: 'Good evening', type: 'Greeting' },
+  { word: 'ありがとうございます', romaji: 'arigatou gozaimasu', meaning: 'Thank you very much', type: 'Phrase' },
+  { word: 'すみません', romaji: 'sumimasen', meaning: 'Excuse me / I\'m sorry', type: 'Phrase' }
+]} />
+
+<ExampleSentence client:load 
+  japanese="はじめまして。 アンナ です。"
+  romaji="Hajimemashite. Anna desu."
+  translation="Nice to meet you. I am Anna."
+/>
+
+<ExampleSentence client:load 
+  japanese="よろしく おねがいします。"
+  romaji="Yoroshiku onegaishimasu."
+  translation="Please treat me well / I look forward to working with you."
+/>
+
+<ExampleSentence client:load 
+  japanese="さようなら。"
+  romaji="Sayounara."
+  translation="Goodbye."
+/>
+
+## 6. Cultural Note: The Art of Bowing (Ojigi)
+
+In Japan, greetings are almost always accompanied by a bow (**ojigi**). The depth and duration of the bow depend on the social situation:
+- **Eshaku (15°):** A casual greeting to friends or acquaintances.
+- **Keirei (30°):** The standard business bow, used for customers or superiors.
+- **Saikeirei (45°):** A deep bow used for formal apologies or showing profound respect.
+Remember: keep your back straight and your eyes downcast!
+
+## Practical Conversations
+
+<BookImage
+  src="/book-images/02-katakana-greetings-dialogue-practice.webp"
+  alt="Anime pixel-art illustration of hotel and café greeting practice with katakana coffee, cake, small ッ, and long vowel mark study cards."
+  width={1536}
+  height={1024}
+  accent="asagi"
+/>
+
+<ConversationDialog client:load
+  title="Arriving at a Hotel"
+  lines={[
+    { speaker: "Guest", japanese: "こんにちは。 すみません。", romaji: "Konnichiwa. Sumimasen.", translation: "Hello. Excuse me." },
+    { speaker: "Staff", japanese: "こんにちは！ いらっしゃいませ。", romaji: "Konnichiwa! Irasshaimase.", translation: "Hello! Welcome." },
+    { speaker: "Guest", japanese: "わたし は スミス です。 はじめまして。", romaji: "Watashi wa Sumisu desu. Hajimemashite.", translation: "I am Smith. Nice to meet you." },
+    { speaker: "Staff", japanese: "スミスさん です ね。 よろしく おねがいします。", romaji: "Sumisu-san desu ne. Yoroshiku onegaishimasu.", translation: "Mr. Smith, right? Please treat me well." }
+  ]}
+/>
+
+<ConversationDialog client:load 
+  title="At a Café"
+  lines={[
+    { speaker: "Customer", japanese: "すみません！ コーヒー を ください。", romaji: "Sumimasen! Koohii o kudasai.", translation: "Excuse me! Coffee, please." },
+    { speaker: "Waiter", japanese: "はい、どうぞ。 ケーキ も いかが です か。", romaji: "Hai, douzo. Keeki mo ikaga desu ka.", translation: "Yes, here you go. Would you like some cake too?" },
+    { speaker: "Customer", japanese: "はい、ありがとうございます。 いただきます！", romaji: "Hai, arigatou gozaimasu. Itadakimasu!", translation: "Yes, thank you very much. Let's eat!" }
+  ]}
+/>
+
+## Chapter Summary
+
+<ChapterSummary 
+  takeaways={[
+    "Katakana is used for foreign names, loanwords, and emphasis.",
+    "Long vowels in Katakana are indicated by the straight line mark (ー).",
+    "The small ッ doubles the next consonant (ベッド beddo), just like hiragana's っ.",
+    "Extended katakana (ファ, ティ, ウィ, ジェ) spells sounds the base 46 can't, for modern loanwords.",
+    "Japanese greetings (Aisatsu) change based on the time of day and politeness level.",
+    "Bowing (Ojigi) is an essential non-verbal component of Japanese greetings.",
+    "Many modern Japanese words like 'Pasokon' or 'Sumaho' are shortened loanwords."
+  ]}
+/>
+
+## Knowledge Check
+
+Test your knowledge of Katakana and Greetings!
+
+<QuizBlock 
+  client:load
+  questions={[
+    {
+      question: "Which script is used for the word 'Coffee' (コーヒー)?",
+      options: ["Hiragana", "Kanji", "Katakana", "Romaji"],
+      correct: 2,
+      explanation: "Foreign loanwords like coffee are written in Katakana."
+    },
+    {
+      question: "What does the mark 'ー' represent in Katakana?",
+      options: ["A pause", "A long vowel", "A double consonant", "The end of a sentence"],
+      correct: 1,
+      explanation: "The 'chouonpu' (ー) extends the previous vowel sound."
+    },
+    {
+      question: "Which greeting is appropriate for 8:00 PM?",
+      options: ["こんにちは", "おはようございます", "こんばんは", "さようなら"],
+      correct: 2,
+      explanation: "こんばんは (Konbanwa) is used for 'Good evening'."
+    },
+    {
+      question: "What should you say before you start eating?",
+      options: ["ごちそうさまです", "いただきます", "はじめまして", "すみません"],
+      correct: 1,
+      explanation: "いただきます (Itadakimasu) is said before meals."
+    },
+    {
+      question: "Which Katakana character is 'A'?",
+      options: ["イ", "ウ", "ア", "エ"],
+      correct: 2,
+      explanation: "ア is 'A' in Katakana."
+    },
+    {
+      question: "How do you say 'Excuse me' or 'I'm sorry'?",
+      options: ["ありがとう", "すみません", "さようなら", "はい"],
+      correct: 1,
+      explanation: "すみません (Sumimasen) is highly versatile for excuse me/sorry."
+    },
+    {
+      question: "What is 'Eshaku' in Japanese culture?",
+      options: ["A type of tea", "A 15-degree casual bow", "A 45-degree formal bow", "A morning greeting"],
+      correct: 1,
+      explanation: "Eshaku is a casual 15-degree bow."
+    },
+    {
+      question: "Translate: 'はじめまして'",
+      options: ["Thank you", "Goodbye", "Nice to meet you", "I am a student"],
+      correct: 2,
+      explanation: "Hajimemashite is used when meeting someone for the first time."
+    },
+    {
+      question: "Which character is 'SHI' (シ)?",
+      options: ["ツ", "ソ", "ン", "シ"],
+      correct: 3,
+      explanation: "シ is 'SHI'. It is drawn with more horizontal strokes than 'TSU' (ツ)."
+    },
+    {
+      question: "What does 'Gairaigo' refer to?",
+      options: ["Traditional Japanese clothes", "Loanwords from foreign languages", "Formal greetings", "Kanji characters"],
+      correct: 1,
+      explanation: "Gairaigo means 'loanwords' imported from other languages."
+    },
+    {
+      question: "Read the word: 'ホテル'",
+      options: ["Hoteru", "Hatoru", "Futeru", "Hotalu"],
+      correct: 0,
+      explanation: "ホ (ho), テ (te), ル (ru) makes 'Hoteru' (Hotel)."
+    },
+    {
+      question: "Which phrase ends a self-introduction politely?",
+      options: ["はじめまして", "よろしく おねがいします", "ありがとうございます", "さようなら"],
+      correct: 1,
+      explanation: "Yoroshiku onegaishimasu is said at the end of an introduction."
+    },
+    {
+      question: "What is 'Konnichiwa' written with at the end?",
+      options: ["わ", "は", "あ", "お"],
+      correct: 1,
+      explanation: "It is written with は (ha), but pronounced 'wa'."
+    },
+    {
+      question: "How do you write 'Taxi' in Katakana?",
+      options: ["タカシー", "タクシー", "テクシー", "トクシー"],
+      correct: 1,
+      explanation: "タクシー (Takushii)."
+    },
+    {
+      question: "What is the role of the small ッ in 'ベッド' (bed)?",
+      options: ["It is a 'tsu' sound", "It doubles the next consonant", "It lengthens the vowel", "It is silent decoration"],
+      correct: 1,
+      explanation: "The small ッ (sokuon) doubles the following consonant: be-(pause)-do → beddo."
+    },
+    {
+      question: "Which extended katakana spells the 'fa' sound in 'ファイル' (file)?",
+      options: ["ハ", "ファ", "バ", "パ"],
+      correct: 1,
+      explanation: "ファ (フ + small ァ) makes 'fa' — a sound the base 46 katakana cannot write."
+    },
+    {
+      question: "Which bow is used for a formal apology?",
+      options: ["Eshaku", "Keirei", "Saikeirei", "Aisatsu"],
+      correct: 2,
+      explanation: "Saikeirei (45 degrees) is used for formal apologies or high respect."
+    }
+  ]}
+/>

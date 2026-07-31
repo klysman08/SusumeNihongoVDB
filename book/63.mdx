@@ -1,0 +1,47 @@
+---
+title: "Chapter 63 — Integrated Reading and Listening Workshop"
+level: "N3"
+chapter: 63
+unit: 6
+unitTitle: "Natural and Integrated Japanese"
+topics: "Purpose-first reading, information search, speaker intention, paraphrase, and listening decisions"
+description: "Apply N3 grammar and vocabulary to notices, messages, short articles, and decision-focused listening."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Integrated Reading and Listening Workshop" level="N3" chapter={63} objectives={["Choose a reading strategy from the document's purpose.", "Track who must do what and by when.", "Listen for the final decision rather than isolated familiar words."]} />
+<SectionIntro level="N3">This workshop introduces no new grammar list. The goal is integration: recognise paraphrases, track reference and conditions, separate a speaker's initial idea from the final decision, and answer from the text rather than from general knowledge.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "該当する", reading: "がいとうする", meaning: "to apply; correspond", type: "verb" }, { word: "締め切り", reading: "しめきり", meaning: "deadline", type: "noun" }, { word: "変更点", reading: "へんこうてん", meaning: "changed point", type: "noun" }, { word: "要望", reading: "ようぼう", meaning: "request; demand", type: "noun" }, { word: "優先する", reading: "ゆうせんする", meaning: "to prioritise", type: "verb" }, { word: "見送る", reading: "みおくる", meaning: "to postpone; decide against for now", type: "verb" }]} />
+<PatternCompare client:load title="Match the task to the strategy" items={[
+  { pattern: "Notice / guidance", meaning: "scan conditions and deadlines", use: "Mark the target reader, required action, exceptions, date, and contact point.", example: "対象・条件・期限・例外", translation: "Who, under what conditions, by when, with what exception?", register: "information search" },
+  { pattern: "Opinion / short article", meaning: "track claim and support", use: "Circle contrast and conclusion markers; distinguish the writer's position from examples.", example: "一方で → 例えば → つまり", translation: "Contrast → supporting example → conclusion", register: "argument" },
+  { pattern: "Message exchange", meaning: "recover reference and final action", use: "Identify what prior noun それ or その件 refers to and what the recipient must do next.", example: "では、その予定でお願いします。", translation: "Then, let us proceed with that plan.", register: "reference" },
+  { pattern: "Conversation", meaning: "follow revisions to the decision", use: "Do not answer from the first proposal; listen through disagreement, constraints, and the final agreement.", example: "A案 → でも… → じゃあB案", translation: "Proposal A → obstacle → final plan B", register: "listening decision" }
+]} />
+<CommonMistake title="A matching word is not necessarily the answer"><p>N3 questions frequently paraphrase. If the option repeats one word from the text but reverses a condition, subject, or time, reject it. Verify the whole relationship.</p></CommonMistake>
+<PracticeBlock client:load instructions="State the minimum information needed before answering." items={[{ prompt: "A notice asks who may apply. What should you scan for?", answer: "対象者 and conditions such as age, membership, experience, or residence.", explanation: "Eligibility is defined by the target and its restrictions." }, { prompt: "A dialogue begins with Saturday but ends with 日曜日にしよう. Which day is the answer?", answer: "Sunday.", explanation: "Listening questions normally test the final agreed action." }, { prompt: "An option says 'all users' while the text says 初めて利用する人に限り. Accept or reject?", answer: "Reject.", explanation: "The option removes the first-time-user restriction." }]} />
+<ReadingPractice client:load title="Community kitchen reservation change" genre="public notice" targetTime="5 minutes" passage={<>これまで、市民センターの調理室は電話で予約することになっていましたが、来月からウェブサイトでの申し込みに変わります。利用日の二か月前から三日前まで予約できます。ただし、初めて利用する団体は、設備の説明を受けてからでないと申し込めません。説明会は毎月第一土曜日に行います。すでに電話で予約した団体は、改めて申し込む必要はありません。変更やキャンセルをする場合だけ、ウェブサイトで手続きをしてください。</>} glossary={[{ word: "調理室", reading: "ちょうりしつ", meaning: "kitchen room" }, { word: "改めて", reading: "あらためて", meaning: "again; anew" }]} questions={[{ question: "A group using the room for the first time wants to book. What must it do first?", answer: "Attend an equipment information session.", explanation: "説明を受けてからでないと makes this a prerequisite." }, { question: "A group already booked by telephone. Must it submit a new web booking?", answer: "No, unless it needs to change or cancel the reservation.", explanation: "改めて申し込む必要はありません removes that requirement and the final sentence gives the exception." }, { question: "What is the latest normal booking time?", answer: "Three days before the date of use.", explanation: "二か月前から三日前まで defines the booking window." }]} />
+<ReadingPractice client:load title="Convenience and local shops" genre="short opinion article" targetTime="6 minutes" passage={<>インターネットで買い物をする人が増え、必要な物が家にいながら手に入るようになった。特に、店が少ない地域に住む人にとっては大きな利点である。一方で、価格だけを比べて商品を選ぶ人が増えれば、地域の小さな店は減る一方かもしれない。地域の店を守るためにオンライン購入をやめるべきだというわけではない。便利さを利用しながらも、修理や相談など、近くの店だからこそできる役割にも目を向ける必要がある。</>} glossary={[{ word: "目を向ける", reading: "めをむける", meaning: "to pay attention to" }, { word: "修理", reading: "しゅうり", meaning: "repair" }]} questions={[{ question: "What absolute position does the writer reject?", answer: "That people should stop shopping online to protect local shops.", explanation: "というわけではない explicitly denies that full implication." }, { question: "What balance does the writer recommend?", answer: "Use online convenience while recognising services local shops uniquely provide.", explanation: "ながらも and だからこそ frame the balanced conclusion." }]} />
+<ListeningPractice client:load title="Choosing a presentation time" situation="Two students revise their plan. Listen to the final decision." script="土曜日の午前なら二人とも空いていますが、資料が金曜日までに完成するとは限りません。日曜日は会場が使えないそうです。じゃあ、土曜日の午後に集まって練習して、発表は予定どおり月曜日にしましょう。" questions={[{ question: "When will they practise, and when will they present?", answer: "They will practise Saturday afternoon and present Monday as planned.", explanation: "The dialogue considers other constraints before settling on the final plan." }, { question: "Why do they not rely on Friday completion?", answer: "The materials may not necessarily be finished by then.", explanation: "とは限りません blocks that assumption." }]} />
+<ChapterSummary takeaways={["Choose a strategy from document purpose before reading every detail.", "Track target, condition, deadline, exception, reference, and final action.", "Confirm the full relationship; familiar vocabulary alone does not prove an option correct."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "For an eligibility question, scan first for…", options: ["対象 and conditions", "the longest sentence", "all adjective readings", "the writer's biography"], correct: 0, explanation: "Target-reader and condition language defines eligibility." },
+  { question: "ただし most often signals…", options: ["a restriction or exception", "a visual impression", "a personal intention", "a repeated habit"], correct: 0, explanation: "It limits the preceding statement." },
+  { question: "In listening, the first proposal conflicts with the final agreement. Which controls the answer?", options: ["The first proposal", "The final agreement", "Whichever has familiar vocabulary", "Neither"], correct: 1, explanation: "Decision questions test the resulting action." },
+  { question: "初めての人に限り means…", options: ["everyone except new users", "only first-time users", "new users as an example", "even new users"], correct: 1, explanation: "に限り restricts the target." },
+  { question: "Which option is suspicious?", options: ["A paraphrase preserving subject and condition", "A word copied from the text but with the subject reversed", "A summary of the conclusion", "A stated deadline"], correct: 1, explanation: "Lexical overlap cannot repair a reversed relationship." },
+  { question: "In an opinion text, つまり usually introduces…", options: ["the writer's restatement or conclusion", "an unrelated example", "a new speaker", "a visual guess"], correct: 0, explanation: "つまり condenses what the preceding argument means." },
+  { question: "What should you track in a message exchange?", options: ["Only kanji stroke count", "Reference words and the recipient's next action", "Only the greeting", "Romaji spelling"], correct: 1, explanation: "Reference and action resolve the practical task." },
+  { question: "Why read the question before a long notice?", options: ["To ignore the text", "To know which condition or detail to locate", "To translate every word", "To predict from general knowledge"], correct: 1, explanation: "Purpose-first reading focuses attention without skipping verification." }
+]} />

@@ -1,0 +1,47 @@
+---
+title: "Chapter 61 — Discourse Markers and Long Sentences"
+level: "N3"
+chapter: 61
+unit: 6
+unitTitle: "Natural and Integrated Japanese"
+topics: "Addition, examples, contrast, result, restatement, restrictions, and main-clause parsing"
+description: "Follow paragraph logic and locate the main clause in longer written Japanese."
+layout: ../../layouts/BookLayout.astro
+---
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Discourse Markers and Long Sentences" level="N3" chapter={61} objectives={["Predict the next relationship from a discourse marker.", "Locate the final main predicate after long modifiers.", "Distinguish result, restatement, contrast, addition, and restriction."]} />
+<SectionIntro level="N3">Reading speed improves when you stop treating conjunctions as decoration. They tell you how the next sentence changes the argument. Long sentences become manageable when you bracket modifiers and wait for the final main predicate.</SectionIntro>
+<VocabTable romajiMode="hidden" data={[{ word: "要点", reading: "ようてん", meaning: "main point", type: "noun" }, { word: "接続", reading: "せつぞく", meaning: "connection", type: "noun" }, { word: "具体例", reading: "ぐたいれい", meaning: "concrete example", type: "noun" }, { word: "要約", reading: "ようやく", meaning: "summary", type: "noun" }, { word: "例外", reading: "れいがい", meaning: "exception", type: "noun" }, { word: "段落", reading: "だんらく", meaning: "paragraph", type: "noun" }]} />
+<PatternCompare client:load title="Predict the next move" items={[
+  { pattern: "そのため／したがって", meaning: "therefore; consequently", use: "Introduces a result. したがって is more formal and logical.", example: "利用者が減った。そのため、運行本数が見直された。", translation: "Users decreased. Therefore, the number of services was reviewed.", register: "result" },
+  { pattern: "一方（で）／ところが", meaning: "on the other hand / however unexpectedly", use: "一方で adds a contrasting side; ところが reverses an expectation.", example: "準備は十分だった。ところが、当日は機械が動かなかった。", translation: "Preparation was sufficient. However, the equipment failed on the day.", register: "contrast" },
+  { pattern: "つまり／すなわち", meaning: "in other words; namely", use: "Restates or summarises. すなわち is more formal.", example: "全員が賛成した。つまり、反対意見はなかった。", translation: "Everyone agreed. In other words, there was no opposition.", register: "restatement" },
+  { pattern: "さらに／例えば", meaning: "furthermore / for example", use: "Adds another point or supplies a representative case.", example: "費用が安い。さらに、手続きも簡単だ。", translation: "It is inexpensive. Furthermore, the procedure is simple.", register: "addition / example" },
+  { pattern: "なお／ただし", meaning: "in addition / provided that; however", use: "なお adds supplementary information; ただし states a restriction or exception.", example: "入場は無料です。ただし、予約が必要です。", translation: "Admission is free. However, a reservation is required.", register: "supplement / restriction" }
+]} />
+<CommonMistake title="つまり does not add new evidence"><p><strong>つまり</strong> should restate what the previous information means. If the next sentence adds another independent reason, use <strong>さらに</strong> or another additive connector.</p></CommonMistake>
+<PracticeBlock client:load instructions="Choose a connector and identify the final main predicate." items={[{ prompt: "Restate: No trains or buses are running. In other words, there is no public transport.", answer: "電車もバスも動いていない。つまり、公共交通機関がないということだ。", explanation: "つまり summarises the implication." }, { prompt: "Add a restriction: Children enter free, but they need a ticket.", answer: "子どもは無料です。ただし、入場券は必要です。", explanation: "ただし limits the preceding statement." }, { prompt: "In 先月市が発表した計画について住民が話し合った, identify the main predicate.", answer: "話し合った", explanation: "先月市が発表した modifies 計画; the sentence resolves at 話し合った." }]} />
+<ReadingPractice client:load title="Should the library stay open later?" genre="short opinion article" targetTime="5 minutes" passage={<>市立図書館は、来年度から平日の閉館時間を一時間遅くすることを検討している。仕事や学校の後でも利用しやすくなるため、賛成する人は多い。一方で、開館時間が長くなれば、職員の負担や電気代も増える。例えば、夜間の安全を確保するために、警備員を増やす必要があるかもしれない。つまり、利用者にとって便利になるだけでなく、運営方法全体を見直さなければならないということだ。ただし、市はまだ最終的な決定をしていない。</>} glossary={[{ word: "閉館", reading: "へいかん", meaning: "closing a facility" }, { word: "警備員", reading: "けいびいん", meaning: "security guard" }]} questions={[{ question: "What contrast does 一方で introduce?", answer: "Longer hours improve access but increase staffing and energy burdens.", explanation: "It presents the other side of the proposal." }, { question: "What does つまり summarise?", answer: "The whole operating model, not only closing time, may need review.", explanation: "つまり converts the preceding examples into the main implication." }, { question: "What restriction does ただし add?", answer: "No final decision has yet been made.", explanation: "It limits how certain the proposal is." }]} />
+<ListeningPractice client:load title="A changed venue" situation="Listen for result, addition, and restriction." script="参加者が予想より増えました。そのため、会場を大きい部屋に変更します。さらに、開始時間も三十分遅くします。ただし、受付は予定どおり九時からです。" questions={[{ question: "What changes, and what remains unchanged?", answer: "The room and start time change; registration still begins at nine.", explanation: "そのため and さらに add changes; ただし states the exception." }]} />
+<ChapterSummary takeaways={["Result, contrast, restatement, addition, and restriction markers predict paragraph movement.", "つまり summarises; it does not introduce unrelated evidence.", "Bracket noun modifiers and locate the final main predicate before translating a long sentence."]} />
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "料金が上がった。＿＿、利用者が減った。", options: ["例えば", "そのため", "つまり", "なお"], correct: 1, explanation: "The second sentence is a result." },
+  { question: "準備は完璧だった。＿＿、失敗した。", options: ["さらに", "ところが", "すなわち", "そのため"], correct: 1, explanation: "ところが reverses the expectation." },
+  { question: "全便が欠航だ。＿＿、今日は島へ行けない。", options: ["つまり", "例えば", "なお", "一方で"], correct: 0, explanation: "The second statement restates the practical implication." },
+  { question: "Admission is free, but booking is required. Which connector?", options: ["そのため", "ただし", "例えば", "つまり"], correct: 1, explanation: "ただし adds a restriction." },
+  { question: "Which connector adds another supporting point?", options: ["さらに", "ところが", "つまり", "ただし"], correct: 0, explanation: "さらに is additive." },
+  { question: "Which is the formal equivalent of つまり?", options: ["なお", "すなわち", "ところが", "一方"], correct: 1, explanation: "すなわち formally restates or identifies." },
+  { question: "In 私が昨日駅で買った本は面白かった, what is the main predicate?", options: ["買った", "駅で", "本", "面白かった"], correct: 3, explanation: "The long modifier ends at 本; 面白かった predicates the full sentence." },
+  { question: "なお usually introduces…", options: ["a sudden contradiction", "supplementary information", "a minimum condition", "a visual impression"], correct: 1, explanation: "なお adds a related supplementary note." }
+]} />

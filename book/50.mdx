@@ -1,0 +1,146 @@
+---
+title: "Chapter 50 — Expressing Reasons"
+level: "N3"
+chapter: 50
+unit: 3
+unitTitle: "Purpose, Cause, and Evidence"
+topics: "Reason tone, formal causes, positive credit, and negative blame"
+description: "Explain personal, polite, formal, positive, and negative reasons with 〜から, 〜ので, 〜ため, 〜おかげで, and 〜せいで."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import ParticleCompare from '../../components/book/ParticleCompare.tsx'
+import GrammarBox from '../../components/book/GrammarBox.tsx'
+import ExampleSentence from '../../components/book/ExampleSentence.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Expressing Reasons" level="N3" chapter={50} objectives={[
+  "Choose から, ので, or ため according to tone and the type of explanation.",
+  "Use おかげで for a positive result and せいで for blame or a negative result.",
+  "Connect nouns, adjectives, and verbs correctly before reason expressions.",
+  "Explain a decision or problem naturally in daily, school, and workplace contexts."
+]} />
+
+<SectionIntro level="N3">
+At N4, you learned that から and ので can both mean “because.” At N3, the important question is not only <em>why</em>, but also how directly, politely, formally, positively, or critically you explain the reason. These choices shape the relationship with your listener.
+</SectionIntro>
+
+<VocabTable data={[
+  { word: "延期", reading: "えんき", romaji: "enki", meaning: "postponement", type: "noun" },
+  { word: "間に合う", reading: "まにあう", romaji: "maniau", meaning: "to be in time", type: "verb" },
+  { word: "渋滞", reading: "じゅうたい", romaji: "juutai", meaning: "traffic congestion", type: "noun" },
+  { word: "助け", reading: "たすけ", romaji: "tasuke", meaning: "help; assistance", type: "noun" },
+  { word: "迷惑", reading: "めいわく", romaji: "meiwaku", meaning: "trouble; inconvenience", type: "noun" }
+]} />
+
+## 1. A reason has a tone
+
+<ParticleCompare client:load title="Choosing a reason expression" items={[
+  { label: "〜から", role: "direct, personal explanation", example: "今日は疲れたから、早く寝る。", note: "Natural in conversation; can sound firm when giving a reason for your own decision." },
+  { label: "〜ので", role: "softer, more considerate explanation", example: "少し遅れますので、先に始めてください。", note: "Often preferred when speaking politely or making a request." },
+  { label: "〜ため", role: "formal cause or official explanation", example: "大雨のため、イベントは延期です。", note: "Common in notices, announcements, and written Japanese." },
+  { label: "〜おかげで / 〜せいで", role: "positive help / negative blame", example: "先生のおかげで合格できた。", note: "Choose according to whether the result is welcome or unwanted." }
+]} />
+
+<GrammarBox client:load pattern="Plain form + から / ので" meaning="Because; since." formation="Verb and い-adjective: plain form + から/ので. Noun and な-adjective: だ + から, but な + ので (静かなので, 学生なので)." examples={[
+  { japanese: "明日は試験があるから、今夜は出かけない。", romaji: "ashita wa shiken ga aru kara, konya wa dekakenai.", translation: "Because I have an exam tomorrow, I will not go out tonight." },
+  { japanese: "この道は危ないので、気をつけてください。", romaji: "kono michi wa abunai node, ki o tsukete kudasai.", translation: "Because this road is dangerous, please be careful." },
+  { japanese: "駅に近いので、この店で待ちましょう。", romaji: "eki ni chikai node, kono mise de machimashou.", translation: "Since it is close to the station, let us wait at this shop." }
+]} />
+
+<GrammarBox client:load pattern="N のため / plain form + ため" meaning="Because of; due to. Formal and objective." formation="Noun + のため; verb plain form + ため; い-adjective + ため; な-adjective + なため." examples={[
+  { japanese: "事故のため、電車が遅れています。", romaji: "jiko no tame, densha ga okurete imasu.", translation: "Trains are delayed due to an accident." },
+  { japanese: "体調が悪いため、本日は休みます。", romaji: "taichou ga warui tame, honjitsu wa yasumimasu.", translation: "I will be absent today because I am unwell." },
+  { japanese: "不便なため、この方法は使われなくなった。", romaji: "fuben na tame, kono houhou wa tsukawarenaku natta.", translation: "Because it was inconvenient, this method stopped being used." }
+]} />
+
+## 2. Credit, blame, and responsibility
+
+<GrammarBox client:load pattern="N のおかげで / N のせいで" meaning="Thanks to N (positive result) / because of N (negative result or blame)." formation="Noun + のおかげで / のせいで. A clause can also come before おかげで or せいで." examples={[
+  { japanese: "友達が手伝ってくれたおかげで、レポートが間に合った。", romaji: "tomodachi ga tetsudatte kureta okage de, repooto ga maniatta.", translation: "Thanks to my friend's help, I finished the report in time." },
+  { japanese: "渋滞のせいで、会議に遅れてしまった。", romaji: "juutai no sei de, kaigi ni okurete shimatta.", translation: "Because of the traffic, I ended up late for the meeting." },
+  { japanese: "彼のせいで失敗した、と決めつけないほうがいい。", romaji: "kare no sei de shippai shita, to kimetsukenai hou ga ii.", translation: "It is better not to jump to the conclusion that you failed because of him." }
+]} />
+
+<CommonMistake title="Do not use せいで for your own neutral explanation">
+  <p><strong>電車が遅れたせいで、遅れました</strong> is possible, but it carries blame. For a neutral apology, use <strong>電車が遅れたので、遅れました</strong>. Reserve <strong>せいで</strong> for a clearly unwelcome result.</p>
+</CommonMistake>
+
+<ExampleSentence client:load japanese="雨なので、試合は中止になると思います。" romaji="ame na node, shiai wa chuushi ni naru to omoimasu." translation="Because it is raining, I think the game will be cancelled." note="Noun + なので is polite and explanatory; 雨だから is more direct." />
+
+## 3. Context dialogue: changing a reservation
+
+<ConversationDialog client:load title="Calling a restaurant after a train delay" lines={[
+  { speaker: "Mina", japanese: "もしもし、七時に二人で予約しているミナです。", romaji: "moshi moshi, shichi-ji ni futari de yoyaku shite iru Mina desu.", translation: "Hello, this is Mina; I have a reservation for two at seven." },
+  { speaker: "Mina", japanese: "事故のため電車が遅れているので、十分ほど遅れそうです。", romaji: "jiko no tame densha ga okurete iru node, juppun hodo okuresou desu.", translation: "Because trains are delayed due to an accident, it looks like we will be about ten minutes late." },
+  { speaker: "Clerk", japanese: "承知しました。お席はそのままにしておきます。", romaji: "shouchi shimashita. oseki wa sono mama ni shite okimasu.", translation: "Certainly. We will keep your table for you." },
+  { speaker: "Mina", japanese: "助かります。ご迷惑をおかけして、申し訳ありません。", romaji: "tasukarimasu. gomeiwaku o okake shite, moushiwake arimasen.", translation: "That is a great help. I am sorry for the inconvenience." },
+  { speaker: "Clerk", japanese: "大丈夫です。お気をつけてお越しください。", romaji: "daijoubu desu. oki o tsukete okoshi kudasai.", translation: "No problem. Please come safely." }
+]} />
+
+## 4. Guided practice
+
+Choose the best expression, then explain the tone.
+
+1. You tell a friend: “I am going home because I am tired.”
+2. You politely ask a teacher to begin without you because you will be late.
+3. A station notice: “Service is suspended due to strong winds.”
+4. You thank a classmate: “Thanks to you, I understood the assignment.”
+5. You complain that a noisy neighbour caused your poor sleep.
+
+<details><summary>Check your answers</summary><ol><li><strong>疲れたから、帰るね。</strong> Direct, personal reason.</li><li><strong>少し遅れますので、先に始めてください。</strong> Softer and considerate.</li><li><strong>強風のため、運転を見合わせています。</strong> Formal public-notice style.</li><li><strong>あなたのおかげで、課題が分かりました。</strong> Positive credit.</li><li><strong>隣の部屋がうるさかったせいで、よく眠れなかった。</strong> An unwanted result with blame.</li></ol></details>
+
+## 5. Reading practice: a school announcement
+
+> 本日の校外授業は、強風のため中止になりました。代わりに、三時から教室で映画を見ます。急な変更なので、全員に連絡できない可能性があります。友達が来ていない場合は、この知らせを伝えてください。先生方の準備のおかげで、授業の内容は来週も続けられます。
+
+**Reading check:** Find (1) the formal cause, (2) the reason the school may not reach everyone, and (3) the positive result credited to the teachers.
+
+Translation: “Today's outdoor lesson has been cancelled because of strong winds. Instead, we will watch a film in the classroom from three o'clock. Because this is a sudden change, it may not be possible to contact everyone. If a friend has not come, please pass on this notice. Thanks to the teachers' preparation, we can continue the lesson content next week.”
+
+## 6. Communication and flashcard review
+
+**Speak or write:** explain one changed plan using `〜ので`, one formal notice using `〜ため`, and one positive result using `〜おかげで`.
+
+**Review flashcards:** `〜から` → direct personal reason; `〜ので` → softer explanation; `〜ため` → formal objective cause; `〜おかげで` → positive result; `〜せいで` → negative result/blame.
+
+<PracticeBlock client:load instructions="Choose the expression whose tone fits the setting." items={[
+  { prompt: "Politely ask a teacher to start without you because you will be late.", answer: "少し遅れますので、先に始めてください。", explanation: "ので gives a softer explanation before a request." },
+  { prompt: "Write a formal notice that service is suspended because of strong winds.", answer: "強風のため、運転を見合わせています。", explanation: "Nのため fits a formal public explanation." },
+  { prompt: "Thank a classmate because their help let you meet the deadline.", answer: "手伝ってくれたおかげで、締め切りに間に合いました。", explanation: "おかげで credits a welcome result." }
+]} />
+
+<ReadingPractice client:load title="Outdoor lesson change" genre="school announcement" targetTime="3 minutes" passage={<>本日の校外授業は、強風のため中止になりました。代わりに、三時から教室で映画を見ます。急な変更なので、全員に連絡できない可能性があります。友達が来ていない場合は、この知らせを伝えてください。先生方が早く準備してくださったおかげで、来週の授業予定を変えずに済みます。</>} glossary={[{ word: "校外授業", reading: "こうがいじゅぎょう", meaning: "lesson outside school" }, { word: "変えずに済む", reading: "かえずにすむ", meaning: "to manage without changing" }]} questions={[{ question: "What is the formal cause of the cancellation?", answer: "Strong winds.", explanation: "強風のため gives the objective public reason." }, { question: "Why might the school not contact everyone?", answer: "Because the change was sudden.", explanation: "急な変更なので provides the softer explanation." }, { question: "What positive result is credited to the teachers?", answer: "Next week's schedule does not need to change.", explanation: "おかげで marks positive credit." }]} />
+
+<ListeningPractice client:load title="A delayed arrival" situation="Listen for the neutral reason and the speaker's response." script="事故で電車が遅れているので、到着が十分ほど遅れそうです。先に会議を始めていただけますか。" questions={[{ question: "Why will the speaker be late, and what do they request?", answer: "A train delay caused by an accident; they ask the others to begin the meeting.", explanation: "ので softens the explanation before the request." }]} />
+
+<ChapterSummary takeaways={[
+  "から is direct and personal; ので softens an explanation or request.",
+  "ため is formal and objective, so it fits notices and written explanations.",
+  "おかげで gives positive credit; せいで marks an unwanted result or blame.",
+  "Nouns and な-adjectives use different connections: 学生だから but 学生なので; 静かなため."
+]} />
+
+## Knowledge Check
+
+<QuizBlock client:load questions={[
+  { question: "Which is best in a public transport announcement?", options: ["事故だから、電車が遅れています。", "事故のため、電車が遅れています。", "事故のおかげで、電車が遅れています。", "事故のせいでください。"], correct: 1, explanation: "〜ため is formal and objective, making it appropriate for an announcement." },
+  { question: "Which sentence gives a soft reason before a request?", options: ["忙しいので、後で電話してください。", "忙しいせいで、後で電話してください。", "忙しいおかげで、後で電話してください。", "忙しいために、後で電話してください。"], correct: 0, explanation: "〜ので softens an explanation and naturally precedes a request." },
+  { question: "Choose the natural positive sentence.", options: ["先生のおかげで合格できた。", "先生のせいで合格できた。", "先生のため合格できた。", "先生なので合格できた。"], correct: 0, explanation: "おかげで credits a helpful person or condition for a welcome result." },
+  { question: "What nuance does 渋滞のせいで遅れた have?", options: ["Formal gratitude", "A neutral fact only", "An unwanted result with blame", "A future purpose"], correct: 2, explanation: "せいで frames the traffic as the cause of an unwelcome outcome." },
+  { question: "Which connection is correct?", options: ["静かだから", "静かだので", "静かのため", "静かでので"], correct: 0, explanation: "A な-adjective uses だ before から: 静かだから." },
+  { question: "Which connection is correct?", options: ["学生だから", "学生なから", "学生なので", "Both 学生だから and 学生なので"], correct: 3, explanation: "Nouns take だ + から and な + ので: 学生だから / 学生なので." },
+  { question: "Which is least suitable for a neutral apology to a teacher?", options: ["電車が遅れたので、遅れました。", "電車が遅れたため、遅れました。", "電車が遅れたせいで、遅れました。", "事故のため、遅れました。"], correct: 2, explanation: "せいで sounds blaming; ので is usually more considerate in an apology." },
+  { question: "What does 急な変更なので mean here?", options: ["Because it is a sudden change", "In order to make a sudden change", "Despite a sudden change", "Thanks to a sudden change"], correct: 0, explanation: "Noun + なので gives a reason in a softer explanatory tone." },
+  { question: "Which form should follow a noun in a formal notice?", options: ["雨だから", "雨なので", "雨のため", "雨おかげで"], correct: 2, explanation: "Noun + のため is the formal cause pattern used in notices." },
+  { question: "Why is おかげで inappropriate in 雨のおかげで試合が中止になった?", options: ["It cannot follow nouns", "It normally introduces a welcome result, while cancellation is usually unwanted", "It is only for written Japanese", "It means 'in order to'"], correct: 1, explanation: "おかげで expresses positive credit, so it clashes with an unwelcome cancellation unless the speaker clearly wanted it." }
+]} />

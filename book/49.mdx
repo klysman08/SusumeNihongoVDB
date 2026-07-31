@@ -1,0 +1,74 @@
+---
+title: "Chapter 49 — Goals, Purposes, and Requirements"
+level: "N3"
+chapter: 49
+unit: 3
+unitTitle: "Purpose, Cause, and Evidence"
+topics: "Controllable purposes, desired outcomes, requirements, and goals"
+description: "Express controllable purposes, desired outcomes, requirements, and long-term goals without confusing ために and ように."
+layout: ../../layouts/BookLayout.astro
+---
+
+import ChapterHeader from '../../components/book/ChapterHeader.tsx'
+import SectionIntro from '../../components/book/SectionIntro.tsx'
+import VocabTable from '../../components/book/VocabTable.tsx'
+import PatternCompare from '../../components/book/PatternCompare.tsx'
+import CommonMistake from '../../components/book/CommonMistake.tsx'
+import ConversationDialog from '../../components/book/ConversationDialog.tsx'
+import PracticeBlock from '../../components/book/PracticeBlock.tsx'
+import ReadingPractice from '../../components/book/ReadingPractice.tsx'
+import ListeningPractice from '../../components/book/ListeningPractice.tsx'
+import ChapterSummary from '../../components/book/ChapterSummary.tsx'
+import QuizBlock from '../../components/book/QuizBlock.tsx'
+
+<ChapterHeader title="Goals, Purposes, and Requirements" level="N3" chapter={49} objectives={["Choose ために for a controlled purpose and ように for a desired outcome.", "Use には to introduce a requirement for reaching a goal.", "Express sustained long-term aims with 目指す."]} />
+<SectionIntro level="N3">Purpose expressions reveal the relationship between an action and its goal. The decisive question is not whether English says “in order to,” but whether the subject can directly control the desired action or result.</SectionIntro>
+
+<VocabTable romajiMode="hidden" data={[
+  { word: "達成する", reading: "たっせいする", meaning: "to achieve", type: "verb" },
+  { word: "目指す", reading: "めざす", meaning: "to aim for", type: "verb" },
+  { word: "資格", reading: "しかく", meaning: "qualification", type: "noun" },
+  { word: "身につける", reading: "みにつける", meaning: "to acquire a skill", type: "verb" },
+  { word: "改善する", reading: "かいぜんする", meaning: "to improve", type: "verb" },
+  { word: "必要", reading: "ひつよう", meaning: "necessary", type: "adj" }
+]} />
+
+<PatternCompare client:load title="Controlled action or desired result?" items={[
+  { pattern: "V-る／Nのために", meaning: "in order to; for the purpose of", use: "The goal is normally a deliberate action controlled by the same subject. It also follows a noun.", example: "通訳になるために、大学で日本語を学んでいる。", translation: "I am studying Japanese at university in order to become an interpreter.", register: "controlled goal" },
+  { pattern: "V-る／V-ないように", meaning: "so that; in order that", use: "The goal is an ability, state, prevention, or other result not directly commanded into existence.", example: "忘れないように、予定をカレンダーに入れた。", translation: "I put the appointment in my calendar so that I would not forget.", register: "desired result" },
+  { pattern: "V-るには", meaning: "to achieve V; if one is to V", use: "Introduces the condition, method, or requirement needed to reach a goal.", example: "この資格を取るには、二年の経験が必要だ。", translation: "To obtain this qualification, two years of experience is required.", register: "requirement" },
+  { pattern: "Nを目指す／Vことを目指す", meaning: "aim toward a sustained goal", use: "Used for a long-term destination, standard, profession, or institutional objective.", example: "誰でも利用しやすいサービスを目指しています。", translation: "We aim to provide a service that is easy for everyone to use.", register: "long-term" }
+]} />
+
+<CommonMistake title="Potential verbs normally point to ように"><p>Say <strong>日本語が話せるように練習する</strong>, not <strong>話せるために</strong>, when the goal is gaining an ability. Use <strong>日本で働くために日本語を勉強する</strong> when the goal is a deliberate future action.</p></CommonMistake>
+
+<ConversationDialog client:load romajiMode="hidden" title="Preparing for a career change" lines={[
+  { speaker: "Emi", japanese: "将来、どんな仕事をしたいんですか。", translation: "What kind of work would you like to do in the future?" },
+  { speaker: "Noah", japanese: "海外の客と働けるように、会話力を伸ばしたいです。", translation: "I want to improve my speaking ability so that I can work with customers overseas." },
+  { speaker: "Emi", japanese: "その仕事に就くには、資格が必要ですか。", translation: "Do you need a qualification to enter that profession?" },
+  { speaker: "Noah", japanese: "必須ではありませんが、専門的な翻訳ができるようになるために、講座を受けるつもりです。", translation: "It is not mandatory, but I intend to take a course so that I can eventually do specialist translation." }
+]} />
+
+<PracticeBlock client:load instructions="Choose a purpose form based on control, result, or requirement." items={[
+  { prompt: "I left home early in order to catch the first train.", answer: "始発に乗るために、早く家を出ました。", explanation: "Boarding the train is the subject's deliberate goal." },
+  { prompt: "I spoke slowly so that everyone could understand.", answer: "みんなが分かるように、ゆっくり話しました。", explanation: "Another person's understanding is a desired result, not controlled directly." },
+  { prompt: "To work in this field, practical experience is necessary.", answer: "この分野で働くには、実務経験が必要です。", explanation: "には frames the requirement for reaching the goal." }
+]} />
+
+<ReadingPractice client:load title="A community project" genre="project description" targetTime="2 minutes" passage={<>私たちの団体は、外国から来た人も安心して暮らせる町を目指しています。必要な情報が簡単に見つかるように、市の案内を四つの言語に翻訳しています。また、地域の人と交流する機会を増やすために、毎月イベントを開いています。活動を続けるには、翻訳や会場の準備を手伝ってくれる人が必要です。</>} glossary={[{ word: "団体", reading: "だんたい", meaning: "organisation; group" }, { word: "会場", reading: "かいじょう", meaning: "venue" }]} questions={[{ question: "What long-term goal does the organisation have?", answer: "A town where people from abroad can live with confidence.", explanation: "町を目指しています states the sustained objective." }, { question: "Why are the guides translated?", answer: "So that necessary information can be found easily.", explanation: "見つかるように presents the desired result." }, { question: "What is required to continue the activity?", answer: "People who can help with translation and venue preparation.", explanation: "続けるには introduces a requirement." }]} />
+
+<ListeningPractice client:load title="Preparing a presentation" situation="Listen for two different purposes." script="来週の発表で間違えないように、毎日声に出して練習しています。専門用語を正しく説明するために、先生にも内容を確認してもらいました。" questions={[{ question: "Why does the speaker practise aloud?", answer: "So as not to make mistakes in the presentation.", explanation: "間違えないように marks prevention." }, { question: "Why did the speaker ask the teacher to check the content?", answer: "In order to explain specialist terms correctly.", explanation: "説明するために marks a controlled purpose." }]} />
+
+<ChapterSummary takeaways={["ために normally links a controlled action to its purpose.", "ように presents a desired ability, state, prevention, or result.", "には introduces what is required; 目指す presents a sustained destination or standard."]} />
+
+## Knowledge Check
+<QuizBlock client:load questions={[
+  { question: "子どもにも読める＿＿、簡単な言葉で書きました。", options: ["ために", "ように", "には", "ことに"], correct: 1, explanation: "A child's ability to read is a desired result." },
+  { question: "医者になる＿＿、医学部で勉強しています。", options: ["ように", "には", "ために", "せいで"], correct: 2, explanation: "Becoming a doctor is the subject's deliberate long-term purpose." },
+  { question: "日本で運転する＿＿、国際免許が必要です。", options: ["には", "ように", "ためで", "ことを"], correct: 0, explanation: "には introduces a requirement for the goal." },
+  { question: "Which sentence naturally describes prevention?", options: ["遅れないために気をつけた。", "遅れないように早く出た。", "遅れないには早く出た。", "遅れないことを目指して出た。"], correct: 1, explanation: "ように naturally marks the desired negative result." },
+  { question: "Which is the best institutional goal?", options: ["事故を減らす町を目指す。", "事故の少ない町を目指す。", "事故が減るための町を目指す。", "事故を減らせるには町を目指す。"], correct: 1, explanation: "事故の少ない町 is a natural target state with 目指す." },
+  { question: "Why is 話せるために usually unnatural for an ability goal?", options: ["Potential verbs cannot be negative", "An ability is a desired result, which normally takes ように", "ために is only written Japanese", "話せる is a noun"], correct: 1, explanation: "Potential outcomes normally pair with ように." },
+  { question: "Choose the sentence with the same subject controlling both actions.", options: ["母が読めるように大きく書いた。", "忘れないようにメモした。", "留学するために貯金している。", "雨が入らないように窓を閉めた。"], correct: 2, explanation: "The speaker both saves and intends to study abroad." },
+  { question: "この問題を解決するには means…", options: ["because the problem was solved", "despite solving the problem", "in order to identify what is required to solve the problem", "the problem was accidentally solved"], correct: 2, explanation: "V-るには establishes a goal whose requirements or method follow." }
+]} />
