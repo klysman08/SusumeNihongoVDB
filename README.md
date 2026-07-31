@@ -4,6 +4,8 @@ A single-host, Dockerized Japanese-learning knowledge app. It indexes the 64 num
 
 SQLite is the durable catalog and source of truth for content added through the API. Qdrant is a rebuildable search index. The original book files are mounted read-only and are never changed by the web app.
 
+For the complete indexing, retrieval, security, dashboard, and recovery design, see [`Qdrant.md`](Qdrant.md).
+
 ## Start the stack
 
 Requirements: Docker Engine with Compose v2 and enough disk for the application images, Qdrant data, and approximately 250 MB of baked embedding assets.
