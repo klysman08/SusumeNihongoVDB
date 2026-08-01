@@ -491,6 +491,76 @@ test("keeps controls usable without horizontal overflow on mobile", async ({
   expect(dialogBox?.height).toBeLessThanOrEqual(812)
 })
 
+test("uses a full-screen five-to-seven study desk on desktop", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 })
+  await openHydrated(page)
+
+  const askBox = await page.locator("#ask-workspace").boundingBox()
+  const answerBox = await page.locator("#answer-workspace").boundingBox()
+
+  expect(askBox).not.toBeNull()
+  expect(answerBox).not.toBeNull()
+  expect(askBox?.height).toBe(900)
+  expect(answerBox?.height).toBe(900)
+  expect(
+    Math.abs(
+      (askBox?.width || 0) / ((askBox?.width || 0) + (answerBox?.width || 0)) -
+        5 / 12
+    )
+  ).toBeLessThan(0.02)
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollHeight <= window.innerHeight
+    )
+  ).toBe(true)
+})
+
+test("switches the mobile workspace between Ask and Answer without losing state", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.route("**/api/v1/answers", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify(citedAnswer),
+    })
+  )
+  await openHydrated(page)
+
+  const askTab = page.getByRole("tab", { name: /質問.*Ask/ })
+  const answerTab = page.getByRole("tab", { name: /回答.*Answer/ })
+
+  await expect(askTab).toHaveAttribute("aria-selected", "true")
+  await expect(page.locator("#ask-workspace")).toBeVisible()
+  await expect(page.locator("#answer-workspace")).not.toBeVisible()
+
+  await askTab.focus()
+  await page.keyboard.press("ArrowRight")
+  await expect(answerTab).toBeFocused()
+  await askTab.click()
+
+  await page.getByLabel("Question").fill("What does は do?")
+  await page.getByRole("button", { name: "Ask Susume" }).click()
+
+  await expect(answerTab).toHaveAttribute("aria-selected", "true")
+  await expect(page.getByText("は marks the topic of a sentence")).toBeVisible()
+
+  await askTab.click()
+  await expect(page.getByLabel("Question")).toHaveValue("What does は do?")
+
+  await page.getByRole("button", { name: "Open answer history" }).click()
+  await page.getByRole("button", { name: "Open answer" }).click()
+  await expect(answerTab).toHaveAttribute("aria-selected", "true")
+  await expect(
+    page
+      .locator("#answer-result")
+      .getByText("は marks the topic of a sentence", { exact: true })
+  ).toBeVisible()
+})
+
 test("keeps result interactions functional with reduced motion", async ({
   page,
 }) => {

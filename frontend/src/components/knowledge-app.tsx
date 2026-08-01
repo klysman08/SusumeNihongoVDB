@@ -73,6 +73,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Spinner } from "@/components/ui/spinner"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -95,6 +96,7 @@ import {
   type Level,
 } from "@/lib/api-types"
 import type { AnswerHistoryEntry } from "@/lib/browser-storage"
+import { cn } from "@/lib/utils"
 
 const levelItems: Array<{ label: string; value: Level | null }> = [
   { label: "No level", value: null },
@@ -117,6 +119,8 @@ type QueryState = {
   pending: boolean
   error: string
 }
+
+type WorkspacePane = "ask" | "answer"
 
 type QueryAction =
   | { type: "question_changed"; question: string }
@@ -185,10 +189,7 @@ async function parseResponse<T>(response: Response): Promise<T> {
 
 function LoadingAnswer() {
   return (
-    <div
-      aria-label="Searching the book"
-      className="grid gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)]"
-    >
+    <div aria-label="Searching the book" className="flex flex-col gap-5">
       <Card>
         <CardHeader>
           <Skeleton className="h-5 w-36" />
@@ -491,7 +492,41 @@ function AdminDialog({
   )
 }
 
-function AppHeader({
+function BrandLockup({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className="flex min-w-0 items-center gap-3">
+      <div
+        aria-hidden="true"
+        className={cn(
+          "flex shrink-0 items-center justify-center rounded-sm bg-primary text-primary-foreground shadow-sm",
+          compact ? "size-10" : "size-12"
+        )}
+      >
+        <BookOpenTextIcon
+          className={compact ? "size-5" : "size-6"}
+          weight="duotone"
+        />
+      </div>
+      <div className="min-w-0">
+        <p
+          className={cn(
+            "truncate font-heading font-medium tracking-tight",
+            compact ? "text-base" : "text-xl"
+          )}
+        >
+          Susume Nihongo
+        </p>
+        <p className="truncate text-xs text-muted-foreground">
+          <span lang="ja">すすめ日本語</span>
+          <span aria-hidden="true"> · </span>
+          Evidence-led study
+        </p>
+      </div>
+    </div>
+  )
+}
+
+function UtilityActions({
   history,
   onSelectHistory,
   sound,
@@ -503,109 +538,150 @@ function AppHeader({
   theme: ReturnType<typeof useTheme>
 }) {
   return (
-    <header className="border-b bg-background/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-8 sm:py-4">
-        <div className="flex min-w-0 items-center gap-3">
-          <div className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-            <BookOpenTextIcon className="size-5" weight="duotone" />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate font-heading font-medium">Susume Nihongo</p>
-            <p className="hidden text-xs text-muted-foreground sm:block">
-              Vector knowledge book
-            </p>
-          </div>
-        </div>
-
-        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          <Tooltip>
-            <TooltipTrigger
-              render={
-                <Button
-                  aria-label={
-                    "Switch to " +
-                    (theme.theme === "dark" ? "light" : "dark") +
-                    " mode"
-                  }
-                  onClick={() => {
-                    sound.playSound("tap")
-                    theme.toggleTheme()
-                  }}
-                  size="icon-lg"
-                  type="button"
-                  variant="ghost"
-                />
+    <div className="flex shrink-0 items-center gap-1 sm:gap-2">
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              aria-label={
+                "Switch to " +
+                (theme.theme === "dark" ? "light" : "dark") +
+                " mode"
               }
+              onClick={() => {
+                sound.playSound("tap")
+                theme.toggleTheme()
+              }}
+              size="icon-lg"
+              type="button"
+              variant="ghost"
+            />
+          }
+        >
+          <AnimatePresence initial={false} mode="wait">
+            <m.span
+              animate={{ opacity: 1, rotate: 0, scale: 1 }}
+              className="flex"
+              exit={{ opacity: 0, rotate: 20, scale: 0.8 }}
+              initial={{ opacity: 0, rotate: -20, scale: 0.8 }}
+              key={theme.theme}
+              transition={{ duration: 0.16 }}
             >
-              <AnimatePresence initial={false} mode="wait">
-                <m.span
-                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  className="flex"
-                  exit={{ opacity: 0, rotate: 20, scale: 0.8 }}
-                  initial={{ opacity: 0, rotate: -20, scale: 0.8 }}
-                  key={theme.theme}
-                  transition={{ duration: 0.16 }}
-                >
-                  {theme.theme === "dark" ? (
-                    <SunIcon data-icon="inline-start" />
-                  ) : (
-                    <MoonIcon data-icon="inline-start" />
-                  )}
-                </m.span>
-              </AnimatePresence>
-            </TooltipTrigger>
-            <TooltipContent side="bottom">
-              Switch to {theme.theme === "dark" ? "light" : "dark"} mode
-            </TooltipContent>
-          </Tooltip>
+              {theme.theme === "dark" ? (
+                <SunIcon data-icon="inline-start" />
+              ) : (
+                <MoonIcon data-icon="inline-start" />
+              )}
+            </m.span>
+          </AnimatePresence>
+        </TooltipTrigger>
+        <TooltipContent side="bottom">
+          Switch to {theme.theme === "dark" ? "light" : "dark"} mode
+        </TooltipContent>
+      </Tooltip>
 
-          <Tooltip>
-            <TooltipTrigger
-              render={
-                <Button
-                  aria-label={
-                    (sound.enabled ? "Disable" : "Enable") + " action sounds"
-                  }
-                  aria-pressed={sound.enabled}
-                  onClick={sound.toggleSound}
-                  size="icon-lg"
-                  type="button"
-                  variant="ghost"
-                />
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              aria-label={
+                (sound.enabled ? "Disable" : "Enable") + " action sounds"
               }
+              aria-pressed={sound.enabled}
+              onClick={sound.toggleSound}
+              size="icon-lg"
+              type="button"
+              variant="ghost"
+            />
+          }
+        >
+          <AnimatePresence initial={false} mode="wait">
+            <m.span
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex"
+              exit={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              key={String(sound.enabled)}
+              transition={{ duration: 0.16 }}
             >
-              <AnimatePresence initial={false} mode="wait">
-                <m.span
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="flex"
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  key={String(sound.enabled)}
-                  transition={{ duration: 0.16 }}
-                >
-                  {sound.enabled ? (
-                    <SpeakerHighIcon data-icon="inline-start" />
-                  ) : (
-                    <SpeakerSlashIcon data-icon="inline-start" />
-                  )}
-                </m.span>
-              </AnimatePresence>
-            </TooltipTrigger>
-            <TooltipContent side="bottom">
-              {sound.enabled ? "Disable" : "Enable"} action sounds
-            </TooltipContent>
-          </Tooltip>
+              {sound.enabled ? (
+                <SpeakerHighIcon data-icon="inline-start" />
+              ) : (
+                <SpeakerSlashIcon data-icon="inline-start" />
+              )}
+            </m.span>
+          </AnimatePresence>
+        </TooltipTrigger>
+        <TooltipContent side="bottom">
+          {sound.enabled ? "Disable" : "Enable"} action sounds
+        </TooltipContent>
+      </Tooltip>
 
-          <AnswerHistory
-            entries={history.entries}
-            onClear={history.clear}
-            onDelete={history.remove}
-            onSelect={onSelectHistory}
-            playSound={sound.playSound}
-          />
-          <AdminDialog playSound={sound.playSound} />
-        </div>
+      <AnswerHistory
+        entries={history.entries}
+        onClear={history.clear}
+        onDelete={history.remove}
+        onSelect={onSelectHistory}
+        playSound={sound.playSound}
+      />
+      <AdminDialog playSound={sound.playSound} />
+    </div>
+  )
+}
+
+function MobileHeader({
+  history,
+  onSelectHistory,
+  sound,
+  theme,
+}: {
+  history: ReturnType<typeof useAnswerHistory>
+  onSelectHistory: (entry: AnswerHistoryEntry) => void
+  sound: ReturnType<typeof useSoundEffects>
+  theme: ReturnType<typeof useTheme>
+}) {
+  return (
+    <header className="flex items-center justify-between gap-3 border-b bg-background/95 px-4 py-3 backdrop-blur lg:hidden">
+      <BrandLockup compact />
+      <UtilityActions
+        history={history}
+        onSelectHistory={onSelectHistory}
+        sound={sound}
+        theme={theme}
+      />
+    </header>
+  )
+}
+
+function ReaderToolbar({
+  history,
+  onSelectHistory,
+  sound,
+  theme,
+}: {
+  history: ReturnType<typeof useAnswerHistory>
+  onSelectHistory: (entry: AnswerHistoryEntry) => void
+  sound: ReturnType<typeof useSoundEffects>
+  theme: ReturnType<typeof useTheme>
+}) {
+  return (
+    <header className="hidden items-center justify-between gap-4 border-b bg-background/92 px-8 py-4 backdrop-blur lg:flex xl:px-10">
+      <div className="flex items-center gap-3">
+        <Badge variant="outline">
+          <span lang="ja">回答</span>
+          <span aria-hidden="true">·</span>
+          Answer
+        </Badge>
+        <p className="text-xs text-muted-foreground">
+          Source-grounded Japanese study
+        </p>
       </div>
+      <UtilityActions
+        history={history}
+        onSelectHistory={onSelectHistory}
+        sound={sound}
+        theme={theme}
+      />
     </header>
   )
 }
@@ -614,19 +690,26 @@ function HeroSection() {
   return (
     <m.section
       animate={{ opacity: 1, y: 0 }}
-      className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center"
+      className="flex flex-col items-start gap-6"
       initial={false}
       transition={{ duration: 0.35, ease: "easeOut" }}
     >
-      <Badge variant="secondary">
-        <SparkleIcon data-icon="inline-start" />
-        64 chapters · N5 to N3
-      </Badge>
-      <div className="flex flex-col gap-3">
-        <h1 className="font-heading text-4xl font-medium tracking-tight text-balance sm:text-6xl">
+      <BrandLockup />
+      <div className="flex flex-col gap-4">
+        <Badge className="w-fit" variant="secondary">
+          <SparkleIcon data-icon="inline-start" />
+          64 chapters · N5 to N3
+        </Badge>
+        <p
+          className="font-heading text-sm tracking-[0.2em] text-primary"
+          lang="ja"
+        >
+          本から学ぶ、日本語を深める
+        </p>
+        <h1 className="max-w-xl font-heading text-4xl font-medium tracking-tight text-balance sm:text-5xl xl:text-6xl">
           Ask the book. Learn with evidence.
         </h1>
-        <p className="mx-auto max-w-2xl text-base leading-7 text-pretty text-muted-foreground sm:text-lg">
+        <p className="max-w-xl text-base leading-7 text-pretty text-muted-foreground sm:text-lg">
           Search Japanese grammar, vocabulary, examples, and practice material
           with multilingual hybrid retrieval and source-backed answers.
         </p>
@@ -657,8 +740,13 @@ function QuestionCard({
   question: string
 }) {
   return (
-    <Card className="mx-auto w-full max-w-4xl">
+    <Card className="w-full">
       <CardHeader>
+        <Badge className="mb-2 w-fit" variant="outline">
+          <span lang="ja">質問</span>
+          <span aria-hidden="true">·</span>
+          Ask
+        </Badge>
         <CardTitle>What would you like to understand?</CardTitle>
         <CardDescription>
           Ask in English or Japanese, then optionally narrow the search by JLPT
@@ -791,6 +879,7 @@ function QuestionCard({
 
 export function KnowledgeApp() {
   const [query, dispatchQuery] = useReducer(queryReducer, initialQueryState)
+  const [workspacePane, setWorkspacePane] = useState<WorkspacePane>("ask")
   const { answer, error, language, levels, pending, question } = query
   const theme = useTheme()
   const sound = useSoundEffects()
@@ -798,6 +887,7 @@ export function KnowledgeApp() {
 
   function selectHistory(entry: AnswerHistoryEntry) {
     dispatchQuery({ type: "history_selected", entry })
+    setWorkspacePane("answer")
     window.requestAnimationFrame(() => {
       document.getElementById("answer-result")?.scrollIntoView({
         behavior: "smooth",
@@ -811,6 +901,7 @@ export function KnowledgeApp() {
     const trimmed = question.trim()
     if (!trimmed) return
     sound.playSound("tap")
+    setWorkspacePane("answer")
     dispatchQuery({ type: "request_started" })
     try {
       const response = await fetch("/api/v1/answers", {
@@ -864,6 +955,12 @@ export function KnowledgeApp() {
           <EmptyMedia variant="icon">
             <BookOpenTextIcon />
           </EmptyMedia>
+          <p
+            className="font-heading text-sm tracking-[0.18em] text-primary"
+            lang="ja"
+          >
+            学びを始めましょう
+          </p>
           <EmptyTitle>Your study companion is ready</EmptyTitle>
           <EmptyDescription>
             Ask about grammar, vocabulary, usage, examples, or chapter material.
@@ -886,67 +983,139 @@ export function KnowledgeApp() {
     <MotionConfig reducedMotion="user">
       <LazyMotion features={domAnimation} strict>
         <TooltipProvider>
-          <main className="min-h-svh">
-            <AppHeader
+          <Tabs
+            className="h-svh gap-0 overflow-hidden lg:grid lg:grid-cols-[minmax(22rem,5fr)_minmax(0,7fr)] lg:grid-rows-1"
+            onValueChange={(value) => setWorkspacePane(value as WorkspacePane)}
+            value={workspacePane}
+          >
+            <MobileHeader
               history={history}
               onSelectHistory={selectHistory}
               sound={sound}
               theme={theme}
             />
 
-            <div className="mx-auto flex max-w-6xl flex-col gap-7 px-4 py-8 sm:gap-8 sm:px-8 sm:py-14">
-              <HeroSection />
-
-              <QuestionCard
-                language={language}
-                levels={levels}
-                onLanguageChange={(value) =>
-                  dispatchQuery({ type: "language_changed", language: value })
-                }
-                onLevelsChange={(value) =>
-                  dispatchQuery({ type: "levels_changed", levels: value })
-                }
-                onQuestionChange={(value) =>
-                  dispatchQuery({ type: "question_changed", question: value })
-                }
-                onSubmit={ask}
-                pending={pending}
-                playSound={sound.playSound}
-                question={question}
-              />
-
-              <section
-                aria-live="polite"
-                className="scroll-mt-4"
-                id="answer-result"
-              >
-                <AnimatePresence initial={false} mode="wait">
-                  <m.div
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    initial={{ opacity: 0, y: 8 }}
-                    key={resultKey}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                  >
-                    {resultView}
-                  </m.div>
-                </AnimatePresence>
-              </section>
-
-              <Separator />
-              <footer className="flex flex-col items-center gap-2 text-center text-xs text-muted-foreground">
-                <p>
-                  Answers are generated from indexed Susume Nihongo material and
-                  may still contain mistakes.
-                </p>
-                <p className="flex items-center gap-1">
-                  <KeyIcon />
-                  Administrator and LLM keys are never embedded in the browser
-                  bundle.
-                </p>
-              </footer>
+            <div className="border-b bg-background/95 p-2 lg:hidden">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger
+                  aria-controls="ask-workspace"
+                  id="ask-workspace-tab"
+                  value="ask"
+                >
+                  <span lang="ja">質問</span>
+                  <span aria-hidden="true">·</span>
+                  Ask
+                </TabsTrigger>
+                <TabsTrigger
+                  aria-controls="answer-workspace"
+                  id="answer-workspace-tab"
+                  value="answer"
+                >
+                  <span lang="ja">回答</span>
+                  <span aria-hidden="true">·</span>
+                  Answer
+                </TabsTrigger>
+              </TabsList>
             </div>
-          </main>
+
+            <main
+              aria-labelledby="ask-workspace-tab"
+              className={cn(
+                "min-h-0 flex-1 bg-sidebar lg:col-start-1 lg:row-start-1 lg:flex lg:border-r",
+                workspacePane === "answer" ? "hidden" : "flex"
+              )}
+              id="ask-workspace"
+            >
+              <ScrollArea className="h-full w-full">
+                <div className="washi-pattern mx-auto flex min-h-full w-full max-w-2xl flex-col gap-7 px-5 py-7 sm:px-8 sm:py-9 lg:max-w-none lg:px-10 lg:py-10 xl:px-12 xl:py-12">
+                  <HeroSection />
+
+                  <QuestionCard
+                    language={language}
+                    levels={levels}
+                    onLanguageChange={(value) =>
+                      dispatchQuery({
+                        type: "language_changed",
+                        language: value,
+                      })
+                    }
+                    onLevelsChange={(value) =>
+                      dispatchQuery({ type: "levels_changed", levels: value })
+                    }
+                    onQuestionChange={(value) =>
+                      dispatchQuery({
+                        type: "question_changed",
+                        question: value,
+                      })
+                    }
+                    onSubmit={ask}
+                    pending={pending}
+                    playSound={sound.playSound}
+                    question={question}
+                  />
+
+                  <div className="mt-auto flex flex-col gap-4">
+                    <Separator />
+                    <p className="flex items-start gap-2 text-xs leading-5 text-muted-foreground">
+                      <KeyIcon className="mt-0.5 shrink-0" />
+                      Administrator and LLM keys are never embedded in the
+                      browser bundle.
+                    </p>
+                  </div>
+                </div>
+              </ScrollArea>
+            </main>
+
+            <section
+              aria-labelledby="answer-workspace-tab"
+              className={cn(
+                "reader-pattern min-h-0 flex-1 bg-background lg:col-start-2 lg:row-start-1 lg:flex",
+                workspacePane === "ask" ? "hidden" : "flex"
+              )}
+              id="answer-workspace"
+            >
+              <div className="flex min-h-0 w-full flex-col">
+                <ReaderToolbar
+                  history={history}
+                  onSelectHistory={selectHistory}
+                  sound={sound}
+                  theme={theme}
+                />
+
+                <ScrollArea className="min-h-0 flex-1">
+                  <div className="mx-auto flex min-h-full w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:px-8 sm:py-9 lg:px-10 lg:py-10 xl:px-12">
+                    <section
+                      aria-live="polite"
+                      className="flex flex-1 scroll-mt-4 items-center"
+                      id="answer-result"
+                    >
+                      <AnimatePresence initial={false} mode="wait">
+                        <m.div
+                          animate={{ opacity: 1, y: 0 }}
+                          className="w-full"
+                          exit={{ opacity: 0, y: -8 }}
+                          initial={{ opacity: 0, y: 8 }}
+                          key={resultKey}
+                          transition={{ duration: 0.2, ease: "easeOut" }}
+                        >
+                          {resultView}
+                        </m.div>
+                      </AnimatePresence>
+                    </section>
+
+                    <Separator />
+                    <footer className="flex flex-col items-center gap-2 text-center text-xs text-muted-foreground">
+                      <p>
+                        Answers are generated from indexed Susume Nihongo
+                        material and may still contain mistakes.
+                      </p>
+                      <p lang="ja">出典を確認しながら学びましょう。</p>
+                    </footer>
+                  </div>
+                </ScrollArea>
+              </div>
+            </section>
+          </Tabs>
         </TooltipProvider>
       </LazyMotion>
     </MotionConfig>

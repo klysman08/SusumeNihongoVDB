@@ -6,8 +6,8 @@ export const THEME_STORAGE_KEY = "susume-theme"
 const THEME_CHANGE_EVENT = "susume-theme-change"
 
 const themeColors: Record<Theme, string> = {
-  light: "#ffffff",
-  dark: "#17191a",
+  light: "#f3eee2",
+  dark: "#151a24",
 }
 
 function applyTheme(theme: Theme) {

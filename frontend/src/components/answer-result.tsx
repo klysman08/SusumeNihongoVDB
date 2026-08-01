@@ -23,7 +23,6 @@ import { Spinner } from "@/components/ui/spinner"
 import { useSpeech } from "@/hooks/use-speech"
 import type { SoundEffect } from "@/hooks/use-sound-effects"
 import type { AnswerLanguage, AnswerResponse, Citation } from "@/lib/api-types"
-import { cn } from "@/lib/utils"
 
 type AnswerResultProps = {
   answer: AnswerResponse
@@ -43,18 +42,28 @@ function CitedAnswer({
   onSelectCitation,
 }: CitedAnswerProps) {
   const parts = answer.split(/(\[\d+\])/g)
+  const keyedParts = parts.reduce<{
+    offset: number
+    values: Array<{ key: string; part: string }>
+  }>(
+    (result, part) => ({
+      offset: result.offset + part.length,
+      values: [...result.values, { key: `${result.offset}-${part}`, part }],
+    }),
+    { offset: 0, values: [] }
+  ).values
 
   return (
     <p className="text-base leading-8">
-      {parts.map((part, index) => {
+      {keyedParts.map(({ key, part }) => {
         const match = part.match(/^\[(\d+)\]$/)
-        if (!match) return <span key={`${part}-${index}`}>{part}</span>
+        if (!match) return <span key={key}>{part}</span>
 
         const citationIndex = citations.findIndex(
           (citation) => citation.number === Number(match[1])
         )
         if (citationIndex < 0) {
-          return <span key={`${part}-${index}`}>{part}</span>
+          return <span key={key}>{part}</span>
         }
 
         return (
@@ -62,7 +71,7 @@ function CitedAnswer({
             aria-label={`Show source ${match[1]}`}
             className="mx-0.5 inline-flex align-super text-xs font-medium text-primary underline-offset-2 hover:underline"
             href={`#source-${match[1]}`}
-            key={`${part}-${index}`}
+            key={key}
             onClick={(event) => {
               event.preventDefault()
               onSelectCitation(citationIndex)
@@ -136,31 +145,29 @@ export function AnswerResult({
   const navigatorRef = useRef<HTMLDivElement>(null)
   const citation = answer.citations[activeCitationIndex]
 
-  function selectCitation(index: number, scrollOnMobile = false) {
+  function selectCitation(index: number, scrollToSource = false) {
     if (index < 0 || index >= answer.citations.length) return
     setActiveCitationIndex(index)
     playSound("navigate")
-    if (scrollOnMobile && window.matchMedia("(max-width: 1023px)").matches) {
+    if (scrollToSource) {
       window.requestAnimationFrame(() => {
         navigatorRef.current?.scrollIntoView({
           behavior: "smooth",
-          block: "start",
+          block: "nearest",
         })
       })
     }
   }
 
   return (
-    <div
-      className={cn(
-        "grid gap-5",
-        citation
-          ? "lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.65fr)]"
-          : "mx-auto max-w-3xl"
-      )}
-    >
+    <div className="mx-auto flex w-full max-w-4xl flex-col gap-5">
       <Card>
         <CardHeader>
+          <Badge className="mb-2 w-fit" variant="secondary">
+            <span lang="ja">回答</span>
+            <span aria-hidden="true">·</span>
+            Answer
+          </Badge>
           <CardTitle className="flex items-center gap-2">
             <QuotesIcon />
             Grounded answer
@@ -192,77 +199,77 @@ export function AnswerResult({
         </CardFooter>
       </Card>
 
-      {citation && (
-        <div
-          aria-label="Cited source navigator"
-          aria-live="polite"
-          className="scroll-mt-4"
-          ref={navigatorRef}
-        >
-          <AnimatePresence initial={false} mode="wait">
-            <m.div
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -10 }}
-              initial={{ opacity: 0, x: 10 }}
-              key={`${citation.document_id}-${citation.number}`}
-              transition={{ duration: 0.18, ease: "easeOut" }}
-            >
-              <Card id={`source-${citation.number}`}>
-                <CardHeader>
-                  <CardTitle>
-                    {citation.number}. {citation.title}
-                  </CardTitle>
-                  <CardDescription>
-                    {citation.section || "Overview"}
-                  </CardDescription>
-                  <CardAction>
-                    {citation.chapter && (
-                      <Badge variant="outline">Ch. {citation.chapter}</Badge>
-                    )}
-                  </CardAction>
-                </CardHeader>
-                <CardContent>
-                  <p className="leading-7 text-muted-foreground">
-                    {citation.excerpt}
-                  </p>
-                </CardContent>
-                <CardFooter className="justify-between gap-3 border-t">
-                  <Button
-                    aria-label="Previous source"
-                    className="min-h-10"
-                    disabled={activeCitationIndex === 0}
-                    onClick={() => selectCitation(activeCitationIndex - 1)}
-                    type="button"
-                    variant="outline"
-                  >
-                    <CaretLeftIcon data-icon="inline-start" />
-                    <span className="hidden sm:inline">Previous</span>
-                  </Button>
-                  <Badge
-                    aria-label={`Source ${activeCitationIndex + 1} of ${answer.citations.length}`}
-                    variant="secondary"
-                  >
-                    {activeCitationIndex + 1} of {answer.citations.length}
-                  </Badge>
-                  <Button
-                    aria-label="Next source"
-                    className="min-h-10"
-                    disabled={
-                      activeCitationIndex === answer.citations.length - 1
-                    }
-                    onClick={() => selectCitation(activeCitationIndex + 1)}
-                    type="button"
-                    variant="outline"
-                  >
-                    <span className="hidden sm:inline">Next</span>
-                    <CaretRightIcon data-icon="inline-end" />
-                  </Button>
-                </CardFooter>
-              </Card>
-            </m.div>
-          </AnimatePresence>
-        </div>
-      )}
+      <AnimatePresence initial={false} mode="wait">
+        {citation && (
+          <m.div
+            animate={{ opacity: 1, x: 0 }}
+            aria-label="Cited source navigator"
+            aria-live="polite"
+            className="scroll-mt-4"
+            exit={{ opacity: 0, x: -10 }}
+            initial={{ opacity: 0, x: 10 }}
+            key={`${citation.document_id}-${citation.number}`}
+            ref={navigatorRef}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+          >
+            <Card id={`source-${citation.number}`}>
+              <CardHeader>
+                <Badge className="mb-2 w-fit" variant="outline">
+                  <span lang="ja">出典</span>
+                  <span aria-hidden="true">·</span>
+                  Source
+                </Badge>
+                <CardTitle>
+                  {citation.number}. {citation.title}
+                </CardTitle>
+                <CardDescription>
+                  {citation.section || "Overview"}
+                </CardDescription>
+                <CardAction>
+                  {citation.chapter && (
+                    <Badge variant="outline">Ch. {citation.chapter}</Badge>
+                  )}
+                </CardAction>
+              </CardHeader>
+              <CardContent>
+                <p className="leading-7 text-muted-foreground">
+                  {citation.excerpt}
+                </p>
+              </CardContent>
+              <CardFooter className="justify-between gap-3 border-t">
+                <Button
+                  aria-label="Previous source"
+                  className="min-h-10"
+                  disabled={activeCitationIndex === 0}
+                  onClick={() => selectCitation(activeCitationIndex - 1)}
+                  type="button"
+                  variant="outline"
+                >
+                  <CaretLeftIcon data-icon="inline-start" />
+                  <span className="hidden sm:inline">Previous</span>
+                </Button>
+                <Badge
+                  aria-label={`Source ${activeCitationIndex + 1} of ${answer.citations.length}`}
+                  variant="secondary"
+                >
+                  {activeCitationIndex + 1} of {answer.citations.length}
+                </Badge>
+                <Button
+                  aria-label="Next source"
+                  className="min-h-10"
+                  disabled={activeCitationIndex === answer.citations.length - 1}
+                  onClick={() => selectCitation(activeCitationIndex + 1)}
+                  type="button"
+                  variant="outline"
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <CaretRightIcon data-icon="inline-end" />
+                </Button>
+              </CardFooter>
+            </Card>
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
