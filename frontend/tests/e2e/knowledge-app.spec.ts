@@ -109,7 +109,15 @@ test("chooses an answer language and restores it from browser history", async ({
   expect(requestBody).toMatchObject({ language: "pt" })
 
   await page.getByRole("button", { name: "Open answer history" }).click()
-  await expect(page.getByRole("dialog")).toContainText("What does は do?")
+  const historyDialog = page.getByRole("dialog")
+  await expect(historyDialog).toContainText("Study archive")
+  await expect(historyDialog).toContainText("What does は do?")
+  await page.getByLabel("Search answer history").fill("Chapter 05")
+  await expect(historyDialog).toContainText("What does は do?")
+  await page.getByLabel("Search answer history").fill("missing lesson")
+  await expect(historyDialog).toContainText("No matching answers")
+  await page.getByRole("button", { name: "Clear history search" }).click()
+  await expect(historyDialog).toContainText("What does は do?")
   await page.getByRole("button", { name: "Close" }).click()
 
   await page.reload()
@@ -119,6 +127,33 @@ test("chooses an answer language and restores it from browser history", async ({
 
   await expect(page.getByText("A partícula は marca o tópico")).toBeVisible()
   await expect(page.getByLabel("Answer language")).toContainText("Portuguese")
+})
+
+test("requires confirmation before clearing the study archive", async ({
+  page,
+}) => {
+  await page.route("**/api/v1/answers", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify(citedAnswer),
+    })
+  )
+  await openHydrated(page)
+  await page.getByLabel("Question").fill("What does は do?")
+  await page.getByRole("button", { name: "Ask Susume" }).click()
+  await page.getByRole("button", { name: "Open answer history" }).click()
+
+  await page.getByRole("button", { name: "Clear archive" }).click()
+  await expect(
+    page.getByRole("button", { name: "Confirm clear archive" })
+  ).toBeVisible()
+  await page.getByRole("button", { name: "Cancel" }).click()
+  await expect(page.getByRole("dialog")).toContainText("What does は do?")
+
+  await page.getByRole("button", { name: "Clear archive" }).click()
+  await page.getByRole("button", { name: "Confirm clear archive" }).click()
+  await expect(page.getByRole("dialog")).toContainText("No saved answers yet")
 })
 
 test("shows rejected administrator access clearly", async ({ page }) => {
@@ -203,6 +238,10 @@ test("follows the system theme and persists a manual override", async ({
   await openHydrated(page)
 
   await expect(page.locator("html")).toHaveClass(/dark/)
+  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute(
+    "content",
+    "#100e0f"
+  )
   await page.getByRole("button", { name: "Switch to light mode" }).click()
   await expect(page.locator("html")).not.toHaveClass(/dark/)
   expect(await page.evaluate(() => localStorage.getItem("susume-theme"))).toBe(

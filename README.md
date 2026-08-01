@@ -1,10 +1,21 @@
 # Susume Nihongo Vector Knowledge App
 
-A single-host, Dockerized Japanese-learning knowledge app. It indexes the 64 numbered chapters in [`book/`](book/) with local multilingual dense embeddings and BM25 sparse vectors, serves hybrid search through FastAPI, and generates citation-validated answers through OpenRouter or another OpenAI-compatible Chat Completions gateway.
 
+A single-host, Dockerized Japanese-learning knowledge app with a desktop-first, Japanese-inspired interface. It indexes the 64 numbered chapters in [`book/`](book/) with local multilingual dense embeddings and BM25 sparse vectors, serves hybrid search through FastAPI, and generates citation-validated answers through OpenRouter or another OpenAI-compatible Chat Completions gateway.
+
+![Susume Nihongo application interface](hero.png)
 SQLite is the durable catalog and source of truth for content added through the API. Qdrant is a rebuildable search index. The original book files are mounted read-only and are never changed by the web app.
 
 For the complete indexing, retrieval, security, dashboard, and recovery design, see [`Qdrant.md`](Qdrant.md).
+
+## Highlights
+
+- Full-screen, two-column study workspace with responsive mobile Ask and Answer views.
+- Evidence-backed answers with chapter citations and source previews.
+- Japanese, English, Portuguese, Spanish, and French answer generation with matching speech playback.
+- Searchable, browser-local Study archive for reopening and managing previous answers.
+- Japanese-inspired light and dark themes, including the `知` (knowledge) identity.
+- Admin workflows for adding notes, uploading documents, and rebuilding the search index.
 
 ## Start the stack
 
@@ -47,7 +58,7 @@ docker compose up -d --force-recreate backend
 
 `OPENROUTER_TTS_MODEL` configures the model used by the answer card's Listen action. Japanese, English, Portuguese, Spanish, and French answers use separately configurable voices. The backend requests MP3 from [OpenRouter's Audio Speech API](https://openrouter.ai/docs/guides/overview/multimodal/tts), and the browser only receives the generated audio—the OpenRouter key is never included in the browser bundle.
 
-Before asking, users can choose Automatic, Japanese, English, Portuguese, Spanish, or French as the answer language. Kokoro uses a matching native voice for each explicit choice. The browser keeps up to 30 answers and 50 generated audio clips in IndexedDB; replaying cached speech does not call OpenRouter again. Users can delete individual answers or clear all local history and audio from the History dialog.
+Before asking, users can choose Automatic, Japanese, English, Portuguese, Spanish, or French as the answer language. Kokoro uses a matching native voice for each explicit choice. The browser keeps up to 30 answers and 50 generated audio clips in IndexedDB; replaying cached speech does not call OpenRouter again. The searchable Study archive lets users reopen or delete individual answers and clear all local history and audio with confirmation.
 
 `OPENROUTER_HTTP_REFERER` and `OPENROUTER_APP_TITLE` enable OpenRouter's optional app attribution headers. Leave the referer blank for a private/local installation.
 

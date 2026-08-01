@@ -7,7 +7,7 @@ const THEME_CHANGE_EVENT = "susume-theme-change"
 
 const themeColors: Record<Theme, string> = {
   light: "#f3eee2",
-  dark: "#151a24",
+  dark: "#100e0f",
 }
 
 function applyTheme(theme: Theme) {

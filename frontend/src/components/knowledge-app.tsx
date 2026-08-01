@@ -502,10 +502,15 @@ function BrandLockup({ compact = false }: { compact?: boolean }) {
           compact ? "size-10" : "size-12"
         )}
       >
-        <BookOpenTextIcon
-          className={compact ? "size-5" : "size-6"}
-          weight="duotone"
-        />
+        <span
+          className={cn(
+            "font-heading leading-none font-semibold",
+            compact ? "text-xl" : "text-2xl"
+          )}
+          lang="ja"
+        >
+          知
+        </span>
       </div>
       <div className="min-w-0">
         <p
