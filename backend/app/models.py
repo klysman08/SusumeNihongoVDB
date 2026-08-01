@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_vali
 Level = Literal["N5", "N4", "N3"]
 SourceType = Literal["book", "manual"]
 DocumentStatus = Literal["pending", "indexed", "failed"]
+AnswerLanguage = Literal["auto", "ja", "en", "pt", "es", "fr"]
 Tag = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=50)]
 
 
@@ -60,6 +61,7 @@ class SearchResponse(BaseModel):
 
 class AnswerRequest(StrictModel):
     question: str = Field(min_length=1, max_length=1000)
+    language: AnswerLanguage = "auto"
     levels: list[Level] = Field(default_factory=list, max_length=3)
     tags: list[Tag] = Field(default_factory=list, max_length=20)
     source_types: list[SourceType] = Field(default_factory=list, max_length=2)
@@ -87,7 +89,21 @@ class AnswerResponse(BaseModel):
     question: str
     answer: str
     found: bool
+    language: AnswerLanguage = "auto"
     citations: list[Citation] = Field(default_factory=list)
+
+
+class SpeechRequest(StrictModel):
+    input: str = Field(min_length=1, max_length=4000)
+    language: Literal["ja", "en", "pt", "es", "fr"] = "ja"
+
+    @field_validator("input")
+    @classmethod
+    def input_not_blank(cls, value: str) -> str:
+        value = " ".join(value.split())
+        if not value:
+            raise ValueError("input must not be blank")
+        return value
 
 
 class DocumentCreate(StrictModel):
@@ -148,4 +164,3 @@ class ReindexBookResponse(BaseModel):
     skipped: int
     removed: int
     failed: int
-

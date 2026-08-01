@@ -69,6 +69,41 @@ async def test_grounded_prompt_and_valid_citation() -> None:
 
 @pytest.mark.asyncio
 @respx.mock
+async def test_requested_answer_language_is_added_to_grounded_prompt() -> None:
+    route = respx.post("http://provider/v1/chat/completions").mock(
+        return_value=Response(
+            200,
+            json={"choices": [{"message": {"content": "は marca o tópico [1]."}}]},
+        )
+    )
+    service = AnswerService(
+        Settings(llm_base_url="http://provider", llm_model="model"),
+        AnswerIndex([result()]),
+    )
+
+    response = await service.answer(
+        AnswerRequest(question="What does は do?", language="pt")
+    )
+
+    sent = json.loads(route.calls[0].request.content)
+    assert "Answer in Portuguese." in sent["messages"][0]["content"]
+    assert response.language == "pt"
+
+
+@pytest.mark.asyncio
+async def test_not_found_answer_uses_requested_language() -> None:
+    service = AnswerService(Settings(llm_model="model"), AnswerIndex([]))
+
+    response = await service.answer(
+        AnswerRequest(question="Onde está esta regra?", language="pt")
+    )
+
+    assert response.language == "pt"
+    assert response.answer.startswith("Não encontrei")
+
+
+@pytest.mark.asyncio
+@respx.mock
 async def test_invalid_citations_retry_once_then_error() -> None:
     route = respx.post("http://provider/v1/chat/completions").mock(
         return_value=Response(200, json={"choices": [{"message": {"content": "Unsupported [9]."}}]})

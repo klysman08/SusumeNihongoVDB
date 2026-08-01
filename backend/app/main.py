@@ -9,7 +9,7 @@ from pathlib import Path
 
 from fastapi import Depends, FastAPI, File, Form, Query, Request, UploadFile
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 from fastapi.security import APIKeyHeader
 from starlette.concurrency import run_in_threadpool
 
@@ -27,9 +27,10 @@ from .models import (
     ReindexBookResponse,
     SearchRequest,
     SearchResponse,
+    SpeechRequest,
 )
 from .repository import DocumentRepository
-from .services import AnswerService, CatalogService, VectorIndex
+from .services import AnswerService, CatalogService, SpeechService, VectorIndex
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,6 +45,7 @@ def create_app(
     *,
     repository: DocumentRepository | None = None,
     index: VectorIndex | None = None,
+    speech_service: SpeechService | None = None,
 ) -> FastAPI:
     configured = settings or get_settings()
 
@@ -56,6 +58,7 @@ def create_app(
         app.state.index = vector_index
         app.state.catalog = CatalogService(repo, vector_index)
         app.state.answers = AnswerService(configured, vector_index)
+        app.state.speech = speech_service or SpeechService(configured)
         logger.info(
             "startup_complete environment=%s database=%s collection=%s",
             configured.environment,
@@ -179,6 +182,22 @@ def create_app(
     @app.post("/api/v1/answers", response_model=AnswerResponse, tags=["answers"])
     async def answers(request: Request, body: AnswerRequest) -> AnswerResponse:
         return await request.app.state.answers.answer(body)
+
+    @app.post(
+        "/api/v1/audio/speech",
+        response_class=Response,
+        responses={200: {"content": {"audio/mpeg": {}}}},
+        tags=["audio"],
+    )
+    async def create_speech(request: Request, body: SpeechRequest) -> Response:
+        audio = await request.app.state.speech.synthesize(body)
+        headers = {
+            "Cache-Control": "private, no-store",
+            "Content-Disposition": 'inline; filename="susume-answer.mp3"',
+        }
+        if audio.generation_id:
+            headers["X-Generation-ID"] = audio.generation_id
+        return Response(content=audio.content, media_type=audio.media_type, headers=headers)
 
     @app.get("/api/v1/documents", response_model=DocumentListResponse, tags=["documents"])
     async def list_documents(

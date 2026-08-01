@@ -7,8 +7,33 @@ import "@/styles/global.css"
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="description" content="Grounded Japanese learning answers from the Susume Nihongo book." />
-    <meta name="theme-color" content="#9f1239" />
+    <meta
+      name="description"
+      content="Grounded Japanese learning answers from the Susume Nihongo book."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script is:inline>
+      ;(() => {
+        let storedTheme = null
+        try {
+          storedTheme = localStorage.getItem("susume-theme")
+        } catch {
+          // The system preference remains available when storage is blocked.
+        }
+        const theme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+        document.documentElement.classList.toggle("dark", theme === "dark")
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", theme === "dark" ? "#17191a" : "#ffffff")
+      })()
+    </script>
     <title>Susume Nihongo · Vector Knowledge Book</title>
   </head>
   <body class="antialiased">

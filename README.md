@@ -13,7 +13,7 @@ Requirements: Docker Engine with Compose v2 and enough disk for the application 
 ```bash
 cp .env.example .env
 # Set independent, random ADMIN_API_KEY and QDRANT_API_KEY values in .env.
-# Set OPENROUTER_API_KEY. Change OPENROUTER_MODEL whenever you want to switch models.
+# Set OPENROUTER_API_KEY. Answer and speech generation share this server-side key.
 docker compose up --build -d
 docker compose ps
 curl -fsS http://localhost:8080/api/health/ready
@@ -31,6 +31,12 @@ The example environment uses [OpenRouter's Chat Completions API](https://openrou
 LLM_PROVIDER=openrouter
 OPENROUTER_API_KEY=sk-or-v1-...
 OPENROUTER_MODEL=~anthropic/claude-sonnet-latest
+OPENROUTER_TTS_MODEL=hexgrad/kokoro-82m
+OPENROUTER_TTS_JAPANESE_VOICE=jf_alpha
+OPENROUTER_TTS_ENGLISH_VOICE=af_heart
+OPENROUTER_TTS_PORTUGUESE_VOICE=pf_dora
+OPENROUTER_TTS_SPANISH_VOICE=ef_dora
+OPENROUTER_TTS_FRENCH_VOICE=ff_siwis
 ```
 
 After changing models, recreate only the backend (no reindex or frontend rebuild is needed):
@@ -39,7 +45,11 @@ After changing models, recreate only the backend (no reindex or frontend rebuild
 docker compose up -d --force-recreate backend
 ```
 
-`OPENROUTER_HTTP_REFERER` and `OPENROUTER_APP_TITLE` enable OpenRouter's optional app attribution headers. Leave the referer blank for a private/local installation. The API key is sent only by FastAPI and is never included in the browser bundle.
+`OPENROUTER_TTS_MODEL` configures the model used by the answer card's Listen action. Japanese, English, Portuguese, Spanish, and French answers use separately configurable voices. The backend requests MP3 from [OpenRouter's Audio Speech API](https://openrouter.ai/docs/guides/overview/multimodal/tts), and the browser only receives the generated audio—the OpenRouter key is never included in the browser bundle.
+
+Before asking, users can choose Automatic, Japanese, English, Portuguese, Spanish, or French as the answer language. Kokoro uses a matching native voice for each explicit choice. The browser keeps up to 30 answers and 50 generated audio clips in IndexedDB; replaying cached speech does not call OpenRouter again. Users can delete individual answers or clear all local history and audio from the History dialog.
+
+`OPENROUTER_HTTP_REFERER` and `OPENROUTER_APP_TITLE` enable OpenRouter's optional app attribution headers. Leave the referer blank for a private/local installation.
 
 To use a local or different compatible gateway instead, set `LLM_PROVIDER=compatible` and configure `LLM_BASE_URL`, `LLM_MODEL`, and optional `LLM_API_KEY`.
 
@@ -59,6 +69,15 @@ Grounded answers are public but require the server-side LLM configuration:
 curl -sS http://localhost:8080/api/v1/answers \
   -H 'Content-Type: application/json' \
   -d '{"question":"『はずだ』はいつ使いますか？","levels":["N3"]}'
+```
+
+Speech generation is public, rate-limited at the edge, and requires the server-side OpenRouter configuration:
+
+```bash
+curl -sS http://localhost:8080/api/v1/audio/speech \
+  -H 'Content-Type: application/json' \
+  -d '{"input":"『はずだ』は予想や確信を表します。","language":"ja"}' \
+  --output answer.mp3
 ```
 
 Mutations require the administrator key:
