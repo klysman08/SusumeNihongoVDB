@@ -38,12 +38,12 @@ class Settings(BaseSettings):
     openrouter_model: str = ""
     openrouter_http_referer: str | None = None
     openrouter_app_title: str = "Susume Nihongo"
-    openrouter_tts_model: str = "hexgrad/kokoro-82m"
-    openrouter_tts_japanese_voice: str = "jf_alpha"
-    openrouter_tts_english_voice: str = "af_heart"
-    openrouter_tts_portuguese_voice: str = "pf_dora"
-    openrouter_tts_spanish_voice: str = "ef_dora"
-    openrouter_tts_french_voice: str = "ff_siwis"
+    openrouter_tts_model: str = "x-ai/grok-voice-tts-1.0"
+    openrouter_tts_japanese_voice: str = "ara"
+    openrouter_tts_english_voice: str = "ara"
+    openrouter_tts_portuguese_voice: str = "ara"
+    openrouter_tts_spanish_voice: str = "ara"
+    openrouter_tts_french_voice: str = "ara"
 
     # Fallback for Ollama and any other OpenAI-compatible gateway.
     llm_base_url: str = "http://host.docker.internal:11434"

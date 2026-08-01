@@ -23,6 +23,8 @@ type SpeechAudioEntry = {
   key: string
   input: string
   language: SpeechLanguage
+  model: string
+  voice: string
   audio: Blob
   updatedAt: number
 }
@@ -129,24 +131,39 @@ export async function clearStudyHistory() {
   }
 }
 
-function speechAudioKey(input: string, language: SpeechLanguage) {
+function speechAudioKey(
+  input: string,
+  language: SpeechLanguage,
+  model: string,
+  voice: string
+) {
   let hash = 2166136261
-  const value = `${language}:${input}`
+  const value = `${model}:${voice}:${language}:${input}`
   for (let index = 0; index < value.length; index += 1) {
     hash ^= value.charCodeAt(index)
     hash = Math.imul(hash, 16777619)
   }
-  return `v1:${language}:${input.length}:${(hash >>> 0).toString(36)}`
+  return `v3:${language}:${input.length}:${(hash >>> 0).toString(36)}`
 }
 
-export async function getSpeechAudio(input: string, language: SpeechLanguage) {
+export async function getSpeechAudio(
+  input: string,
+  language: SpeechLanguage,
+  model: string,
+  voice: string
+) {
   const database = await openDatabase()
   try {
     const transaction = database.transaction(AUDIO_STORE, "readonly")
     const entry = await requestResult<SpeechAudioEntry | undefined>(
-      transaction.objectStore(AUDIO_STORE).get(speechAudioKey(input, language))
+      transaction
+        .objectStore(AUDIO_STORE)
+        .get(speechAudioKey(input, language, model, voice))
     )
-    return entry?.input === input && entry.language === language
+    return entry?.input === input &&
+      entry.language === language &&
+      entry.model === model &&
+      entry.voice === voice
       ? entry.audio
       : null
   } finally {
@@ -157,12 +174,16 @@ export async function getSpeechAudio(input: string, language: SpeechLanguage) {
 export async function saveSpeechAudio(
   input: string,
   language: SpeechLanguage,
+  model: string,
+  voice: string,
   audio: Blob
 ) {
   const entry: SpeechAudioEntry = {
-    key: speechAudioKey(input, language),
+    key: speechAudioKey(input, language, model, voice),
     input,
     language,
+    model,
+    voice,
     audio,
     updatedAt: Date.now(),
   }

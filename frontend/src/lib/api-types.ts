@@ -2,6 +2,26 @@ export type Level = "N5" | "N4" | "N3"
 export type AnswerLanguage = "auto" | "ja" | "en" | "pt" | "es" | "fr"
 export type SpeechLanguage = Exclude<AnswerLanguage, "auto">
 
+export type SpeechModel = {
+  id: string
+  name: string
+  voices: string[]
+}
+
+export type SpeechModelsResponse = {
+  default_model: string
+  models: SpeechModel[]
+}
+
+export type SpeechBatchResponse = {
+  segments: Array<{
+    id: string
+    audio_base64: string
+    media_type: string
+    generation_id?: string
+  }>
+}
+
 export const answerLanguageOptions: Array<{
   label: string
   value: AnswerLanguage

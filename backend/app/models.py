@@ -1,13 +1,47 @@
 from datetime import datetime
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    StringConstraints,
+    field_validator,
+    model_validator,
+)
 
 Level = Literal["N5", "N4", "N3"]
 SourceType = Literal["book", "manual"]
 DocumentStatus = Literal["pending", "indexed", "failed"]
 AnswerLanguage = Literal["auto", "ja", "en", "pt", "es", "fr"]
 Tag = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=50)]
+SpeechModelId = Annotated[
+    str,
+    StringConstraints(
+        strip_whitespace=True,
+        min_length=3,
+        max_length=200,
+        pattern=r"^[A-Za-z0-9._~-]+/[A-Za-z0-9._~:-]+$",
+    ),
+]
+SpeechVoice = Annotated[
+    str,
+    StringConstraints(
+        strip_whitespace=True,
+        min_length=1,
+        max_length=100,
+        pattern=r"^[A-Za-z0-9._:~-]+$",
+    ),
+]
+SpeechSegmentId = Annotated[
+    str,
+    StringConstraints(
+        strip_whitespace=True,
+        min_length=1,
+        max_length=200,
+        pattern=r"^[A-Za-z0-9._:~-]+$",
+    ),
+]
 
 
 class StrictModel(BaseModel):
@@ -96,6 +130,8 @@ class AnswerResponse(BaseModel):
 class SpeechRequest(StrictModel):
     input: str = Field(min_length=1, max_length=4000)
     language: Literal["ja", "en", "pt", "es", "fr"] = "ja"
+    model: SpeechModelId | None = None
+    voice: SpeechVoice | None = None
 
     @field_validator("input")
     @classmethod
@@ -104,6 +140,57 @@ class SpeechRequest(StrictModel):
         if not value:
             raise ValueError("input must not be blank")
         return value
+
+
+class SpeechBatchSegmentRequest(StrictModel):
+    id: SpeechSegmentId
+    input: str = Field(min_length=1, max_length=4000)
+
+    @field_validator("input")
+    @classmethod
+    def input_not_blank(cls, value: str) -> str:
+        value = " ".join(value.split())
+        if not value:
+            raise ValueError("input must not be blank")
+        return value
+
+
+class SpeechBatchRequest(StrictModel):
+    language: Literal["ja", "en", "pt", "es", "fr"] = "ja"
+    model: SpeechModelId | None = None
+    voice: SpeechVoice | None = None
+    segments: list[SpeechBatchSegmentRequest] = Field(min_length=1, max_length=50)
+
+    @model_validator(mode="after")
+    def validate_segments(self) -> "SpeechBatchRequest":
+        if sum(len(segment.input) for segment in self.segments) > 4000:
+            raise ValueError("aggregate segment input must not exceed 4000 characters")
+        ids = [segment.id for segment in self.segments]
+        if len(ids) != len(set(ids)):
+            raise ValueError("segment ids must be unique")
+        return self
+
+
+class SpeechBatchSegmentResponse(BaseModel):
+    id: SpeechSegmentId
+    audio_base64: str
+    media_type: str
+    generation_id: str | None = None
+
+
+class SpeechBatchResponse(BaseModel):
+    segments: list[SpeechBatchSegmentResponse]
+
+
+class SpeechModel(BaseModel):
+    id: SpeechModelId
+    name: str = Field(min_length=1, max_length=200)
+    voices: list[SpeechVoice] = Field(default_factory=list)
+
+
+class SpeechModelsResponse(BaseModel):
+    default_model: SpeechModelId
+    models: list[SpeechModel]
 
 
 class DocumentCreate(StrictModel):

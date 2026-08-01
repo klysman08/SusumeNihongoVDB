@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import hmac
 import logging
 import time
@@ -27,6 +28,10 @@ from .models import (
     ReindexBookResponse,
     SearchRequest,
     SearchResponse,
+    SpeechBatchRequest,
+    SpeechBatchResponse,
+    SpeechModelsResponse,
+    SpeechBatchSegmentResponse,
     SpeechRequest,
 )
 from .repository import DocumentRepository
@@ -119,7 +124,15 @@ def create_app(
     async def validation_error_handler(request: Request, exc: RequestValidationError):
         return JSONResponse(
             status_code=422,
-            content=error_payload(request, "validation_error", "Request validation failed.", exc.errors()),
+            content=error_payload(
+                request,
+                "validation_error",
+                "Request validation failed.",
+                [
+                    {key: value for key, value in error.items() if key != "ctx"}
+                    for error in exc.errors()
+                ],
+            ),
         )
 
     @app.exception_handler(Exception)
@@ -198,6 +211,35 @@ def create_app(
         if audio.generation_id:
             headers["X-Generation-ID"] = audio.generation_id
         return Response(content=audio.content, media_type=audio.media_type, headers=headers)
+
+    @app.post(
+        "/api/v1/audio/speech/batch",
+        response_model=SpeechBatchResponse,
+        tags=["audio"],
+    )
+    async def create_speech_batch(
+        request: Request, body: SpeechBatchRequest
+    ) -> SpeechBatchResponse:
+        audio_segments = await request.app.state.speech.synthesize_batch(body)
+        return SpeechBatchResponse(
+            segments=[
+                SpeechBatchSegmentResponse(
+                    id=segment.id,
+                    audio_base64=base64.b64encode(audio.content).decode("ascii"),
+                    media_type=audio.media_type,
+                    generation_id=audio.generation_id,
+                )
+                for segment, audio in zip(body.segments, audio_segments, strict=True)
+            ]
+        )
+
+    @app.get(
+        "/api/v1/audio/speech/models",
+        response_model=SpeechModelsResponse,
+        tags=["audio"],
+    )
+    async def speech_models(request: Request) -> SpeechModelsResponse:
+        return await request.app.state.speech.catalog()
 
     @app.get("/api/v1/documents", response_model=DocumentListResponse, tags=["documents"])
     async def list_documents(

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import {
   CaretLeftIcon,
   CaretRightIcon,
@@ -10,6 +10,7 @@ import { AnimatePresence, m } from "motion/react"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { MarkdownAnswer } from "@/components/markdown-answer"
 import {
   Card,
   CardAction,
@@ -20,9 +21,18 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Spinner } from "@/components/ui/spinner"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { useSpeech } from "@/hooks/use-speech"
 import type { SoundEffect } from "@/hooks/use-sound-effects"
-import type { AnswerLanguage, AnswerResponse, Citation } from "@/lib/api-types"
+import { parseAnswerMarkdown, type SpeechSegment } from "@/lib/answer-markdown"
+import type { AnswerLanguage, AnswerResponse } from "@/lib/api-types"
 
 type AnswerResultProps = {
   answer: AnswerResponse
@@ -30,75 +40,51 @@ type AnswerResultProps = {
   playSound: (effect: SoundEffect) => void
 }
 
-type CitedAnswerProps = {
-  answer: string
-  citations: Citation[]
-  onSelectCitation: (index: number) => void
-}
-
-function CitedAnswer({
-  answer,
-  citations,
-  onSelectCitation,
-}: CitedAnswerProps) {
-  const parts = answer.split(/(\[\d+\])/g)
-  const keyedParts = parts.reduce<{
-    offset: number
-    values: Array<{ key: string; part: string }>
-  }>(
-    (result, part) => ({
-      offset: result.offset + part.length,
-      values: [...result.values, { key: `${result.offset}-${part}`, part }],
-    }),
-    { offset: 0, values: [] }
-  ).values
-
-  return (
-    <p className="text-base leading-8">
-      {keyedParts.map(({ key, part }) => {
-        const match = part.match(/^\[(\d+)\]$/)
-        if (!match) return <span key={key}>{part}</span>
-
-        const citationIndex = citations.findIndex(
-          (citation) => citation.number === Number(match[1])
-        )
-        if (citationIndex < 0) {
-          return <span key={key}>{part}</span>
-        }
-
-        return (
-          <a
-            aria-label={`Show source ${match[1]}`}
-            className="mx-0.5 inline-flex align-super text-xs font-medium text-primary underline-offset-2 hover:underline"
-            href={`#source-${match[1]}`}
-            key={key}
-            onClick={(event) => {
-              event.preventDefault()
-              onSelectCitation(citationIndex)
-            }}
-          >
-            {part}
-          </a>
-        )
-      })}
-    </p>
-  )
-}
-
 function SpeechButton({
-  answer,
   language,
   playSound,
+  segments,
+  speech,
 }: {
-  answer: string
   language: AnswerLanguage
   playSound: (effect: SoundEffect) => void
+  segments: SpeechSegment[]
+  speech: ReturnType<typeof useSpeech>
 }) {
-  const speech = useSpeech()
   const active = speech.loading || speech.speaking
+  const modelItems = speech.models.map((model) => ({
+    label: model.name,
+    value: model.id,
+  }))
 
   return (
-    <div className="flex max-w-full flex-col items-end gap-2">
+    <div className="flex w-full max-w-full flex-col items-end gap-2 sm:w-auto">
+      <Select
+        items={modelItems}
+        onValueChange={(value) => {
+          if (!value) return
+          speech.selectModel(value)
+          playSound("tap")
+        }}
+        value={speech.model}
+      >
+        <SelectTrigger
+          aria-label="Speech model"
+          className="w-full sm:w-64"
+          size="sm"
+        >
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent alignItemWithTrigger={false}>
+          <SelectGroup>
+            {modelItems.map((item) => (
+              <SelectItem key={item.value} value={item.value}>
+                {item.label}
+              </SelectItem>
+            ))}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
       <Button
         aria-label={
           speech.loading
@@ -110,7 +96,7 @@ function SpeechButton({
         onClick={() => {
           playSound("tap")
           if (active) speech.stop()
-          else void speech.speak(answer, language)
+          else void speech.speak(segments, language)
         }}
         type="button"
         variant="outline"
@@ -122,8 +108,20 @@ function SpeechButton({
         ) : (
           <PlayIcon data-icon="inline-start" />
         )}
-        {speech.loading ? "Preparing…" : speech.speaking ? "Stop" : "Listen"}
+        {speech.loading
+          ? `Preparing ${speech.preparedSegments} of ${speech.totalSegments}…`
+          : speech.speaking
+            ? "Stop"
+            : "Listen"}
       </Button>
+      {speech.loading && (
+        <progress
+          aria-label="Speech preparation progress"
+          className="sr-only"
+          max={speech.totalSegments}
+          value={speech.preparedSegments}
+        />
+      )}
       {speech.error && (
         <p
           className="max-w-sm text-right text-sm text-destructive"
@@ -144,6 +142,16 @@ export function AnswerResult({
   const [activeCitationIndex, setActiveCitationIndex] = useState(0)
   const navigatorRef = useRef<HTMLDivElement>(null)
   const citation = answer.citations[activeCitationIndex]
+  const parsed = useMemo(
+    () => parseAnswerMarkdown(answer.answer),
+    [answer.answer]
+  )
+  const speech = useSpeech()
+  const stopSpeech = speech.stop
+
+  useEffect(() => {
+    stopSpeech()
+  }, [answer.answer, stopSpeech])
 
   function selectCitation(index: number, scrollToSource = false) {
     if (index < 0 || index >= answer.citations.length) return
@@ -179,10 +187,12 @@ export function AnswerResult({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <CitedAnswer
-            answer={answer.answer}
+          <MarkdownAnswer
+            activeSegmentId={speech.activeSegmentId}
             citations={answer.citations}
             onSelectCitation={(index) => selectCitation(index, true)}
+            parsed={parsed}
+            segmentProgress={speech.segmentProgress}
           />
         </CardContent>
         <CardFooter className="flex-wrap justify-between gap-3">
@@ -192,9 +202,10 @@ export function AnswerResult({
               : "No evidence"}
           </Badge>
           <SpeechButton
-            answer={answer.answer}
             language={language}
             playSound={playSound}
+            segments={parsed.segments}
+            speech={speech}
           />
         </CardFooter>
       </Card>

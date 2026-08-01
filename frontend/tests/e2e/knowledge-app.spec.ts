@@ -47,6 +47,31 @@ const multiCitedAnswer = {
   ],
 }
 
+const markdownAnswer = {
+  ...multiCitedAnswer,
+  answer: [
+    "は and が mark different kinds of focus [1].",
+    "",
+    "### Grammar points",
+    "",
+    "- **Topic:** `〜は` establishes the topic [1].",
+    "- **Subject:** `〜が` often identifies new information [2].",
+    "",
+    "### Examples",
+    "",
+    "> 猫は学生です。[1]",
+    ">",
+    "> *The cat is a student.* [1]",
+    "",
+    "**Note:** Context determines the natural choice [3].",
+    "",
+    "An invalid marker stays readable [99].",
+    "[Do not open](https://example.com)",
+    '<img src=x onerror="window.__markdownExecuted=true">',
+    "**unfinished emphasis",
+  ].join("\n"),
+}
+
 async function openHydrated(page: import("@playwright/test").Page) {
   await page.goto("/")
   await page.locator("astro-island:not([ssr])").waitFor()
@@ -78,6 +103,110 @@ test("asks a question, filters by level, and opens its citation", async ({
     question: "What does は do?",
     levels: ["N5"],
   })
+})
+
+test("renders safe structured Markdown with citations in list items", async ({
+  page,
+}) => {
+  let speechInputs: string[] = []
+  await page.addInitScript(() => {
+    ;(
+      window as typeof window & { __markdownExecuted: boolean }
+    ).__markdownExecuted = false
+  })
+  await page.route("**/api/v1/answers", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify(markdownAnswer),
+    })
+  )
+  await page.route("**/api/v1/audio/speech/models", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        default_model: "x-ai/grok-voice-tts-1.0",
+        models: [
+          {
+            id: "x-ai/grok-voice-tts-1.0",
+            name: "xAI: Grok Voice TTS 1.0",
+            voices: ["eve", "ara", "rex", "sal", "leo"],
+          },
+          {
+            id: "hexgrad/kokoro-82m",
+            name: "hexgrad: Kokoro 82M",
+            voices: ["af_heart", "jf_alpha"],
+          },
+        ],
+      }),
+    })
+  )
+  await page.route("**/api/v1/audio/speech/batch", async (route) => {
+    speechInputs = route
+      .request()
+      .postDataJSON()
+      .segments.map((segment: { input: string }) => segment.input)
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({ message: "Speech unavailable in this test." }),
+    })
+  })
+
+  await openHydrated(page)
+  await page.getByLabel("Question").fill("How are は and が different?")
+  await page.getByRole("button", { name: "Ask Susume" }).click()
+
+  const result = page.locator("#answer-result")
+  await expect(
+    result.getByRole("heading", { name: "Grammar points" })
+  ).toBeVisible()
+  await expect(result.getByRole("listitem")).toHaveCount(2)
+  await expect(result.locator("code").first()).toHaveText("〜は")
+  await expect(result.locator("blockquote")).toContainText("猫は学生です")
+  await expect(result.locator("blockquote em")).toHaveText(
+    "The cat is a student."
+  )
+  await expect(result.getByText("Note:", { exact: true })).toBeVisible()
+  await expect(result).toContainText("[99]")
+  await expect(result.getByRole("link", { name: "Do not open" })).toHaveCount(0)
+  await expect(result).toContainText(
+    '<img src=x onerror="window.__markdownExecuted=true">'
+  )
+  await expect(result).toContainText("**unfinished emphasis")
+  expect(
+    await page.evaluate(
+      () =>
+        (window as typeof window & { __markdownExecuted: boolean })
+          .__markdownExecuted
+    )
+  ).toBe(false)
+
+  await result.getByRole("link", { name: "Show source 2" }).click()
+  await expect(page.getByText("Chapter 06 — Subjects")).toBeVisible()
+
+  await page.getByRole("button", { name: "Listen to answer" }).click()
+  await expect
+    .poll(() => speechInputs)
+    .toEqual([
+      "は and が mark different kinds of focus.",
+      "Grammar points.",
+      "Topic: 〜は establishes the topic.",
+      "Subject: 〜が often identifies new information.",
+      "Examples.",
+      "猫は学生です。",
+      "The cat is a student.",
+      "Note: Context determines the natural choice.",
+      "An invalid marker stays readable.",
+      "unfinished emphasis",
+    ])
+
+  await page.getByRole("button", { name: "Open answer history" }).click()
+  const history = page.getByRole("dialog")
+  await expect(history).toContainText("Grammar points")
+  await expect(history).not.toContainText("### Grammar points")
+  await expect(history).not.toContainText("[1]")
 })
 
 test("chooses an answer language and restores it from browser history", async ({
@@ -123,7 +252,7 @@ test("chooses an answer language and restores it from browser history", async ({
   await page.reload()
   await waitForHydration(page)
   await page.getByRole("button", { name: "Open answer history" }).click()
-  await page.getByRole("button", { name: "Open answer" }).click()
+  await page.getByRole("button", { name: "Open answer" }).first().click()
 
   await expect(page.getByText("A partícula は marca o tópico")).toBeVisible()
   await expect(page.getByLabel("Answer language")).toContainText("Portuguese")
@@ -330,24 +459,36 @@ test("keeps action sounds opt-in and persists the preference", async ({
   ).toHaveAttribute("aria-pressed", "true")
 })
 
-test("generates OpenRouter speech, plays it, and stops on request", async ({
+test("prepares sentence clips, highlights playback progress, and reuses the cache", async ({
   page,
 }) => {
   await page.addInitScript(() => {
     const testWindow = window as typeof window & {
       __audioPaused: number
-      __audioPlayed: string | null
+      __speechAudios: Array<{
+        currentTime: number
+        duration: number
+        onended: (() => void) | null
+        ontimeupdate: (() => void) | null
+        src: string
+      }>
     }
     testWindow.__audioPaused = 0
-    testWindow.__audioPlayed = null
+    testWindow.__speechAudios = []
 
     class AudioStub {
-      onend: (() => void) | null = null
+      currentTime = 0
+      duration = 4
+      ondurationchange: (() => void) | null = null
+      onended: (() => void) | null = null
       onerror: (() => void) | null = null
+      ontimeupdate: (() => void) | null = null
+      preload = ""
       src: string
 
       constructor(src: string) {
         this.src = src
+        testWindow.__speechAudios.push(this)
       }
 
       load() {}
@@ -357,7 +498,6 @@ test("generates OpenRouter speech, plays it, and stops on request", async ({
       }
 
       play() {
-        testWindow.__audioPlayed = this.src
         return Promise.resolve()
       }
 
@@ -372,7 +512,7 @@ test("generates OpenRouter speech, plays it, and stops on request", async ({
     })
     Object.defineProperty(URL, "createObjectURL", {
       configurable: true,
-      value: () => "blob:susume-speech",
+      value: () => `blob:susume-speech-${testWindow.__speechAudios.length + 1}`,
     })
     Object.defineProperty(URL, "revokeObjectURL", {
       configurable: true,
@@ -381,43 +521,121 @@ test("generates OpenRouter speech, plays it, and stops on request", async ({
   })
   let speechRequest: Record<string, unknown> = {}
   let speechRequests = 0
+  let answerPayload = multiCitedAnswer
+  const speechBatches: Array<{
+    segments: Array<{ id: string; input: string }>
+  }> = []
   await page.route("**/api/v1/answers", (route) =>
     route.fulfill({
       status: 200,
       contentType: "application/json",
-      body: JSON.stringify(citedAnswer),
+      body: JSON.stringify(answerPayload),
     })
   )
-  await page.route("**/api/v1/audio/speech", async (route) => {
+  await page.route("**/api/v1/audio/speech/models", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        default_model: "x-ai/grok-voice-tts-1.0",
+        models: [
+          {
+            id: "x-ai/grok-voice-tts-1.0",
+            name: "xAI: Grok Voice TTS 1.0",
+            voices: ["eve", "ara", "rex", "sal", "leo"],
+          },
+          {
+            id: "hexgrad/kokoro-82m",
+            name: "hexgrad: Kokoro 82M",
+            voices: ["af_heart", "jf_alpha"],
+          },
+        ],
+      }),
+    })
+  )
+  await page.route("**/api/v1/audio/speech/batch", async (route) => {
     speechRequests += 1
     speechRequest = route.request().postDataJSON()
+    await new Promise((resolve) => setTimeout(resolve, 100))
+    const request = speechRequest as {
+      segments: Array<{ id: string; input: string }>
+    }
+    speechBatches.push(request)
     await route.fulfill({
       status: 200,
-      contentType: "audio/mpeg",
-      body: Buffer.from("generated mp3"),
+      contentType: "application/json",
+      body: JSON.stringify({
+        segments: request.segments.map((segment) => ({
+          id: segment.id,
+          audio_base64: Buffer.from(`audio-${segment.id}`).toString("base64"),
+          media_type: "audio/mpeg",
+          generation_id: `generation-${segment.id}`,
+        })),
+      }),
     })
   })
 
   await openHydrated(page)
   await page.getByLabel("Question").fill("What does は do?")
   await page.getByRole("button", { name: "Ask Susume" }).click()
+  await expect(page.getByLabel("Speech model")).toContainText("Grok Voice")
+  await page.getByLabel("Speech model").click()
+  await page.getByRole("option", { name: "hexgrad: Kokoro 82M" }).click()
   await page.getByRole("button", { name: "Listen to answer" }).click()
 
+  await expect(page.getByRole("progressbar")).toHaveAttribute("max", "3")
   await expect(
     page.getByRole("button", { name: "Stop reading answer" })
   ).toBeVisible()
-  expect(speechRequest).toEqual({
-    input: "は marks the topic of a sentence.",
+  expect(speechRequest).toMatchObject({
     language: "en",
+    model: "hexgrad/kokoro-82m",
+    voice: "af_heart",
   })
   expect(
-    await page.evaluate(
-      () =>
-        (window as typeof window & { __audioPlayed: string | null })
-          .__audioPlayed
+    (speechRequest as { segments: Array<{ input: string }> }).segments.map(
+      (segment) => segment.input
     )
-  ).toBe("blob:susume-speech")
+  ).toEqual([
+    "は introduces the topic.",
+    "が commonly identifies the grammatical subject.",
+    "Context determines which contrast matters.",
+  ])
+
+  const segments = page.locator("[data-speech-segment]")
+  await expect(segments).toHaveCount(3)
+  await expect(segments.nth(0)).toHaveAttribute("aria-current", "true")
+  await page.evaluate(() => {
+    const audio = (
+      window as typeof window & {
+        __speechAudios: Array<{
+          currentTime: number
+          ontimeupdate: (() => void) | null
+        }>
+      }
+    ).__speechAudios[0]
+    audio.currentTime = 2
+    audio.ontimeupdate?.()
+  })
+  await expect(
+    segments.nth(0).locator("[data-speech-progress]")
+  ).toHaveAttribute("style", /scaleX\(0\.5\)/)
+
+  await page.getByRole("link", { name: "Show source 1" }).click()
+  await expect(segments.nth(0)).toHaveAttribute("aria-current", "true")
+  await page.evaluate(() => {
+    ;(
+      window as typeof window & {
+        __speechAudios: Array<{ onended: (() => void) | null }>
+      }
+    ).__speechAudios[0].onended?.()
+  })
+  await expect(segments.nth(1)).toHaveAttribute("aria-current", "true")
+
   await page.getByRole("button", { name: "Stop reading answer" }).click()
+  await expect(
+    page.locator('[aria-current="true"][data-speech-segment]')
+  ).toHaveCount(0)
   expect(
     await page.evaluate(
       () => (window as typeof window & { __audioPaused: number }).__audioPaused
@@ -430,16 +648,42 @@ test("generates OpenRouter speech, plays it, and stops on request", async ({
   ).toBeVisible()
   expect(speechRequests).toBe(1)
 
-  await page.getByRole("button", { name: "Stop reading answer" }).click()
-  await page.reload()
-  await waitForHydration(page)
-  await page.getByRole("button", { name: "Open answer history" }).click()
-  await page.getByRole("button", { name: "Open answer" }).click()
+  await page.getByLabel("Speech model").click()
+  await page.getByRole("option", { name: "xAI: Grok Voice TTS 1.0" }).click()
+  await expect(
+    page.getByRole("button", { name: "Listen to answer" })
+  ).toBeVisible()
+  await expect(
+    page.locator('[aria-current="true"][data-speech-segment]')
+  ).toHaveCount(0)
+  await page.getByLabel("Speech model").click()
+  await page.getByRole("option", { name: "hexgrad: Kokoro 82M" }).click()
+  answerPayload = {
+    ...multiCitedAnswer,
+    answer: `${multiCitedAnswer.answer} One additional sentence is now included.`,
+  }
+  await page.getByLabel("Question").fill("Add one more detail")
+  await page.getByRole("button", { name: "Ask Susume" }).click()
   await page.getByRole("button", { name: "Listen to answer" }).click()
   await expect(
     page.getByRole("button", { name: "Stop reading answer" })
   ).toBeVisible()
-  expect(speechRequests).toBe(1)
+  expect(speechRequests).toBe(2)
+  expect(speechBatches[1].segments.map((segment) => segment.input)).toEqual([
+    "One additional sentence is now included.",
+  ])
+
+  await page.getByRole("button", { name: "Stop reading answer" }).click()
+  await page.reload()
+  await waitForHydration(page)
+  await page.getByRole("button", { name: "Open answer history" }).click()
+  await page.getByRole("button", { name: "Open answer" }).first().click()
+  await expect(page.getByLabel("Speech model")).toContainText("Kokoro 82M")
+  await page.getByRole("button", { name: "Listen to answer" }).click()
+  await expect(
+    page.getByRole("button", { name: "Stop reading answer" })
+  ).toBeVisible()
+  expect(speechRequests).toBe(2)
 })
 
 test("shows speech provider errors without losing the answer", async ({
@@ -452,7 +696,7 @@ test("shows speech provider errors without losing the answer", async ({
       body: JSON.stringify(citedAnswer),
     })
   )
-  await page.route("**/api/v1/audio/speech", (route) =>
+  await page.route("**/api/v1/audio/speech/batch", (route) =>
     route.fulfill({
       status: 503,
       contentType: "application/json",
@@ -594,9 +838,7 @@ test("switches the mobile workspace between Ask and Answer without losing state"
   await page.getByRole("button", { name: "Open answer" }).click()
   await expect(answerTab).toHaveAttribute("aria-selected", "true")
   await expect(
-    page
-      .locator("#answer-result")
-      .getByText("は marks the topic of a sentence", { exact: true })
+    page.locator("#answer-result").getByText("は marks the topic of a sentence")
   ).toBeVisible()
 })
 
@@ -604,6 +846,59 @@ test("keeps result interactions functional with reduced motion", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" })
+  await page.addInitScript(() => {
+    const testWindow = window as typeof window & {
+      __scrollBehaviors: ScrollBehavior[]
+      __speechAudios: Array<{ onended: (() => void) | null }>
+    }
+    testWindow.__scrollBehaviors = []
+    testWindow.__speechAudios = []
+
+    class AudioStub {
+      currentTime = 0
+      duration = 4
+      ondurationchange: (() => void) | null = null
+      onended: (() => void) | null = null
+      onerror: (() => void) | null = null
+      ontimeupdate: (() => void) | null = null
+      preload = ""
+      src: string
+
+      constructor(src: string) {
+        this.src = src
+        testWindow.__speechAudios.push(this)
+      }
+
+      load() {}
+      pause() {}
+      play() {
+        return Promise.resolve()
+      }
+      removeAttribute(name: string) {
+        if (name === "src") this.src = ""
+      }
+    }
+
+    Object.defineProperty(window, "Audio", {
+      configurable: true,
+      value: AudioStub,
+    })
+    Object.defineProperty(URL, "createObjectURL", {
+      configurable: true,
+      value: () => `blob:reduced-${testWindow.__speechAudios.length + 1}`,
+    })
+    Object.defineProperty(URL, "revokeObjectURL", {
+      configurable: true,
+      value: () => undefined,
+    })
+    Element.prototype.scrollIntoView = function (options) {
+      if (this instanceof HTMLElement && this.dataset.speechSegment) {
+        testWindow.__scrollBehaviors.push(
+          typeof options === "object" ? (options.behavior ?? "auto") : "auto"
+        )
+      }
+    }
+  })
   await page.route("**/api/v1/answers", (route) =>
     route.fulfill({
       status: 200,
@@ -611,9 +906,63 @@ test("keeps result interactions functional with reduced motion", async ({
       body: JSON.stringify(multiCitedAnswer),
     })
   )
+  await page.route("**/api/v1/audio/speech/batch", async (route) => {
+    const request = route.request().postDataJSON() as {
+      segments: Array<{ id: string }>
+    }
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        segments: request.segments.map((segment) => ({
+          id: segment.id,
+          audio_base64: Buffer.from("clip").toString("base64"),
+          media_type: "audio/mpeg",
+        })),
+      }),
+    })
+  })
   await openHydrated(page)
   await page.getByLabel("Question").fill("How are は and が different?")
   await page.getByRole("button", { name: "Ask Susume" }).click()
   await page.getByRole("button", { name: "Next source" }).click()
   await expect(page.getByLabel("Source 2 of 3")).toBeVisible()
+
+  await page.getByRole("button", { name: "Listen to answer" }).click()
+  const speechSegments = page.locator("[data-speech-segment]")
+  await expect(speechSegments.nth(0)).toHaveAttribute("aria-current", "true")
+  await expect(
+    speechSegments.nth(0).locator("[data-speech-progress]")
+  ).toBeHidden()
+  await speechSegments.nth(1).evaluate((element) => {
+    element.getBoundingClientRect = () =>
+      ({
+        bottom: 2040,
+        height: 40,
+        left: 0,
+        right: 100,
+        top: 2000,
+        width: 100,
+        x: 0,
+        y: 2000,
+        toJSON: () => ({}),
+      }) as DOMRect
+  })
+  await page.evaluate(() => {
+    ;(
+      window as typeof window & {
+        __speechAudios: Array<{ onended: (() => void) | null }>
+      }
+    ).__speechAudios[0].onended?.()
+  })
+  await expect(speechSegments.nth(1)).toHaveAttribute("aria-current", "true")
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () =>
+          (window as typeof window & { __scrollBehaviors: ScrollBehavior[] })
+            .__scrollBehaviors
+      )
+    )
+    .toContain("auto")
 })

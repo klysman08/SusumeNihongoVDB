@@ -45,6 +45,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area"
 import type { SoundEffect } from "@/hooks/use-sound-effects"
 import { answerLanguageLabel } from "@/lib/api-types"
+import { markdownToPlainText } from "@/lib/answer-markdown"
 import type { AnswerHistoryEntry } from "@/lib/browser-storage"
 
 type AnswerHistoryProps = {
@@ -76,7 +77,7 @@ export function AnswerHistory({
     ? entries.filter((entry) => {
         const searchableText = [
           entry.question,
-          entry.answer.answer,
+          markdownToPlainText(entry.answer.answer),
           ...entry.answer.citations.flatMap((citation) => [
             citation.title,
             citation.section || "",
@@ -217,7 +218,7 @@ export function AnswerHistory({
                       </CardHeader>
                       <CardContent>
                         <p className="line-clamp-2 leading-6 text-muted-foreground">
-                          {entry.answer.answer}
+                          {markdownToPlainText(entry.answer.answer)}
                         </p>
                       </CardContent>
                       <CardFooter className="flex-wrap justify-between gap-3">

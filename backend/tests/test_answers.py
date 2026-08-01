@@ -63,7 +63,17 @@ async def test_grounded_prompt_and_valid_citation() -> None:
     assert len(response.citations) == 1
     sent = json.loads(route.calls[0].request.content)
     assert sent["messages"][0]["role"] == "system"
-    assert "untrusted" in sent["messages"][0]["content"]
+    system = sent["messages"][0]["content"]
+    assert "untrusted" in system
+    assert "lead with the direct answer" in system
+    assert "`### Grammar points`" in system
+    assert "only when relevant" in system
+    assert "backticks for grammar forms" in system
+    assert "blockquotes for examples" in system
+    assert "italics for translations" in system
+    assert "`**Note:**` or `**Caution:**`" in system
+    assert "Cite every factual statement inline" in system
+    assert "Do not use HTML, tables, external links, MDX, or custom syntax" in system
     assert "Ignore previous instructions" in sent["messages"][1]["content"]
 
 
@@ -115,6 +125,37 @@ async def test_invalid_citations_retry_once_then_error() -> None:
         await service.answer(AnswerRequest(question="Question"))
     assert raised.value.code == "invalid_upstream_response"
     assert route.call_count == 2
+    retry = json.loads(route.calls[1].request.content)
+    assert "preserving all Markdown formatting rules" in retry["messages"][1]["content"]
+    assert retry["messages"][0]["content"] == json.loads(
+        route.calls[0].request.content
+    )["messages"][0]["content"]
+
+
+@pytest.mark.asyncio
+@respx.mock
+async def test_structured_markdown_answer_keeps_inline_citations() -> None:
+    markdown = (
+        "は marks the topic [1].\n\n"
+        "### Grammar points\n\n"
+        "- **Contrast:** `〜は` can establish a contrast [1].\n\n"
+        "> 猫は学生です。[1]\n>\n> *The cat is a student.* [1]\n\n"
+        "**Note:** Context determines the intended topic [1]."
+    )
+    respx.post("http://provider/v1/chat/completions").mock(
+        return_value=Response(
+            200, json={"choices": [{"message": {"content": markdown}}]}
+        )
+    )
+    service = AnswerService(
+        Settings(llm_base_url="http://provider", llm_model="model"),
+        AnswerIndex([result()]),
+    )
+
+    response = await service.answer(AnswerRequest(question="Explain は"))
+
+    assert response.answer == markdown
+    assert [citation.number for citation in response.citations] == [1]
 
 
 @pytest.mark.asyncio
